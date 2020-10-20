@@ -1,0 +1,33 @@
+<!--{block return}-->
+<link rel="stylesheet" href="source/plugin/comiis_app_activity/style/comiis.css" type="text/css" media="all">
+<!--{if $_G['cache']['plugin']['comiis_app_activity']['css'] || $_G['cache']['plugin']['comiis_app_activity']['activity_index'] == 1}-->
+<style>
+	<!--{if $_G['cache']['plugin']['comiis_app_activity']['css']}-->{$_G['cache']['plugin']['comiis_app_activity']['css']}<!--{/if}-->
+	<!--{if $_G['cache']['plugin']['comiis_app_activity']['activity_index'] == 1}-->.comiis_ac_homebox {margin-bottom:10px;}<!--{/if}-->
+</style>
+<!--{/if}-->
+<div class="comiis_ac_homebox yzvl acbg_f acb_t acb_b bg_f b_t b_b cl">
+	<!--{if $_G['cache']['plugin']['comiis_app_activity']['hooktitle']}-->
+		<h2 class="acbg_f acb_b bg_f b_b"><span class="acf_c f_c"><a href="plugin.php?id=comiis_app_activity">More...</a></span>{$_G['cache']['plugin']['comiis_app_activity']['hookname']}</h2>
+	<!--{/if}-->
+	<ul class="ac_homelist jkst">
+		<!--{loop $comiis_app_activity $temp}-->
+			<!--{eval}-->
+				$comiis_app_activityimg = getforumimg($temp['aid'], '0', '160', '120');
+				$comiis_app_activityfrom = dgmdate($temp['starttimefrom'], 'u', '9999', 'Y-m-d');
+				$comiis_app_activityto = dgmdate($temp['starttimeto'], 'u', '9999', 'Y-m-d');
+			<!--{/eval}-->
+			<li class="acb_t b_t dqgc">
+				<a href="forum.php?mod=viewthread&tid={$temp['tid']}">
+					<div class="ac_homelist_img comiis_ac_imgbg gbqf"><!--{if $temp['aid']}--><img src="{$comiis_app_activityimg}" width="160" height="120" class="vm"><!--{/if}--></div>
+					<div class="ac_homelist_info irqm">
+						<p>{$temp['subject']}</p>
+						<span class="acf_d f_d">{$comiis_app_ac_lang['13']}: {$comiis_app_activityfrom}{if $temp['starttimeto']} {$comiis_app_ac_lang['14']} {$comiis_app_activityto}{/if}</span>
+						<span class="acf_d f_d">{$comiis_app_ac_lang['15']}: {$temp['class']}</span>
+					</div>
+				</a>
+			</li>
+		<!--{/loop}-->
+	</ul>
+</div>
+<!--{/block}-->

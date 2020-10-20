@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Cache-control" content="{if $_G['setting']['mobile'][mobilecachetime] > 0}{$_G['setting']['mobile'][mobilecachetime]}{else}no-cache{/if}" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<!--{if $comiis_app_switch['comiis_ucqqfull'] == 1}-->
+<meta name="full-screen" content="yes">
+<meta name="browsermode" content="application">
+<meta name="x5-fullscreen" content="true">
+<meta name="x5-page-mode" content="app">
+<!--{/if}-->
+<base href="{$_G['siteurl']}" />
+<title>{$navtitle}</title>
+<meta name="keywords" content="{if $comiis_data['keywords']}{$comiis_data['keywords']}{else}$_G['setting']['sitename']{/if}" />
+<meta name="description" content="{if $comiis_data['description']}{$comiis_data['description']}{else}$_G['setting']['bbname']{/if}" />
+<link rel="stylesheet" href="./source/plugin/comiis_app_portal/image/comiis_style.css?{VERHASH}" type="text/css" media="all">
+<script src="./template/comiis_app/comiis/js/jquery.min.js"></script>
+<script src="./source/plugin/comiis_app_portal/image/comiis.js?{VERHASH}"></script>
+<style>
+body {background:{if $comiis_data['color']}{$comiis_data['color']}{else}#f3f3f3{/if};}
+.nf_f, .nf_f a, .comiis_mh_head i {color:{if $comiis_data['fontcolor']}{$comiis_data['fontcolor']}{else}#fff{/if};}
+</style>
+</head>
+<body>
+<!--{if $comiis_data['header'] == '1'}-->
+<div id="comiis_mh_head">		
+	<div class="comiis_mh_head nf_f cl" style="background:{if $comiis_data['bgcolor']}{$comiis_data['bgcolor']}{else}#53BCF5{/if}">
+		<div class="head_z">
+		<!--{echo ($comiis_data['rekey'] ? '<a href="'.($comiis_data['rekeyurl'] ? $comiis_data['rekeyurl'] : 'javascript:history.back(-1)').'"><i class="comiis_mhfont">&#xe607;</i></a>' : '<a></a>');}-->
+		</div>
+		<h2>{$comiis_data['name']}</h2>
+	</div>
+</div>
+<div class="comiis_mh_h48"></div>
+<!--{/if}-->

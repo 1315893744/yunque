@@ -1,0 +1,766 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X3.2,X3.3,X3.4,XF1.0]]></item>
+	<item id="Time"><![CDATA[2017-12-21 18:01]]></item>
+	<item id="From"><![CDATA[XXX网(baidu.Com) - 站长互动平台]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[小米每日签到]]></item>
+			<item id="identifier"><![CDATA[k_misign]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[k_misign/]]></item>
+			<item id="copyright"><![CDATA[XXX网(baidu.Com) - 站长互动平台]]></item>
+			<item id="version"><![CDATA[4.3.0]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[sign]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[签到]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[1]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[sign]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[cp_users]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[用户管理]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="3">
+					<item id="name"><![CDATA[signmobile]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[28]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[2]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="4">
+					<item id="name"><![CDATA[cp_prize]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[奖品管理]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[2]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="5">
+					<item id="name"><![CDATA[cp_push]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[推送图文]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[11]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="6">
+					<item id="name"><![CDATA[cp_wsq]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[微社区]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[12]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="7">
+					<item id="name"><![CDATA[cp_pluginextend]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[插件互联]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[13]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="8">
+					<item id="name"><![CDATA[cp_button]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[按钮设置]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[14]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="9">
+					<item id="name"><![CDATA[cp_buttonstyles]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[按钮风格]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[15]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="10">
+					<item id="name"><![CDATA[cp_style]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[风格管理]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[16]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="11">
+					<item id="name"><![CDATA[cp_extend]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[辅助扩展]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[17]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="12">
+					<item id="name"><![CDATA[addon]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[应用推荐]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[99]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2.5,X3,X3.1,X3.2,X3.3,X3.4,F1.0,L1.0]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[插件名称]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[title]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[小米签到]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[插件地址模式]]></item>
+				<item id="description"><![CDATA[留空则为默认模式，填写内容请参考相关辅助入口扩展的说明。]]></item>
+				<item id="variable"><![CDATA[pluginurl]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[plugin.php?id=k_misign:]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[签到按钮默认宽度]]></item>
+				<item id="description"><![CDATA[单位：px
+当按钮功能区或插件互联按钮推送未设置宽度时，以此为准。]]></item>
+				<item id="variable"><![CDATA[width]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[220]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[签到按钮初始色彩]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[bcolor]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[签到按钮高亮色彩]]></item>
+				<item id="description"><![CDATA[鼠标移动上去之后显示的色彩]]></item>
+				<item id="variable"><![CDATA[hcolor]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[是否开启抽奖]]></item>
+				<item id="description"><![CDATA[选否后不开启奖品系统，签到页面将无底部中奖用户栏目]]></item>
+				<item id="variable"><![CDATA[prizestatus]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[抽奖难度升级]]></item>
+				<item id="description"><![CDATA[选是后，通过算法调整，抽奖的中奖率将降低，选否则为正常]]></item>
+				<item id="variable"><![CDATA[prizetype]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[签到时差]]></item>
+				<item id="description"><![CDATA[如签到时间显示正常无需修改]]></item>
+				<item id="variable"><![CDATA[tos]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[8]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[是否开启手机版按钮]]></item>
+				<item id="description"><![CDATA[选否后手机触屏版和手机标准版将不显示按钮，但签到页面仍然可以正常显示]]></item>
+				<item id="variable"><![CDATA[mobilehookstatus]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[可使用的用户组]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[groups]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[10]]></item>
+					<item id="1"><![CDATA[11]]></item>
+					<item id="2"><![CDATA[12]]></item>
+					<item id="3"><![CDATA[13]]></item>
+					<item id="4"><![CDATA[14]]></item>
+					<item id="5"><![CDATA[15]]></item>
+					<item id="6"><![CDATA[20]]></item>
+					<item id="7"><![CDATA[16]]></item>
+					<item id="8"><![CDATA[17]]></item>
+					<item id="9"><![CDATA[18]]></item>
+					<item id="10"><![CDATA[19]]></item>
+					<item id="11"><![CDATA[1]]></item>
+					<item id="12"><![CDATA[2]]></item>
+					<item id="13"><![CDATA[3]]></item>
+					<item id="14"><![CDATA[7]]></item>
+				</item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[禁止签到的用户]]></item>
+				<item id="description"><![CDATA[请输入其uid，多个会员请以半角逗号","间隔]]></item>
+				<item id="variable"><![CDATA[ban]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[签到等级名称]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[lvtext]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[初来米粉
+米坛新人
+米坛熟人
+米坛新星
+普通米粉
+超级米粉
+狂热米粉
+铁杆米粉
+黄金米粉
+至尊米粉
+米老头]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[签到奖励积分项]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[nrcredit]]></item>
+				<item id="type"><![CDATA[extcredit]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[最多奖励积分值]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[maxcredit]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[3]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[最少奖励积分值]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[mincredit]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[前N额外奖励项自定义]]></item>
+				<item id="description"><![CDATA[格式为"2|10"，第一个参数为积分项，第二个参数为积分数值，一行一个，第一行为第一名，以此类推]]></item>
+				<item id="variable"><![CDATA[jlmain]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[2|10
+2|9
+2|8
+2|7
+2|6
+2|5
+2|4
+2|3
+2|2
+2|1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="16">
+				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="title"><![CDATA[排行列表每页数]]></item>
+				<item id="description"><![CDATA[排行榜每页显示的数量，默认格式为"10|15"，前一个数字表示电脑版每页显示10条，后一个数字表示手机版每页显示15条]]></item>
+				<item id="variable"><![CDATA[listppp]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[10|15]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="17">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[是否开启奖励排行榜]]></item>
+				<item id="description"><![CDATA[开启后签到页面排行榜将显示奖励排行]]></item>
+				<item id="variable"><![CDATA[rewardlistopen]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="18">
+				<item id="displayorder"><![CDATA[17]]></item>
+				<item id="title"><![CDATA[签到的自动回复类型]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[qdtype]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[3]]></item>
+				<item id="extra"><![CDATA[1=关闭
+2=指定帖子
+3=指定版块每天一主题]]></item>
+			</item>
+			<item id="19">
+				<item id="displayorder"><![CDATA[18]]></item>
+				<item id="title"><![CDATA[指定帖子TID]]></item>
+				<item id="description"><![CDATA[当且仅当“签到的自动回复类型”为指定帖子时有效]]></item>
+				<item id="variable"><![CDATA[tidnumber]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="20">
+				<item id="displayorder"><![CDATA[18]]></item>
+				<item id="title"><![CDATA[签到帖开帖版块]]></item>
+				<item id="description"><![CDATA[当且仅当“签到的自动回复类型”为指定版块每天一主题时有效]]></item>
+				<item id="variable"><![CDATA[fidnumber]]></item>
+				<item id="type"><![CDATA[forum]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="21">
+				<item id="displayorder"><![CDATA[19]]></item>
+				<item id="title"><![CDATA[默认签到排行倒序]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[qddesc]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="22">
+				<item id="displayorder"><![CDATA[20]]></item>
+				<item id="title"><![CDATA[自定义每日签到帖标题]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[title_thread]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[{y}年{m}月{d}日签到记录贴]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="23">
+				<item id="displayorder"><![CDATA[21]]></item>
+				<item id="title"><![CDATA[中奖用户区域标题]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[rewardtitle]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[中奖用户]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="24">
+				<item id="displayorder"><![CDATA[21]]></item>
+				<item id="title"><![CDATA[推送区域标题]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[pushtitle]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[推送信息]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="25">
+				<item id="displayorder"><![CDATA[22]]></item>
+				<item id="title"><![CDATA[签到进程锁]]></item>
+				<item id="description"><![CDATA[可有效防止重复开帖和重复签到现象发生，PHP4的WIN下的用户必须关闭，否则会出现签到错误]]></item>
+				<item id="variable"><![CDATA[lockopen]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="26">
+				<item id="displayorder"><![CDATA[23]]></item>
+				<item id="title"><![CDATA[内存缓存更新开关]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[memorystatus]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="27">
+				<item id="displayorder"><![CDATA[98]]></item>
+				<item id="title"><![CDATA[按钮功能区配置]]></item>
+				<item id="description"><![CDATA[请勿随意设置，此区为Discuz!内置功能区按钮设置，请到按钮设置选项中设置。]]></item>
+				<item id="variable"><![CDATA[modstatus]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="portal_index">
+						<item id="status"><![CDATA[1]]></item>
+						<item id="width"><![CDATA[0]]></item>
+					</item>
+					<item id="portal_list">
+						<item id="status"><![CDATA[1]]></item>
+						<item id="width"><![CDATA[0]]></item>
+					</item>
+					<item id="portal_view">
+						<item id="status"><![CDATA[1]]></item>
+						<item id="width"><![CDATA[0]]></item>
+					</item>
+					<item id="forum_index">
+						<item id="status"><![CDATA[1]]></item>
+						<item id="width"><![CDATA[0]]></item>
+					</item>
+					<item id="forum_forumdisplay">
+						<item id="status"><![CDATA[1]]></item>
+						<item id="width"><![CDATA[0]]></item>
+					</item>
+					<item id="forum_viewthread">
+						<item id="status"><![CDATA[1]]></item>
+						<item id="width"><![CDATA[0]]></item>
+					</item>
+					<item id="group_default">
+						<item id="status"><![CDATA[1]]></item>
+						<item id="width"><![CDATA[0]]></item>
+					</item>
+					<item id="group_index">
+						<item id="status"><![CDATA[1]]></item>
+						<item id="width"><![CDATA[0]]></item>
+					</item>
+					<item id="group_forumdisplay">
+						<item id="status"><![CDATA[1]]></item>
+						<item id="width"><![CDATA[0]]></item>
+					</item>
+					<item id="group_viewthread">
+						<item id="status"><![CDATA[1]]></item>
+						<item id="width"><![CDATA[0]]></item>
+					</item>
+					<item id="group_other">
+						<item id="status"><![CDATA[1]]></item>
+						<item id="width"><![CDATA[0]]></item>
+					</item>
+					<item id="home_index">
+						<item id="status"><![CDATA[1]]></item>
+						<item id="width"><![CDATA[218]]></item>
+					</item>
+				</item>
+			</item>
+			<item id="28">
+				<item id="displayorder"><![CDATA[99]]></item>
+				<item id="title"><![CDATA[插件扩展配置区]]></item>
+				<item id="description"><![CDATA[请勿随意修改，需要配置参数请点击插件互联选项后设置]]></item>
+				<item id="variable"><![CDATA[pextend]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="tie_button">
+						<item id="status"><![CDATA[1]]></item>
+						<item id="width"><![CDATA[220]]></item>
+					</item>
+				</item>
+			</item>
+			<item id="29">
+				<item id="displayorder"><![CDATA[99]]></item>
+				<item id="title"><![CDATA[辅助扩展配置]]></item>
+				<item id="description"><![CDATA[请勿随意修改，需要配置参数请点击辅助扩展选项后设置]]></item>
+				<item id="variable"><![CDATA[extendp]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="lastrule"><![CDATA[0]]></item>
+				</item>
+			</item>
+			<item id="30">
+				<item id="displayorder"><![CDATA[99]]></item>
+				<item id="title"><![CDATA[按钮风格配置]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[extendb]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="maohao"><![CDATA[：]]></item>
+				<item id="douhao"><![CDATA[，]]></item>
+				<item id="sign"><![CDATA[签到]]></item>
+				<item id="signed"><![CDATA[已签到]]></item>
+				<item id="djqd"><![CDATA[点击签到]]></item>
+				<item id="row"><![CDATA[连续]]></item>
+				<item id="days"><![CDATA[天]]></item>
+				<item id="people"><![CDATA[人]]></item>
+				<item id="alldays"><![CDATA[累计签到]]></item>
+				<item id="signsuccess"><![CDATA[签到成功]]></item>
+				<item id="yourrow"><![CDATA[您的签到排名：]]></item>
+				<item id="signlevel"><![CDATA[签到等级]]></item>
+				<item id="success"><![CDATA[操作成功]]></item>
+				<item id="signtoranklist"><![CDATA[签到看排名]]></item>
+				<item id="groupontallow"><![CDATA[您所在用户组不允许使用]]></item>
+				<item id="uidinblack"><![CDATA[您已经被列入黑名单]]></item>
+				<item id="tdyq"><![CDATA[今日已签]]></item>
+				<item id="empty"><![CDATA[空]]></item>
+				<item id="tsn_extrac"><![CDATA[[quote][color=gray]我在 [color=darkorange]{time}[/color] 完成签到，是[color=darkorange]第 {row} 个签到的用户[/color]，获得随机奖励 {extrac} ,其中包括额外获得的 {extrac2}。[/color][/quote]]]></item>
+				<item id="tsn_noextrac"><![CDATA[[quote][color=gray]我在 [color=darkorange]{time}[/color] 完成签到，获得随机奖励 {extrac}。[/color][/quote]]]></item>
+				<item id="tsn_thread"><![CDATA[[quote][color=gray]本贴是论坛每日签到系统在每天的第一位签到者签到时所自动生成的,如果您还未签到,[url=plugin.php?id=k_misign:sign][color=darkorange]请点此[/color][/url]进行签到的操作。[/color][/quote]]]></item>
+				<item id="getreward"><![CDATA[获得随机奖励 {reward}。]]></item>
+				<item id="getreward2"><![CDATA[获得随机奖励 {reward} 和 {reward2}。]]></item>
+				<item id="yljqddays"><![CDATA[已累计签到 {days} 天。]]></item>
+				<item id="prize_cp"><![CDATA[奖品管理]]></item>
+				<item id="prize_log"><![CDATA[中奖记录]]></item>
+				<item id="prize_name"><![CDATA[奖品名称]]></item>
+				<item id="prize_type"><![CDATA[奖品类型]]></item>
+				<item id="please_select"><![CDATA[请选择]]></item>
+				<item id="prize_type_1"><![CDATA[实物奖品]]></item>
+				<item id="prize_type_2"><![CDATA[积分奖品]]></item>
+				<item id="prize_type_3"><![CDATA[卡密奖品]]></item>
+				<item id="prize_credit_type"><![CDATA[积分类型]]></item>
+				<item id="prize_credit_num"><![CDATA[积分数量]]></item>
+				<item id="prize_credit_tips"><![CDATA[只有当奖品类型为积分时该项设置有效]]></item>
+				<item id="prize_last"><![CDATA[奖品余量]]></item>
+				<item id="prize_updatetime"><![CDATA[更新时间]]></item>
+				<item id="prize_percent"><![CDATA[得奖概率]]></item>
+				<item id="prize_percent_unit"><![CDATA[‰]]></item>
+				<item id="prize_percent_tips"><![CDATA[‰  请填写整数，注意是千分之]]></item>
+				<item id="prize_status"><![CDATA[启用状态]]></item>
+				<item id="prize_status_on"><![CDATA[启用中]]></item>
+				<item id="prize_status_off"><![CDATA[未启用]]></item>
+				<item id="prize_add"><![CDATA[添加新奖品]]></item>
+				<item id="prize_edit"><![CDATA[编辑奖品]]></item>
+				<item id="prize_auto"><![CDATA[自动补货]]></item>
+				<item id="prize_auto_tips"><![CDATA[只有当奖品类型为实物和积分时该项设置有效]]></item>
+				<item id="prize_everyday"><![CDATA[奖品限量]]></item>
+				<item id="prize_addkami"><![CDATA[添加卡密]]></item>
+				<item id="prize_kami_cp"><![CDATA[卡密管理]]></item>
+				<item id="prize_addkami_tips"><![CDATA[一行一个信息，比如填写：“卡号是12345，密码是67890”，将做为消息内容被发出去，请勿包含冒号]]></item>
+				<item id="prize_kami_name"><![CDATA[卡密内容]]></item>
+				<item id="prize_kami_unuse"><![CDATA[未使用]]></item>
+				<item id="prize_kami_user"><![CDATA[使用用户]]></item>
+				<item id="prize_kami_usetime"><![CDATA[使用时间]]></item>
+				<item id="prize_kami_notice"><![CDATA[恭喜您签到中奖，中奖信息如下：]]></item>
+				<item id="push_add"><![CDATA[添加新推送]]></item>
+				<item id="push_title"><![CDATA[推送标题]]></item>
+				<item id="push_message"><![CDATA[推送信息]]></item>
+				<item id="push_pic"><![CDATA[推送图片]]></item>
+				<item id="push_pic_tips"><![CDATA[<br />图片尺寸为145px*161px]]></item>
+				<item id="push_url"><![CDATA[推送链接]]></item>
+				<item id="wsq_hook_reg_status"><![CDATA[微社区接口注册状态]]></item>
+				<item id="topBar"><![CDATA[列表页顶部区域]]></item>
+				<item id="mobilesign"><![CDATA[头部文字签到区域]]></item>
+				<item id="headerBar"><![CDATA[列表页头部区域]]></item>
+				<item id="wsqcp_tips"><![CDATA[接口的启用与否请前往微信登录插件的接口菜单中设置，默认注册后为启用]]></item>
+				<item id="button_status"><![CDATA[开启按钮推送]]></item>
+				<item id="button_width"><![CDATA[按钮宽度]]></item>
+				<item id="portal_index"><![CDATA[门户首页（需要模板支持）]]></item>
+				<item id="portal_list"><![CDATA[门户列表页（需要模板支持）]]></item>
+				<item id="portal_view"><![CDATA[门户文章内容页]]></item>
+				<item id="forum_index"><![CDATA[论坛首页]]></item>
+				<item id="forum_forumdisplay"><![CDATA[论坛列表页]]></item>
+				<item id="forum_viewthread"><![CDATA[论坛帖子内容内（需要模板支持）]]></item>
+				<item id="group_default"><![CDATA[群组聚合页]]></item>
+				<item id="group_index"><![CDATA[群组首页]]></item>
+				<item id="group_forumdisplay"><![CDATA[群组讨论区]]></item>
+				<item id="group_viewthread"><![CDATA[群组帖子内容页（需要模板支持）]]></item>
+				<item id="group_other"><![CDATA[群组其他页]]></item>
+				<item id="home_index"><![CDATA[家园SNS风格边栏]]></item>
+				<item id="buttoncp_tip"><![CDATA[未填写或0则以全局默认宽度为准]]></item>
+				<item id="rewardrule"><![CDATA[奖励规则]]></item>
+				<item id="reward_top_number"><![CDATA[第{number}名]]></item>
+				<item id="reward_lasted"><![CDATA[您已连续签到 {lasted} 天]]></item>
+				<item id="reward_lasted_credit"><![CDATA[，获得 {credit}]]></item>
+				<item id="reward_lasted_medal"><![CDATA[，并获得一枚 {medal} 勋章]]></item>
+				<item id="usernotexist"><![CDATA[用户不存在]]></item>
+				<item id="searchuser"><![CDATA[搜索用户]]></item>
+				<item id="ranklist_days"><![CDATA[总天数]]></item>
+				<item id="ranklist_monthdays"><![CDATA[月天数]]></item>
+				<item id="ranklist_lasttime"><![CDATA[上次签到时间]]></item>
+				<item id="ranklist_lastreward"><![CDATA[上次奖励]]></item>
+				<item id="ranklist_rewards"><![CDATA[总奖励]]></item>
+				<item id="extend"><![CDATA[辅助扩展]]></item>
+				<item id="extend_toinstall"><![CDATA[未安装]]></item>
+				<item id="extend_installed"><![CDATA[已安装]]></item>
+				<item id="extend_install"><![CDATA[安装中]]></item>
+				<item id="extend_uninstall"><![CDATA[卸载]]></item>
+				<item id="extend_k_migeyan"><![CDATA[仿小米每日格言点赞]]></item>
+				<item id="extend_dataimport"><![CDATA[数据导入]]></item>
+				<item id="extend_dataexport"><![CDATA[数据导出]]></item>
+				<item id="extend_lastrule"><![CDATA[连续签到规则]]></item>
+				<item id="extend_lastdefend"><![CDATA[连续签到维护]]></item>
+				<item id="extend_totalrule"><![CDATA[累计签到规则]]></item>
+				<item id="extend_level"><![CDATA[签到等级自定义]]></item>
+				<item id="cp_style_default"><![CDATA[电脑版默认风格]]></item>
+				<item id="cp_style_mobile_default"><![CDATA[手机版默认风格]]></item>
+				<item id="cp_style_usestyle"><![CDATA[设为电脑版风格]]></item>
+				<item id="cp_style_usestyle_mobile"><![CDATA[设为手机版风格]]></item>
+				<item id="cp_last_lastday"><![CDATA[连续签到天数]]></item>
+				<item id="extend_magics"><![CDATA[道具扩展]]></item>
+				<item id="magic_bq"><![CDATA[补签卡]]></item>
+				<item id="magic_bq_do"><![CDATA[补签]]></item>
+				<item id="magic_bq_buy"><![CDATA[购买]]></item>
+				<item id="magic_bq_dec"><![CDATA[忘记签到导致的连续签到中断时可补签的道具。]]></item>
+				<item id="magic_bq_tips"><![CDATA[<em class="xi1">{starttime}</em> 到 <em class="xi1">{endtime}</em> 期间，您共有 <em class="xi1">{tobqdays}</em> 天可补签，补签完成后您的连续签到天数将达到 <em class="xi1">{lasted}</em> 天。]]></item>
+				<item id="magic_bq_notexit"><![CDATA[补签信息不存在]]></item>
+				<item id="magic_bq_neednotbq"><![CDATA[恭喜您，不存在需要补签的日子哦]]></item>
+				<item id="extend_hooks"><![CDATA[嵌入点扩展]]></item>
+				<item id="hook_global_usernav_extra3"><![CDATA[顶部签到小按钮]]></item>
+				<item id="hook_viewthread_sidetop"><![CDATA[帖内用户信息]]></item>
+				<item id="week_1"><![CDATA[周一]]></item>
+				<item id="week_2"><![CDATA[周二]]></item>
+				<item id="week_3"><![CDATA[周三]]></item>
+				<item id="week_4"><![CDATA[周四]]></item>
+				<item id="week_5"><![CDATA[周五]]></item>
+				<item id="week_6"><![CDATA[周六]]></item>
+				<item id="week_0"><![CDATA[周日]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="index"><![CDATA[首页]]></item>
+				<item id="sign"><![CDATA[签到]]></item>
+				<item id="signed"><![CDATA[已签到]]></item>
+				<item id="maohao"><![CDATA[：]]></item>
+				<item id="douhao"><![CDATA[，]]></item>
+				<item id="row"><![CDATA[连续]]></item>
+				<item id="days"><![CDATA[天]]></item>
+				<item id="people"><![CDATA[人]]></item>
+				<item id="signtoranklist"><![CDATA[签到看排名]]></item>
+				<item id="signsuccess"><![CDATA[签到成功]]></item>
+				<item id="yourrow"><![CDATA[您的签到排名：]]></item>
+				<item id="todayrow"><![CDATA[今日排名]]></item>
+				<item id="signlevel"><![CDATA[签到等级]]></item>
+				<item id="signjl"><![CDATA[积分奖励]]></item>
+				<item id="zong"><![CDATA[总天数]]></item>
+				<item id="alldays"><![CDATA[累计签到]]></item>
+				<item id="todaystar"><![CDATA[今日签到之星：]]></item>
+				<item id="height"><![CDATA[历史最高人数：]]></item>
+				<item id="notqdyet"><![CDATA[您今天还没有签到]]></item>
+				<item id="ranklist_today"><![CDATA[今日排行]]></item>
+				<item id="ranklist_month"><![CDATA[本月排行]]></item>
+				<item id="ranklist_zong"><![CDATA[总排行]]></item>
+				<item id="ranklist_reward"><![CDATA[奖励排行]]></item>
+				<item id="ranklist_nickname"><![CDATA[昵称]]></item>
+				<item id="ranklist_days"><![CDATA[总天数]]></item>
+				<item id="ranklist_monthdays"><![CDATA[月天数]]></item>
+				<item id="ranklist_lasttime"><![CDATA[上次签到时间]]></item>
+				<item id="ranklist_nowlevel"><![CDATA[目前等级]]></item>
+				<item id="ranklist_lastreward"><![CDATA[上次奖励]]></item>
+				<item id="ranklist_rewards"><![CDATA[总奖励]]></item>
+				<item id="todayrewards"><![CDATA[今日获得了]]></item>
+				<item id="rewards"><![CDATA[获得了]]></item>
+				<item id="rewardusers"><![CDATA[中奖用户]]></item>
+				<item id="rewardrule"><![CDATA[奖励规则]]></item>
+				<item id="visitmore"><![CDATA[访问详情]]></item>
+				<item id="noinfo"><![CDATA[暂无内容]]></item>
+				<item id="rule"><![CDATA[规则]]></item>
+				<item id="base_reward"><![CDATA[基础奖励]]></item>
+				<item id="reward_top"><![CDATA[前排奖励]]></item>
+				<item id="reward_top_ext"><![CDATA[额外奖励]]></item>
+				<item id="reward_medal"><![CDATA[勋章]]></item>
+				<item id="reward_rank"><![CDATA[名次]]></item>
+				<item id="k_migeyan_everyday"><![CDATA[每日正能量]]></item>
+				<item id="extend_k_migeyan"><![CDATA[仿小米每日格言点赞]]></item>
+				<item id="extend_dataimport"><![CDATA[数据导入]]></item>
+				<item id="extend_dataexport"><![CDATA[数据导出]]></item>
+				<item id="extend_lastrule"><![CDATA[连续签到规则]]></item>
+				<item id="extend_lastdefend"><![CDATA[连续签到维护]]></item>
+				<item id="extend_totalrule"><![CDATA[累计签到规则]]></item>
+				<item id="extend_magics"><![CDATA[道具扩展]]></item>
+				<item id="magic_bq"><![CDATA[补签卡]]></item>
+				<item id="magic_bq_do"><![CDATA[补签]]></item>
+				<item id="magic_bq_buy"><![CDATA[购买]]></item>
+				<item id="magic_bq_dec"><![CDATA[忘记签到导致的连续签到中断时可补签的道具。]]></item>
+				<item id="week_1"><![CDATA[周一]]></item>
+				<item id="week_2"><![CDATA[周二]]></item>
+				<item id="week_3"><![CDATA[周三]]></item>
+				<item id="week_4"><![CDATA[周四]]></item>
+				<item id="week_5"><![CDATA[周五]]></item>
+				<item id="week_6"><![CDATA[周六]]></item>
+				<item id="week_0"><![CDATA[周日]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+	</item>
+</root>

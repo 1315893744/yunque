@@ -1,0 +1,32 @@
+.z-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.btns {
+    width: 6.5rem;
+}
+
+.tip {
+    width: 6.5rem;
+    height: 6.5rem;
+}
+
+.pc {
+    width: 5.5rem;
+    height: 5.5rem;
+    margin-left: 0.5rem;
+    background-image: url('./pc.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.text {
+    text-align: center;
+}
+
+.bui-btn {
+    margin-top: 0.1rem;
+}

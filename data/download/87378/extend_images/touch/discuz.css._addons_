@@ -1,0 +1,120 @@
+a {
+    -webkit-tap-highlight-color: transparent
+}
+
+.lmw_cat {
+    background-color: white;
+}
+
+/*板块名*/
+.lmw_catTitle {
+    position: relative;
+    line-height: 30px;
+    padding: 14px 0 6px 10px;
+    font-size: 16px;
+    color: #303133;
+}
+
+/*放缩板块的开关*/
+.lmw_forum_cat_switch {
+    float: right;
+    margin: 8px 20px 0 0;
+
+    position: relative;
+    line-height: 30px;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 34px;
+    height: 14px;
+    background: #ccc;
+    border-radius: 10px;
+    transition: border-color .2s, background-color .2s;
+}
+
+.lmw_forum_cat_switch::after {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 2px #999;
+    transition: .4s;
+    top: -2px;
+    position: absolute;
+    left: 0;
+}
+
+.lmw_forum_cat_switch:checked {
+    background: #0099FF;
+}
+
+.lmw_forum_cat_switch:checked::after {
+    content: '';
+    position: absolute;
+    left: 55%;
+    top: -2px;
+}
+
+.lmw_catbody {
+    padding: 0 5px 10px;
+    font-size: 0;
+}
+
+.lmw_catbody_inner {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    text-align: center;
+}
+
+.lmw_forum_card {
+    margin: 5px;
+    padding: 15px 10px 15px 10px;
+    -moz-box-shadow: 2px 2px 5px rgba(0, 108, 110, 0.1);
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 108, 110, 0.1);
+    box-shadow: 2px 2px 5px rgba(0, 108, 110, 0.1);
+}
+
+.lmw_forum_icon {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border-radius: 35%;
+    overflow: hidden;
+    border: 2px #FFF solid;
+}
+
+.lmw_forum_name {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 3px 0 3px;
+}
+
+.lmw_forum_info {
+    font-size: 10px;
+    color: grey;
+    margin-bottom: 3px;
+}
+
+.lmw_forum_desc {
+    font-size: 10px;
+    line-height: 18px;
+    height: 54px;
+}
+
+.threadlist li {
+    background: white;
+    padding-left: 10px;
+    border-bottom: unset;
+    color: #606266;
+    margin-bottom: 3px;
+}
+
+.inlineTop{
+    display: inline-block;
+    vertical-align: top;
+}
+

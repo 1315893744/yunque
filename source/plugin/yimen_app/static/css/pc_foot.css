@@ -1,0 +1,75 @@
+.yimen_app_pay {
+    position: fixed;
+    right: 0;
+    top: 300px;
+    height: 100px;
+    width: 30px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-size: 17px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 25px;
+    cursor: pointer;
+}
+
+.label_box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.label_box > label {
+    margin: 5px 40px 0px 0;
+}
+
+.label_box > label > input {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -20px;
+
+}
+
+.label_box > label > div {
+    width: 130%;
+    text-align: center;
+    border: #dddddd solid 1px;
+    height: 40px;
+    line-height: 40px;
+    color: #666666;
+    user-select: none;
+    overflow: hidden;
+    position: relative;
+}
+
+.label_box > label > input:checked + div {
+    border: #3CA0EC solid 1px;
+    color: #3CA0EC;
+}
+
+.label_box > label > input:checked + div:after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #3CA0EC;
+    transform: skewY(-45deg);
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    z-index: 1;
+}
+
+.label_box > label > input:checked + div:before {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 8px;
+    border-right: #ffffff solid 2px;
+    border-bottom: #ffffff solid 2px;
+    transform: rotate(35deg);
+    position: absolute;
+    bottom: 2px;
+    right: 4px;
+    z-index: 2;
+}

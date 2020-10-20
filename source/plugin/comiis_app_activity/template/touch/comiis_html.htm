@@ -1,0 +1,107 @@
+<!--{subtemplate common/header}-->
+<link rel="stylesheet" href="source/plugin/comiis_app_activity/style/comiis.css" type="text/css" media="all">
+<!--{if $comiis_app_activity_set['css']}-->
+<style>
+	{echo strip_tags($comiis_app_activity_set['css']);}
+</style>
+<!--{/if}-->
+<!--{if $comiis_app_activity_set['open_header']}-->
+<header class="comiis_achead dqgc cl">
+	<div class="head_l"><a href="javascript:history.back(-1)"><img src="source/plugin/comiis_app_activity/style/comiis_top_lico.png"></a></div>
+	<h2>{$comiis_app_activity_set['name']}</h2>
+	<div class="head_r">
+	<!--{if $comiis_app_activity_set['post_url']}-->
+		<a href="{$comiis_app_activity_set['post_url']}"><img src="source/plugin/comiis_app_activity/style/comiis_top_fhd.png"></a>
+	<!--{else}-->
+		<a href="/"><img src="source/plugin/comiis_app_activity/style/comiis_top_rico.png"></a>
+	<!--{/if}-->
+	</div>
+</header>
+<!--{/if}-->
+<!--{if $comiis_app_activity_set['header_ad']}--><div class="comiis_ac_ggbig cl">{$comiis_app_activity_set['header_ad']}</div><!--{/if}-->
+<div class="comiis_acheader gbqf acbg_f bg_f cl">
+	<div id="comiis_actop_box" class="acb_b b_b">
+		<div class="comiis_actop_ico_box">
+			<div class="comiis_actop_ico_l"></div>
+			<div class="comiis_actop_ico acbg_f acb_l bg_f b_l">
+				<img src="source/plugin/comiis_app_activity/style/comiis_actop_ico.png">
+			</div>
+		</div>
+		<div id="comiis_actop_nvyzvl">
+			<ul class="swiper-wrapper">
+				<li class="swiper-slide{if empty($comiis_app_activityclass)} acf_0 f_0{/if}">{if empty($comiis_app_activityclass)}<em class="acbg_0 bg_0"></em>{/if}<a href="plugin.php?id=comiis_app_activity"{if !empty($comiis_app_activityclass)} class="acf_c f_c"{/if}>{$comiis_app_ac_lang['01']}</a></li>
+				<!--{loop $activitytypelist $temp}-->
+				<li class="swiper-slide{if $comiis_app_activityclass == $temp} acf_0 f_0{/if}">{if $comiis_app_activityclass == $temp}<em class="acbg_0 bg_0"></em>{/if}<a href="plugin.php?id=comiis_app_activity&class={echo urlencode($temp);}{if $comiis_app_activitytype}&type={$comiis_app_activitytype}{/if}"{if $comiis_app_activityclass != $temp} class="acf_c f_c"{/if}>{$temp}</a></li>
+				<!--{/loop}-->
+				<li class="swiper-slide" style="width:45px;"></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="comiis_ac_my irqm acbg_f acb_b bg_f b_b"{if !$comiis_app_activitytype} style="display:none;"{/if}>
+	<ul>
+		<li class="acb_l b_l"><a href="plugin.php?id=comiis_app_activity{if $comiis_app_activityclass}&class={echo urlencode($comiis_app_activityclass);}{/if}&type=start" class="{if $comiis_app_activitytype == 'start'}acf_0 f_0{else}acf_d f_d{/if}">{$comiis_app_ac_lang['02']}</a></li>
+		<li class="acb_l b_l"><a href="plugin.php?id=comiis_app_activity{if $comiis_app_activityclass}&class={echo urlencode($comiis_app_activityclass);}{/if}&type=end" class="{if $comiis_app_activitytype == 'end'}acf_0 f_0{else}acf_d f_d{/if}">{$comiis_app_ac_lang['03']}</a></li>
+		<li class="acb_l b_l"><a {if $_G['uid']}href="plugin.php?id=comiis_app_activity{if $comiis_app_activityclass}&class={echo urlencode($comiis_app_activityclass);}{/if}&type=participate"{else}href="javascript:;" onclick="popup.open('{$comiis_app_ac_lang['06']}', 'confirm', 'member.php?mod=logging&action=login');"{/if} class="{if $comiis_app_activitytype == 'participate'}acf_0 f_0{else}acf_d f_d{/if}">{$comiis_app_ac_lang['04']}</a></li>
+		<li class="acb_l b_l"><a {if $_G['uid']}href="plugin.php?id=comiis_app_activity{if $comiis_app_activityclass}&class={echo urlencode($comiis_app_activityclass);}{/if}&type=launched"{else}href="javascript:;" onclick="popup.open('{$comiis_app_ac_lang['06']}', 'confirm', 'member.php?mod=logging&action=login');"{/if} class="{if $comiis_app_activitytype == 'launched'}acf_0 f_0{else}acf_d f_d{/if}">{$comiis_app_ac_lang['05']}</a></li>
+	</ul>
+</div>
+<div class="comiis_ach10 bg_e b_b"></div>
+<!--{if count($comiis_app_activity)}-->
+	<div class="comiis_activity acbg_f bg_f cl">
+		<ul>
+		<!--{loop $comiis_app_activity $key $temp}-->
+			<li class="acb_t b_t">
+				<a href="forum.php?mod=viewthread&tid={$temp['tid']}">
+					<div class="act_tit">{$temp['subject']}</div>
+					<div class="act_time acf_a f_a"><span class="acbg_a bg_a f_f">{$temp['class']}</span>{$comiis_app_ac_lang['07']}: {echo dgmdate($temp['starttimefrom'], 'u', '9999', 'Y-m-d');}{if $temp['starttimeto']} - {echo dgmdate($temp['starttimeto'], 'u', '9999', 'Y-m-d');}{/if}</div>
+					<!--{if $temp['aid']}-->
+						<div class="act_img"><img src="{echo getforumimg($temp['aid'], '0', '640', '9999')}" class="vm"></div>
+					<!--{else}-->
+						<div class="act_noimg acbg_b bg_b f_c">{$comiis_app_ac_lang['08']}</div>
+					<!--{/if}-->
+					<div class="act_btn acf_c f_c">{echo $temp['starttimeto'] > 0 ? ($temp['starttimeto'] > TIMESTAMP ? '<em class="acbg_a bg_a f_f">'.$comiis_app_ac_lang['09'].'</em>' : '<em class="acbg_b bg_b f_c">'.$comiis_app_ac_lang['10'].'</em>') : ($temp['starttimefrom'] > TIMESTAMP ? '<em class="acbg_a bg_a f_f">'.$comiis_app_ac_lang['09'].'</em>' : '<em class="acbg_b bg_b f_c">'.$comiis_app_ac_lang['10'].'</em>');} {$comiis_app_ac_lang['11']}<span class="acf_a f_a">{$temp['views']}</span>{$comiis_app_ac_lang['12']}</div>
+				</a>
+			</li>
+			<!--{if is_array($list_ad[$startlimit+$key+1])}-->
+				<!--{loop $list_ad[$startlimit+$key+1] $ad_temp}-->
+				<div class="comiis_ac_ggbig comiis_ac_gg acb_t b_t cl">
+					<a href="{$ad_temp[2]}"><em>{$ad_temp[1]}</em><img src="{$ad_temp[3]}" width="100%"></a>
+				</div>
+				<!--{/loop}-->
+			<!--{/if}-->
+		<!--{/loop}-->
+		</ul>
+	</div>
+	$multipage
+<!--{else}-->
+	<div class="comiis_ac_nodata acbg_f acf_d bg_f f_d cl">
+		<img src="source/plugin/comiis_app_activity/style/comiis_nodata.png" class="vm">
+		<h2>{$comiis_app_activity_set['no_ac']}</h2>		
+	</div>
+<!--{/if}-->
+<script src="./source/plugin/comiis_app_activity/style/comiis_swiper.min.js?{VERHASH}"></script>
+<script>
+	if($("#comiis_actop_nvyzvl li.f_0").length > 0) {
+		var comiis_indexjkst = $("#comiis_actop_nvyzvl li.f_0").offset().left + $("#comiis_actop_nvyzvl li.f_0").width() >= $(window).width() ? $("#comiis_actop_nvyzvl li.f_0").index() : 0;
+	}else{
+		var comiis_indexjkst = 0;
+	}
+	new Swiper('#comiis_actop_nvyzvl', {
+		freeMode : true,
+		slidesPerView : 'auto',
+		initialSlide : comiis_indexjkst,
+		onTouchMove: function(swiper){
+			Comiis_Touch_on = 0;
+		},
+		onTouchEnd: function(swiper){
+			Comiis_Touch_on = 1;
+		},
+	});
+	$('.comiis_actop_ico').on('click', function(e) {
+		$(this).toggleClass('comiis_actop_ico_on');
+		$('.comiis_ac_my').toggle();
+	});
+</script>
+<!--{eval $comiis_foot = 'no';}-->
+<!--{subtemplate common/footer}-->

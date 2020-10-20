@@ -1,0 +1,80 @@
+<!--{block return}-->
+<link rel="stylesheet" href="source/plugin/comiis_app_find/style/comiis.css" type="text/css" media="all">
+<!--{if $_G['cache']['plugin']['comiis_app_find']['comiis_app_find_css'] || $comiis_app_find['comiis_app_find_index'] == 1}-->
+<style>
+	<!--{if $_G['cache']['plugin']['comiis_app_find']['comiis_app_find_css']}-->
+	{echo strip_tags($_G['cache']['plugin']['comiis_app_find']['comiis_app_find_css']);}
+	<!--{/if}-->
+	<!--{if $comiis_app_find['comiis_app_find_index'] == 1}-->
+	.comiis_fx_homeico {margin-bottom:10px;}
+	<!--{/if}-->
+</style>
+<!--{/if}-->
+<!--{if $comiis_app_find['comiis_app_find_style'] == 1}-->
+	<div class="comiis_fx_homeico iksh comiis_fx_homeicos fxbg_f fxb_b bg_f{if $comiis_app_find['comiis_app_find_index'] == 1} fxb_t b_t{/if} b_b cl">
+		<!--{if $comiis_app_find['comiis_app_find_title_open']}--><h2 class="fxbg_f fxb_b bg_f b_b"><span class="fxf_c f_c"><a href="plugin.php?id=comiis_app_find">More...</a></span>{$comiis_app_find['comiis_app_find_title']}</h2><!--{/if}-->
+		<div id="comiis_fx_homeicosoohp">
+			<ul class="swiper-wrapper xaqr">
+				<!--{loop $comiis_app_find_data $temp}-->
+					<!--{if $temp['show'] == 1 && $temp['cid']}-->
+						<li class="swiper-slide gmud"><a href="$temp['url']" title="$temp['name']"><img class="vm" src="source/plugin/comiis_app_find/ico/{if $temp['icon']}{$temp['icon']}{else}noicon.png{/if}"><p>$temp['name']</p></a></li>
+					<!--{/if}-->
+				<!--{/loop}-->
+			</ul>
+		</div>
+	</div>
+<!--{elseif $comiis_app_find['comiis_app_find_style'] == 2}-->
+	<div class="comiis_fx_homeico iksh fxbg_f fxb_b bg_f{if $comiis_app_find['comiis_app_find_index'] == 1} fxb_t b_t{/if} b_b cl">
+		<!--{if $comiis_app_find['comiis_app_find_title_open']}--><h2 class="fxbg_f fxb_b bg_f b_b"><span class="fxf_c f_c"><a href="plugin.php?id=comiis_app_find">More...</a></span>{$comiis_app_find['comiis_app_find_title']}</h2><!--{/if}-->
+		<div id="comiis_fx_homeicosoohp">
+			<div class="swiper-wrapper xaqr">
+				<ul class="swiper-slide">
+					<ul class="comiis_fx_two">
+						<!--{eval $comiis_app_find_nn = $comiis_app_find_nns = 0;}-->
+						<!--{loop $comiis_app_find_data $temp}-->
+							<!--{if $temp['show'] == 1 && $temp['cid']}-->
+								<!--{eval $comiis_app_find_nn++;$comiis_app_find_nns++;}-->
+								<!--{if $comiis_app_find_nns > 8}-->
+									<!--{eval $comiis_app_find_nns = 1;$comiis_app_find_nn = 1;}-->
+									</ul></ul><ul class="swiper-slide"><ul class="comiis_fx_two">
+								<!--{/if}-->
+								<!--{if $comiis_app_find_nn > 2}-->
+									<!--{eval $comiis_app_find_nn = 1;}-->
+									</ul><ul class="comiis_fx_two">
+								<!--{/if}-->
+								<li class="gmud"><a href="$temp['url']" title="$temp['name']"><img class="vm" src="source/plugin/comiis_app_find/ico/{if $temp['icon']}{$temp['icon']}{else}noicon.png{/if}"><p>$temp['name']</p></a></li>
+							<!--{/if}-->
+						<!--{/loop}-->
+					</ul>
+				</ul>
+			</div>
+		</div>
+		<div class="comiis_fx_roll cl"></div>
+	</div>
+<!--{/if}-->
+<script>
+if(typeof(Swiper) == 'undefined') {
+	$.getScript("./source/plugin/comiis_app_find/style/comiis_swiper.min.js").done(function(){
+		comiis_app_find_swiperfuii();
+	});
+}else{
+	comiis_app_find_swiperfuii();
+}
+function comiis_app_find_swiperfuii(){
+	var comiis_find_mySwiper = new Swiper('#comiis_fx_homeicosoohp', {
+		slidesPerView : 'auto',
+		<!--{if $comiis_app_find['comiis_app_find_style'] == 1}-->
+		slidesPerView: 5,
+		<!--{elseif $comiis_app_find['comiis_app_find_style'] == 2}-->
+        pagination: '.comiis_fx_roll',
+		<!--{/if}-->
+		onTouchMove: function(swiper){
+			Comiis_Touch_on = 0;
+		},
+		onTouchEnd: function(swiper){
+			Comiis_Touch_on = 1;
+		},
+	});
+}
+</script>
+<!--{/block}-->

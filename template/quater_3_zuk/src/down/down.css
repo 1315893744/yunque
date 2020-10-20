@@ -1,0 +1,587 @@
+/* pc端样式 */
+
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{}
+html{color:#000;overflow-y:scroll;overflow:-moz-scrollbars-vertical}
+body,button,input,select,textarea{font-size:14px;font-family:arial,'Hiragino Sans GB','Microsoft Yahei',Tahoma,Arial,Helvetica,STHeiti; color: #000000}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+em{font-style:normal}
+small{font-size:12px}
+ul,ol{list-style:none}
+a{text-decoration:none}
+legend{color:#000}
+fieldset,img{border:0}
+button,input,select,textarea{font-size:100%}
+table{border-collapse:collapse;border-spacing:0}
+img{-ms-interpolation-mode:bicubic}
+textarea{resize:vertical}
+.left{float:left}
+.right{float:right}
+.overflow{overflow:hidden}
+.hide{display:none}
+.block{display:block}
+.inline{display:inline}
+.error{color:#F00;font-size:12px}
+label,button{cursor:pointer}
+.clearfix:after{content:'\20';display:block;height:0;clear:both}
+.clearfix{zoom:1}.clear{clear:both;height:0;line-height:0;font-size:0;visibility:hidden;overflow:hidden}
+
+	
+/* 顶部样式开始 */
+#quater_head_top { box-shadow: none !important}
+#footer { margin-top: 0 !important}
+.w {
+    width:1100px;
+    margin:0 auto;
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.clearfix{
+	clear: both;
+}
+.top{
+    width: 100%;
+    height: 700px;
+    background: url(kv_bg2.jpg)  no-repeat;
+    background-position: center center;
+}
+.headerBox{
+	width:1100px;
+	height:60px;
+	line-height: 60px;
+	margin:0 auto;
+	clear: both;
+}
+.headerBox-left{
+	float:left;
+	box-sizing:border-box;
+}
+.headerBox-left img{
+    width:40px;
+    height:40px;
+	vertical-align: middle;
+	margin-right:8px;
+}
+.headerBox-left  span{
+    font-weight:bold;
+    font-size: 16px;
+    color:#000;
+}
+.headerBox ul{
+	float: right;
+}
+.headerBox ul li a{
+    font-size: 16px;
+    color:#000;
+}
+.headerBox ul li a:hover{
+	color:#dd2421;
+}
+.downTop{
+    width: 100%;
+    height: 60px;
+    line-height:60px;
+    position: fixed;
+    top:0;
+    left: 0;
+    background: #fff;
+    border-bottom:1px solid #ccc;
+    z-index: 999999;
+}
+.downTop-left,.downTop-right{
+    line-height: 60px;
+}
+.downTop-left img{
+    width: 40px;
+	height:40px;
+	vertical-align: middle;
+}
+.downTop-word{
+    font-weight: bold;
+    margin-left:8px;
+}
+.downTop-right div{
+    line-height: 60px;
+}
+.downTopDowmload{
+    display:block;
+    width:200px;
+    height:40px;
+    background: #E12924;
+    border-radius: 8px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    color:#fff;
+    margin-top:10px;
+    margin-left:30px;
+}
+.downTopDowmload img{
+    width: 20px;
+	height:20px;
+	vertical-align: middle;
+}
+.downTopDowmload:hover{
+    background: #c04000;
+}
+.downTopDowmload:active{
+    background: #dd2421;
+}
+.downTopDowmload span{
+    display: inline-block;
+    margin-right: 10px;
+    margin-left:10px;
+}
+.downTop-word{
+    font-size: 16px;
+    color:#000;
+}
+.system-msg{
+	margin-top:10px;
+}
+.system-word{
+    font-size: 20px;
+    margin-top:20px;
+}
+/* 顶部样式结束 */
+
+/* banner样式开始 */
+.banner-content{
+    width:1200px;
+    margin:0 auto;
+}
+.yinBanner{
+    margin:100px auto;
+    text-align: center;
+}
+.banner-name{
+    font-size: 40px;
+    font-weight: bold;
+    margin-top:240px;
+}
+.banner-msg{
+    font-size: 24px;
+    margin-top:15px;
+    color:#333333;
+}
+.banner-download{
+    width:320px;
+    height:60px;
+    font-size: 16px;
+    line-height: 60px;
+    text-align: center;
+    margin-top:50px;
+    border-radius: 8px;
+    background:#DD2421;
+    color:#fff;
+    cursor:pointer;
+}
+.ludown{
+    background: none;
+}
+.yindown{
+    margin-left:auto;
+    margin-right:auto;
+}
+.ludown:hover{
+    background:#DD2421;
+}
+.banner-download img{
+    width: 40px;
+    height: 40px;
+}
+.windows{
+    margin-top:10px;
+    margin-left:20px;
+}
+.yun{
+    margin-top:10px;
+    margin-right:20px;
+}
+.banner-right{
+    width:637px;
+    height:406px;
+    margin-right:103px;
+    margin-top:170px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.banner-right video{
+    width:100%;
+}
+/* banner样式结束 */
+/* title */
+.title{
+    width: 100%;
+    margin-top:60px;
+    font-size: 28px;
+    text-align: center;
+}
+/* 描述开始 */
+.messageOne,.messageTwo{
+    width: 1200px;
+    margin:0 auto;
+    font-size: 16px;
+    color:#555555;
+    text-align: center;
+}
+.messageOne{
+    margin-top:40px;
+}
+.messageTwo{
+    margin-top:16px;
+    margin-bottom:60px;
+}
+/* wrapper开始 */
+.wrapper{
+    width:100%;
+}
+.list{
+    width:1200px;
+    margin:50px auto;
+    padding:0 35px;
+    box-sizing: border-box;
+}
+.list li{
+    float: left;
+    width: 200px;
+    height: 240px;
+    margin-bottom:60px;
+    text-align: center;
+}
+.list li img{
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+.list li img:hover{
+    animation: myfirst 1s;
+    -moz-animation: myfirst 1s;	/* Firefox */
+    -webkit-animation: myfirst 1s;	/* Safari 和 Chrome */
+    -o-animation: myfirst 1s;
+}
+@keyframes myfirst{
+    0% {transform: scale(1)}
+    50% {transform: scale(1.1)}
+    100% {transform: scale(1)}
+}
+.list li p{
+    white-space:nowrap;
+    margin-top:20px;
+    font-size: 18px;;
+}
+.list .Mli{
+    margin-left:265px;
+    margin-right:265px;
+}
+/* wrapper结束 */
+/* 指南开始 */
+.guide{
+    width: 100%;
+    height: 370px;
+    background: #eeeeee;
+}
+.guide-title{
+    width:100%;
+    text-align: center;
+    font-size: 28px;
+    padding-top:60px;
+}
+.guide-content{
+    width: 1200px;
+    margin:60px auto;
+    padding:0 60px;
+    box-sizing: border-box;
+}
+.guide-content p{
+    font-size: 20px;
+    margin-top:20px;
+}
+.first img{
+    margin-left:50px;
+}
+.second{
+    margin-left:40px;
+}
+.second img{
+    margin-left:45px;
+}
+.jiantou{
+    margin-top:40px;
+    margin-left:20px;
+}
+/* 指南结束 */
+
+/* 录音软件主要样式 */
+.jcBox{
+    width: 100%;
+    height: 220px;
+    background: #f5f5f5;
+}
+.jcBox-content{
+    width:1200px;
+    height: 220px;
+    margin:0 auto;
+}
+.jcBox-content img{
+    margin-top:40px;
+}
+.jcBoxLeft,.jcBoxMiddle,.jcBoxRight{
+    width:33.33%;
+    height: 220px;
+    text-align: center;
+}
+.jcFirst{
+    font-size: 20px;
+    margin-top:20px;
+    color:#DD2421;
+}
+.jcmsg{
+    font-size: 16px;
+    margin-top:10px;
+}
+.lc{
+    width: 1200px;
+    padding:60px 0;
+    margin:0 auto;
+    border-bottom:5px solid #eeeeee;
+}
+.yinlc{
+    padding-top:0px;
+}
+.lcMsg{
+    margin-left:60px;
+    margin-top:160px;
+}
+.lcMsgOne{
+    font-size: 32px;
+}
+.lcMsgTwo{
+    font-size: 20px;
+    color:#555555;
+    margin-top:30px;
+}
+.lcMsgThree{
+    font-size: 20px;
+    color:#555555;
+    margin-top:10px;
+}
+.luChose{
+    margin-top:0px;
+}
+.contentBox-ct{
+    width:100%;
+    height:600px;
+    background: #fff;
+}
+.contentBox-left img{
+    margin-top:30px;
+    width:500px;
+    height:560px;
+}
+.contentBox-right{
+    width:600px;
+    word-break:break-all;
+    word-wrap: break-word;
+    white-space: pre-wrap; 
+    text-align:justify; 
+    text-justify:inter-ideograph;
+}
+.contentBox-right p{
+    color:#333333;
+    font-size: 40px;
+    margin-top:230px;
+}
+.contentBox-right span,.contentBoxOne-left span{
+    display:block;
+    color:#555555;
+    font-size: 24px;
+    line-height: 48px;
+    margin-top:30px;
+}
+.contentBox-cr{
+    width:100%;
+    height:520px;
+    background: #f5f5f5;
+}
+.contentBoxOne-left{
+    width:530px;
+    margin-top:170px;
+}
+.contentBoxOne-left p{
+    color:#333333;
+    font-size: 40px;
+}
+.contentBoxOne-right{
+    width:600px;
+    height:388px;
+    margin-top:60px;
+}
+.contentBoxOne-right img{
+    margin-top:20px;
+    border:1px solid #ccc;
+}
+.listBoxt{
+    width:100%;
+    height:405px;
+    background: #fff;
+}
+.listt{
+    margin-top:80px;
+}
+.listt li{
+    float: left;
+    width:360px;
+    margin-right:60px;
+    text-align: center;
+}
+.listt .lastLi{
+    margin-right:0 !important;
+}
+.listt li img{
+    width:100%;
+    height:230px;
+}
+.listt li p{
+    font-size: 24px;
+    margin-top:15px;
+}
+.listt li span{
+    display:block;
+    color:#555555;
+    font-size: 20px;
+    margin-top:15px;
+}
+.contentBoxOne-right video{
+    width: 100%;
+    height: 100%;
+    border:3px solid #ccc;
+}
+/* 重新下载页面样式开始 */
+.down-banner{
+    width:100%;
+    height:400px;
+    background: url(tiaozhuan_banner_bg.png) center center no-repeat;
+    background-position: center center;
+}
+.down-banner-title{
+    padding-top:80px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+.down-banner-msg{
+    margin-top:15px;
+    text-align: center;
+    font-size: 24px;
+}
+.down-banner-dev{
+    color:#000;
+    font-size: 18px !important;
+    margin-top:20px;
+}
+.down-middle-title{
+    font-size: 30px;
+    font-weight: bold;
+    padding-top:70px;
+}
+.down-middle-line{
+    display:block;
+    width:80px;
+    height:5px;
+    background: #dd2421;
+    margin-top:20px;
+}
+.down-middle-dev{
+    color:#999999;
+    font-size: 20px;
+    line-height: 38px;
+    margin-top:20px;
+}
+.down-middle-img{
+    width:620px;
+}
+.down-middle-img img { max-width: 100%}
+.down-middle-msg{
+    width:480px;
+}
+.down-middle{
+    height:420px;
+}
+.down-title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 40px;
+}
+.down-question{
+	width: 1100px !important;
+    margin-top:50px;
+}
+.down-question-one{
+    font-size: 18px;
+}
+.down-question-two{
+    color:#555555;
+    font-size: 16px;
+    margin-top:15px;
+    margin-bottom:20px;
+    line-height: 30px;
+    text-indent: 1.5em;
+    word-break:break-all;
+    word-wrap: break-word;
+    white-space: pre-wrap; 
+    text-align:justify; 
+    text-justify:inter-ideograph;
+}
+.down-b{
+    padding-top:60px;
+}
+.conver_band{
+    width:1100px;
+    margin:0 auto;
+    height:180px;
+}
+.divdemo{
+    float: left;
+    margin-right: 88px;
+}
+.demoicon,.d_icon{
+    float: left;
+}
+.divdemo-last{
+    margin:0;
+}
+.d_icon{
+    padding-top:15px;
+}
+.TextcColorf{
+    color: #000000;
+    font-size: 20px;
+}
+.TextSize14{
+    margin-top:10px;
+}
+.demoicon {
+    float: left;
+    margin-right:10px;
+    width:80px;
+    height:80px;
+}
+.demoicon img {
+    width:100%;
+    height:100%;
+}
+.downloadTwo{
+    margin:40px auto 30px;
+}
+a.downloadTwo:hover{
+    color: #FFFFFF !important; background: #c04000;
+}
+
+
+
+#footer a { font-size: 12px}

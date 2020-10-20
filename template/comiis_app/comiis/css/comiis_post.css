@@ -1,0 +1,51 @@
+.comiis_seccheck {padding:0 10px}
+.comiis_seccheck .comiis_sec_code {border:none !important;padding:0;height:46px;line-height:46px}
+.comiis_seccheck .comiis_sec_code .sec_code_img, .comiis_seccheck .comiis_sec_code .comiis_px {margin:8px 0}
+.comiis_upbox {padding:6px 0 6px 10px}
+.comiis_post_imglist li {float:left;padding:6px 10px 6px 0;position:relative}
+.comiis_post_imglist li .del {position:absolute;top:-5px;left:-5px}
+.comiis_post_imglist li .del i {font-size:24px;background:#fff;border-radius:50%}
+.comiis_post_imglist li .p_img img {padding:2px;border-radius:2px}
+.comiis_post_imglist li.up_btn a {display:block;width:50px;height:50px;line-height:50px;padding:4px;border-radius:2px;border-style:dashed}
+.comiis_post_imglist li.up_btn a i {position:absolute;top:11px;left:5px;z-index:8;font-size:26px;width:50px;height:50px;line-height:50px;text-align:center}
+.comiis_post_imglist li.up_btn a input {position:absolute;top:11px;left:5px;height:50px;width:50px;z-index:10;opacity:0}
+.comiis_post_ico .comiis_gjsz {float:right;height:26px;line-height:26px;margin-top:1px;border-radius:3px;border:1px solid rgba(0,0,0,0.12)}
+.comiis_post_ico .comiis_gjsz a {margin-right:0;height:26px;line-height:26px;padding:0 7px}
+.comiis_post_ico .comiis_gjsz i {float:left;font-size:16px;margin-right:4px;line-height:28px}
+.comiis_tagbox {padding:10px 12px 5px;line-height:30px}
+.comiis_tagbox .tagbox {width:100%}
+.comiis_tagbox .tagbox a {display:inline-block;font-size:14px;margin-left:10px;padding:0 15px;text-align:center;border-radius:20px}
+.comiis_tagbox .tagbox th {width:100px;text-align:right}
+.comiis_tagbox .tagbox .comiis_px {font-size:14px}
+.comiis_tagbox p {margin-top:3px;text-align:center}
+.comiis_tag, .comiis_pictitle{position:relative}
+.comiis_tag:after{right:-2px;top:0;content: " ";display: block;position:absolute;width:8px;height:8px;z-index:2;pointer-events:none;background:#f00;border-radius:50%}
+.comiis_minipost_icot .comiis_gjsz {margin-top:3px}
+.comiis_minipost_icot .comiis_tag:after {right:8px}
+.comiis_pictitle span{right:-1px;top:-1px;display: block;position:absolute;padding:0 3px;height:14px;line-height:14px;text-align:center;font-size:12px;z-index:2;pointer-events:none;background:#f00;color:#fff;border-radius:2px;display:none}
+.tebie_poll_img {padding:12px}
+.tebie_poll_img img {width:100%;font-size:0;border-radius:2px}
+.comiis_post_sort li {font-size:15px}
+.comiis_post_sort .tebie_li {padding:10px 10px 10px 100px;position:relative}
+.comiis_post_sort li.tebie_lir {padding:10px 50px 10px 100px;position:relative}
+.comiis_post_sort li.tebie_lirs {padding:0 115px 10px 100px}
+.comiis_post_sort .tebie_li span, .comiis_post_sort li.tebie_lir span {width:90px}
+.post_sort .flx {width:100%;overflow:hidden}
+.post_sort label {float:left;display:block;width:46%;margin:2px 1%}
+.comiis_post_sort .comiis_px, .comiis_post_sort .comiis_pt {font-size:15px}
+.comiis_input_style input.comiis_file_key {width:26px;height:30px;opacity:0;position:absolute;top:0px;right:0px;display:block;z-index:2}
+.comiis_upbox_attach {padding:0 12px;overflow:hidden}
+.comiis_upbox_attach p {height:30px;line-height:30px;padding:12px 0;position:relative}
+.comiis_upbox_attach p span {float:right;padding-right:5px}
+.comiis_upbox_attach p a {display:inline-block;width:82px;height:30px;line-height:30px;padding-left:15px;border-radius:40px}
+.comiis_upbox_attach p a input {position:absolute;top:10px;left:0;height:40px;width:100px;z-index:10;opacity:0}
+.comiis_upbox_attach p a i {float:left;padding-right:5px}
+.comiis_upbox_attach li {height:22px;line-height:22px;padding:12px 0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.comiis_upbox_attach li .kmbtn {float:right;padding:0 10px;margin-left:8px;border-radius:30px}
+.comiis_upbox_attach li .kmimg {float:left;height:22px;width:22px;margin-right:6px}
+.comiis_bqbox .bqbox_t ul {height:41px}
+.comiis_icotxt .b_l {border-left:none !important}
+.comiis_icotxt .b_r {border-right:none !important}
+.comiis_atlist {margin:0 12px;overflow:hidden}
+.comiis_atlist li {float:left;margin-top:12px;margin-right:12px;height:26px;line-height:26px;border-radius:20px}
+.comiis_atlist a {display:block;padding:0 15px}

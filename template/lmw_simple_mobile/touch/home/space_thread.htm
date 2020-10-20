@@ -1,0 +1,33 @@
+<!--{template common/header}-->
+
+<!-- header start -->
+<header class="header">
+    <div class="nav" style="background: white;">
+       <a href="home.php?mod=space&uid=1&do=profile&mycenter=1" class="z"><img src="{STATICURL}image/mobile/images/icon_back.png" /></a>
+	   <span>{lang mythread}</span>
+   </div>
+</header>
+<!-- header end -->
+<!-- main threadlist start -->
+<div class="threadlist" style="background-color: white;margin-top: 10px;">
+	<ul>
+	<!--{if $list}-->
+		<!--{loop $list $thread}-->
+			<li>
+			<!--{if $viewtype == 'reply' || $viewtype == 'postcomment'}-->
+			<a href="forum.php?mod=redirect&goto=findpost&ptid=$thread[tid]&pid=$thread[pid]" target="_blank">$thread[subject]</a>
+			<!--{else}-->
+			<a href="forum.php?mod=viewthread&tid=$thread[tid]" target="_blank" {if $thread['displayorder'] == -1}class="grey"{/if}>$thread[subject]</a>
+			<!--{/if}-->
+			<span class="num">{$thread[replies]}</span>
+			</li>
+		<!--{/loop}-->
+	<!--{else}-->
+		<li>{lang no_related_posts}</li>
+	<!--{/if}-->
+	</ul>
+	$multi
+</div>
+<!-- main threadlist end -->
+<!--{eval $nofooter = true;}-->
+<!--{template common/footer}-->

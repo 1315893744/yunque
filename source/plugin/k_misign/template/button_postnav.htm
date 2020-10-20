@@ -1,0 +1,86 @@
+<!--{block return}-->
+<style type="text/css">
+.lbr_dl{
+	border:1px solid #f0f0f0;
+	padding:12px 0 0 11px;
+	overflow:hidden;
+	height:63px;
+	margin-bottom:10px;
+}
+.forthro_a_button{
+	cursor: pointer;
+	display:block;
+	float:left;
+	width:80px;
+	height:50px;
+	margin-right:7px;
+	color:#FFFFFF;
+	background:{$setting['extendb']['postnav_detail']['bgcolor']} url(./source/plugin/k_misign/static/image/button/postnav/icon_post.png) no-repeat 20px 16px;
+    font-size: 16px;
+    line-height: 50px;
+    padding: 0px 15px 0px 50px;
+}
+.forthro_a_button:hover {
+	color:#FFFFFF;
+}
+.forthro_b_button{
+	display:block;
+	float: right;
+    margin-right: 10px;
+	text-align:center;
+	height:50px;
+	width:{$setting['extendb']['postnav_detail']['width']}px;
+	background:{$setting['extendb']['postnav_detail']['bgcolor']};
+	color:#FFF;
+}
+.forthro_b_button em {
+	float: left;
+    display: block;
+    color: #FFF;
+    background: #FF3300;
+    line-height: 50px;
+    padding: 0px 0px 0px 1px;
+    font-size: 16px;
+	width:49%;
+}
+.forthro_b_button span {
+	color:#666;
+    background: #FFF;
+	float: right;
+    display: block;
+    margin: 1px;
+    height: 40px;
+    line-height: 20px;
+    padding: 4px 0px;
+	width: 49%;
+}
+
+</style>
+
+ <div class="lbr_dl">
+ 		{if $_G['fid']}
+        <a class="forthro_a_button"  id="newspecial" onmouseover="$('newspecial').id = 'newspecialtmp';this.id = 'newspecial';showMenu({'ctrlid':this.id})"{if !$_G['forum']['allowspecialonly'] && empty($_G['forum']['picstyle']) && !$_G['forum']['threadsorts']['required']} onclick="showWindow('newthread', 'forum.php?mod=post&action=newthread&fid=$_G[fid]')"{else} onclick="location.href='forum.php?mod=post&action=newthread&fid=$_G[fid]';return false;"{/if} title="{$extendlang['send_posts']}">{$extendlang['send_posts']}</a>
+        {else}
+ 		<a class="forthro_a_button" onclick="showWindow('{if $_G['uid']}nav{else}login{/if}', this.href, 'get', 0)" href="{if $_G['uid']}forum.php?mod=misc&action=nav{else}member.php?mod=logging&action=login{/if}" title="{$extendlang['send_posts']}">{$extendlang['send_posts']}</a>
+        {/if}
+       <a <!--{if $qiandaodb['time'] >= $tdtime || !$_G['uid']}--> {if $_G['uid']}href="{$setting['pluginurl']}sign" target="_blank"{else}href="member.php?mod=logging&action=login" onclick="showWindow('login', this.href);return false;"{/if}<!--{else}--> href="{$setting['pluginurl']}sign&operation=qiandao&format=button&formhash={FORMHASH}" onclick="ajaxget(this.href, 'JD_win', '', '', '', 'cjdsign();');return false;"<!--{/if}--> class="forthro_b_button" target="_blank" id="misign_button_postnav_sign">
+       	<em id="misign_button_postnav_signtxt"><!--{if $qiandaodb['time'] >= $tdtime}-->{lang k_misign:signed}<!--{else}-->{lang k_misign:sign}<!--{/if}--></em>
+        <span><script type="text/javascript">var ybsj = new Date();document.write('{$extendlang[week]}'+'{$extendlang[week0]}{$extendlang[week1]}{$extendlang[week2]}{$extendlang[week3]}{$extendlang[week4]}{$extendlang[week5]}{$extendlang[week6]}'.charAt(new Date().getDay())+'<br>'+(ybsj.getMonth()+1)+'{$extendlang[month]}'+ybsj.getDate()+'{$extendlang[week0]}');</script></span>
+       </a>
+</div>
+<div class="JD_win" style="display:none;"></div>
+     
+<script type="text/javascript">
+function cjdsign(){
+	document.getElementById("misign_button_postnav_sign").href = '{$setting['pluginurl']}sign';
+	document.getElementById("misign_button_postnav_signtxt").innerHTML = '{lang k_misign:signed}';
+	document.getElementById('JD_win').style.display='block';
+	var fadeOut=function(){
+		document.getElementById('JD_win').style.display='none';
+	}
+	setTimeout(fadeOut,3000);
+} 
+</script>
+
+<!--{/block}-->
+<!--{eval return $return;}-->

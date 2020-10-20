@@ -1,0 +1,72 @@
+<!--{template common/header}-->
+	<!--{eval $comiis_app_switch['comiis_space_nv'] = '3';}-->
+	<!--{template home/space_header}-->
+	<style>
+	.comiis_space_bglist {padding:7px 6px 6px;overflow:hidden;}
+	.comiis_space_bglist li {float:left;width:33.33%;padding:6px;box-sizing:border-box;text-align:center;overflow:hidden;border-radius:2px;}
+	.comiis_space_bglist li img {width:100%;margin-bottom:5px;border-radius:2px;}
+	#comiis_home_sub {overflow:hidden;}
+	#comiis_home_sub li.swiper-slide {width:20%;height:39px;}
+	.comiis_space_box {transition: all .4s ease;-webkit-transition: all .4s ease;}
+	</style>
+	<div class="comiis_topnv xvwh bg_f b_b" id="comiis_home_sub">
+		<ul class="swiper-wrapper">
+			<li class="swiper-slide{if !$smod} kmon{/if}"><a href="{$comiis_home_url}" class="{if !$smod}b_0 f_0{else}f_c{/if}">{$_G['cache']['plugin']['comiis_app_homestyle']['name']}</a></li>
+			<!--{loop $comiis_app_home $temp}-->
+				<!--{if $temp['img'] == '0'}-->
+					<li class="swiper-slide{if $smod == $temp['id']} kmon{eval $comiis_home_dir=$temp['dir'];}{/if}"><a href="{$comiis_home_url}&smod={$temp['id']}" class="{if $smod == $temp['id']}b_0 f_0{else}f_c{/if}">{$temp['name']}</a></li>
+				<!--{/if}-->
+			<!--{/loop}-->
+		</ul>
+	</div>
+	<div class="comiis_space_bglist vydd bg_f b_t mt10 cl">
+		<ul>
+			<!--{loop $comiis_app_home $temp}-->
+				<!--{if $temp['img'] != '0' && ($temp['dir'] == $comiis_home_dir || (!$smod && $temp['recommend'] == 1))}-->
+					<li onclick="comiis_homebglwoz(this, './source/plugin/comiis_app_homestyle/image/home_bg/{$temp['dir']}/{$temp['img']}', '{$temp['id']}');"{if $_G['comiis_homestyleid'] == $temp['id']} class="bg_0 f_f"{/if}><img src="./source/plugin/comiis_app_homestyle/image/home_bg/{$temp['dir']}/{$temp['img']}" class="vm">{$temp['name']}</li>
+				<!--{/if}-->
+			<!--{/loop}-->
+		</ul>
+	</div>
+	<script src="template/comiis_app/comiis/js/comiis_swiper.min.js?{VERHASH}"></script>
+	<script>
+		function comiis_homebglwoz(a, pic, id){
+			$('body,html').animate({scrollTop:0}, 200);
+			$(a).parent().find("li").attr("class", "");
+			$(a).attr("class", "bg_0 f_f");
+			comiis_post_bgjxts(id);
+			setTimeout(function() {
+				$('.comiis_space_box').attr('style', 'background:url('+pic+') no-repeat 0 0 / cover;')
+			}, 200);
+		}
+		function comiis_post_bgjxts(id){
+			if($('#comiis_home_form').length > 0) {
+				$('#comiis_home_form').val(id);
+			}else{
+				$('.comiis_head .header_y').html('<form method="post" autocomplete="off" action="plugin.php?id=comiis_app_homestyle">'+
+					'<input type="hidden" name="formhash" value="{FORMHASH}" />'+
+					'<input type="hidden" name="homesubmit" value="true" />'+
+					'<input type="hidden" id="comiis_home_form" name="styleid" value="'+id+'">'+
+					'<input type="submit" value="{$comiis_app_homestyle_lang['67']}" class="formdialog comiis_sendbtn bg_del f_f y">'+
+				'</form>');
+			}
+		}
+		if($("#comiis_home_sub li.kmon").length > 0) {
+			var comiis_indexjlhf = $("#comiis_home_sub li.kmon").offset().left + $("#comiis_home_sub li.kmon").width() >= $(window).width() ? $("#comiis_home_sub li.kmon").index() : 0;
+		}else{
+			var comiis_indexjlhf = 0;
+		}
+		new Swiper('#comiis_home_sub', {
+			freeMode : true,
+			slidesPerView : 'auto',
+			initialSlide : comiis_indexjlhf,
+			onTouchMove: function(swiper){
+				Comiis_Touch_on = 0;
+			},
+			onTouchEnd: function(swiper){
+				Comiis_Touch_on = 1;
+			},
+		});
+	</script>
+<!--{eval $comiis_foot = 'no';}-->
+<!--{template common/footer}-->

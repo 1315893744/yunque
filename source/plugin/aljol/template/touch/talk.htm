@@ -1,0 +1,103 @@
+{template aljol:head}
+<header class="topBar2 top1">
+	<a href="plugin.php?id=aljol"><i class="iconfont icon-fanhui"></i></a>
+	<span>{if !$friendid}&#22312;&#32447;&#32842;&#22825;&#23460;{else}{$firendname['username']}{/if}</span>
+	<a href="./"><i class="iconfont icon-shouye"></i></a>
+</header>
+<main class="talk">
+	<div style="text-align: center;margin-top:20px;color:#666666;" onclick="loadmore(this, {$friendid}, {$_G['uid']}, {$loadchatid})">&#21152;&#36733;&#26356;&#22810;</div>
+	<ul id="loadmore">
+		{loop $selftalkrecord $tmp_key $tmp_value}
+			{if $tmp_value['uid'] != $_G['uid']}
+			<li class="layim-chat-li w" date-id="{$tmp_value['id']}">
+				<div style="font-size:12px;color:#999999;text-align:center;padding:20px;">{$tmp_value['datetime']}</div>
+				<div class="layim-chat-user" >
+					{eval echo avatar($tmp_value['uid'])}
+					<cite>{$tmp_value['username']}</cite>
+				</div>
+				<div class="layim-chat-text w">
+					{if $tmp_value['type']}
+						<img src="http://liangjianyun.oss-cn-shanghai.aliyuncs.com/hongbao.png" width="180"   onclick="show_red_packet('$tmp_value[id]','aljol')"/>
+					{else}
+						{if $tmp_value['talk']}
+							{$tmp_value['talk']}
+						{else}
+							<img src="{$tmp_value['picture']}" class="jm" onclick="clickjm(this);">
+						{/if}
+					{/if}
+				</div>
+			</li>
+			{else}
+			<li class="layim-chat-li layim-chat-mine" date-id="{$tmp_value['id']}">
+				<div style="font-size:12px;color:#999999;text-align:center;padding:20px;">{$tmp_value['datetime']}</div>
+				<div class="layim-chat-user">
+					{eval echo avatar($tmp_value['uid'])}
+					<cite>{$tmp_value['username']}</cite>
+				</div>
+				<div class="layim-chat-text">
+					{if $tmp_value['type']}
+					<img src="http://liangjianyun.oss-cn-shanghai.aliyuncs.com/hongbao.png" width="180"   onclick="show_red_packet('$tmp_value[id]','aljol')"/>
+					{else}
+					{if $tmp_value['talk']}
+						{$tmp_value['talk']}
+					{else}
+						<img src="{$tmp_value['picture']}" class="jm" onclick="clickjm(this);">
+					{/if}
+					{/if}
+				</div>
+			</li>
+			{/if}
+		{/loop}
+	</ul>
+</main>
+
+
+<div class="swiper-container1" style="display: none;">
+	<div class="closeswiper"><i class="iconfont icon-remove"></i></div>
+	<div class="swiper-wrapper">
+
+	</div>
+</div>
+
+
+<div class="Emain">
+	<div class="layim-layer" id='emoji'>
+		<div class="Econt">
+		<ul class="Eface">
+		</ul>
+		</div>
+	</div>
+</div>
+<footer class="talk-foot">
+	<div class="layim-chat-send">
+		<input type="text" autocomplete="off" id="saytext" oninput="addtext()" onkeydown="sendKeyDown({$friendid})">
+		<button class="layim-send layui-disabled" onclick="send({$friendid},this);">{lang aljol:talk_htm_1}</button>
+	</div>
+	<div class="layim-chat-tool" >
+		<i class="iconfont icon-biaoqing emotion"></i>
+		<i class="iconfont icon-xuanzetupian pic">
+			<form  method="post" enctype="multipart/form-data" action="" id="picturefile">
+            	<input id="picture" type="file" name="picture" onchange="lrz_mobile({$friendid},this)">
+        	</form>
+		</i>
+		{if file_exists('source/plugin/aljhb/aljhb.inc.php')}
+		<i class="iconfont " onclick="red_packet_post('1','aljol')"><img src="source/plugin/aljol/static/img/red_p.png" width="20"/></i>
+		{/if}
+	</div>
+</footer>
+</body>
+<script>
+var morepage = '{$morepage}';
+chat({$friendid});
+addslide();
+</script>
+{if file_exists('source/plugin/aljhb/aljhb.inc.php')}
+{template aljhb:red_packet}
+{/if}
+</html>
+<!--{eval updatesession();}-->
+<!--{if defined('IN_MOBILE')}-->
+<!--{eval output();}-->
+<!--{else}-->
+<!--{eval output_preview();}-->
+<!--{/if}-->

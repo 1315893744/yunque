@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X3,X3.1,X3.2,X3.3,X3.4,F1.0]]></item>
+	<item id="Time"><![CDATA[2018-10-01 22:38]]></item>
+	<item id="From"><![CDATA[XXX网 - 站长互动平台]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[克米設計-查看全文]]></item>
+			<item id="identifier"><![CDATA[comiis_lookfulltext]]></item>
+			<item id="description"><![CDATA[為手機版內容頁長文章提供點擊查看全文功能，使頁面更美觀實用]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[comiis_lookfulltext/]]></item>
+			<item id="copyright"><![CDATA[XXX网 - 站长互动平台]]></item>
+			<item id="version"><![CDATA[v1.0]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[comiis_lookfulltext_pc]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[comiis_lookfulltext]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[28]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[comiis_more]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[更多克米設計作品]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X3,X3.1,X3.2,X3.3,X3.4,F1.0]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[開啟PC版]]></item>
+				<item id="description"><![CDATA[設置是否開啟PC版]]></item>
+				<item id="variable"><![CDATA[open_pc]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[PC版是否加載JQuery]]></item>
+				<item id="description"><![CDATA[PC版是否需要加載JQuery庫]]></item>
+				<item id="variable"><![CDATA[jquery]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[PC版JQuery標識]]></item>
+				<item id="description"><![CDATA[設置PC版的JQuery標識]]></item>
+				<item id="variable"><![CDATA[jquery_id]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[jQuery]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[PC版內容頁容器名稱]]></item>
+				<item id="description"><![CDATA[設置PC版內容頁內容區域容器的CSS變量名稱（注︰使用克米設計手機版以及默認模板無需設置此項，留空即可，默認已經自動適配）]]></item>
+				<item id="variable"><![CDATA[pc_class]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[PC版最大高度]]></item>
+				<item id="description"><![CDATA[設置PC版頁面內容超過多少高度才出現點擊查看全文按鈕，注︰數值不能低于300]]></item>
+				<item id="variable"><![CDATA[pc_maxheight]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[400]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[開啟手機版]]></item>
+				<item id="description"><![CDATA[設置是否開啟手機版]]></item>
+				<item id="variable"><![CDATA[open_mob]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[論壇啟用版塊]]></item>
+				<item id="description"><![CDATA[請選擇啟用查看全文功能的版塊
+設置為空則不啟用]]></item>
+				<item id="variable"><![CDATA[forum]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[文章是否啟用]]></item>
+				<item id="description"><![CDATA[設置文章內容頁是否啟用]]></item>
+				<item id="variable"><![CDATA[portal]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[群組是否啟用]]></item>
+				<item id="description"><![CDATA[設置群組帖子內容頁是否啟用]]></item>
+				<item id="variable"><![CDATA[group]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[日志是否啟用]]></item>
+				<item id="description"><![CDATA[設置日志內容頁是否啟用]]></item>
+				<item id="variable"><![CDATA[blog]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[按鈕文字]]></item>
+				<item id="description"><![CDATA[設置點擊按鈕的文字名稱]]></item>
+				<item id="variable"><![CDATA[name]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[點擊查看全文]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[內容頁容器名稱]]></item>
+				<item id="description"><![CDATA[設置內容頁內容區域容器的CSS變量名稱（注︰使用克米設計手機版以及默認模板無需設置此項，留空即可，默認已經自動適配）]]></item>
+				<item id="variable"><![CDATA[class]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[最大高度]]></item>
+				<item id="description"><![CDATA[設置頁面內容超過多少高度才出現點擊查看全文按鈕，注︰數值不能低于300]]></item>
+				<item id="variable"><![CDATA[maxheight]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[360]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[顯示樣式]]></item>
+				<item id="description"><![CDATA[設置查看全文按鈕顯示樣式]]></item>
+				<item id="variable"><![CDATA[kmstyle]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[1 = 文字樣式
+2 = 按鈕樣式]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[漸變區域背景色]]></item>
+				<item id="description"><![CDATA[設置漸變區域背景顏色, 一般設置和你內容頁頁面背景顏色一樣即可]]></item>
+				<item id="variable"><![CDATA[bgcolor]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#FFFFFF]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="title"><![CDATA[按鈕文字/背景色]]></item>
+				<item id="description"><![CDATA[設置按鈕的文字或按鈕樣式下的背景顏色（注︰如果需要與克米設計手機版配色自動搭配主色調，此處留空即可）]]></item>
+				<item id="variable"><![CDATA[txtcolor]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#FF705E]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="16">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[底部間隔距離]]></item>
+				<item id="description"><![CDATA[設置查看全文按鈕底部留空的距離，直接輸入數字即可，默認:30]]></item>
+				<item id="variable"><![CDATA[kmbottom]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[40]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="17">
+				<item id="displayorder"><![CDATA[17]]></item>
+				<item id="title"><![CDATA[附加CSS]]></item>
+				<item id="description"><![CDATA[為按鈕添加CSS進行個性化樣式設置]]></item>
+				<item id="variable"><![CDATA[kmcss]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+	</item>
+</root>

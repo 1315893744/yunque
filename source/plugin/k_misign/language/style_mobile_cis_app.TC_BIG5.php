@@ -1,0 +1,7 @@
+<?php
+
+$extendlang = array(
+	'title' => 'APP!¤â¾÷¼ÒªO',
+);
+
+?>

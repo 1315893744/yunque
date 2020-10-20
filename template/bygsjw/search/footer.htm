@@ -1,0 +1,151 @@
+
+<!--{eval require_once(DISCUZ_ROOT.'./template/bygsjw/php/footer.php');}-->
+
+<!--{eval $focusid = getfocus_rand($_G[basescript]);}-->
+<!--{if $focusid !== null}-->
+	<!--{eval $focus = $_G['cache']['focus']['data'][$focusid];}-->
+	<div class="focus" id="focus">
+		<div class="bm">
+			<div class="bm_h cl">
+				<a href="javascript:;" onclick="setcookie('nofocus_$focusid', 1, $_G['cache']['focus']['cookie']*3600);$('focus').style.display='none'" class="y" title="{lang close}">{lang close}</a>
+				<h2><!--{if $_G['cache']['focus']['title']}-->{$_G['cache']['focus']['title']}<!--{else}-->{lang focus_hottopics}<!--{/if}--></h2>
+			</div>
+			<div class="bm_c">
+				<dl class="xld cl bbda">
+					<dt><a href="{$focus['url']}" class="xi2" target="_blank">$focus['subject']</a></dt>
+					<!--{if $focus[image]}-->
+					<dd class="m"><a href="{$focus['url']}" target="_blank"><img src="{$focus['image']}" alt="$focus['subject']" /></a></dd>
+					<!--{/if}-->
+					<dd>$focus['summary']</dd>
+				</dl>
+				<p class="ptn hm"><a href="{$focus['url']}" class="xi2" target="_blank">{lang focus_show} &raquo;</a></p>
+			</div>
+		</div>
+	</div>
+<!--{/if}-->
+
+<!--{ad/footerbanner/wp a_f hm/1}--><!--{ad/footerbanner/wp a_f hm/2}--><!--{ad/footerbanner/wp a_f hm/3}-->
+<!--{ad/float/a_fl/1}--><!--{ad/float/a_fr/2}-->
+<!--{ad/couplebanner/a_fl a_cb/1}--><!--{ad/couplebanner/a_fr a_cb/2}-->
+
+<!--{hook/global_footer}-->
+
+<div class="ft_xin">
+	<!--{eval}-->
+		$footer_nav_logo_param = byg_diy_block_param('简约通用电脑版尾部导航LOGO');
+		$footer_nav_sum_param = byg_diy_block_param('简约通用电脑版尾部导航网站简介');
+		$footer_nav_tit1_param = byg_diy_block_param('简约通用电脑版尾部导航栏目标题1');
+		$footer_nav_url11_param = byg_diy_block_param('简约通用电脑版尾部导航标题1链接1');
+		$footer_nav_url12_param = byg_diy_block_param('简约通用电脑版尾部导航标题1链接2');
+		$footer_nav_url13_param = byg_diy_block_param('简约通用电脑版尾部导航标题1链接3');
+		$footer_nav_url14_param = byg_diy_block_param('简约通用电脑版尾部导航标题1链接4');
+		$footer_nav_tit2_param = byg_diy_block_param('简约通用电脑版尾部导航栏目标题2');
+		$footer_nav_url21_param = byg_diy_block_param('简约通用电脑版尾部导航标题2链接1');
+		$footer_nav_url22_param = byg_diy_block_param('简约通用电脑版尾部导航标题2链接2');
+		$footer_nav_url23_param = byg_diy_block_param('简约通用电脑版尾部导航标题2链接3');
+		$footer_nav_url24_param = byg_diy_block_param('简约通用电脑版尾部导航标题2链接4');
+		$footer_nav_tit3_param = byg_diy_block_param('简约通用电脑版尾部导航栏目标题3');
+		$footer_nav_url31_param = byg_diy_block_param('简约通用电脑版尾部导航标题3链接1');
+		$footer_nav_url32_param = byg_diy_block_param('简约通用电脑版尾部导航标题3链接2');
+		$footer_nav_url33_param = byg_diy_block_param('简约通用电脑版尾部导航标题3链接3');
+		$footer_nav_url34_param = byg_diy_block_param('简约通用电脑版尾部导航标题3链接4');
+		$footer_nav_pic1_param = byg_diy_block_param('简约通用电脑版尾部导航二维码1图片');
+		$footer_nav_word1_param = byg_diy_block_param('简约通用电脑版尾部导航二维码1文字');
+		$footer_nav_pic2_param = byg_diy_block_param('简约通用电脑版尾部导航二维码2图片');
+		$footer_nav_word2_param = byg_diy_block_param('简约通用电脑版尾部导航二维码2文字');
+		$f_n_logo = unserialize($footer_nav_logo_param);
+		$f_n_sum = unserialize($footer_nav_sum_param);
+		$f_n_tit1 = unserialize($footer_nav_tit1_param);
+		$f_n_url11 = unserialize($footer_nav_url11_param);
+		$f_n_url12 = unserialize($footer_nav_url12_param);
+		$f_n_url13 = unserialize($footer_nav_url13_param);
+		$f_n_url14 = unserialize($footer_nav_url14_param);
+		$f_n_tit2 = unserialize($footer_nav_tit2_param);
+		$f_n_url21 = unserialize($footer_nav_url21_param);
+		$f_n_url22 = unserialize($footer_nav_url22_param);
+		$f_n_url23 = unserialize($footer_nav_url23_param);
+		$f_n_url24 = unserialize($footer_nav_url24_param);
+		$f_n_tit3 = unserialize($footer_nav_tit3_param);
+		$f_n_url31 = unserialize($footer_nav_url31_param);
+		$f_n_url32 = unserialize($footer_nav_url32_param);
+		$f_n_url33 = unserialize($footer_nav_url33_param);
+		$f_n_url34 = unserialize($footer_nav_url34_param);
+		$f_n_pic1 = unserialize($footer_nav_pic1_param);
+		$f_n_word1 = unserialize($footer_nav_word1_param);
+		$f_n_pic2 = unserialize($footer_nav_pic2_param);
+		$f_n_word2 = unserialize($footer_nav_word2_param);
+	<!--{/eval}-->
+	<!--{if $footer_nav_logo_param || $footer_nav_tit1_param || $footer_nav_tit2_param || $footer_nav_tit3_param || $footer_nav_pic1_param || $footer_nav_pic2_param}-->
+	<div class="ft_top">
+		<div class="ft_wp cl">
+			<div class="ft_1 z">
+				<!--{if $f_n_logo}-->
+				<a href="{$f_n_logo['url']}" target="{$f_n_logo['atarget']}"><img src="{$f_n_logo['pic']}" alt="{$f_n_logo['text']}"/></a>
+				<!--{/if}-->
+				<p>{$f_n_sum['text']}</p>
+			</div>
+			<div class="ft_2 z">
+				<a href="{$f_n_tit1['url']}" target="{$f_n_tit1['atarget']}"><h3>{$f_n_tit1['text']}</h3></a>
+				<ul>
+					<li><a href="{$f_n_url11['url']}" target="{$f_n_url11['atarget']}">{$f_n_url11['text']}</a></li>
+					<li><a href="{$f_n_url12['url']}" target="{$f_n_url12['atarget']}">{$f_n_url12['text']}</a></li>
+					<li><a href="{$f_n_url13['url']}" target="{$f_n_url13['atarget']}">{$f_n_url13['text']}</a></li>
+					<li><a href="{$f_n_url14['url']}" target="{$f_n_url14['atarget']}">{$f_n_url14['text']}</a></li>
+				</ul>
+			</div>
+			<div class="ft_2 z">
+				<a href="{$f_n_tit2['url']}" target="{$f_n_tit2['atarget']}"><h3>{$f_n_tit2['text']}</h3></a>
+				<ul>
+					<li><a href="{$f_n_url21['url']}" target="{$f_n_url21['atarget']}">{$f_n_url21['text']}</a></li>
+					<li><a href="{$f_n_url22['url']}" target="{$f_n_url22['atarget']}">{$f_n_url22['text']}</a></li>
+					<li><a href="{$f_n_url23['url']}" target="{$f_n_url23['atarget']}">{$f_n_url23['text']}</a></li>
+					<li><a href="{$f_n_url24['url']}" target="{$f_n_url24['atarget']}">{$f_n_url24['text']}</a></li>
+				</ul>
+			</div>
+			<div class="ft_2 z">
+				<a href="{$f_n_tit3['url']}" target="{$f_n_tit3['atarget']}"><h3>{$f_n_tit3['text']}</h3></a>
+				<ul>
+					<li><a href="{$f_n_url31['url']}" target="{$f_n_url31['atarget']}">{$f_n_url31['text']}</a></li>
+					<li><a href="{$f_n_url32['url']}" target="{$f_n_url32['atarget']}">{$f_n_url32['text']}</a></li>
+					<li><a href="{$f_n_url33['url']}" target="{$f_n_url33['atarget']}">{$f_n_url33['text']}</a></li>
+					<li><a href="{$f_n_url34['url']}" target="{$f_n_url34['atarget']}">{$f_n_url34['text']}</a></li>
+				</ul>
+			</div>
+			<div class="ft_3 y">
+				<!--{if $f_n_pic2}-->
+				<img src="{$f_n_pic2['pic']}" alt="{$f_n_pic2['text']}"/>
+				<!--{/if}-->
+				<p>{$f_n_word2['text']}</p>
+			</div>
+			<div class="ft_3 y" style="padding-left:50px;">
+				<!--{if $f_n_pic1}-->
+				<img src="{$f_n_pic1['pic']}" alt="{$f_n_pic1['text']}"/>
+				<!--{/if}-->
+				<p>{$f_n_word1['text']}</p>
+			</div>
+		</div>
+	</div>
+	<!--{/if}-->
+	<div id="ft" class="wp cl">
+		<div id="flk" class="y">
+			<!--{loop $_G['setting']['footernavs'] $nav}--><!--{if $nav['available'] && ($nav['type'] && (!$nav['level'] || ($nav['level'] == 1 && $_G['uid']) || ($nav['level'] == 2 && $_G['adminid'] > 0) || ($nav['level'] == 3 && $_G['adminid'] == 1)) ||
+			!$nav['type'] && ($nav['id'] == 'stat' && $_G['group']['allowstatdata'] || $nav['id'] == 'report' && $_G['uid'] || $nav['id'] == 'archiver'))}-->$nav[code]<span class="pipe">|</span><!--{/if}--><!--{/loop}-->
+			<strong><a href="$_G['setting']['siteurl']" target="_blank">$_G['setting']['sitename']</a></strong>
+			<!--{if $_G['setting']['icp']}-->( <a href="http://www.miibeian.gov.cn/" target="_blank">$_G['setting']['icp']</a> )<!--{/if}-->
+			<!--{hook/global_footerlink}-->
+			<!--{if $_G['setting']['statcode']}--><span class="pipe">| $_G['setting']['statcode']</span><!--{/if}-->
+			<!--{eval updatesession();}-->
+		</div>
+		<div id="frt">
+			<em>Powered by <strong><a href="http://www.discuz.net" target="_blank">Discuz!</a></strong> <em>$_G['setting']['version']</em><!--{if !empty($_G['setting']['boardlicensed'])}--> <a href="http://license.comsenz.com/?pid=1&host=$_SERVER[HTTP_HOST]" target="_blank">Licensed</a><!--{/if}--></em> &nbsp;
+			<em>&copy; 2001-2013 <a href="http://www.comsenz.com" target="_blank">Comsenz Inc.</a></em>
+		</div>
+	</div>
+</div>
+
+<!--{if $_G[uid] && !isset($_G['cookie']['checkpm'])}-->
+<script language="javascript"  type="text/javascript" src="home.php?mod=spacecp&ac=pm&op=checknewpm&rand=$_G[timestamp]"></script>
+<!--{/if}-->
+<!--{eval output();}-->
+</body>
+</html>

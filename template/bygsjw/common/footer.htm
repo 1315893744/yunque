@@ -1,0 +1,544 @@
+	</div>
+<footer>
+<!--{eval require_once(DISCUZ_ROOT.'./template/bygsjw/php/footer.php');}-->
+
+<!--{if empty($topic) || ($topic[usefooter])}-->
+	<!--{eval $focusid = getfocus_rand($_G[basescript]);}-->
+	<!--{if $focusid !== null}-->
+		<!--{eval $focus = $_G['cache']['focus']['data'][$focusid];}-->
+		<!--{eval $focusnum = count($_G['setting']['focus'][$_G[basescript]]);}-->
+		<div class="focus" id="sitefocus">
+			<div class="bm">
+				<div class="bm_h cl">
+					<a href="javascript:;" onclick="setcookie('nofocus_$_G[basescript]', 1, $_G['cache']['focus']['cookie']*3600);$('sitefocus').style.display='none'" class="y" title="{lang close}">{lang close}</a>
+					<h2>
+						<!--{if $_G['cache']['focus']['title']}-->{$_G['cache']['focus']['title']}<!--{else}-->{lang focus_hottopics}<!--{/if}-->
+						<span id="focus_ctrl" class="fctrl"><img src="{IMGDIR}/pic_nv_prev.gif" alt="{lang footer_previous}" title="{lang footer_previous}" id="focusprev" class="cur1" onclick="showfocus('prev');" /> <em><span id="focuscur"></span>/$focusnum</em> <img src="{IMGDIR}/pic_nv_next.gif" alt="{lang footer_next}" title="{lang footer_next}" id="focusnext" class="cur1" onclick="showfocus('next')" /></span>
+					</h2>
+				</div>
+				<div class="bm_c" id="focus_con">
+				</div>
+			</div>
+		</div>
+		<!--{eval $focusi = 0;}-->
+		<!--{loop $_G['setting']['focus'][$_G[basescript]] $id}-->
+				<div class="bm_c" style="display: none" id="focus_$focusi">
+					<dl class="xld cl bbda">
+						<dt><a href="{$_G['cache']['focus']['data'][$id]['url']}" class="xi2" target="_blank">$_G['cache']['focus']['data'][$id]['subject']</a></dt>
+						<!--{if $_G['cache']['focus']['data'][$id][image]}-->
+						<dd class="m"><a href="{$_G['cache']['focus']['data'][$id]['url']}" target="_blank"><img src="{$_G['cache']['focus']['data'][$id]['image']}" alt="$_G['cache']['focus']['data'][$id]['subject']" /></a></dd>
+						<!--{/if}-->
+						<dd>$_G['cache']['focus']['data'][$id]['summary']</dd>
+					</dl>
+					<p class="ptn cl"><a href="{$_G['cache']['focus']['data'][$id]['url']}" class="xi2 y" target="_blank">{lang focus_show} &raquo;</a></p>
+				</div>
+		<!--{eval $focusi ++;}-->
+		<!--{/loop}-->
+		<script type="text/javascript">
+			var focusnum = $focusnum;
+			if(focusnum < 2) {
+				$('focus_ctrl').style.display = 'none';
+			}
+			if(!$('focuscur').innerHTML) {
+				var randomnum = parseInt(Math.round(Math.random() * focusnum));
+				$('focuscur').innerHTML = Math.max(1, randomnum);
+			}
+			showfocus();
+			var focusautoshow = window.setInterval('showfocus(\'next\', 1);', 5000);
+		</script>
+	<!--{/if}-->
+	<!--{if $_G['uid'] && $_G['member']['allowadmincp'] == 1 && $_G['setting']['showpatchnotice'] == 1}-->
+		<div class="focus patch" id="patch_notice"></div>
+	<!--{/if}-->
+
+	<!--{ad/footerbanner/wp a_f/1}--><!--{ad/footerbanner/wp a_f/2}--><!--{ad/footerbanner/wp a_f/3}-->
+	<!--{ad/float/a_fl/1}--><!--{ad/float/a_fr/2}-->
+	<!--{ad/couplebanner/a_fl a_cb/1}--><!--{ad/couplebanner/a_fr a_cb/2}-->
+	<!--{ad/cornerbanner/a_cn}-->
+	<!--{hook/global_footer}-->
+	
+	<div class="ft_xin">
+		<!--{eval}-->
+			$footer_nav_logo_param = byg_diy_block_param('简约通用电脑版尾部导航LOGO');
+			$footer_nav_sum_param = byg_diy_block_param('简约通用电脑版尾部导航网站简介');
+			$footer_nav_tit1_param = byg_diy_block_param('简约通用电脑版尾部导航栏目标题1');
+			$footer_nav_url11_param = byg_diy_block_param('简约通用电脑版尾部导航标题1链接1');
+			$footer_nav_url12_param = byg_diy_block_param('简约通用电脑版尾部导航标题1链接2');
+			$footer_nav_url13_param = byg_diy_block_param('简约通用电脑版尾部导航标题1链接3');
+			$footer_nav_url14_param = byg_diy_block_param('简约通用电脑版尾部导航标题1链接4');
+			$footer_nav_tit2_param = byg_diy_block_param('简约通用电脑版尾部导航栏目标题2');
+			$footer_nav_url21_param = byg_diy_block_param('简约通用电脑版尾部导航标题2链接1');
+			$footer_nav_url22_param = byg_diy_block_param('简约通用电脑版尾部导航标题2链接2');
+			$footer_nav_url23_param = byg_diy_block_param('简约通用电脑版尾部导航标题2链接3');
+			$footer_nav_url24_param = byg_diy_block_param('简约通用电脑版尾部导航标题2链接4');
+			$footer_nav_tit3_param = byg_diy_block_param('简约通用电脑版尾部导航栏目标题3');
+			$footer_nav_url31_param = byg_diy_block_param('简约通用电脑版尾部导航标题3链接1');
+			$footer_nav_url32_param = byg_diy_block_param('简约通用电脑版尾部导航标题3链接2');
+			$footer_nav_url33_param = byg_diy_block_param('简约通用电脑版尾部导航标题3链接3');
+			$footer_nav_url34_param = byg_diy_block_param('简约通用电脑版尾部导航标题3链接4');
+			$footer_nav_pic1_param = byg_diy_block_param('简约通用电脑版尾部导航二维码1图片');
+			$footer_nav_word1_param = byg_diy_block_param('简约通用电脑版尾部导航二维码1文字');
+			$footer_nav_pic2_param = byg_diy_block_param('简约通用电脑版尾部导航二维码2图片');
+			$footer_nav_word2_param = byg_diy_block_param('简约通用电脑版尾部导航二维码2文字');
+			$f_n_logo = unserialize($footer_nav_logo_param);
+			$f_n_sum = unserialize($footer_nav_sum_param);
+			$f_n_tit1 = unserialize($footer_nav_tit1_param);
+			$f_n_url11 = unserialize($footer_nav_url11_param);
+			$f_n_url12 = unserialize($footer_nav_url12_param);
+			$f_n_url13 = unserialize($footer_nav_url13_param);
+			$f_n_url14 = unserialize($footer_nav_url14_param);
+			$f_n_tit2 = unserialize($footer_nav_tit2_param);
+			$f_n_url21 = unserialize($footer_nav_url21_param);
+			$f_n_url22 = unserialize($footer_nav_url22_param);
+			$f_n_url23 = unserialize($footer_nav_url23_param);
+			$f_n_url24 = unserialize($footer_nav_url24_param);
+			$f_n_tit3 = unserialize($footer_nav_tit3_param);
+			$f_n_url31 = unserialize($footer_nav_url31_param);
+			$f_n_url32 = unserialize($footer_nav_url32_param);
+			$f_n_url33 = unserialize($footer_nav_url33_param);
+			$f_n_url34 = unserialize($footer_nav_url34_param);
+			$f_n_pic1 = unserialize($footer_nav_pic1_param);
+			$f_n_word1 = unserialize($footer_nav_word1_param);
+			$f_n_pic2 = unserialize($footer_nav_pic2_param);
+			$f_n_word2 = unserialize($footer_nav_word2_param);
+		<!--{/eval}-->
+		<!--{if $footer_nav_logo_param || $footer_nav_tit1_param || $footer_nav_tit2_param || $footer_nav_tit3_param || $footer_nav_pic1_param || $footer_nav_pic2_param}-->
+		<div class="ft_top">
+			<div class="ft_wp cl">
+				<div class="ft_1 z">
+					<!--{if $f_n_logo}-->
+					<a href="{$f_n_logo['url']}" target="{$f_n_logo['atarget']}"><img src="{$f_n_logo['pic']}" alt="{$f_n_logo['text']}"/></a>
+					<!--{/if}-->
+					<p>{$f_n_sum['text']}</p>
+				</div>
+				<div class="ft_2 z">
+					<a href="{$f_n_tit1['url']}" target="{$f_n_tit1['atarget']}"><h3>{$f_n_tit1['text']}</h3></a>
+					<ul>
+						<li><a href="{$f_n_url11['url']}" target="{$f_n_url11['atarget']}">{$f_n_url11['text']}</a></li>
+						<li><a href="{$f_n_url12['url']}" target="{$f_n_url12['atarget']}">{$f_n_url12['text']}</a></li>
+						<li><a href="{$f_n_url13['url']}" target="{$f_n_url13['atarget']}">{$f_n_url13['text']}</a></li>
+						<li><a href="{$f_n_url14['url']}" target="{$f_n_url14['atarget']}">{$f_n_url14['text']}</a></li>
+					</ul>
+				</div>
+				<div class="ft_2 z">
+					<a href="{$f_n_tit2['url']}" target="{$f_n_tit2['atarget']}"><h3>{$f_n_tit2['text']}</h3></a>
+					<ul>
+						<li><a href="{$f_n_url21['url']}" target="{$f_n_url21['atarget']}">{$f_n_url21['text']}</a></li>
+						<li><a href="{$f_n_url22['url']}" target="{$f_n_url22['atarget']}">{$f_n_url22['text']}</a></li>
+						<li><a href="{$f_n_url23['url']}" target="{$f_n_url23['atarget']}">{$f_n_url23['text']}</a></li>
+						<li><a href="{$f_n_url24['url']}" target="{$f_n_url24['atarget']}">{$f_n_url24['text']}</a></li>
+					</ul>
+				</div>
+				<div class="ft_2 z">
+					<a href="{$f_n_tit3['url']}" target="{$f_n_tit3['atarget']}"><h3>{$f_n_tit3['text']}</h3></a>
+					<ul>
+						<li><a href="{$f_n_url31['url']}" target="{$f_n_url31['atarget']}">{$f_n_url31['text']}</a></li>
+						<li><a href="{$f_n_url32['url']}" target="{$f_n_url32['atarget']}">{$f_n_url32['text']}</a></li>
+						<li><a href="{$f_n_url33['url']}" target="{$f_n_url33['atarget']}">{$f_n_url33['text']}</a></li>
+						<li><a href="{$f_n_url34['url']}" target="{$f_n_url34['atarget']}">{$f_n_url34['text']}</a></li>
+					</ul>
+				</div>
+				<div class="ft_3 y">
+					<!--{if $f_n_pic2}-->
+					<img src="{$f_n_pic2['pic']}" alt="{$f_n_pic2['text']}"/>
+					<!--{/if}-->
+					<p>{$f_n_word2['text']}</p>
+				</div>
+				<div class="ft_3 y" style="padding-left:50px;">
+					<!--{if $f_n_pic1}-->
+					<img src="{$f_n_pic1['pic']}" alt="{$f_n_pic1['text']}"/>
+					<!--{/if}-->
+					<p>{$f_n_word1['text']}</p>
+				</div>
+			</div>
+		</div>
+		<!--{/if}-->
+		
+		<div id="ft" class="wp cl">
+			<div id="flk" class="y">
+				<p>
+					<!--{if $_G['setting']['site_qq']}--><a href="http://wpa.qq.com/msgrd?V=3&uin=$_G['setting']['site_qq']&Site=$_G['setting']['bbname']&Menu=yes&from=discuz" target="_blank" title="QQ"><img src="{IMGDIR}/site_qq.jpg" alt="QQ" /></a><span class="pipe">|</span><!--{/if}-->
+					<!--{loop $_G['setting']['footernavs'] $nav}--><!--{if $nav['available'] && ($nav['type'] && (!$nav['level'] || ($nav['level'] == 1 && $_G['uid']) || ($nav['level'] == 2 && $_G['adminid'] > 0) || ($nav['level'] == 3 && $_G['adminid'] == 1)) ||
+							!$nav['type'] && ($nav['id'] == 'stat' && $_G['group']['allowstatdata'] || $nav['id'] == 'report' && $_G['uid'] || $nav['id'] == 'archiver' || $nav['id'] == 'mobile' || $nav['id'] == 'darkroom'))}-->$nav[code]<span class="pipe">|</span><!--{/if}--><!--{/loop}-->
+							<strong><a href="$_G['setting']['siteurl']" target="_blank">$_G['setting']['sitename']</a></strong>
+					<!--{if $_G['setting']['icp']}-->( <a href="http://www.miitbeian.gov.cn/" target="_blank">$_G['setting']['icp']</a> )<!--{/if}-->
+					<!--{hook/global_footerlink}-->
+					<!--{if $_G['setting']['statcode']}-->$_G['setting']['statcode']<!--{/if}-->
+				</p>
+				<p class="xs1" style="display:none;">
+					{lang time_now}
+					<span id="debuginfo">
+					<!--{if debuginfo()}-->, Processed in $_G[debuginfo][time] second(s), $_G[debuginfo][queries] queries
+						<!--{if $_G['gzipcompress']}-->, Gzip On<!--{/if}--><!--{if C::memory()->type}-->, <!--{echo ucwords(C::memory()->type)}--> On<!--{/if}-->.
+					<!--{/if}-->
+					</span>
+				</p>
+			</div>
+			<div id="frt">
+				<p>Powered by <strong><a href="http://www.discuz.net" target="_blank">Discuz!</a></strong> <em>$_G['setting']['version']</em><!--{if !empty($_G['setting']['boardlicensed'])}--> <a href="http://license.comsenz.com/?pid=1&host=$_SERVER[HTTP_HOST]" target="_blank">Licensed</a><!--{/if}-->
+				&nbsp;<span class="xs1">&copy; 2001-2013 <a href="http://www.comsenz.com" target="_blank">Comsenz Inc.</a></span>
+				</p>
+			</div>
+			<!--{eval updatesession();}-->
+			<!--{if $_G['uid'] && $_G['group']['allowinvisible']}-->
+				<script type="text/javascript">
+				var invisiblestatus = '<!--{if $_G['session']['invisible']}-->{lang login_invisible_mode}<!--{else}-->{lang login_normal_mode}<!--{/if}-->';
+				var loginstatusobj = $('loginstatusid');
+				if(loginstatusobj != undefined && loginstatusobj != null) loginstatusobj.innerHTML = invisiblestatus;
+				</script>
+			<!--{/if}-->
+		</div>
+	</div>
+<!--{/if}-->
+
+<ul class="byg_side_nav">
+	<!--{if $_G[fid] && $_G['mod'] == 'viewthread'}-->
+	<li>
+		<a href="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]&extra=$_GET[extra]&page=$page{if $_GET[from]}&from=$_GET[from]{/if}" onclick="showWindow('reply', this.href)" class="byg_sn1">
+			<img src="{$_G['style']['styleimgdir']}/side_huifu.png"/>
+		</a>
+		<i class="byg_sn_i"></i>
+		<div class="byg_sn2">
+			{lang fastreply}
+		</div>
+	</li>
+	<!--{/if}-->
+	<!--{if $_G[fid]}-->
+	<li>
+		<!--{if $_G['mod'] == 'viewthread'}-->
+		<a href="forum.php?mod=forumdisplay&fid=$_G[fid]" class="byg_sn1">
+			<img src="{$_G['style']['styleimgdir']}/side_liebiao.png"/>
+		</a>
+		<i class="byg_sn_i"></i>
+		<div class="byg_sn2">
+			{lang return_list}
+		</div>
+		<!--{else}-->
+		<a href="forum.php" class="byg_sn1">
+			<img src="{$_G['style']['styleimgdir']}/side_liebiao.png"/>
+		</a>
+		<i class="byg_sn_i"></i>
+		<div class="byg_sn2">
+			返回论坛
+		</div>
+		<!--{/if}-->
+	</li>
+	<!--{/if}-->
+	<li>
+		<a href="forum.php?mod=misc&action=nav" target="_blank" onclick="showWindow('nav', this.href, 'get', 0)" class="byg_sn1">
+			<img src="{$_G['style']['styleimgdir']}/side_fatie.png"/>
+		</a>
+		<i class="byg_sn_i"></i>
+		<div class="byg_sn2">
+			快速发帖
+		</div>
+	</li>
+	<!--{eval $side_nav_icon1_param = byg_diy_block_param('简约通用电脑版侧边导航1图标');}-->
+	<!--{if $side_nav_icon1_param}-->
+	<!--{eval $side_nav_pop1_param = byg_diy_block_param('简约通用电脑版侧边导航1弹出');}-->
+	<!--{eval $s_n_icon1 = unserialize($side_nav_icon1_param);}-->
+	<!--{eval $s_n_pop1 = unserialize($side_nav_pop1_param);}-->
+	<li>
+		<a href="{$s_n_icon1['url']}" target="{$s_n_icon1['atarget']}" class="byg_sn1">
+			<img src="{$s_n_icon1['pic']}" alt="{$s_n_icon1['text']}"/>
+		</a>
+		<!--{if $side_nav_pop1_param}-->
+		<i class="byg_sn_i"></i>
+		<div class="byg_sn2">
+			<!--{if $s_n_pop1['pic']}-->
+			<img src="{$s_n_pop1['pic']}"/>
+			<!--{/if}-->
+			<!--{if $s_n_pop1['text']}-->
+			<p>{$s_n_pop1['text']}</p>
+			<!--{/if}-->
+		</div>
+		<!--{/if}-->
+	</li>
+	<!--{/if}-->
+	<!--{eval $side_nav_icon2_param = byg_diy_block_param('简约通用电脑版侧边导航2图标');}-->
+	<!--{if $side_nav_icon2_param}-->
+	<!--{eval $side_nav_pop2_param = byg_diy_block_param('简约通用电脑版侧边导航2弹出');}-->
+	<!--{eval $s_n_icon2 = unserialize($side_nav_icon2_param);}-->
+	<!--{eval $s_n_pop2 = unserialize($side_nav_pop2_param);}-->
+	<li>
+		<a href="{$s_n_icon2['url']}" target="{$s_n_icon2['atarget']}" class="byg_sn1">
+			<img src="{$s_n_icon2['pic']}" alt="{$s_n_icon2['text']}"/>
+		</a>
+		<!--{if $side_nav_pop2_param}-->
+		<i class="byg_sn_i"></i>
+		<div class="byg_sn2">
+			<!--{if $s_n_pop2['pic']}-->
+			<img src="{$s_n_pop2['pic']}"/>
+			<!--{/if}-->
+			<!--{if $s_n_pop2['text']}-->
+			<p>{$s_n_pop2['text']}</p>
+			<!--{/if}-->
+		</div>
+		<!--{/if}-->
+	</li>
+	<!--{/if}-->
+	<!--{eval $side_nav_icon3_param = byg_diy_block_param('简约通用电脑版侧边导航3图标');}-->
+	<!--{if $side_nav_icon3_param}-->
+	<!--{eval $side_nav_pop3_param = byg_diy_block_param('简约通用电脑版侧边导航3弹出');}-->
+	<!--{eval $s_n_icon3 = unserialize($side_nav_icon3_param);}-->
+	<!--{eval $s_n_pop3 = unserialize($side_nav_pop3_param);}-->
+	<li>
+		<a href="{$s_n_icon3['url']}" target="{$s_n_icon3['atarget']}" class="byg_sn1">
+			<img src="{$s_n_icon3['pic']}" alt="{$s_n_icon3['text']}"/>
+		</a>
+		<!--{if $side_nav_pop3_param}-->
+		<i class="byg_sn_i"></i>
+		<div class="byg_sn2">
+			<!--{if $s_n_pop3['pic']}-->
+			<img src="{$s_n_pop3['pic']}"/>
+			<!--{/if}-->
+			<!--{if $s_n_pop3['text']}-->
+			<p>{$s_n_pop3['text']}</p>
+			<!--{/if}-->
+		</div>
+		<!--{/if}-->
+	</li>
+	<!--{/if}-->
+	<!--{eval $side_nav_icon4_param = byg_diy_block_param('简约通用电脑版侧边导航4图标');}-->
+	<!--{if $side_nav_icon4_param}-->
+	<!--{eval $side_nav_pop4_param = byg_diy_block_param('简约通用电脑版侧边导航4弹出');}-->
+	<!--{eval $s_n_icon4 = unserialize($side_nav_icon4_param);}-->
+	<!--{eval $s_n_pop4 = unserialize($side_nav_pop4_param);}-->
+	<li>
+		<a href="{$s_n_icon4['url']}" target="{$s_n_icon4['atarget']}" class="byg_sn1">
+			<img src="{$s_n_icon4['pic']}" alt="{$s_n_icon4['text']}"/>
+		</a>
+		<!--{if $side_nav_pop4_param}-->
+		<i class="byg_sn_i"></i>
+		<div class="byg_sn2">
+			<!--{if $s_n_pop4['pic']}-->
+			<img src="{$s_n_pop4['pic']}"/>
+			<!--{/if}-->
+			<!--{if $s_n_pop4['text']}-->
+			<p>{$s_n_pop4['text']}</p>
+			<!--{/if}-->
+		</div>
+		<!--{/if}-->
+	</li>
+	<!--{/if}-->
+	<!--{eval $side_nav_icon5_param = byg_diy_block_param('简约通用电脑版侧边导航5图标');}-->
+	<!--{if $side_nav_icon5_param}-->
+	<!--{eval $side_nav_pop5_param = byg_diy_block_param('简约通用电脑版侧边导航5弹出');}-->
+	<!--{eval $s_n_icon5 = unserialize($side_nav_icon5_param);}-->
+	<!--{eval $s_n_pop5 = unserialize($side_nav_pop5_param);}-->
+	<li>
+		<a href="{$s_n_icon5['url']}" target="{$s_n_icon5['atarget']}" class="byg_sn1">
+			<img src="{$s_n_icon5['pic']}" alt="{$s_n_icon5['text']}"/>
+		</a>
+		<!--{if $side_nav_pop5_param}-->
+		<i class="byg_sn_i"></i>
+		<div class="byg_sn2">
+			<!--{if $s_n_pop5['pic']}-->
+			<img src="{$s_n_pop5['pic']}"/>
+			<!--{/if}-->
+			<!--{if $s_n_pop5['text']}-->
+			<p>{$s_n_pop5['text']}</p>
+			<!--{/if}-->
+		</div>
+		<!--{/if}-->
+	</li>
+	<!--{/if}-->
+	<!--{eval $side_nav_icon6_param = byg_diy_block_param('简约通用电脑版侧边导航6图标');}-->
+	<!--{if $side_nav_icon6_param}-->
+	<!--{eval $side_nav_pop6_param = byg_diy_block_param('简约通用电脑版侧边导航6弹出');}-->
+	<!--{eval $s_n_icon6 = unserialize($side_nav_icon6_param);}-->
+	<!--{eval $s_n_pop6 = unserialize($side_nav_pop6_param);}-->
+	<li>
+		<a href="{$s_n_icon6['url']}" target="{$s_n_icon6['atarget']}" class="byg_sn1">
+			<img src="{$s_n_icon6['pic']}" alt="{$s_n_icon6['text']}"/>
+		</a>
+		<!--{if $side_nav_pop6_param}-->
+		<i class="byg_sn_i"></i>
+		<div class="byg_sn2">
+			<!--{if $s_n_pop6['pic']}-->
+			<img src="{$s_n_pop6['pic']}"/>
+			<!--{/if}-->
+			<!--{if $s_n_pop6['text']}-->
+			<p>{$s_n_pop6['text']}</p>
+			<!--{/if}-->
+		</div>
+		<!--{/if}-->
+	</li>
+	<!--{/if}-->
+	<li>
+		<a href="javascript:;" class="byg_sn1" onclick="topFunction();">
+			<img src="{$_G['style']['styleimgdir']}/side_dingbu.png"/>
+		</a>
+		<i class="byg_sn_i"></i>
+		<div class="byg_sn2">
+			{lang scrolltop}
+		</div>
+	</li>
+	<script type="text/javascript">
+		function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+	</script>
+</ul>
+
+<!--{if !$_G['setting']['bbclosed'] && !$_G['member']['freeze'] && !$_G['member']['groupexpiry']}-->
+	<!--{if $_G[uid] && !isset($_G['cookie']['checkpm'])}-->
+	<script type="text/javascript" src="home.php?mod=spacecp&ac=pm&op=checknewpm&rand=$_G[timestamp]"></script>
+	<!--{/if}-->
+
+	<!--{if $_G[uid] && helper_access::check_module('follow') && !isset($_G['cookie']['checkfollow'])}-->
+	<script type="text/javascript" src="home.php?mod=spacecp&ac=follow&op=checkfeed&rand=$_G[timestamp]"></script>
+	<!--{/if}-->
+
+	<!--{if !isset($_G['cookie']['sendmail'])}-->
+	<script type="text/javascript" src="home.php?mod=misc&ac=sendmail&rand=$_G[timestamp]"></script>
+	<!--{/if}-->
+
+	<!--{if $_G[uid] && $_G['member']['allowadmincp'] == 1 && !isset($_G['cookie']['checkpatch'])}-->
+	<script type="text/javascript" src="misc.php?mod=patch&action=checkpatch&rand=$_G[timestamp]"></script>
+	<!--{/if}-->
+<!--{/if}-->
+
+<!--{if $_GET['diy'] == 'yes'}-->
+	<!--{if check_diy_perm($topic) && (empty($do) || $do != 'index')}-->
+		<script type="text/javascript" src="{$_G[setting][jspath]}common_diy.js?{VERHASH}"></script>
+		<script type="text/javascript" src="{$_G[setting][jspath]}portal_diy{if !check_diy_perm($topic, 'layout')}_data{/if}.js?{VERHASH}"></script>
+	<!--{/if}-->
+	<!--{if $space['self'] && CURMODULE == 'space' && $do == 'index'}-->
+		<script type="text/javascript" src="{$_G[setting][jspath]}common_diy.js?{VERHASH}"></script>
+		<script type="text/javascript" src="{$_G[setting][jspath]}space_diy.js?{VERHASH}"></script>
+	<!--{/if}-->
+<!--{/if}-->
+<!--{if $_G['uid'] && $_G['member']['allowadmincp'] == 1 && $_G['setting']['showpatchnotice'] == 1}-->
+	<script type="text/javascript">patchNotice();</script>
+<!--{/if}-->
+<!--{if $_G['uid'] && $_G['member']['allowadmincp'] == 1 && empty($_G['cookie']['pluginnotice'])}-->
+	<div class="focus plugin" id="plugin_notice"></div>
+	<script type="text/javascript">pluginNotice();</script>
+<!--{/if}-->
+<!--{if !$_G['setting']['bbclosed'] && !$_G['member']['freeze'] && !$_G['member']['groupexpiry'] && $_G['setting']['disableipnotice'] != 1 && $_G['uid'] && !empty($_G['cookie']['lip'])}-->
+	<div class="focus plugin" id="ip_notice"></div>
+	<script type="text/javascript">ipNotice();</script>
+<!--{/if}-->
+<!--{if $_G['member']['newprompt'] && (empty($_G['cookie']['promptstate_'.$_G[uid]]) || $_G['cookie']['promptstate_'.$_G[uid]] != $_G['member']['newprompt']) && $_GET['do'] != 'notice'}-->
+	<script type="text/javascript">noticeTitle();</script>
+<!--{/if}-->
+
+<!--{if ($_G[member][newpm] || $_G[member][newprompt]) && empty($_G['cookie']['ignore_notice'])}-->
+	<script type="text/javascript" src="{$_G[setting][jspath]}html5notification.js?{VERHASH}"></script>
+	<script type="text/javascript">
+	var h5n = new Html5notification();
+	if(h5n.issupport()) {
+		<!--{if $_G[member][newpm] && $_GET[do] != 'pm'}-->
+		h5n.shownotification('pm', '$_G[siteurl]home.php?mod=space&do=pm', '<!--{avatar($_G[uid],small,true)}-->', '{lang newpm_subject}', '{lang newpm_notice_info}');
+		<!--{/if}-->
+		<!--{if $_G[member][newprompt] && $_GET[do] != 'notice'}-->
+				<!--{loop $_G['member']['category_num'] $key $val}-->
+					<!--{eval $noticetitle = lang('template', 'notice_'.$key);}-->
+					h5n.shownotification('notice_$key', '$_G[siteurl]home.php?mod=space&do=notice&view=$key', '<!--{avatar($_G[uid],small,true)}-->', '$noticetitle ($val)', '{lang newnotice_notice_info}');
+				<!--{/loop}-->
+		<!--{/if}-->
+	}
+	</script>
+<!--{/if}-->
+
+<!--{eval userappprompt();}-->
+<!--{if $_G['basescript'] != 'userapp'}-->
+<div id="scrolltop" style="display:none;">
+	<!--{if $_G[fid] && $_G['mod'] == 'viewthread'}-->
+	<span><a href="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]&extra=$_GET[extra]&page=$page{if $_GET[from]}&from=$_GET[from]{/if}" onclick="showWindow('reply', this.href)" class="replyfast" title="{lang fastreply}"><b>{lang fastreply}</b></a></span>
+	<!--{/if}-->
+	<span hidefocus="true"><a title="{lang scrolltop}" onclick="window.scrollTo('0','0')" class="scrolltopa" ><b>{lang scrolltop}</b></a></span>
+	<!--{if $_G[fid]}-->
+	<span>
+		<!--{if $_G['mod'] == 'viewthread'}-->
+		<a href="forum.php?mod=forumdisplay&fid=$_G[fid]" hidefocus="true" class="returnlist" title="{lang return_list}"><b>{lang return_list}</b></a>
+		<!--{else}-->
+		<a href="forum.php" hidefocus="true" class="returnboard" title="{lang return_forum}"><b>{lang return_forum}</b></a>
+		<!--{/if}-->
+	</span>
+	<!--{/if}-->
+</div>
+<script type="text/javascript">_attachEvent(window, 'scroll', function () { showTopLink(); });checkBlind();</script>
+<!--{/if}-->
+<!--{if isset($_G['makehtml'])}-->
+	<script type="text/javascript" src="{$_G[setting][jspath]}html2dynamic.js?{VERHASH}"></script>
+	<script type="text/javascript">
+		var html_lostmodify = {TIMESTAMP};
+		htmlGetUserStatus();
+		<!--{if isset($_G['htmlcheckupdate'])}-->
+		htmlCheckUpdate();
+		<!--{/if}-->
+	</script>
+<!--{/if}-->
+<!--{eval output();}-->
+
+<!--{if CURSCRIPT == 'forum' && CURMODULE == 'index'}-->
+	<script type="text/javascript" src="{$_G['style']['styleimgdir']}/js/jquery.min.js"></script>
+	<script type="text/javascript" src="{$_G['style']['styleimgdir']}/js/slide.js"></script>
+	<script type="text/javascript">
+		var jq = jQuery.noConflict();
+		TouchSlide({
+			slideCell:"#byg_slide",
+			mainCell:".slide_bd ul",
+			titCell:".slide_hd ul",
+			effect:"leftLoop",
+			autoPage:true,
+			autoPlay:true,
+			interTime:4000
+		});
+	</script>
+	<script type="text/javascript" src="{$_G['style']['styleimgdir']}/js/headline.js"></script>
+	<!--{if $_GET['diy'] != 'yes'}-->
+	<script type="text/javascript" src="{$_G['style']['styleimgdir']}/js/sidebar.min.js"></script>
+	<script type="text/javascript">
+		jQuery('.byg_sidebar').theiaStickySidebar({
+			<!--{if empty($_G['setting']['disfixednv_forumindex'])}-->
+			additionalMarginTop: 80
+			<!--{else}-->
+			additionalMarginTop: 10
+			<!--{/if}-->
+		});
+	</script>
+	<!--{/if}-->
+<!--{/if}-->
+<!--{if CURMODULE == 'forumdisplay' || CURMODULE == 'viewthread'}-->
+	<!--{if $_GET['diy'] != 'yes'}-->
+	<script type="text/javascript" src="{$_G['style']['styleimgdir']}/js/jquery.min.js"></script>
+	<script type="text/javascript" src="{$_G['style']['styleimgdir']}/js/sidebar.min.js"></script>
+	<script type="text/javascript">
+		var jq = jQuery.noConflict();
+		jQuery('.content_right').theiaStickySidebar({
+			<!--{if empty($_G['setting']['disfixednv_forumindex'])}-->
+			additionalMarginTop: 80
+			<!--{else}-->
+			additionalMarginTop: 10
+			<!--{/if}-->
+		});
+	</script>
+	<!--{/if}-->
+<!--{/if}-->
+<!--{if CURMODULE == 'guide'}-->
+	<script type="text/javascript" src="{$_G['style']['styleimgdir']}/js/jquery.min.js"></script>
+	<script type="text/javascript" src="{$_G['style']['styleimgdir']}/js/sidebar.min.js"></script>
+	<script type="text/javascript" src="{$_G['style']['styleimgdir']}/js/lanjiazai.js"></script>
+	<script type="text/javascript">
+		var jq = jQuery.noConflict();
+		jQuery('.byg_sd').theiaStickySidebar({
+			<!--{if empty($_G['setting']['disfixednv_forumindex'])}-->
+			additionalMarginTop: 80
+			<!--{else}-->
+			additionalMarginTop: 10
+			<!--{/if}-->
+		});
+		jQuery(".lanjiazai").lazyload({
+			effect:"fadeIn",
+			threshold: 300
+		});
+	</script>
+<!--{/if}-->
+
+</footer>
+</body>
+</html>

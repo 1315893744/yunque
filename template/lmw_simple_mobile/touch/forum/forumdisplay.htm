@@ -1,0 +1,92 @@
+<!--{template common/header}-->
+<link rel="stylesheet" href="{$_G['style']['styleimgdir']}/touch/discuz.css" type="text/css" media="all">
+<!-- header start -->
+<header class="header">
+    <div class="nav" style="background: white;margin-bottom: 5px;">
+        <div class="icon_edit y"><a href="forum.php?mod=post&action=newthread&fid=$_G[fid]" title="{lang send_threads}"><span
+                class="none">{lang send_threads}</span></a></div>
+        <a href="forum.php?forumlist=1" class="z"><img src="{STATICURL}image/mobile/images/icon_back.png"/></a>
+        <span class="category">
+			<!--{if $subexists && $_G['page'] == 1}-->
+			<span class="display name vm" href="#subname_list">
+				<h2 class="tit"><!--{eval echo strip_tags($_G['forum']['name']) ? strip_tags($_G['forum']['name']) : $_G['forum']['name'];}--></h2>
+				<img src="{STATICURL}image/mobile/images/icon_arrow_down.png">
+			</span>
+			<div id="subname_list" class="subname_list" display="true" style="display:none;">
+				<ul>
+				<!--{loop $sublist $sub}-->
+				<li>
+					<a href="forum.php?mod=forumdisplay&fid={$sub[fid]}">{$sub['name']}</a>
+				</li>
+                    <!--{/loop}-->
+				</ul>
+			</div>
+            <!--{else}-->
+			<span class="name">
+				<!--{eval echo strip_tags($_G['forum']['name']) ? strip_tags($_G['forum']['name']) : $_G['forum']['name'];}-->
+			</span>
+            <!--{/if}-->
+		</span>
+    </div>
+</header>
+<!-- header end -->
+
+<!--{hook/forumdisplay_top_mobile}-->
+<!-- main threadlist start -->
+<!--{if !$subforumonly}-->
+<div class="threadlist">
+    <ul>
+        <!--{if $_G['forum_threadcount']}-->
+        <!--{loop $_G['forum_threadlist'] $key $thread}-->
+        <!--{if !$_G['setting']['mobile']['mobiledisplayorder3'] && $thread['displayorder'] > 0}-->
+        {eval continue;}
+        <!--{/if}-->
+        <!--{if $thread['displayorder'] > 0 && !$displayorder_thread}-->
+        {eval $displayorder_thread = 1;}
+        <!--{/if}-->
+        <!--{if $thread['moved']}-->
+        <!--{eval $thread[tid]=$thread[closed];}-->
+        <!--{/if}-->
+        <li>
+			<script>console.log({echo json_encode($thread);});</script>
+            <!--{hook/forumdisplay_thread_mobile $key}-->
+            <a href="forum.php?mod=viewthread&tid=$thread[tid]&extra=$extra" $thread[highlight]>
+				<!--{if in_array($thread['displayorder'], array(1, 2, 3, 4))}-->
+				<div class="inlineTop" style="margin-top: 4px;">
+					<div style="border-radius: 3px;vertical-align: middle;line-height: 14px;font-size: 12px;background: #409eff;color:white;padding: 2px;">
+						置顶
+					</div>
+				</div>
+                <!--{elseif $thread['digest'] > 0}-->
+				<div class="inlineTop" style="margin-top: 4px;">
+					<div style="border-radius: 3px;vertical-align: middle;line-height: 14px;font-size: 12px;background: #E6A23C;color:white;padding: 2px;">
+						精品
+					</div>
+				</div>
+				<!--{elseif $thread['attachment'] == 2 && $_G['setting']['mobile']['mobilesimpletype'] == 0}-->
+                <div class="inlineTop">
+                    <svg style="padding:3px 0 0;vertical-align: top;" xmlns="http://www.w3.org/2000/svg"
+                         viewBox="0 0 24 24" width="21"
+                         height="21">
+                        <path fill="none" d="M0 0h24v24H0z"/>
+                        <path d="M5 11.1l2-2 5.5 5.5 3.5-3.5 3 3V5H5v6.1zM4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm11.5 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                    </svg>
+                </div>
+                <!--{/if}-->
+                {$thread[subject]}
+                <span class="by">$thread[author]</span>
+            </a>
+            <span class="num">{$thread[replies]}</span>
+        </li>
+        <!--{/loop}-->
+        <!--{else}-->
+        <li style="padding: 20px 20px;">{lang forum_nothreads}</li>
+        <!--{/if}-->
+    </ul>
+</div>
+$multipage
+<!--{/if}-->
+<!-- main threadlist end -->
+<!--{hook/forumdisplay_bottom_mobile}-->
+<div class="pullrefresh" style="display:none;"></div>
+<!--{template common/footer}-->

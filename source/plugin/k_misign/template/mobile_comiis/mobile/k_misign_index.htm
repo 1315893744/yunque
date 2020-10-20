@@ -1,0 +1,82 @@
+<!--{template common/header}-->
+<!--{if defined('SUB_DIR')}-->
+<script>window.location.href='../plugin.php?id=k_misign:sign';</script>
+<!--{/if}-->
+<link rel="stylesheet" type="text/css" href="./source/plugin/k_misign/static/mobile_default/phone.css" />
+<style>
+.comiis_qdinfo {position:absolute;left:0;bottom:0;width:100%;height:50px;background:rgba(0,0,0,0.5);}
+.comiis_qdinfo li {float:left;width:33%;margin-top:7px;height:36px;line-height:18px;text-align:center;border-left:1px solid rgba(255,255,255,0.2);}
+.comiis_qdinfo li:first-child {border-left:none !important;}
+.comiis_qdinfo li span {display:block;}
+</style>
+<!--{if $inwsq}-->
+<script type="text/javascript" src="http://wsq.discuz.qq.com/cdn/discuz/js/openjs.js"></script>
+<script>
+WSQ.initPlugin({name:'{$setting[title]}'});
+var initWx = {
+	'img': '{$_G[siteurl]}static/image/common/logo.png',
+	'desc': 'initWxParam',
+	'title': 'shareTitle',
+	'pluginid':'k_misign:sign',
+	'param': ''
+};
+WSQ.initShareWx(initWx);
+var menu = new Array();
+menu.push({name:"{lang k_misign:sign}", pluginid: 'k_misign:sign', param: 'wsq=1' });
+WSQ.initBtmBar(menu);
+WSQ.showBtmBar();
+<!--{if !$_G['uid']}-->
+var referer = {
+	pluginid: 'k_misign:sign',
+	param: 'wsq=1'
+};
+WSQ.login(referer);
+<!--{/if}-->
+</script>
+<!--{/if}-->
+<div class="comiis_space_box cl">
+	<div style="height:18px;"></div>
+	<!--{if $_G['uid']}-->
+	<div class="comiis_space_info f_f">
+		<div class="comiis_space_tx{if $comiis_app_switch['comiis_space_header']==1} comiis_space_txv1{/if}"{if $comiis_app_switch['comiis_space_header']==1} style="margin-top:68px;"{/if}>
+			<div class="user_img"><img src="<!--{avatar($_G['uid'], 'middle', 1)}-->" /></div>
+			<h2 class="fyy">{$_G['username']}</h2>
+			<p class="fyy">{lang k_misign:signlevel} Lv.<!--{if $qiandaodb['level']}-->{$qiandaodb['level']}<!--{else}-->0<!--{/if}--></p>
+		</div>
+	</div>
+	<!--{/if}-->
+	<div class="comiis_qdinfo">
+		<ul>
+			<li class="f_f"><span class="comiis_tm">{lang k_misign:todayrow}</span><!--{if $qiandaodb['time'] > $tdtime}-->{$qiandaodb['row']}<!--{else}-->0<!--{/if}--></li>
+			<li class="f_f"><span class="comiis_tm">{lang k_misign:row}{lang k_misign:sign}</span><!--{if $qiandaodb['lasted']}-->{$qiandaodb['lasted']}<!--{else}-->0<!--{/if}-->{lang k_misign:days}</li>
+			<li class="f_f"><span class="comiis_tm">{lang k_misign:alldays}</span><!--{if $qiandaodb['days']}-->{$qiandaodb['days']}<!--{else}-->0<!--{/if}-->{lang k_misign:days}</li>
+		</ul>
+	</div>
+</div>
+<div class="comiis_btnbox cl">
+	<!--{if $_G['uid'] && $qiandaodb['time'] > $tdtime}-->
+		<a href="javascript:;" class="comiis_btn bg_b f_c">{lang k_misign:signed}</a>
+	<!--{else}-->
+		<a href="javascript:;" class="comiis_btn bg_c f_f" id="signresult" onClick="ajaxsign();window.location.reload();">{lang k_misign:sign}</a>
+	<!--{/if}-->
+</div>
+<div id="ranklist"></div>
+<script>
+	ajaxlist('today');
+	function ajaxlist(type){
+		if(type == 'month'){
+			urlextra = '&op=month';
+		}else if(type == 'zong'){
+			urlextra = '&op=zong';
+		}else{
+			urlextra = '';
+		}
+		htmlobj = $.ajax({url:"{$setting['pluginurl']}sign&operation=list"+urlextra,async:false,contentType: "application/x-www-form-urlencoded; charset=utf-8"});
+		$("#ranklist").html(htmlobj.responseText);
+	}
+	function ajaxsign(){
+		htmlobj = $.ajax({url:"{$setting['pluginurl']}sign&operation=qiandao&format=text&formhash={FORMHASH}",async:false,contentType: "application/x-www-form-urlencoded; charset=utf-8"});
+		$("#signresult").html(htmlobj.responseText);
+	}
+</script>
+<!--{template common/footer}-->

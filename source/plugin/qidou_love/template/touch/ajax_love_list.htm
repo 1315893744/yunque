@@ -1,0 +1,58 @@
+<!--{if $user_type == 1}-->
+    <!--{loop $love_list $love}-->
+    <li data-uid="{$love['uid']}">
+        <div class="user_author">
+            <img src="{$_G['setting']['ucenterurl']}/avatar.php?uid={$love['uid']}&size=middle" />
+        </div>
+        <div class="user_info">
+            <div class="user_header">
+                <div class="user_name">{$love['user_name']}</div>
+                <div class="user_group v{$love['groupid']}"><div>{$user_group[$love['groupid']][1]}</div></div>
+            </div>
+            <div class="user_footer"><!--{if $love['age']}-->{$love['age']}{$lang['h_age_unit']}<span>|</span><!--{/if}--><!--{if $love['height']}-->{$love['height']}cm<!--{/if}--></div>
+        </div>
+        <div class="love_num"><div class="text">{$love['love_num']}</div><div class="icon"></div></div>
+        <div class="comm_right"></div>
+    </li>
+    <!--{/loop}-->
+<!--{elseif $user_type == 2}-->
+    <!--{loop $love_list $love}-->
+    <li data-uid="{$love['uid']}">
+        <div class="user_author">
+            <img src="{$_G['setting']['ucenterurl']}/avatar.php?uid={$love['uid']}&size=middle" />
+        </div>
+        <div class="user_info">
+            <div class="user_header">
+                <div class="user_name">{$love['user_name']}</div>
+                <div class="user_group v{$love['groupid']}"><div>{$user_group[$love['groupid']][1]}</div></div>
+            </div>
+            <div class="user_footer"><!--{if $love['age']}-->{$love['age']}{$lang['h_age_unit']}<span>|</span><!--{/if}--><!--{if $love['height']}-->{$love['height']}cm<!--{/if}--></div>
+        </div>
+        <div class="love_num reward"><div class="text">{$love['r_price']}</div><div class="icon"></div></div>
+        <div class="comm_right"></div>
+    </li>
+    <!--{/loop}-->
+<!--{elseif $user_type == 3}-->
+    <!--{loop $love_list $love}-->
+    <li data-uid="{$love['uid']}">
+        <div class="user_author">
+            <img src="{$_G['setting']['ucenterurl']}/avatar.php?uid={$love['uid']}&size=middle" />
+        </div>
+        <div class="user_info">
+            <div class="user_header">
+                <div class="user_name">{$love['user_name']}</div>
+                <div class="reward_name">{$love['r_name']}</div>
+            </div>
+            <div class="user_footer"><!--{if $love['age']}-->{$love['age']}{$lang['h_age_unit']}<span>|</span><!--{/if}--><!--{if $love['height']}-->{$love['height']}cm<!--{/if}--></div>
+        </div>
+        <div class="reward_wrap">
+            <img src="{$love['r_image']}" class="reward_image"/>
+            <div class="love_num reward">
+                <div class="text">{$love['r_price']}</div>
+                <div class="icon"></div>
+            </div>
+        </div>
+        <div class="comm_right"></div>
+    </li>
+    <!--{/loop}-->
+<!--{/if}-->

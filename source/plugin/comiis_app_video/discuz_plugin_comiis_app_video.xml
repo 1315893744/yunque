@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X3.4]]></item>
+	<item id="Time"><![CDATA[2018-10-07 22:05]]></item>
+	<item id="From"><![CDATA[XXX网 - 站长互动平台]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[克米设计-手机视频]]></item>
+			<item id="identifier"><![CDATA[comiis_app_video]]></item>
+			<item id="description"><![CDATA[为手机版提供视频上传和列表内容展示的实用插件]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[comiis_app_video/]]></item>
+			<item id="copyright"><![CDATA[XXX网 - 站长互动平台]]></item>
+			<item id="version"><![CDATA[v3.6]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[comiis_app_video_pc]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[comiis_app_video]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[28]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[comiis_more]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[更多克米设计作品]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X3.4]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[授权Key]]></item>
+				<item id="description"><![CDATA[XXX网(baidu.Com)整理无限制版，KEY请直接留空]]></item>
+				<item id="variable"><![CDATA[comiis_key]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[视频宽高比例]]></item>
+				<item id="description"><![CDATA[设置视频的宽高比例，默认不建议修改]]></item>
+				<item id="variable"><![CDATA[comiis_scale]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[1.75]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[优酷ClientID]]></item>
+				<item id="description"><![CDATA[ClientID在优酷视频云后台获得，申请地址：https://cloud.youku.com]]></item>
+				<item id="variable"><![CDATA[clientid]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[优酷Access_Token]]></item>
+				<item id="description"><![CDATA[Access_Token在优酷视频云后台获得，申请地址：https://cloud.youku.com]]></item>
+				<item id="variable"><![CDATA[access_token]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[优酷Refresh_Token]]></item>
+				<item id="description"><![CDATA[Refresh_Token在优酷视频云后台获得，申请地址：https://cloud.youku.com]]></item>
+				<item id="variable"><![CDATA[refresh_token]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[开启视频解析的版块]]></item>
+				<item id="description"><![CDATA[设置开启视频解析的论坛版块]]></item>
+				<item id="variable"><![CDATA[comiis_forum]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[开启视频上传的版块]]></item>
+				<item id="description"><![CDATA[设置开启视频上传的版块]]></item>
+				<item id="variable"><![CDATA[comiis_upload_video]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[2]]></item>
+				</item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[开启视频上传的用户组]]></item>
+				<item id="description"><![CDATA[设置开启视频上传的用户组]]></item>
+				<item id="variable"><![CDATA[comiis_upload_group]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[1]]></item>
+				</item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[开启列表显示视频的版块]]></item>
+				<item id="description"><![CDATA[设置开启列表显示视频播放的版块]]></item>
+				<item id="variable"><![CDATA[comiis_forum_video]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[开启列表音频播放的版块]]></item>
+				<item id="description"><![CDATA[设置开启列表音频播放的版块]]></item>
+				<item id="variable"><![CDATA[comiis_forum_audio]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[开启内容页视频显示在头部]]></item>
+				<item id="description"><![CDATA[设置开启内容页视频显示在头部的版块]]></item>
+				<item id="variable"><![CDATA[comiis_view_video]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[开启内容页视频浮动置顶]]></item>
+				<item id="description"><![CDATA[开启后视频窗口将会一直固定在顶部播放]]></item>
+				<item id="variable"><![CDATA[comiis_view_video_top]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[开启群组视频音频解析]]></item>
+				<item id="description"><![CDATA[设置是否开启群组视频音频解析播放功能]]></item>
+				<item id="variable"><![CDATA[comiis_group]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="title"><![CDATA[开启群组视频显示在头部]]></item>
+				<item id="description"><![CDATA[设置开启群组内容页视频显示在头部]]></item>
+				<item id="variable"><![CDATA[comiis_group_video]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[开启群组视频上传]]></item>
+				<item id="description"><![CDATA[设置是否开启群组视频上传]]></item>
+				<item id="variable"><![CDATA[comiis_group_uploadvideo]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[17]]></item>
+				<item id="title"><![CDATA[开启群组列表显示视频]]></item>
+				<item id="description"><![CDATA[设置是否开启群组列表显示视频]]></item>
+				<item id="variable"><![CDATA[comiis_group_list]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="16">
+				<item id="displayorder"><![CDATA[18]]></item>
+				<item id="title"><![CDATA[开启群组列表音频播放]]></item>
+				<item id="description"><![CDATA[设置是否开启群组列表音频播放]]></item>
+				<item id="variable"><![CDATA[comiis_group_list_audio]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+	</item>
+</root>

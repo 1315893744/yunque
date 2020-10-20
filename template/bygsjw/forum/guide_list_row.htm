@@ -1,0 +1,77 @@
+<!--{if $list['threadcount']}-->
+<!--{eval require_once(DISCUZ_ROOT.'./template/bygsjw/php/forum_guide_list_row.php');}-->
+	<!--{loop $list['threadlist'] $key $thread}-->
+	<!--{eval $biaoid = substr($thread[tid], -1);}-->
+	<!--{eval $img_number = byg_threadlist_img_num($thread[tid], $thread[authorid], $biaoid);}-->
+	<!--{if $img_number == 1 && $_G['style']['luntan_liebiaotu'] == "on"}-->
+		<!--{eval $list_img1 = byg_threadlist_img($thread[tid], $thread[authorid], 1, $biaoid);}-->
+		<!--{loop $list_img1 $list_img1_1}-->
+		<div class="guide_list_img1 cl">
+			<div class="img1_z lanjiazai_bg">
+				<a href="forum.php?mod=viewthread&tid=$thread[tid]&{if $_GET['archiveid']}archiveid={$_GET['archiveid']}&{/if}extra=$extra" target="_blank" title="{$thread[subject]}" class="img_center img_big lanjiazai" data-original="{eval echo(getforumimg($list_img1_1[aid],0,150,100));}"></a>
+			</div>
+			<div class="img1_y">
+				<div class="img1_y_t">
+					<a href="forum.php?mod=viewthread&tid=$thread[tid]&{if $_GET['archiveid']}archiveid={$_GET['archiveid']}&{/if}extra=$extra" target="_blank" class="img1_tit over_two">{$thread[subject]}</a>
+				</div>
+				<div class="img1_y_b cl">
+					<a href="forum.php?mod=forumdisplay&fid=$thread[fid]" target="_blank" class="img1_laizi">{$list['forumnames'][$thread[fid]]['name']}</a>
+					<!--{if $thread['authorid'] && $thread['author']}-->
+						<a href="home.php?mod=space&uid=$thread[authorid]" c="1" target="_blank" class="z">{$thread[author]}</a>
+					<!--{else}-->
+						<a href="javascript:;" target="_blank" class="z">{$_G[setting][anonymoustext]}</a>
+					<!--{/if}-->
+					<span class="z">&nbsp;&nbsp;发表于&nbsp;{$thread[dateline]}</span>
+					<span class="y"><img src="{$_G['style']['styleimgdir']}/hui_huifu.png"/>{$thread[replies]}</span>
+					<span class="y"><img src="{$_G['style']['styleimgdir']}/hui_chakan.png"/><!--{if $thread['isgroup'] != 1}-->{$thread[views]}<!--{else}-->{$groupnames[$thread[tid]][views]}<!--{/if}--></span>
+				</div>
+			</div>
+		</div>
+		<!--{/loop}-->
+	<!--{elseif $img_number > 1 && $_G['style']['luntan_liebiaotu'] == "on"}-->
+		<div class="guide_list_img3 cl">
+			<div class="img1_y_t">
+				<a href="forum.php?mod=viewthread&tid=$thread[tid]&{if $_GET['archiveid']}archiveid={$_GET['archiveid']}&{/if}extra=$extra" target="_blank" class="img1_tit over_two">{$thread[subject]}</a>
+			</div>
+			<ul class="img3_c cl">
+			<!--{eval $list_img3 = byg_threadlist_img($thread[tid], $thread[authorid], 5, $biaoid);}-->
+			<!--{loop $list_img3 $list_img3_1}-->
+				<li class="lanjiazai_bg">
+					<a href="forum.php?mod=viewthread&tid=$thread[tid]&{if $_GET['archiveid']}archiveid={$_GET['archiveid']}&{/if}extra=$extra" target="_blank" title="{$thread[subject]}" class="img_center img_big lanjiazai" data-original="{eval echo(getforumimg($list_img3_1[aid],0,150,100));}"></a>
+				</li>
+			<!--{/loop}-->
+			</ul>
+			<div class="img1_y_b cl">
+				<a href="forum.php?mod=forumdisplay&fid=$thread[fid]" target="_blank" class="img1_laizi">{$list['forumnames'][$thread[fid]]['name']}</a>
+				<!--{if $thread['authorid'] && $thread['author']}-->
+					<a href="home.php?mod=space&uid=$thread[authorid]" c="1" target="_blank" class="z">{$thread[author]}</a>
+				<!--{else}-->
+					<a href="javascript:;" target="_blank" class="z">{$_G[setting][anonymoustext]}</a>
+				<!--{/if}-->
+				<span class="z">&nbsp;&nbsp;发表于&nbsp;{$thread[dateline]}</span>
+				<span class="y"><img src="{$_G['style']['styleimgdir']}/hui_huifu.png"/>{$thread[replies]}</span>
+				<span class="y"><img src="{$_G['style']['styleimgdir']}/hui_chakan.png"/><!--{if $thread['isgroup'] != 1}-->{$thread[views]}<!--{else}-->{$groupnames[$thread[tid]][views]}<!--{/if}--></span>
+			</div>
+		</div>
+	<!--{else}-->
+		<div class="guide_list_img3 cl">
+			<div class="img1_y_t">
+				<a href="forum.php?mod=viewthread&tid=$thread[tid]&{if $_GET['archiveid']}archiveid={$_GET['archiveid']}&{/if}extra=$extra" target="_blank" class="img1_tit over_two">{$thread[subject]}</a>
+			</div>
+			<div class="img1_y_b cl">
+				<a href="forum.php?mod=forumdisplay&fid=$thread[fid]" target="_blank" class="img1_laizi">{$list['forumnames'][$thread[fid]]['name']}</a>
+				<!--{if $thread['authorid'] && $thread['author']}-->
+					<a href="home.php?mod=space&uid=$thread[authorid]" c="1" target="_blank" class="z">{$thread[author]}</a>
+				<!--{else}-->
+					<a href="javascript:;" target="_blank" class="z">{$_G[setting][anonymoustext]}</a>
+				<!--{/if}-->
+				<span class="z">&nbsp;&nbsp;发表于&nbsp;{$thread[dateline]}</span>
+				<span class="y"><img src="{$_G['style']['styleimgdir']}/hui_huifu.png"/>{$thread[replies]}</span>
+				<span class="y"><img src="{$_G['style']['styleimgdir']}/hui_chakan.png"/><!--{if $thread['isgroup'] != 1}-->{$thread[views]}<!--{else}-->{$groupnames[$thread[tid]][views]}<!--{/if}--></span>
+			</div>
+		</div>
+	<!--{/if}-->
+	<!--{/loop}-->
+<!--{else}-->
+	<div style="padding: 12px 0; font-size: 16px; text-align: center; color: #999;">{lang guide_nothreads}</div>
+<!--{/if}-->

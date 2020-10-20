@@ -1,0 +1,536 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: "Microsoft YaHei", "微软雅黑";
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+}
+
+#qrcode {
+    margin: 0 105px;
+}
+
+li {
+    list-style: none;
+    display: block;
+    float: left;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+input:focus {
+    border-color: #01DF00;
+    outline: 0;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(1, 223, 0, 0.6);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(1, 223, 0, 0.6);
+}
+
+input, select {
+    border: 0;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.login_box {
+    background: url(img/bg.png) center repeat;
+    position: fixed;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.cont_box {
+    width: 94%;
+    margin: 30px auto;
+}
+
+.logo {
+    width: 200px;
+    height: 60px;
+    float: left;
+    margin-bottom: 50px;
+    background: rgb(255, 255, 255, .3);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.login_tab {
+    width: 410px;
+    background-color: #fff;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.18);
+    margin: 0px auto;
+    clear: both;
+    padding: 30px;
+}
+
+.tab_left {
+    width: 40%;
+    height: 450px;
+    float: left;
+    overflow: hidden;
+    text-align: right;
+}
+
+.tab_all {
+    width: 100%;
+}
+
+.tab_menu {
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    margin-top: 20px;
+}
+
+.left_menu, .right_menu {
+    width: 15%;
+    text-align: center;
+    font-size: 16px;
+    height: 40px;
+    line-height: 42px;
+    cursor: pointer;
+}
+
+.left_menu {
+    margin-left: 35%;
+}
+
+.tab {
+    width: 100%;
+    overflow: hidden;
+}
+
+.tab td {
+    height: 65px;
+    line-height: 50px;
+}
+
+.clicked_menu {
+    border-bottom: 2px solid #01DF00;
+}
+
+.name {
+    text-align: right;
+    color: #333;
+    padding-right: 10px;
+    width: 25%;
+}
+
+.input_nml {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    height: 36px;
+    padding-left: 10px;
+    width: 96%;
+}
+
+.yzzd {
+    position: relative;
+}
+
+.error {
+    position: absolute;
+    left: 10px;
+    top: 36px;
+    color: red;
+    z-index: 99;
+    display: block;
+    background: url(img/error.png) left center no-repeat;
+    padding-left: 20px;
+}
+
+.sus {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    color: #01DF00;
+    z-index: 99;
+    display: block;
+    background: url(img/sus.png) left center no-repeat;
+    padding-left: 20px;
+}
+
+select.input_nml {
+    width: 100%;
+    padding-left: 2%;
+    color: #999;
+}
+
+.first {
+    text-align: right;
+    color: #ccc;
+}
+
+.first a {
+    color: #01DF00;
+}
+
+.yzm {
+    width: 50%;
+    float: left;
+}
+
+.yzm_img {
+    width: 44%;
+    float: left;
+    height: 38px;
+    margin-left: 2%;
+    background: #ccc;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.sign input {
+    float: left;
+    margin-left: 10px;
+    margin-top: 14px;
+    margin-right: 10px;
+}
+
+.sign span {
+    float: left;
+    color: #999;
+}
+
+.sign span.sm_word {
+    float: left;
+    color: #ccc;
+}
+
+.sign a {
+    color: #01DF00;
+    float: right;
+}
+
+.login_btn {
+    background: #01DF00;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 5px 20px rgba(0, 223, 0, .35);
+    box-shadow: 0 5px 20px rgba(0, 223, 0, .35);
+    font-size: 16px;
+}
+
+.tab_box {
+    display: none;
+    margin-top: 20px;
+}
+
+.tab_box:first-child {
+    display: block;
+}
+
+.login_btn:hover {
+    background: #00CC33;
+}
+
+select.input_nml.short {
+    width: 70px;
+    float: left;
+    margin-right: 10px;
+}
+
+.regis {
+    margin-left: 0px;
+    margin-right: 10%;
+}
+
+.regis_pic {
+    text-align: left;
+    height: 600px;
+    margin-top: 50px;
+    margin-left: -20px;
+}
+
+.dl .tab td, .wj .tab td {
+    height: 50px;
+}
+
+.select_name {
+    color: #333;
+}
+
+.short_line td {
+    height: 40px;
+    line-height: 40px;
+}
+
+.tck_login, .tck_forget {
+    display: none;
+    background: rgba(0, 0, 0, .8);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.tck_login_box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.tck_login .login_tab.dl, .tck_forget .login_tab.wj {
+    margin-left: -300px;
+    margin-top: -225px;
+    position: relative;
+    width: 600px;
+    padding: 0px;
+    height: 450px;
+}
+
+.tck_forget .login_tab.wj {
+    height: 250px;
+    margin-top: -125px;
+}
+
+.close {
+    background: url(img/zz_close_btn.png) no-repeat;
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+}
+
+.close:hover {
+    background: url(img/zz_close_btn_h.png) no-repeat;
+    cursor: pointer;
+}
+
+.left_pic {
+    width: 225px;
+    background: #f5f9ff;
+    height: 450px;
+    float: left;
+    text-align: center;
+}
+
+.left_pic img {
+    margin-top: 55%;
+}
+
+.tck_forget .login_tab.wj .left_pic {
+    height: 250px;
+}
+
+.tck_login .login_tab.dl .tab, .tck_forget .login_tab.wj .tab {
+    width: 340px;
+}
+
+.tck_login .login_tab.dl .tab .yzm, .tck_forget .login_tab.wj .tab .yzm {
+    width: 49%;
+}
+
+.dl_box {
+}
+
+.zn .tab td {
+    height: 50px;
+}
+
+.name.title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.zn {
+    border: 3px solid #eee;
+    box-shadow: 0px 0px 0px;
+    background: #fff url(img/zz_signin_hdbg.png) center top no-repeat;
+}
+
+.dl, .wj {
+    background: #fff url(img/zz_signin_hdbg.png) 280px top no-repeat;
+}
+
+.zn .tab_box {
+    margin-top: 0px;
+}
+
+.zn .tab_menu li {
+    background: url(img/ts.png) left center no-repeat;
+    color: #01DF00;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 32px;
+}
+
+#btn_login, #btn_forget {
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#btn_login:hover, #btn_forget:hover {
+    color: #01DF00;
+}
+
+@media only screen and (max-width: 1080px) {
+    html {
+        font-size: 100px;
+    }
+
+    .login_tab {
+        width: 90%;
+        padding: 5%;
+    }
+
+    .input_nml {
+        width: 95%;
+    }
+
+    .input_nml.yzm {
+        width: 48%;
+    }
+
+    .logo {
+        margin-bottom: 0.6rem;
+    }
+
+    .left_pic {
+        display: none;
+    }
+
+    .dl, .wj {
+        background: #fff url(img/zz_signin_hdbg.png) center top no-repeat;
+    }
+
+    .tck_login_box {
+        position: relative;
+        left: 0px;
+        top: 0px;
+    }
+
+    .tck_login .login_tab.dl, .tck_forget .login_tab.wj {
+        margin: 50% auto;
+        width: 90%;
+    }
+
+    .tck_login .login_tab.dl .tab, .tck_forget .login_tab.wj .tab {
+        width: 88%;
+        margin: 10px auto;
+    }
+
+    .tck_login .login_tab.dl .tab .yzm, .tck_forget .login_tab.wj .tab .yzm {
+        width: 48%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    html {
+        font-size: 94.8px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 71.1px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 55.6px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    html {
+        font-size: 44.4px;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    html {
+        font-size: 40.7px;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    html {
+        font-size: 38.4px;
+    }
+}
+
+@media only screen and (max-width: 411px) {
+    html {
+        font-size: 38px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    html {
+        font-size: 34.8px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    html {
+        font-size: 33.3px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    html {
+        font-size: 29.6px;
+    }
+}
+
+.other-login {
+    margin-top: 10px;
+    height: 40px;
+    display: flex;
+    line-height: 40px;
+}
+
+.other-login .name {
+    width: 100px;
+    text-align: right;
+}
+
+.other-login .btns {
+    flex: 1;
+    display: flex;
+}
+
+.btns .btn {
+    width: 40px;
+    text-align: center;
+}
+
+.btn .iconfont {
+    font-size: 20px !important;
+}
+
+.wx {
+    color: #8CB922;
+}
+
+.qq {
+    color: #3CA0EC;
+}
+
+.wb {
+    color: #E14432;
+}

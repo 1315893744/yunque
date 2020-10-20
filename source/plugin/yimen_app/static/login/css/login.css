@@ -1,0 +1,140 @@
+.logo {
+    height: 3.93rem;
+    position: relative;
+    background-size: auto 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+}
+
+.logos {
+    height: 1.36rem;
+    width: 2.56rem;
+    background-image: url('../../../../../../static/image/common/logo.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.back {
+    position: absolute;
+    top: 0.15rem;
+    left: 0.15rem;
+    height: 0.6rem;
+    width: 0.6rem;
+    line-height: 0.6rem;
+    text-align: center;
+    font-size: 0.3rem;
+    background: rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    border-radius: 0.6rem;
+}
+
+.btns {
+    position: absolute;
+    bottom: -0.4rem;
+    left: 1.25rem;
+    z-index: 10;
+    height: 0.8rem;
+    width: 5rem;
+    display: flex;
+    border-radius: 0.8rem;
+    background: white;
+    line-height: 0.8rem;
+    text-align: center;
+    color: #bbbbbb;
+    box-shadow: 0 0.2rem 0.2rem -0.2rem #dddedf;
+}
+
+.btn {
+    width: 2.2rem;
+}
+
+.active {
+    /*background: linear-gradient(to right, #36e9e8, #1ba3e8);*/
+    color: white;
+    width: 2.8rem;
+    border-radius: 0.8rem;
+}
+
+.main {
+    flex: 1;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.form-box {
+    width: 5rem;
+    height: 4.5rem;
+}
+
+.bui-input {
+    background: #ffffff;
+    border-bottom: 1px solid #ededed;
+    height: 0.8rem;
+    box-sizing: border-box;
+    margin-top: 0.3rem;
+}
+
+.bui-input input {
+    color: #bfbfbf;
+}
+
+.bui-input i {
+    color: #999999;
+}
+
+.btn-color {
+    margin-top: 0.6rem;
+    background: linear-gradient(to right, #36e9e8, #1ba3e8);
+    color: white;
+}
+
+.forget {
+    margin-top: 0.2rem;
+    text-align: center;
+    color: #bfbfbf;
+    font-size: 0.25rem;
+}
+
+.other-login {
+    position: absolute;
+    left: 0.75rem;
+    bottom: 0.6rem;
+    height: 1rem;
+    width: 6rem;
+    display: flex;
+}
+
+.other-line {
+    flex: 1;
+    height: 0.5rem;
+    border-bottom: 1px solid #ededed;
+    box-sizing: border-box;
+
+}
+
+.other-box {
+    height: 0.8rem;
+    width: 0.8rem;
+    margin: 0.1rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 0 0.1rem #f0f0f0;
+    text-align: center;
+    line-height: 0.8rem;
+}
+
+.wx {
+    color: #8CB922;
+}
+
+.qq {
+    color: #3CA0EC;
+}
+
+.wb {
+    color: #E14432;
+}

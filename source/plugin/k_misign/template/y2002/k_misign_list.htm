@@ -1,0 +1,38 @@
+{template common/header}
+<div class="signlistheader">
+	<a href="javascript:;" onclick="ajaxget('{$setting['pluginurl']}sign&operation=list', 'ranklist')" {if $_GET['op'] != ''}class="more"{/if}>{lang k_misign:ranklist_today}</a>
+    <a href="javascript:;" onclick="ajaxget('{$setting['pluginurl']}sign&operation=list&op=month', 'ranklist')" {if $_GET['op'] != 'month'}class="more"{/if}>{lang k_misign:ranklist_month}</a>
+    <a href="javascript:;" onclick="ajaxget('{$setting['pluginurl']}sign&operation=list&op=zong', 'ranklist')" {if $_GET['op'] != 'zong'}class="more"{/if}>{lang k_misign:ranklist_zong}</a>
+    <!--{if $setting['rewardlistopen']}--><a href="javascript:;" onclick="ajaxget('{$setting['pluginurl']}sign&operation=list&op=rewardlist', 'ranklist')" {if $_GET['op'] != 'rewardlist'}class="more"{/if}>{lang k_misign:ranklist_reward}</a><!--{/if}--> 
+</div>
+
+<div class="list">
+	<!--{if $mrcs}-->
+	<ul class="cl">
+    	<!--{eval $j = 10 * ($page - 1)+1;}-->
+    	<!--{loop $mrcs $mrc}-->
+		<li class="cl">
+        	<div class="head z"><a href="home.php?mod=space&uid={$mrc['uid']}" target="_blank"><img src="<!--{avatar($mrc['uid'], middle, 1)}-->"></a></div>
+            <div class="infor z">
+            	<p><a href="home.php?mod=space&uid={$mrc['uid']}" target="_blank" class="xi1 xs2">{$mrc[username]}</a></p>
+                <p>{$mrc[time]}</p>
+                <p>{$mrc['level']}</p>
+                <!--{if $_GET['op'] == 'month'}--><p>{lang k_misign:ranklist_monthdays}<span class="times">{$mrc[mdays]}</span>次 </p><!--{/if}--> 
+                <!--{if $_GET['op'] == 'zong'}--><p>累计签到<span class="times">{$mrc[days]}</span>次 </p><!--{/if}--> 
+                <!--{if $_GET['op'] == '' || $_GET['op'] == 'month' || $_GET['op'] == 'zong'}-->
+                <p>{lang k_misign:ranklist_lastreward}<span class="times">{$mrc['lastreward']}</span>{$_G['setting']['extcredits'][$setting[nrcredit]]['unit']}{$_G['setting']['extcredits'][$setting[nrcredit]]['title']} </p>
+                <!--{elseif $_GET['op'] == 'rewardlist'}-->
+                <p>{lang k_misign:ranklist_rewards}<span class="times">{$mrc['reward']}</span>{$_G['setting']['extcredits'][$setting[nrcredit]]['unit']}{$_G['setting']['extcredits'][$setting[nrcredit]]['title']} </p>
+                <!--{/if}--> 
+            </div>
+            <div class="index z first">{$j}</div>
+        </li>
+        <!--{eval $j ++;}-->
+        <!--{/loop}-->
+    </ul>
+    <!--{if !empty($multipage)}--><div class="btns y">$multipage</div><!--{/if}-->
+    <!--{else}-->
+    	<center><span class="xg1 xs2">{lang k_misign:noinfo}</span></center>
+    <!--{/if}-->
+</div>
+{subtemplate common/footer}

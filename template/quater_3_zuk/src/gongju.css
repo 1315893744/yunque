@@ -1,0 +1,58 @@
+.cards { float: left; width: 70px; height: 65px; display: block; margin: 0 6px 6px 0; overflow: hidden}
+.cards:hover { opacity: 0.8}
+.cards a { display: block; width: 70px; height: 65px}
+.cards1 { background: url(card2.png) no-repeat 0 0}
+.cards2 { background: url(card2.png) no-repeat -76px 0}
+.cards3 { background: url(card2.png) no-repeat -152px 0}
+.cards4 { background: url(card2.png) no-repeat 0 -70px}
+.cards5 { background: url(card2.png) no-repeat -76px -70px}
+
+
+.use_bx a { float: left; padding: 20px 20px 0 0; font-size: 14px}
+.use_bx a:hover { color: #CF0010}
+
+
+.cool-items { padding: 20px 20px 20px 10px; background: #FFFFFF}
+.cool-items dl {
+    text-align: left;
+    height: 29px;
+    line-height: 29px;
+    position: relative;
+    padding-right: 59px;
+    overflow: hidden;
+    font-size: 15px;
+}
+.cool-items dl {
+    height: 36px;
+    line-height: 36px;
+    overflow: hidden;
+    padding: 0 55px 0 12px;
+}
+.cool-items dt {
+	display: inline-block;
+    text-align: left;
+    height: 29px;
+	margin-right: 5px
+}
+.cool-items dt, .cool-items dt a {
+    color: #3257A3;
+}
+.cool-items dd {
+	display: inline-block;
+    padding: 0;
+}
+.cool-items dd.more {
+    display: block;
+    position: absolute;
+    right: 12px;
+    top: 0;
+    width: 60px;
+    text-align: right;
+    padding: 0;
+    font-size: 12px;
+}
+.cool-items dd.more, .cool-items dd.more a {
+    color: #BBBBBB;
+	font-size: 14px;
+	font-family: Georgia, 'Microsoft Yahei'
+}

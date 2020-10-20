@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X3.2]]></item>
+	<item id="Time"><![CDATA[2016-12-10 11:45]]></item>
+	<item id="From"><![CDATA[XXX网 - 站长互动平台]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[【七豆】交友]]></item>
+			<item id="identifier"><![CDATA[qidou_love]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[qidou_love/]]></item>
+			<item id="copyright"><![CDATA[XXX网 - 站长互动平台]]></item>
+			<item id="version"><![CDATA[1.2]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[admin_user]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[用戶管理]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[admin_reward]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[禮物列表]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[2]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[admin_link]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[入口鏈接]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[10]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X3,X3.1,X3.2,X3.3,X3.4,F1.0]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[標題名稱]]></item>
+				<item id="description"><![CDATA[顯示在網頁的標題中，例如同城交友。]]></item>
+				<item id="variable"><![CDATA[jy_title]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[同城交友]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[個性標簽]]></item>
+				<item id="description"><![CDATA[個性標簽，一行一個。]]></item>
+				<item id="variable"><![CDATA[tag_name]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[小清新
+非誠勿擾
+行動派
+敢愛敢恨
+文藝青年
+起床困難戶
+極品吃貨
+叫我逗比
+雙重人格
+鏟屎官
+糾結狂魔
+選擇恐懼癥
+細節控
+強迫癥
+喜歡簡單
+重情重義
+女漢紙
+單身汪
+神經大條
+萌萌噠
+技術宅
+外貌協會
+待解救男青年
+購物狂
+單細胞
+拖延癥
+大叔控
+長發及腰
+月光族
+待解救女青年]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[邂逅人數]]></item>
+				<item id="description"><![CDATA[每次邂逅好友人數。]]></item>
+				<item id="variable"><![CDATA[meet_num]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[10]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[邂逅時間]]></item>
+				<item id="description"><![CDATA[每次邂逅的間隔時間
+例如10，指下一次邂逅的時間在十小時後。
+請以小時作為時間單位。]]></item>
+				<item id="variable"><![CDATA[meet_time]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[默認性別]]></item>
+				<item id="description"><![CDATA[未登錄時，顯示的默認性別用戶。]]></item>
+				<item id="variable"><![CDATA[meet_gender]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[1=男神
+2=女神]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[打招呼問候語]]></item>
+				<item id="description"><![CDATA[自定義打招呼問候語，一行為一個。]]></item>
+				<item id="variable"><![CDATA[greeting_text]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[我就是想關注你，怎麼辦？
+我嘴笨，不知道該怎麼和你聊天，能教教我嗎？
+他們說我辣眼楮，可我說的話挺甜，你要不要听一听？
+咱們是時候升華一下革命友誼了。
+友誼的小船得兩個人一起劃，怎麼樣一起劃吧~
+對不起，我控制不住我的手......請問你缺粉絲嗎？會撩的那種
+在下已經關注你好久了，並向你暗送秋波，就是秋天的菠菜的那個秋波。
+我怎麼老是感覺你在背後說我帥呢！
+我們要是聊出感情來，你可以負責吆~
+我肯定不是第一個與你聊天的人吧，畢竟你這麼美。
+你怎麼這麼美，容我喝一杯82年的雪碧壓壓驚
+你好，有興趣一起做作業嗎？你懂得
+你好，你听說過安利嗎？
+我覺得你五行缺我
+長的又高又帥還看上你了，是我的錯嗎
+你關注我這麼久，應該說過跟我說話，我不會拒絕你的
+自拍都這麼美，你一定是仙女下凡吧
+打擾一下，你剛剛電了我一下，你的賠償我
+我說你美，他們不信，還有打完QAQ快給我吹吹~
+少年，我看你骨骼精奇，忍不住打聲招呼]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[喜歡次數]]></item>
+				<item id="description"><![CDATA[每人一天對單個用戶的喜歡數量，超過數量不在計入。]]></item>
+				<item id="variable"><![CDATA[love_num]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[打賞貨幣]]></item>
+				<item id="description"><![CDATA[打賞禮物所使用的貨幣。]]></item>
+				<item id="variable"><![CDATA[reward_price]]></item>
+				<item id="type"><![CDATA[extcredit]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[打賞禮物]]></item>
+				<item id="description"><![CDATA[打賞禮物數據格式，一行為一個禮物。
+圖片,名稱,金額
+系統內置32個禮物圖片，在source/plugin/qidou_love/static/images/reward目錄下，盡量不使用gif圖片。]]></item>
+				<item id="variable"><![CDATA[reward_list]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[source/plugin/qidou_love/static/images/reward/1.png,個人票,100
+source/plugin/qidou_love/static/images/reward/2.png,頻道票,150
+source/plugin/qidou_love/static/images/reward/3.png,丘比特,100
+source/plugin/qidou_love/static/images/reward/4.png,游艇,100000
+source/plugin/qidou_love/static/images/reward/5.png,棒棒糖,2
+source/plugin/qidou_love/static/images/reward/6.png,V587,3
+source/plugin/qidou_love/static/images/reward/7.png,水果糖,4
+source/plugin/qidou_love/static/images/reward/8.png,鼓掌,5
+source/plugin/qidou_love/static/images/reward/9.png,啤酒,6
+source/plugin/qidou_love/static/images/reward/10.png,氣球,7
+source/plugin/qidou_love/static/images/reward/11.png,你最棒,8
+source/plugin/qidou_love/static/images/reward/12.png,熒光棒,9
+source/plugin/qidou_love/static/images/reward/13.png,我愛你,10
+source/plugin/qidou_love/static/images/reward/15.png,親一口,11
+source/plugin/qidou_love/static/images/reward/16.png,炸彈,12
+source/plugin/qidou_love/static/images/reward/17.png,抱抱,13
+source/plugin/qidou_love/static/images/reward/17.png,蘿莉,14
+source/plugin/qidou_love/static/images/reward/18.png,烏鴉,15]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[充值鏈接]]></item>
+				<item id="description"><![CDATA[自定義充值鏈接，打賞金額不足時，點擊余額不足按鈕，跳轉充值鏈接。]]></item>
+				<item id="variable"><![CDATA[reward_link]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[帖子原生]]></item>
+				<item id="description"><![CDATA[開啟後，小雲App內帖子使用原生打開，關閉則使用wap或者H5打開。]]></item>
+				<item id="variable"><![CDATA[open_invitation]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="h_ghonor"><![CDATA[超人氣]]></item>
+				<item id="h_honor"><![CDATA[人氣]]></item>
+				<item id="test_name"><![CDATA[王丫丫]]></item>
+				<item id="h_age_unit"><![CDATA[歲]]></item>
+				<item id="h_d_sign"><![CDATA[這個人很懶，什麼都沒有留下~]]></item>
+				<item id="h_meili"><![CDATA[魅力]]></item>
+				<item id="h_guanzhu"><![CDATA[關注]]></item>
+				<item id="h_fensi"><![CDATA[粉絲]]></item>
+				<item id="h_dongtai"><![CDATA[動態]]></item>
+				<item id="h_xiangce"><![CDATA[相冊]]></item>
+				<item id="h_jiaoyou"><![CDATA[交友]]></item>
+				<item id="h_month"><![CDATA[月]]></item>
+				<item id="h_image_unit"><![CDATA[張]]></item>
+				<item id="test_title"><![CDATA[我忽略時刻，正因等你出現；我忽略距離，正因等你出現；我忽略語言，正因想你一向未變。親愛的，想你了。]]></item>
+				<item id="h_read"><![CDATA[閱\讀]]></item>
+				<item id="h_day"><![CDATA[日]]></item>
+				<item id="h_jyzp"><![CDATA[交友照片]]></item>
+				<item id="h_xhtdr"><![CDATA[喜歡TA的人]]></item>
+				<item id="h_t"><![CDATA[共]]></item>
+				<item id="h_r"><![CDATA[人]]></item>
+				<item id="h_jyxr"><![CDATA[交友宣言]]></item>
+				<item id="h_jyxx"><![CDATA[交友信息]]></item>
+				<item id="test_sign"><![CDATA[交友不相親，~~謝謝]]></item>
+				<item id="h_d_1"><![CDATA[性別]]></item>
+				<item id="h_d_2"><![CDATA[年齡]]></item>
+				<item id="h_d_3"><![CDATA[星座]]></item>
+				<item id="h_d_4"><![CDATA[身高]]></item>
+				<item id="h_d_5"><![CDATA[體重]]></item>
+				<item id="h_d_6"><![CDATA[學歷]]></item>
+				<item id="h_d_7"><![CDATA[職業]]></item>
+				<item id="h_d_8"><![CDATA[月收入]]></item>
+				<item id="h_d_9"><![CDATA[住房]]></item>
+				<item id="h_d_10"><![CDATA[購車]]></item>
+				<item id="h_d_11"><![CDATA[情感]]></item>
+				<item id="h_d_1_0"><![CDATA[保密]]></item>
+				<item id="h_d_1_1"><![CDATA[男]]></item>
+				<item id="h_d_1_2"><![CDATA[女]]></item>
+				<item id="h_user_tag"><![CDATA[個性標簽]]></item>
+				<item id="h_not_recom_user"><![CDATA[您已經邂逅了我們今天推薦的交友用戶，我們將精心推薦下一批用戶給您，請耐心等待。]]></item>
+				<item id="h_button_look"><![CDATA[再看一遍]]></item>
+				<item id="h_t_1"><![CDATA[關注]]></item>
+				<item id="h_t_2"><![CDATA[喜歡]]></item>
+				<item id="h_t_3"><![CDATA[聊天]]></item>
+				<item id="h_fengmian"><![CDATA[封面]]></item>
+				<item id="h_jyxy_info"><![CDATA[交友宣言，讓更多人了解你...]]></item>
+				<item id="h_d_12"><![CDATA[生日]]></item>
+				<item id="h_select"><![CDATA[請選擇]]></item>
+				<item id="h_submit_button_1"><![CDATA[保存資料]]></item>
+				<item id="h_submit_button_2"><![CDATA[開啟交友之旅]]></item>
+				<item id="h_up"><![CDATA[以上]]></item>
+				<item id="h_down"><![CDATA[一下]]></item>
+				<item id="h_d_6_1"><![CDATA[大專以下]]></item>
+				<item id="h_d_6_2"><![CDATA[大專]]></item>
+				<item id="h_d_6_3"><![CDATA[本科]]></item>
+				<item id="h_d_6_4"><![CDATA[碩士]]></item>
+				<item id="h_d_6_5"><![CDATA[博士]]></item>
+				<item id="h_d_6_6"><![CDATA[博士後]]></item>
+				<item id="h_d_7_1"><![CDATA[自由職業者]]></item>
+				<item id="h_d_7_2"><![CDATA[學生]]></item>
+				<item id="h_d_7_3"><![CDATA[公務員]]></item>
+				<item id="h_d_7_4"><![CDATA[白領]]></item>
+				<item id="h_d_7_5"><![CDATA[藍領]]></item>
+				<item id="h_d_7_6"><![CDATA[企業高管]]></item>
+				<item id="h_d_7_7"><![CDATA[私營業主]]></item>
+				<item id="h_d_7_8"><![CDATA[軍人]]></item>
+				<item id="h_d_7_9"><![CDATA[待業中]]></item>
+				<item id="h_d_7_10"><![CDATA[其他行業]]></item>
+				<item id="h_d_8_1"><![CDATA[2000以下]]></item>
+				<item id="h_d_8_2"><![CDATA[2000-4000]]></item>
+				<item id="h_d_8_3"><![CDATA[4000-6000]]></item>
+				<item id="h_d_8_4"><![CDATA[6000-8000]]></item>
+				<item id="h_d_8_5"><![CDATA[8000-10000]]></item>
+				<item id="h_d_8_6"><![CDATA[10000-15000]]></item>
+				<item id="h_d_8_7"><![CDATA[15000-20000]]></item>
+				<item id="h_d_8_8"><![CDATA[20000以上]]></item>
+				<item id="h_d_9_1"><![CDATA[自有物業]]></item>
+				<item id="h_d_9_2"><![CDATA[家人同住]]></item>
+				<item id="h_d_9_3"><![CDATA[租房]]></item>
+				<item id="h_d_9_4"><![CDATA[婚後購房]]></item>
+				<item id="h_d_10_1"><![CDATA[未購車]]></item>
+				<item id="h_d_10_2"><![CDATA[已購車]]></item>
+				<item id="h_d_10_3"><![CDATA[單位車]]></item>
+				<item id="h_d_11_1"><![CDATA[單身]]></item>
+				<item id="h_d_11_2"><![CDATA[求交往]]></item>
+				<item id="h_d_11_3"><![CDATA[暗戀中]]></item>
+				<item id="h_d_11_4"><![CDATA[曖昧中]]></item>
+				<item id="h_d_11_5"><![CDATA[戀愛中]]></item>
+				<item id="h_d_11_6"><![CDATA[離異]]></item>
+				<item id="h_d_11_7"><![CDATA[已婚]]></item>
+				<item id="h_success"><![CDATA[保存成功\]]></item>
+				<item id="h_error"><![CDATA[保存失敗]]></item>
+				<item id="h_close"><![CDATA[關閉]]></item>
+				<item id="h_upload_error"><![CDATA[上傳圖片失敗]]></item>
+				<item id="h_login_follow"><![CDATA[還未登錄，先去登錄吧！]]></item>
+				<item id="h_follow_success"><![CDATA[關注成功\]]></item>
+				<item id="h_follow_cancel"><![CDATA[取消關注]]></item>
+				<item id="h_follow_error"><![CDATA[關注失敗]]></item>
+				<item id="h_login_love"><![CDATA[喜歡他/她，也得留個名吧，先去登錄！]]></item>
+				<item id="h_loading_error"><![CDATA[加載失敗，請重試！]]></item>
+				<item id="h_loading_not_data"><![CDATA[沒有更多內容了！]]></item>
+				<item id="h_photo_login"><![CDATA[想看私密照，也先登錄下嘛~]]></item>
+				<item id="h_info_login"><![CDATA[想看我信息，也先登錄下嘛~]]></item>
+				<item id="h_d_3_1"><![CDATA[白羊座]]></item>
+				<item id="h_d_3_2"><![CDATA[金牛座]]></item>
+				<item id="h_d_3_3"><![CDATA[雙子座]]></item>
+				<item id="h_d_3_4"><![CDATA[巨蟹座]]></item>
+				<item id="h_d_3_5"><![CDATA[獅子座]]></item>
+				<item id="h_d_3_6"><![CDATA[處女座]]></item>
+				<item id="h_d_3_7"><![CDATA[天秤座]]></item>
+				<item id="h_d_3_8"><![CDATA[天蠍座]]></item>
+				<item id="h_d_3_9"><![CDATA[射手座]]></item>
+				<item id="h_d_3_10"><![CDATA[摩羯座]]></item>
+				<item id="h_d_3_11"><![CDATA[水瓶座]]></item>
+				<item id="h_d_3_12"><![CDATA[雙魚座]]></item>
+				<item id="h_recom"><![CDATA[推薦]]></item>
+				<item id="h_boy"><![CDATA[男神]]></item>
+				<item id="h_girl"><![CDATA[女神]]></item>
+				<item id="h_encounter"><![CDATA[邂逅]]></item>
+				<item id="a_uid"><![CDATA[UID]]></item>
+				<item id="a_user_name"><![CDATA[用戶名稱]]></item>
+				<item id="a_groupid"><![CDATA[用戶等級]]></item>
+				<item id="a_user_album"><![CDATA[用戶封面]]></item>
+				<item id="a_album_list"><![CDATA[用戶相冊]]></item>
+				<item id="a_gender"><![CDATA[用戶性別]]></item>
+				<item id="a_age"><![CDATA[用戶年齡]]></item>
+				<item id="a_birth"><![CDATA[用戶生日]]></item>
+				<item id="a_constellation"><![CDATA[用戶星座]]></item>
+				<item id="a_education"><![CDATA[用戶學歷]]></item>
+				<item id="a_occupation"><![CDATA[用戶職業]]></item>
+				<item id="a_affectivestatus"><![CDATA[感情狀態]]></item>
+				<item id="a_height"><![CDATA[用戶身高]]></item>
+				<item id="a_weight"><![CDATA[用戶體重]]></item>
+				<item id="a_income"><![CDATA[每月收入]]></item>
+				<item id="a_house"><![CDATA[用戶住房]]></item>
+				<item id="a_vehicle"><![CDATA[用戶購車]]></item>
+				<item id="a_sightml"><![CDATA[用戶簽名]]></item>
+				<item id="a_sigtext"><![CDATA[交友宣言]]></item>
+				<item id="a_user_tag"><![CDATA[個性標簽]]></item>
+				<item id="a_is_recom"><![CDATA[用戶推薦]]></item>
+				<item id="a_people_num"><![CDATA[粉絲人數]]></item>
+				<item id="a_charm_num"><![CDATA[魅力數量]]></item>
+				<item id="a_lat"><![CDATA[經度]]></item>
+				<item id="a_lng"><![CDATA[緯度]]></item>
+				<item id="a_add_time"><![CDATA[創建時間]]></item>
+				<item id="a_handle"><![CDATA[用戶操作]]></item>
+				<item id="a_all"><![CDATA[全部]]></item>
+				<item id="a_submit"><![CDATA[提交]]></item>
+				<item id="a_look"><![CDATA[查看]]></item>
+				<item id="a_yes"><![CDATA[是]]></item>
+				<item id="a_no"><![CDATA[否]]></item>
+				<item id="h_keep_success"><![CDATA[操作成功\]]></item>
+				<item id="h_photo_warning"><![CDATA[上傳照片，填寫資料會增加成功\率吆~]]></item>
+				<item id="h_login_button"><![CDATA[立即登錄]]></item>
+				<item id="link"><![CDATA[鏈接]]></item>
+				<item id="h_ucenter"><![CDATA[個人中心]]></item>
+				<item id="h_share_content"><![CDATA[分享了內容]]></item>
+				<item id="h_not_trends"><![CDATA[還沒有發表過動態哦~]]></item>
+				<item id="h_not_album"><![CDATA[還沒有發表過照片哦~]]></item>
+				<item id="h_greeting_info"><![CDATA[有人向我打招呼]]></item>
+				<item id="h_greeting_success"><![CDATA[打招呼成功\]]></item>
+				<item id="h_greeting_error"><![CDATA[打招呼失敗]]></item>
+				<item id="h_distance"><![CDATA[相距]]></item>
+				<item id="h_perfect_info"><![CDATA[想看我信息，也先完善自己的信息吧~]]></item>
+				<item id="h_t_4"><![CDATA[打賞]]></item>
+				<item id="h_account"><![CDATA[賬戶余額]]></item>
+				<item id="h_zengsong"><![CDATA[贈送]]></item>
+				<item id="h_yebz"><![CDATA[余額不足]]></item>
+				<item id="h_yebz_open_link"><![CDATA[余額不足，正在打開充值中心！]]></item>
+				<item id="h_reward_success"><![CDATA[打賞成功\！]]></item>
+				<item id="h_reward_error"><![CDATA[打賞失敗！]]></item>
+				<item id="h_dstdr"><![CDATA[打賞TA的人]]></item>
+				<item id="h_wgndsl"><![CDATA[我給你打賞了一個]]></item>
+				<item id="a_r_uid"><![CDATA[打賞人UID]]></item>
+				<item id="a_r_rid"><![CDATA[接收人UID]]></item>
+				<item id="a_r_name"><![CDATA[禮物名稱]]></item>
+				<item id="a_r_image"><![CDATA[禮物圖片]]></item>
+				<item id="a_r_price"><![CDATA[禮物金額]]></item>
+				<item id="a_r_time"><![CDATA[打賞時間]]></item>
+				<item id="h_dslwb"><![CDATA[打賞禮物榜]]></item>
+				<item id="h_g"><![CDATA[個]]></item>
+				<item id="a_del"><![CDATA[刪除]]></item>
+				<item id="link_info"><![CDATA[復制鏈接，添加在APP或者手機版入口內使用！]]></item>
+				<item id="h_not_user_tag"><![CDATA[點擊添加個性標簽]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[update.php]]></item>
+	</item>
+</root>

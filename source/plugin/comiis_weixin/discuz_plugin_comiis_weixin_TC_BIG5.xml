@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="version"><![CDATA[X3,X3.1,X3.2,X3.3,X3.4,F1.0,L1.0]]></item>
+	<item id="Time"><![CDATA[2019-02-26 20:26]]></item>
+	<item id="From"><![CDATA[克XXX网 - 站长互动平台]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[克米設計-微信登錄]]></item>
+			<item id="identifier"><![CDATA[comiis_weixin]]></item>
+			<item id="description"><![CDATA[這是一款為PC端和手機端實現微信登錄的插件]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[comiis_weixin/]]></item>
+			<item id="copyright"><![CDATA[XXX网 - 站长互动平台]]></item>
+			<item id="version"><![CDATA[v2.1]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[comiis_weixin_setup]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[綁定微信]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[7]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[comiis_weixin]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[28]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[comiis_weixin_admin]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[微信用戶管理]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="3">
+					<item id="name"><![CDATA[comiis_weixin_key]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="4">
+					<item id="name"><![CDATA[comiis_more]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[更多克米設計作品]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[3]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X3,X3.1,X3.2,X3.3,X3.4,F1.0,L1.0]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[授權Key]]></item>
+				<item id="description"><![CDATA[XXX网(baidu.Com)整理无限制版，KEY请直接留空]]></item>
+				<item id="variable"><![CDATA[comiis_key]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[卸載刪除插件數據]]></item>
+				<item id="description"><![CDATA[設置卸載本插件時是否刪除本插件的所有數據]]></item>
+				<item id="variable"><![CDATA[comiis_app_weixin_del]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[登錄按鈕只在微信顯示]]></item>
+				<item id="description"><![CDATA[設置手機端登錄按鈕只在微信下顯示]]></item>
+				<item id="variable"><![CDATA[wx_show_key]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[手機端登錄圖標樣式]]></item>
+				<item id="description"><![CDATA[設置手機端登錄圖標顯示效果樣式，該設置僅克米設計手機版生效]]></item>
+				<item id="variable"><![CDATA[appicostyle]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[0 = 圖標
+1 = 圖標+文字]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[AppId]]></item>
+				<item id="description"><![CDATA[AppId 必須與微信管理平台後台設置的一致]]></item>
+				<item id="variable"><![CDATA[appid]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[AppSecret]]></item>
+				<item id="description"><![CDATA[AppSecret 必須與微信管理平台後台設置的一致]]></item>
+				<item id="variable"><![CDATA[appsecret]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[回調域名]]></item>
+				<item id="description"><![CDATA[設置回調域名，請和微信管理後台一致]]></item>
+				<item id="variable"><![CDATA[reurl]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[OAuth授權主域名]]></item>
+				<item id="description"><![CDATA[解決微信OAuth2.0網頁授權只能設置一個回調域名的問題: http://你的授權域名/wx.php]]></item>
+				<item id="variable"><![CDATA[wxoauth]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[開啟無感登錄]]></item>
+				<item id="description"><![CDATA[設置是否開啟無感知登錄]]></item>
+				<item id="variable"><![CDATA[wxnotip]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[注冊模式]]></item>
+				<item id="description"><![CDATA[設置微信登錄的注冊模式]]></item>
+				<item id="variable"><![CDATA[perfect]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[0 = 一鍵登錄自動注冊
+1 = 提示是否完善帳號
+2 = 強制完善帳號注冊]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[注冊默認用戶組]]></item>
+				<item id="description"><![CDATA[設置微信注冊用戶的默認用戶組]]></item>
+				<item id="variable"><![CDATA[groupid]]></item>
+				<item id="type"><![CDATA[group]]></item>
+				<item id="value"><![CDATA[9]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[微信自動登錄]]></item>
+				<item id="description"><![CDATA[設置微信訪問是否自動登錄 (注: 開啟後微信訪問站點將無法退出)]]></item>
+				<item id="variable"><![CDATA[autologin]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[引導頁面樣式]]></item>
+				<item id="description"><![CDATA[設置微信登錄引導頁面頭部樣式效果
+提示︰僅在注冊模式為 [提示是否完善帳號] 模式下有效]]></item>
+				<item id="variable"><![CDATA[wxstyle]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[0 = 默認樣式
+1 = 頭像樣式]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[相同用戶提示綁定]]></item>
+				<item id="description"><![CDATA[設置相同用戶是否提示綁定]]></item>
+				<item id="variable"><![CDATA[wxuser]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[注冊郵箱後綴]]></item>
+				<item id="description"><![CDATA[設置微信登錄默認自動填寫的郵箱格式]]></item>
+				<item id="variable"><![CDATA[email]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[@163.com]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[微信管理頁面是否顯示頭部]]></item>
+				<item id="description"><![CDATA[設置個人中心微信管理頁面是否顯示頭部
+使用克米設計-手機版請設置否]]></item>
+				<item id="variable"><![CDATA[showheader]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="16">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[是否顯示頭部引導關注廣告]]></item>
+				<item id="description"><![CDATA[設置是否顯示頭部浮動引導關注廣告]]></item>
+				<item id="variable"><![CDATA[wxtopgz]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="17">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[廣告關閉後再次出現時間]]></item>
+				<item id="description"><![CDATA[設置頭部引導關注廣告關閉後再次出現的時間，單位︰秒
+提示︰86400秒=1天]]></item>
+				<item id="variable"><![CDATA[wxtopgztime]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[86400]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="18">
+				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="title"><![CDATA[廣告顯示頁面]]></item>
+				<item id="description"><![CDATA[設置頭部引導關注廣告需要顯示的頁面]]></item>
+				<item id="variable"><![CDATA[wxtopgzdw]]></item>
+				<item id="type"><![CDATA[selects]]></item>
+				<item id="extra"><![CDATA[0 = 所有頁顯示
+1 = 門戶首頁
+2 = 文章列表
+3 = 文章內容
+4 = 論壇首頁
+5 = 版塊列表頁
+6 = 帖子內容頁]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[1]]></item>
+					<item id="1"><![CDATA[2]]></item>
+					<item id="2"><![CDATA[3]]></item>
+					<item id="3"><![CDATA[4]]></item>
+					<item id="4"><![CDATA[5]]></item>
+					<item id="5"><![CDATA[6]]></item>
+				</item>
+			</item>
+			<item id="19">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[廣告代碼]]></item>
+				<item id="description"><![CDATA[設置頭部引導關注廣告代碼]]></item>
+				<item id="variable"><![CDATA[wxtopgzcode]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<span class="wx_btn_bg bg_0 f_f y"><a href="https://baidu.com">立即關注</a></span>
+<i class="comiis_wxico gzgzh_ico">&#xe639</i>
+<img src="source/plugin/comiis_weixin/style/icon.png" class="kmico">
+<h2>關注克米設計公眾號</h2>
+<p>及時知曉模板插件最新發布情況</p>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="20">
+				<item id="displayorder"><![CDATA[17]]></item>
+				<item id="title"><![CDATA[語言包]]></item>
+				<item id="description"><![CDATA[插件相關語言包, 修改前建議先復制內容到記事本保存備份]]></item>
+				<item id="variable"><![CDATA[language]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[001 = 尊敬的微信用戶︰
+002 = 為了給您提供更多內容，請先關聯社區帳號︰
+003 = 首次登錄，需先綁定帳號
+004 = 請您綁定帳號或注冊新帳號
+005 = 沒有帳號? 1秒快速注冊
+006 = 綁定已有帳號 (僅需一次)
+007 = 若非本人操作請忽略
+008 = &copy 2008-2019 克米設計 版權所有
+009 = 微信一鍵登錄
+010 = 使用微信登錄
+011 = 綁定已有帳號
+012 = 注冊新帳號
+013 = 帳號
+014 = 請輸入用戶名
+015 = 密碼
+016 = 請輸入密碼
+017 = 問題
+018 = 答案
+019 = 請輸入問題答案
+020 = 綁定帳號
+021 = 提示︰PC端也可進行綁定和解綁操作
+022 = 提交注冊
+023 = 解除綁定
+024 = 綁定微信
+025 = 資料修改
+026 = 需設置登錄密碼後才能進行解除綁定操作!
+027 = 馬上設置
+028 = 確認解除已綁定帳號?
+029 = 解除綁定將失去微信相關功能，請慎重!
+030 = 確認解除
+031 = 綁定微信號 隨時隨地輕松登錄!
+032 = 立即綁定微信
+033 = 該功能請在微信下使用
+034 = 返回首頁
+035 = 設置帳號
+036 = 設置密碼
+037 = 確認密碼
+038 = 請再次輸入密碼
+039 = 提交修改
+040 = 提醒︰每個微信新用戶只有一次改名機會!
+041 = 已修改好相關信息，無需再設置
+042 = 請先綁定微信後再繼續操作!
+043 = 微信登錄
+044 = 微信掃一掃，快速登錄
+045 = 掃一掃解除綁定
+046 = 掃一掃綁定微信
+047 = 綁定微信
+048 = 點擊按鈕，立刻綁定微信號
+049 = 新用戶名
+050 = 提交
+051 = 您好! 請在微信中打開
+052 = 二維碼已過期
+053 = 二維碼無效或已過期
+054 = 來源錯誤
+055 = 您好! 微信已綁定社區帳號<br>請更換微信重新綁定
+056 = 恭喜您! 綁定成功
+057 = 獲取用戶信息出錯
+058 = 微信返回出錯
+059 = 恭喜您! 解除綁定成功
+060 = 解除綁定請先設置登錄密碼
+061 = 解除綁定出錯或已解除綁定
+062 = 數據出錯
+063 = 恭喜您! 登錄成功
+064 = 獲取用戶信息出錯
+065 = 已經綁定了帳號
+066 = user_id不正確
+067 = 您好! 請先完善資料信息
+068 = 該帳號已經綁定微信, 請勿重復綁定
+069 = formhash出錯
+070 = 修改完成
+071 = 省
+072 = 市
+073 = 區
+074 = 當前用戶名已被佔用, 請選擇處理方式
+075 = 該帳號已被限制或被刪除, 請與管理員聯系!]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+	</item>
+</root>

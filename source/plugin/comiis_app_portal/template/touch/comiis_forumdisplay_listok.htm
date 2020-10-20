@@ -1,0 +1,140 @@
+<!--{if $in_comiis_app != 1 || $comiis_index_applist == 0}-->
+	<!--{if !$subforumonly}-->
+		<div class="comiis_app_forumlist djsz cl">
+			<ul>
+			<!--{if count($_G['forum_threadlist'])}-->
+				<!--{loop $_G['forum_threadlist'] $key $thread}-->
+					<!--{if $thread['moved']}-->
+						<!--{eval $thread[tid]=$thread[closed];}-->
+					<!--{/if}-->
+					<!--{block comiis_ztfl}-->
+						<!--{if $thread['digest'] > 0}-->
+							<span class="bg_c f_f">{$comiis_app_portal_lang['thread_digest']}</span>
+						<!--{elseif $thread[folder] == 'lock'}-->
+							<span class="bg_del f_f">{$comiis_app_portal_lang['close']}</span>
+						<!--{elseif $thread['special'] == 1}-->
+							<span class="bg_0 f_f">{$comiis_app_portal_lang['thread_poll']}</span>
+						<!--{elseif $thread['special'] == 2}-->
+							<span class="bg_0 f_f">{$comiis_app_portal_lang['thread_trade']}</span>
+						<!--{elseif $thread['special'] == 3}-->
+							<span class="bg_0 f_f">{$comiis_app_portal_lang['thread_reward']}</span>
+						<!--{elseif $thread['special'] == 4}-->
+							<span class="bg_0 f_f">{$comiis_app_portal_lang['thread_activity']}</span>
+						<!--{elseif $thread['special'] == 5}-->
+							<span class="bg_0 f_f">{$comiis_app_portal_lang['thread_debate']}</span>
+						<!--{/if}-->
+						<!--{if $rushreply}--><span class="bg_a f_f">{$comiis_app_portal_lang['rushreply']}</span><!--{/if}-->
+					<!--{/block}-->
+					<li class="comiis_uomj bg_f b_b">
+						<div class="{if !$comiis_pic_list[$thread['tid']]['num']}forumlist_noimg{elseif $comiis_pic_list[$thread['tid']]['num'] < 3}forumlist_one{else}forumlist_imgs{/if}">
+							<a href="forum.php?mod=viewthread&tid=$thread['tid']">
+							<!--{if $thread['attachment'] == 2 && ($comiis_pic_list[$thread['tid']]['num'] == 1 || $comiis_pic_list[$thread['tid']]['num'] == 2)}-->
+								<div class="forumlist_imga"><img {if $comiis_app_switch['comiis_loadimg']}src="./template/comiis_app/pic/none.png" comiis_loadimages={else}src={/if}
+"{echo getforumimg($comiis_pic_list[$thread['tid']]['aid'][0], '0', '200', '150')}"{if $comiis_app_switch['comiis_loadimg']} class="comiis_loadimages"{/if}></div>
+							<!--{/if}-->
+							<!--{if $thread['attachment'] == 2 && $comiis_pic_list[$thread['tid']]['num'] >= 3}-->
+								<h2 $thread[highlight]><!--{if !$comiis_open_displayorder && in_array($thread['displayorder'], array(1, 2, 3, 4))}--><span class="bg_del f_f">{$comiis_app_portal_lang['thread_stick']}</span><!--{/if}-->{$comiis_ztfl}<!--{if $thread[icon] >= 0}--><span class="comiis_xifont f_g">{$_G[cache][stamps][$thread[icon]][text]}</span><!--{/if}--><!--{if $thread['sortid'] && !empty($_G['forum']['threadsorts']['prefix'])}--><span class="bg_0 f_f">{$_G['forum']['threadsorts']['types'][$thread['sortid']]}</span><!--{/if}-->{$thread[subject]}</h2>
+								<div class="listimgs">
+									<ul>
+									<!--{loop $comiis_pic_list[$thread['tid']]['aid'] $temp}-->
+										<li><img {if $comiis_app_switch['comiis_loadimg']}src="./template/comiis_app/pic/none.png" comiis_loadimages={else}src={/if}
+"{echo getforumimg($temp, '0', '200', '160')}"{if $comiis_app_switch['comiis_loadimg']} class="comiis_loadimages"{/if}></li>
+									<!--{/loop}-->
+									</ul>
+								</div>
+							<!--{else}-->
+								<div class="forumlist_info<!--{if $thread['attachment'] == 2}--> forumlist_infoa<!--{else}--> forumlist_infob<!--{/if}-->">
+									<h2 $thread[highlight]><!--{if !$comiis_open_displayorder && in_array($thread['displayorder'], array(1, 2, 3, 4))}--><span class="bg_del f_f">{$comiis_app_portal_lang['thread_stick']}</span><!--{/if}-->{$comiis_ztfl}<!--{if $thread[icon] >= 0}--><span class="comiis_xifont f_g">{$_G[cache][stamps][$thread[icon]][text]}</span><!--{/if}--><!--{if $thread['sortid'] && !empty($_G['forum']['threadsorts']['prefix'])}--><span class="bg_0 f_f">{$_G['forum']['threadsorts']['types'][$thread['sortid']]}</span><!--{/if}-->{$thread[subject]}</h2>
+								</div>
+							<!--{/if}-->						
+							<div class="forumlist_bottom f_d"><em class="y">{$thread['views']}{$comiis_app_portal_lang['271']}</em><span>{if $thread[author]}{$thread[author]}{else}{$_G[setting][anonymoustext]}{/if}</span>{$thread['dateline']}</div>
+							</a>
+						</div>	
+					</li>
+				<!--{/loop}-->
+			<!--{else}-->
+				<li class="comiis_app_nolist bg_f b_b cl">
+					<i class="comiis_font f_e cl">&#xe613</i>
+					<span class="f_d">{$comiis_app_portal_lang['75']}</span>
+				</li>
+			<!--{/if}-->
+			</ul>
+		</div>
+	<!--{/if}-->
+<!--{/if}-->
+<!--{if $page == 1}-->
+<!--{if $comiis_app_list_num != 10}--><div id="list_new"></div><!--{/if}-->
+<div class="comiis_multi_box nalg bg_f b_t" style="margin-top:10px;">
+	<!--{if $comiis_data['comiispages'] == 0 && $page < $comiis_page}-->
+		<a href="javascript:;" onclick="comiis_list_page()" class="comiis_loadbtn bg_e f_d">{$comiis_app_portal_lang['83']}</a>
+	<!--{elseif $comiis_data['comiispages'] == 1 && $page < $comiis_page}-->
+		<div class="comiis_loadbtn f_d">{$comiis_app_portal_lang['84']}</div>
+	<!--{elseif $comiis_page == 1 && $num > 4}-->
+		<div class="comiis_loadbtn f_d">{$comiis_app_portal_lang['85']}</div>
+	<!--{/if}-->
+</div>
+<script>
+	var comiis_page_gkqu = $page;
+	var comiis_ispage = 0;
+	function comiis_list_page(){
+		comiis_ispage = 1;
+		if(comiis_page_gkqu < $comiis_page){
+			$('.comiis_multi_box').html('<div class="comiis_loadbtn f_d">{$comiis_app_portal_lang['84']}</div>');
+			$.ajax({
+				type:'GET',
+				url: 'plugin.php?id=comiis_app_portal&pid={$_GET['pid']}&page=' + (comiis_page_gkqu + 1) + '&inajax=1',
+				dataType:'xml',
+			}).success(function(s) {
+				comiis_page_gkqu++;
+				if(typeof(s.lastChild.firstChild.nodeValue) != "undefined"){
+					$('#list_new').append(s.lastChild.firstChild.nodeValue);
+					<!--{if $comiis_app_list_num == 10}-->
+						var comiis_pic_width = ($(window).width() - 34) / 2;
+						$(".comiis_waterfall li[class='bg_f b_ok']").css('width', (comiis_pic_width) + 'px');
+						imagesLoaded($('.comiis_waterfall'),function(){
+							$('#list_new').masonry('reload');
+						});
+					<!--{/if}-->
+					if(comiis_page_gkqu >= $comiis_page){
+						$('.comiis_multi_box').html('<div class="comiis_loadbtn f_d">{$comiis_app_portal_lang['85']}</div>');
+					}else{
+						$('.comiis_multi_box').html('<a href="javascript:;" onclick="comiis_list_page()" class="comiis_loadbtn bg_e f_d">{$comiis_app_portal_lang['83']}</a>');
+					}
+				}else{
+					comiis_page_gkqu--;
+					$('.comiis_multi_box').html('<a href="javascript:;" onclick="comiis_list_page()" class="comiis_loadbtn bg_e f_d">{$comiis_app_portal_lang['86']}</a>');
+				}
+				comiis_ispage = 0;
+			}).error(function() {
+				comiis_page_gkqu--;
+				$('.comiis_multi_box').html('<a href="javascript:;" onclick="comiis_list_page()" class="comiis_loadbtn bg_e f_d">{$comiis_app_portal_lang['86']}</a>');
+				comiis_ispage = 0;
+			});
+		}else{
+			$('.comiis_multi_box').html('<div class="comiis_loadbtn f_d">{$comiis_app_portal_lang['85']}</div>');
+		}
+	}
+	var comiis_regdata_page = 'comiis_page_gkqu', comiis_regdata_dataid = ['#list_new'];
+	<!--{if $comiis_data['comiispages'] == 1}-->
+	var comiis_page_timer_uomj;
+	$(window).scroll(function(){
+		<!--{if $comiis_data['header'] == '1'}-->
+		if(typeof(comiis_page_start) == "undefined"){
+			var comiis_page_start = 1;
+		}
+		if(comiis_page_start == 0){
+			return;
+		}
+		<!--{/if}-->
+		clearTimeout(comiis_page_timer_uomj);
+		comiis_page_timer_uomj = setTimeout(function() {
+			var comiis_scroll_bottom = $(window).scrollTop() + $(window).height();
+			var comiis_list_bottom = $('#list_new').height() + $('#list_new').offset().top - 200;
+			if(comiis_scroll_bottom >= comiis_list_bottom && comiis_ispage == 0){
+				comiis_list_page();
+			}	
+		}, 200);
+	});
+	<!--{/if}-->
+</script>
+<!--{/if}-->

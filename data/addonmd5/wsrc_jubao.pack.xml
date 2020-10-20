@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Addon MD5]]></item>
+	<item id="ID"><![CDATA[wsrc_jubao.pack]]></item>
+	<item id="RevisionID"><![CDATA[86140]]></item>
+	<item id="SN"><![CDATA[2020050607yr5SzKEXx0]]></item>
+	<item id="RevisionDateline"><![CDATA[1571391354]]></item>
+	<item id="Data">
+		<item id="/wsrc_jubao/jubaoBg.jpg"><![CDATA[af044399296508fc103e1bd85c7cb50f]]></item>
+		<item id="/wsrc_jubao/jubao.html"><![CDATA[b4bd5bf65d067cf7c6c8d697b684613f]]></item>
+		<item id="/wsrc_jubao/index.html"><![CDATA[268abb92c01995762d851d7e0dda5ea3]]></item>
+		<item id="/wsrc_jubao/jubaoBg.png"><![CDATA[3779ca6834d257a4cdd3785caccfd0db]]></item>
+	</item>
+</root>

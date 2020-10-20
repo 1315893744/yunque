@@ -1,0 +1,238 @@
+.yimen_button1 {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #ffffff;
+    z-index: 999;
+}
+
+.yimen_button2 {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #ffffff;
+    z-index: 999;
+}
+
+.yimen_button3 {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #ffffff;
+    z-index: 999;
+}
+
+.yimen_button4 {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #ffffff;
+    z-index: 999;
+}
+
+.yimen_x {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.yimen_menu {
+    position: fixed;
+    top: 200px;
+    left: 30px;
+    right: 30px;
+    height: 270px;
+    background: #ffffff;
+    border-radius: 10px;
+    z-index: 1001;
+}
+
+.yimen_close {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    border-radius: 20px;
+    background: #ffffff;
+    color: #188eee;
+    text-align: center;
+    font-size: 15px;
+}
+
+.yimen_icon {
+    height: 160px;
+    margin: 10px;
+}
+
+.title-text span {
+    display: block; /*设置为块级元素会独占一行形成上下居中的效果*/
+    position: relative; /*定位横线（当横线的父元素）*/
+    color: #188eee; /*居中文字的颜色*/
+    text-align: center;
+}
+
+.title-text span:before, .title-text span:after {
+    content: '';
+    position: absolute; /*定位背景横线的位置*/
+    top: 50%;
+    background: #8c8c8c; /*背景横线颜色*/
+    width: 35%; /*单侧横线的长度*/
+    height: 1px;
+}
+
+.title-text span:before {
+    left: 2%; /*调整背景横线的左右距离*/
+}
+
+.title-text span:after {
+    right: 2%;
+}
+
+.yimen_buttons {
+    margin: 20px 20px;
+    display: flex;
+    justify-content: space-around;
+    height: 30px;
+}
+
+.yimen_login {
+    height: 30px;
+    width: 100px;
+    text-align: center;
+    display: flex;
+    border-radius: 3px;
+}
+
+.login_icon {
+    height: 30px;
+    line-height: 30px;
+    font-size: 30px;
+}
+
+.login_text {
+    flex: 1;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.wx {
+    color: #8CB922;
+}
+
+.qq {
+    color: #3CA0EC;
+}
+
+.wb {
+    color: #E14432;
+}
+
+.label_box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.label_box > label {
+    margin: 5px 30px 0px 0;
+}
+
+.label_box > label > input {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -20px;
+
+}
+
+.label_box > label > div {
+    width: 130%;
+    text-align: center;
+    border: #dddddd solid 1px;
+    height: 40px;
+    line-height: 40px;
+    color: #666666;
+    user-select: none;
+    overflow: hidden;
+    position: relative;
+}
+
+.label_box > label > input:checked + div {
+    border: #3CA0EC solid 1px;
+    color: #3CA0EC;
+}
+
+.label_box > label > input:checked + div:after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #3CA0EC;
+    transform: skewY(-45deg);
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    z-index: 1;
+}
+
+.label_box > label > input:checked + div:before {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 8px;
+    border-right: #ffffff solid 2px;
+    border-bottom: #ffffff solid 2px;
+    transform: rotate(35deg);
+    position: absolute;
+    bottom: 2px;
+    right: 4px;
+    z-index: 2;
+}
+
+.yimen_qrcode {
+    height: 300px;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.yimen_qrcode img {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.yimen_orderid {
+    text-align: center;
+    color: #3CA0EC;
+    height: 40px;
+    line-height: 40px;
+}

@@ -1,0 +1,29 @@
+<div class="nav">
+	<a href="javascript:;" id="k_misignlist_today" onclick="ajaxlist('today');" {if $_GET['op'] == ''}class="nav-cur cc"{/if}>{lang k_misign:ranklist_today}</a>
+	<a href="javascript:;" id="k_misignlist_month" onclick="ajaxlist('month');" {if $_GET['op'] == 'month'}class="nav-cur cc"{/if}>{lang k_misign:ranklist_month}</a>
+	<a href="javascript:;" id="k_misignlist_zong" onclick="ajaxlist('zong');" {if $_GET['op'] == 'zong'}class="nav-cur cc"{/if}>{lang k_misign:ranklist_zong}</a>
+</div>
+<div class="k_misigin_wp">
+	<div class="k_misigin_list">
+		<table>
+    	<!--{if $mrcs}-->
+    	<!--{loop $mrcs $mrc}-->
+		<tbody id="autolist_7427">
+          <tr>
+            <td class="k_misigin_lu">
+            <a href="home.php?mod=space&uid={$mrc[uid]}"><!--{avatar($mrc[uid], 'small')}--></a>
+            </td>
+            <td class="k_misigin_ll"><span></span></td>
+            <td class="k_misigin_lc">
+            <h4><a href="home.php?mod=space&uid={$mrc[uid]}">{$mrc[username]}</a><span>{$mrc[time]}</span></h4>
+            <p class="cc">{lang k_misign:ranklist_monthdays} {$mrc[mdays]} {lang k_misign:days}{lang k_misign:douhao}{lang k_misign:ranklist_days} {$mrc[days]}{lang k_misign:days}</p>
+            </td>
+          </tr>
+        </tbody>
+    	<!--{/loop}-->
+    	<!--{else}-->
+    	<tbody><tr><td colspan="3">{lang k_misign:noinfo}</td></tr></tbody>
+		<!--{/if}-->
+		</table>
+    </div>
+</div>

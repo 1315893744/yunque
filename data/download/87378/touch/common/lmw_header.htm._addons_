@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="{$_G['style']['styleimgdir']}/touch/lmw_header.css" type="text/css" media="all">
+<div id="lmw_discuz_header">
+    <a href="forum.php">
+        <img src="{$_G['style']['styleimgdir']}/logo.png" height="40" class="lmw_header_logo"/>
+    </a>
+    <div class="lmw_header_right">
+        <a href="search.php?mod=forum">
+            <div class="lmw_search_click_btn">
+                <svg class="lmw_header_search_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18"
+                     height="18">
+                    <path fill="none" d="M0 0h24v24H0z"/>
+                    <path fill="#909399"
+                          d="M11 2c4.968 0 9 4.032 9 9s-4.032 9-9 9-9-4.032-9-9 4.032-9 9-9zm0 16c3.867 0 7-3.133 7-7 0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7zm8.485.071l2.829 2.828-1.415 1.415-2.828-2.829 1.414-1.414z"/>
+                </svg>
+                <div class="lmw_header_seach_holder">请输入搜索内容</div>
+            </div>
+        </a>
+    </div>
+</div>
+<div style="height: 70px;width: 100%;"></div>
+<script type="text/javascript">
+    var lmw_scroller_top = 0;
+    var lmw_header_class = document.getElementById("lmw_discuz_header").classList;
+    window.addEventListener("scroll", function (e) {
+        const top = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop; //兼容不同的浏览器
+        if (top > 0 && lmw_scroller_top === 0) {
+            lmw_header_class.add("lmw_bottom_shadow");
+        } else if (top === 0) {
+            lmw_header_class.remove("lmw_bottom_shadow");
+        }
+        lmw_scroller_top = top;
+    }, true);
+</script>

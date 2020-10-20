@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X3,X3.1,X3.2,X3.3,X3.4,F1.0,L1.0]]></item>
+	<item id="Time"><![CDATA[2019-02-24 00:10]]></item>
+	<item id="From"><![CDATA[XXX网 - 站长互动平台]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[克米設計-封面海報]]></item>
+			<item id="identifier"><![CDATA[comiis_poster]]></item>
+			<item id="description"><![CDATA[一款可以把相關內容生成封面海報分享給朋友或朋友圈的逼格小插件，美觀好看，裝逼神器，支持多個不同的頁面生成海報 (版塊列表、帖子內容、群組列表、群組內容、文章內容、日志內容、相冊內容)]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[comiis_poster/]]></item>
+			<item id="copyright"><![CDATA[XXX网 - 站长互动平台]]></item>
+			<item id="version"><![CDATA[v1.2.1]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[comiis_more]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[更多克米設計作品]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[comiis_poster]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[28]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X3,X3.1,X3.2,X3.3,X3.4,F1.0,L1.0]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[授權KEY]]></item>
+				<item id="description"><![CDATA[請與克米設計聯系獲取授權Key]]></item>
+				<item id="variable"><![CDATA[comiis_key]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[通用默認LOGO圖片]]></item>
+				<item id="description"><![CDATA[設置默認LOGO圖片，當調用來源無圖片時默認調用該圖片
+默認地址  ./source/plugin/comiis_poster/image/logo.png]]></item>
+				<item id="variable"><![CDATA[logoimg]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[./source/plugin/comiis_poster/image/logo.png]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[通用列表頁默認頭部圖片]]></item>
+				<item id="description"><![CDATA[設置列表頁默認頭部圖片，當調用來源無圖片時默認調用該圖片
+默認地址 ./source/plugin/comiis_poster/image/bg.jpg]]></item>
+				<item id="variable"><![CDATA[list_topimg]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[./source/plugin/comiis_poster/image/bg.jpg]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[通用內容頁默認頭部圖片]]></item>
+				<item id="description"><![CDATA[設置內容頁默認頭部圖片，當調用來源無圖片時默認調用該圖片
+默認地址  ./source/plugin/comiis_poster/image/view_bg.jpg]]></item>
+				<item id="variable"><![CDATA[view_topimg]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[./source/plugin/comiis_poster/image/view_bg.jpg]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[是否固定頭部圖片]]></item>
+				<item id="description"><![CDATA[設置後將使用通用內容頁默認頭部圖片為固定調用的圖片, 留空為自動讀取]]></item>
+				<item id="variable"><![CDATA[o_image]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[固定二維碼內容]]></item>
+				<item id="description"><![CDATA[設置後將根據左邊輸入的內容生成固定的二維碼, 留空為自動生成當前域名二維碼]]></item>
+				<item id="variable"><![CDATA[code]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[圖片跨域]]></item>
+				<item id="description"><![CDATA[如果圖片和站點在不同一個域名則需要開啟圖片跨域, 開啟後需要設置下方圖片跨域域名才能生效]]></item>
+				<item id="variable"><![CDATA[openimage]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[圖片跨域域名]]></item>
+				<item id="description"><![CDATA[設置圖片跨域域名, 一行一個, 格式如下:https://baidu.com/]]></item>
+				<item id="variable"><![CDATA[openimage_url]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[https://www.baidu.Com/]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[版塊列表頁分享提示語]]></item>
+				<item id="description"><![CDATA[設置版塊列表頁分享提示語]]></item>
+				<item id="variable"><![CDATA[forum_list]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[向您推薦一個好看的欄目，快來看看吧！]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[群組欄目列表頁分享提示語]]></item>
+				<item id="description"><![CDATA[設置群組欄目列表頁分享提示語]]></item>
+				<item id="variable"><![CDATA[group_list]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[發現了一個超好玩的圈子，一起來玩耍吧！^_^]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[長按識別提示文字]]></item>
+				<item id="description"><![CDATA[設置長按識別提示文字內容]]></item>
+				<item id="variable"><![CDATA[tip]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[長按識別二維碼查看詳情<br>來自「 克米設計演示站 」]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[長按識別指紋圖標設置]]></item>
+				<item id="description"><![CDATA[長按識別指紋圖標設置]]></item>
+				<item id="variable"><![CDATA[tipico]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[0 = 不顯示指紋圖標
+1 = 指紋圖標一
+2 = 指紋圖標二]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[生成海報下載圖片提示語]]></item>
+				<item id="description"><![CDATA[設置生成海報下載圖片提示語]]></item>
+				<item id="variable"><![CDATA[tip2]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[↑長按上圖保存圖片，分享好友或朋友圈]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[生成海報等待提示語]]></item>
+				<item id="description"><![CDATA[設置生成海報等待中的提示語]]></item>
+				<item id="variable"><![CDATA[tip3]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[正在生成海報, 請稍候]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[是否顯示內容摘要]]></item>
+				<item id="description"><![CDATA[設置是否顯示內容摘要，開啟後建議把下方 [內容來源顯示設置] 一項設置不顯示！]]></item>
+				<item id="variable"><![CDATA[showbody]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="title"><![CDATA[內容摘要顯示長度]]></item>
+				<item id="description"><![CDATA[設置內容摘要顯示長度，單位︰字節]]></item>
+				<item id="variable"><![CDATA[bodybyte]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[130]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="16">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[內容來源顯示設置]]></item>
+				<item id="description"><![CDATA[設置用戶名顯示位置的數據來源]]></item>
+				<item id="variable"><![CDATA[isusername]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[0 = 不顯示
+1 = 顯示用戶名
+2 = 顯示(版塊名稱/群組欄目/文章欄目)信息]]></item>
+			</item>
+			<item id="17">
+				<item id="displayorder"><![CDATA[17]]></item>
+				<item id="title"><![CDATA[日期顯示設置]]></item>
+				<item id="description"><![CDATA[設置日期時間的顯示效果，注︰資訊文章不支持發布時間顯示]]></item>
+				<item id="variable"><![CDATA[time]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[0 = 不顯示
+1 = 今天日期時間
+2 = 內容發布時間]]></item>
+			</item>
+			<item id="18">
+				<item id="displayorder"><![CDATA[30]]></item>
+				<item id="title"><![CDATA[浮動按鈕顯示方式]]></item>
+				<item id="description"><![CDATA[設置浮動按鈕顯示方式
+如果使用非克米設計手機模板請選擇 [默認浮動按鈕] 即可]]></item>
+				<item id="variable"><![CDATA[showstyle]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[5]]></item>
+				<item id="extra"><![CDATA[0 = 默認浮動銨鈕
+1 = 僅手機版浮動導航顯示 (克米手機模板專用選項)
+2 = 僅替換手機版原分享按鈕，浮動導航不顯示 (克米手機模板專用選項)
+3 = 替換手機版原分享按鈕並且浮動導航一起顯示 (克米手機模板專用選項)
+4 = 僅微信&QQ下替換原分享按鈕，浮動導航不顯示 (克米手機模板專用選項)
+5 = 僅微信&QQ下替換原分享按鈕並且浮動導航一起顯示 (克米手機模板專用選項)]]></item>
+			</item>
+			<item id="19">
+				<item id="displayorder"><![CDATA[31]]></item>
+				<item id="title"><![CDATA[浮動銨鈕名稱]]></item>
+				<item id="description"><![CDATA[設置插件浮動銨鈕名稱]]></item>
+				<item id="variable"><![CDATA[name]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[海報]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="20">
+				<item id="displayorder"><![CDATA[32]]></item>
+				<item id="title"><![CDATA[浮動按鈕文字顏色]]></item>
+				<item id="description"><![CDATA[設置浮動按鈕文字顏色]]></item>
+				<item id="variable"><![CDATA[color]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#FFFFFF]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="21">
+				<item id="displayorder"><![CDATA[33]]></item>
+				<item id="title"><![CDATA[浮動按鈕背景顏色]]></item>
+				<item id="description"><![CDATA[設置浮動按鈕的背景顏色]]></item>
+				<item id="variable"><![CDATA[bgcolor]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#000000]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="22">
+				<item id="displayorder"><![CDATA[34]]></item>
+				<item id="title"><![CDATA[浮動按鈕顯示位置]]></item>
+				<item id="description"><![CDATA[設置浮動按鈕的顯示位置]]></item>
+				<item id="variable"><![CDATA[point]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[3]]></item>
+				<item id="extra"><![CDATA[0 = 右下角
+1 = 右上角
+2 = 左上角
+3 = 左下角]]></item>
+			</item>
+			<item id="23">
+				<item id="displayorder"><![CDATA[35]]></item>
+				<item id="title"><![CDATA[浮動按鈕左右位置調整]]></item>
+				<item id="description"><![CDATA[設置浮動按鈕左右位置間距調整]]></item>
+				<item id="variable"><![CDATA[lrnum]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[12]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="24">
+				<item id="displayorder"><![CDATA[36]]></item>
+				<item id="title"><![CDATA[浮動按鈕上下位置調整]]></item>
+				<item id="description"><![CDATA[設置浮動按鈕上下位置間距調整]]></item>
+				<item id="variable"><![CDATA[tbnum]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[82]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="25">
+				<item id="displayorder"><![CDATA[37]]></item>
+				<item id="title"><![CDATA[浮動按鈕透明度]]></item>
+				<item id="description"><![CDATA[設置浮動按鈕圖標透明度，設置數字1為不透明]]></item>
+				<item id="variable"><![CDATA[opacity]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[0.6]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+	</item>
+</root>

@@ -1,0 +1,21 @@
+/* CSS Document */
+
+/*页脚下关于*/
+.about-wrap{position:relative;display:block;margin-top:30px}
+.about-subnav{position:relative;position:absolute;top:0;left:-220px;float:left}
+.about-subnav.fixed{position:fixed!important;top:0;left:auto;margin-left:-220px}
+.about-subnav .about-menu{position:absolute;float:none;display:block;overflow:visible;padding:0;width:180px;border: 1px solid #bdc3c7;}
+.about-subnav .about-menu li a{display:block;padding:2px 20px 2px 30px;height:40px;border-left:5px solid transparent;color:#34495e;font-weight:bold;font-size:14px;line-height:40px}
+.about-subnav .about-menu li a:hover,.about-subnav .about-menu li a.on{border-left:5px solid #3498db;background:#FFF;color:#3498db}
+.about-content{position:relative;margin-bottom:20px;margin-left:220px;min-height:800px}
+.menu-wrap{margin-bottom:26px}
+.about-content h2{color:#3498db;font-weight:bold;font-size:18px}
+.about-content h3{padding:8px 0;color:#3498db;font-weight:bold;font-size:14px}
+.about-content p{padding:8px 0;color:#34495e;font-size:14px;line-height:24px}
+.about-content p a{font-size:14px;line-height:24px}
+.about-content span{display:block;padding:5px 0;color:#34495e;font-size:14px;line-height:22px}
+.about-content ul{padding:5px 0 5px 30px}
+.about-content ul li{display:block;color:#34495e;font-size:14px;line-height:24px}
+.about-content ul li a{color:#369}
+.about-content span strong{display:block;font-weight:bold;font-size:14px}
+

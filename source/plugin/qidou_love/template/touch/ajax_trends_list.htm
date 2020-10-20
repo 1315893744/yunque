@@ -1,0 +1,50 @@
+<!--{if $type==1}-->
+    <!--{loop $trends_list $trends}-->
+        <li>
+            <div class="trends_date">
+                <!--{if !$trends_list[date('Y-m-d',$trends['dateline'])]}-->
+                {eval $trends_list[date('Y-m-d',$trends['dateline'])]=1;}
+                <div class="date_day">{eval echo date('d',$trends['dateline'])}</div>
+                <div class="date_month">{eval echo date('m',$trends['dateline'])}{$lang['h_month']}</div>
+                <div class="date_line"></div>
+                <!--{else}-->
+                <div class="date_line not_date"></div>
+                <!--{/if}-->
+            </div>
+            <div class="trends_main">
+                <!--{if $trends['image']}-->
+                <div class="trends_image">
+                    <img _src="{$siteurl}/data/attachment/forum/{$trends['image']}" is_load="false"/>
+                    <span>{$album_count[$trends['tid']]}{$lang['h_image_unit']}</span>
+                </div>
+                <!--{/if}-->
+                <div class="trends_content">
+                    <h2>
+                        {eval}
+                        $title = strip_tags($trends['title']);
+                        if( !$title && strip_tags($trends['content'])){
+                            $title = strip_tags($trends['content']);
+                        }else if( !$title ){
+                            $title = $lang['h_share_content'];
+                        }
+                        {/eval}
+                        {$title}
+                    </h2>
+                    <div class="trends_info active">{$trends['views']}{$lang['h_read']}<span class="shuxian">|</span><span class="not_deem"></span>{eval echo (int)$give_count[$trends['tid']][0]}</div>
+                </div>
+            </div>
+            <a href="{$siteurl}/forum.php?mod=viewthread&tid={$trends['tid']}" tid="{$trends['tid']}" target="_blank" class="trends_link"></a>
+        </li>
+    <!--{/loop}-->
+<!--{else}-->
+    <!--{loop $album_list $key $albums}-->
+        <li>
+            <h4>{eval echo date("m".$lang['h_month']."d".$lang['h_day'],$key);}</h4>
+            <div class="album_list">
+                <!--{loop $albums $alb}-->
+                <div class="album"><img _src="{$siteurl}/data/attachment/forum/{$alb}" is_load="false"/></div>
+                <!--{/loop}-->
+            </div>
+        </li>
+    <!--{/loop}-->
+<!--{/if}-->

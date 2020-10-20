@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>充值中心</title>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="./css/bui.css"/>
+    <link rel="stylesheet" href="./icon/iconfont.css"/>
+    <link rel="stylesheet" href="./css/pay.css"/>
+</head>
+<body>
+<div class="bui-page">
+    <header id="header" class="pay-bar bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" id="back"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">充值中心</div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
+        <div class="my-info">
+            <div class="info-box">
+                <div class="info-name" id="money-name"></div>
+                <div class="info-count"><span id='user-amount'></span>.00</div>
+            </div>
+        </div>
+        <div class="title-name">充值金额</div>
+        <div class="goods-list" id="goods-list"></div>
+        <div class="title-name">支付方式</div>
+        <ul class="pay-list" id="pay-type">
+        </ul>
+        <div class="pay">
+            <div class="pay-info">合计：<span id="amount">0</span></div>
+            <div class="pay-btn" id="to-pay">立即支付</div>
+        </div>
+    </main>
+</div>
+<script src="../js/base64.js"></script>
+<script src="./js/zepto.js"></script>
+<script src="./js/bui.js"></script>
+<script src="./js/pay.js"></script>
+<script src="./js/jsbridge-mini.js"></script>
+</body>
+
+</html>

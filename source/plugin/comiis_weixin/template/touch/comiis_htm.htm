@@ -1,0 +1,294 @@
+{eval
+function comiis_weixin_login($url) {
+	global $_G;
+}
+<!--{block return}-->
+	<div class="comiis_wx_boxs vqdn"><a href="{$url}" class="comiis_wx_btn wx_btn_bg01"><!--{if $_G['comiis_weixin']['perfect'] == '0'}-->{$_G['comiis_wxlang']['009']}<!--{else}-->{$_G['comiis_wxlang']['010']}<!--{/if}--></a></div>
+<!--{/block}-->
+<!--{eval return $return;}-->
+{eval
+}
+function comiis_weixin_perfect_tip($id) {
+	global $_G, $comiis_state, $re_weixin_data;
+	$referer = urlencode($_GET['referer']);
+}
+<!--{block return}-->
+	<style>
+	body.bg {background:#f3f3f3;}
+	.footer {display:none;}
+	html{height:100%}
+	</style>
+	<div class="comiis_wx_box rybn">
+		<!--{if $_G['comiis_weixin']['wxstyle'] == '1'}-->
+		<div class="comiis_wx_tx"><img src="{if $re_weixin_data['headimgurl']}$re_weixin_data['headimgurl']{else}$_G['setting']['ucenterurl']/avatar.php?uid=0&size=big{/if}"></div>
+		<div class="comiis_wx_tip wx_f9">{$_G['comiis_wxlang']['001']}<span class="wx_fd">$re_weixin_data['nickname']</span></div>
+		<div class="comiis_wx_tip">
+		<!--{if $_GET['tipname'] == 'yes'}-->
+			{$_G['comiis_wxlang']['074']}
+		<!--{else}-->
+			{$_G['comiis_wxlang']['002']}
+		<!--{/if}-->
+		</div>
+		<!--{else}-->
+		<div class="comiis_wx_tx">
+			<div class="comiis_wx_tico">
+				<i class="comiis_wxico comiis_wx_dunpai wx_fc">&#xe6b2;</i>
+				<i class="comiis_wxico comiis_wx_okico">&#xe6b4;</i>
+			</div>
+		</div>
+		<div class="comiis_wx_tips wx_f3"><span>
+		<!--{if $_GET['tipname'] == 'yes'}-->
+			{$_G['comiis_wxlang']['074']}
+		<!--{else}-->
+			{$_G['comiis_wxlang']['003']}
+		<!--{/if}-->
+		</span></div>
+		<div class="comiis_wx_tips wx_f9" style="margin-bottom:20px;">{$_G['comiis_wxlang']['004']}</div>
+		<!--{/if}-->
+		<!--{if $_GET['tipname'] == 'yes'}-->
+			<a href="plugin.php?id=comiis_weixin&mod=login_perfect&tipname=yes&user_id={$id}{if $comiis_state}&state={$comiis_state}{/if}&referer={$referer}" class="comiis_wx_btn wx_btn_bg02">{$_G['comiis_wxlang']['006']}</a>
+			<!--{if $_G['comiis_weixin']['perfect'] != 2}-->
+			<a href="plugin.php?id=comiis_weixin&mod=login_mod&user_id={$id}{if $comiis_state}&state={$comiis_state}{/if}&referer={$referer}" class="comiis_wx_btn wx_btn_bg01">{$_G['comiis_wxlang']['005']}</a>
+			<!--{/if}-->
+		<!--{else}-->
+			<a href="plugin.php?id=comiis_weixin&mod=login_mod&user_id={$id}{if $comiis_state}&state={$comiis_state}{/if}&referer={$referer}" class="comiis_wx_btn wx_btn_bg01">{$_G['comiis_wxlang']['005']}</a>
+			<a href="plugin.php?id=comiis_weixin&mod=login_perfect&user_id={$id}{if $comiis_state}&state={$comiis_state}{/if}&referer={$referer}" class="comiis_wx_btn wx_btn_bg02">{$_G['comiis_wxlang']['006']}</a>
+		<!--{/if}-->
+	</div>
+	<div class="comiis_wx_foot oysx wx_fd">{$_G['comiis_wxlang']['007']}<br><span class="wx_f9">{$_G['comiis_wxlang']['008']}</span></div>
+	<script>
+	$(window).resize(function(){
+		comiis_wxresize();
+	});
+	function comiis_wxresize() {
+		if($(window).height() < 400){
+			$('.comiis_wx_foot').css('position', 'static');
+		}else{
+			$('.comiis_wx_foot').css('position', 'absolute');
+		}
+	}
+	comiis_wxresize();
+	</script>
+<!--{/block}-->
+<!--{eval return $return;}-->
+{eval
+}
+function comiis_weixin_perfect_user($id) {
+	global $_G, $username, $username2, $comiis_state;
+	$referer = $_GET['referer'];
+	$referers = urlencode($_GET['referer']);
+}
+<!--{block return}-->
+<style>
+.footer {display:none;}
+html{height:100%}
+</style>
+<div class="comiis_wx_tbox">
+	<div class="comiis_wx_toptab wx_b_b gofm">
+		<ul class="comiis_wx_flex">
+			<li class="wx_flex kmon" id="comiis_wxtab1">{$_G['comiis_wxlang']['011']}</li>
+			<li class="wx_flex" id="comiis_wxtab2">{$_G['comiis_wxlang']['012']}</li>
+		</ul>
+	</div>
+	<div class="comiis_wx_fbox">
+		<div class="comiis_wx_listbox">
+			<form action="plugin.php?id=comiis_weixin&mod=login_mod&user_id={$id}{if $comiis_state}&state={$comiis_state}{/if}" method="post" autocomplete="off" accept-charset="utf-8">
+				<input name="submit" type="hidden" value="yes">
+				<input name="lmob" type="hidden" value="login">
+				<input name="formhash" type="hidden" value="{FORMHASH}">
+				<input name="referer" type="hidden" value="{$referer}">
+				<ul class="wx_b_t wx_b_b">
+					<li class="comiis_wx_flex">
+						<div class="listbox_tit wx_b_r"><i class="comiis_wxico wx_f9">&#xe625;</i>{$_G['comiis_wxlang']['013']}</div>
+						<div class="wx_flex"><input name="username" type="text" value="{if $_GET['tipname'] == 'yes'}{$username2}{/if}" autocomplete="off" placeholder="{$_G['comiis_wxlang']['014']}" class="comiis_wx_input"></div>
+					</li>
+					<li class="comiis_wx_flex wx_b_t">
+						<div class="listbox_tit wx_b_r"><i class="comiis_wxico wx_f9">&#xe624;</i>{$_G['comiis_wxlang']['015']}</div>
+						<div class="wx_flex"><input name="password" type="password" placeholder="{$_G['comiis_wxlang']['016']}" class="comiis_wx_input"></div>
+					</li>
+					<li class="comiis_wx_flex wx_b_t">
+						<div class="listbox_tit wx_b_r"><i class="comiis_wxico wx_f9">&#xe6b5;</i>{$_G['comiis_wxlang']['017']}</div>
+						<div class="wx_flex" style="position:relative;">
+							<select name="questionid" class="comiis_security_list">
+								<option value="0" selected="selected">{lang security_question}</option>
+								<option value="1">{lang security_question_1}</option>
+								<option value="2">{lang security_question_2}</option>
+								<option value="3">{lang security_question_3}</option>
+								<option value="4">{lang security_question_4}</option>
+								<option value="5">{lang security_question_5}</option>
+								<option value="6">{lang security_question_6}</option>
+								<option value="7">{lang security_question_7}</option>
+							</select>
+							<div class="listbox_r"><i class="comiis_wxico wx_f9">&#xe60c;</i></div>
+						</div>			
+					</li>
+					<li class="comiis_security_input wx_b_t" style="display:none;">
+						<div class="comiis_wx_flex">
+							<div class="listbox_tit wx_b_r"><i class="comiis_wxico wx_f9">&#xe66a;</i>{$_G['comiis_wxlang']['018']}</div>
+							<div class="wx_flex">
+								<input type="text" name="answer" placeholder="{$_G['comiis_wxlang']['019']}" class="comiis_wx_input">
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div class="comiis_wx_box"><button name="submit" type="submit" value="true" class="comiis_wx_btn wx_btn_bg01">{$_G['comiis_wxlang']['020']}</button></div>
+				<div class="comiis_wx_tip wx_f9">{$_G['comiis_wxlang']['021']}</div>
+			</form>
+		</div>
+		<div class="comiis_wx_listbox">
+			<form action="plugin.php?id=comiis_weixin&mod=login_mod&user_id={$id}{if $comiis_state}&state={$comiis_state}{/if}" method="post" autocomplete="off" accept-charset="utf-8">
+				<input name="submit" type="hidden" value="yes">
+				<input name="lmob" type="hidden" value="register">
+				<input name="formhash" type="hidden" value="{FORMHASH}">
+				<input name="referer" type="hidden" value="{$referer}">
+				<ul class="wx_b_t wx_b_b">
+					<li class="comiis_wx_flex">
+						<div class="listbox_tit wx_b_r"><i class="comiis_wxico wx_f9">&#xe625;</i>{$_G['comiis_wxlang']['013']}</div>
+						<div class="wx_flex"><input name="username" type="text" value="{$username}" autocomplete="off" class="comiis_wx_input"></div>
+					</li>
+					<li class="comiis_wx_flex wx_b_t">
+						<div class="listbox_tit wx_b_r"><i class="comiis_wxico wx_f9">&#xe624;</i>{$_G['comiis_wxlang']['015']}</div>
+						<div class="wx_flex"><input name="password" type="text" placeholder="{$_G['comiis_wxlang']['016']}" class="comiis_wx_input"></div>
+					</li>
+				</ul>
+				<div class="comiis_wx_box"><button name="submit" type="submit" value="true" class="comiis_wx_btn wx_btn_bg01">{$_G['comiis_wxlang']['022']}</button></div>
+				<div class="comiis_wx_ftip wx_f9">{$_G['comiis_wxlang']['021']}</div>
+			</form>
+		</div>
+	</div>
+	<div class="comiis_wx_foot wx_fd">{$_G['comiis_wxlang']['007']}<br><span class="wx_f9">{$_G['comiis_wxlang']['008']}</span></div>
+</div>
+<script type="text/javascript">
+$(document).on('change', '.comiis_security_list', function() {
+	if($(this).val() == 0) {
+		$('.comiis_security_input').css('display', 'none');
+	} else {
+		$('.comiis_security_input').css('display', 'block');
+	}
+});
+$('#comiis_wxtab1').on("click", function() {
+	$('.comiis_wx_fbox').removeClass('comiis_wx_fboxs');
+	$('.comiis_wx_flex li').removeClass('kmon');
+	$(this).addClass('kmon');
+});
+$('#comiis_wxtab2').on("click", function() {
+	$('.comiis_wx_fbox').addClass('comiis_wx_fboxs');
+	$('.comiis_wx_flex li').removeClass('kmon');
+	$(this).addClass('kmon');
+});
+$(window).resize(function(){
+	comiis_wxresize();
+});
+function comiis_wxresize() {
+	if($(window).height() < 400){
+		$('.comiis_wx_foot').css('position', 'static');
+	}else{
+		$('.comiis_wx_foot').css('position', 'absolute');
+	}
+}
+</script>
+<!--{/block}-->
+<!--{eval return $return;}-->
+{eval
+}
+function comiis_get_weixin_tip_html($data, $type = 0) {
+global $_G;
+}
+
+<!--{if $type == 0}-->
+	<!--{block return}-->
+		<style>
+		html{height:100%}
+		.footer {display:none;}
+		</style>
+		<div class="comiis_wx_box unty">
+			<div class="comiis_wx_tx">
+				<div class="comiis_wx_tico">
+					<i class="comiis_wxico comiis_wx_dunpai wx_fc">&#xe6b2;</i>
+					<i class="comiis_wxico comiis_wx_okico">&#xe6b4;</i>
+				</div>
+			</div>
+			<div class="comiis_wx_tips wx_f3"><span>$data</span></div>
+			<a href="./" class="comiis_wx_btn wx_btn_bg01">{$_G['comiis_wxlang']['034']}</a>
+		</div>
+		<div class="comiis_wx_foot wx_fd">{$_G['comiis_wxlang']['007']}<br><span class="wx_f9">{$_G['comiis_wxlang']['008']}</span></div>
+		<script>
+		$(window).resize(function(){
+			comiis_wxresize();
+		});
+		function comiis_wxresize() {
+			if($(window).height() < 400){
+				$('.comiis_wx_foot').css('position', 'static');
+			}else{
+				$('.comiis_wx_foot').css('position', 'absolute');
+			}
+		}
+		comiis_wxresize();
+		</script>
+	<!--{/block}-->
+<!--{else}-->
+	<!--{block return}-->
+		<style>
+		html{height:100%}
+		.footer {display:none;}
+		</style>
+		<div class="comiis_wx_box">
+			<div class="comiis_wx_tx">
+				<div class="comiis_wx_tico">
+					<i class="comiis_wxico comiis_wx_dunpai wx_fa">&#xe6b2;</i>
+					<i class="comiis_wxico comiis_wx_okico">&#xe6b3;</i>
+				</div>
+			</div>
+			<div class="comiis_wx_tips wx_f3"><span>$data</span></div>
+			<a href="./" class="comiis_wx_btn wx_btn_bg01">{$_G['comiis_wxlang']['034']}</a>
+		</div>
+		<div class="comiis_wx_foot wx_fd">{$_G['comiis_wxlang']['007']}<br><span class="wx_f9">{$_G['comiis_wxlang']['008']}</span></div>
+		<script>
+		$(window).resize(function(){
+			comiis_wxresize();
+		});
+		function comiis_wxresize() {
+			if($(window).height() < 400){
+				$('.comiis_wx_foot').css('position', 'static');
+			}else{
+				$('.comiis_wx_foot').css('position', 'absolute');
+			}
+		}
+		comiis_wxresize();
+		</script>
+	<!--{/block}-->
+<!--{/if}-->
+<!--{eval return $return;}-->
+{eval
+}
+function comiis_weixin_gzs() {
+global $_G;
+}
+<!--{block return}-->
+<div class="comiis_wx_gzgzh" style="display:none;">
+<!--{$_G['comiis_weixin']['wxtopgzcode']}-->
+</div>
+<script>
+	var comiis_gzwx = $(".comiis_wx_gzgzh");
+	$(window).bind("scroll orientationchange", function (e) {
+		if (getcookie("comiis_wxhide") != 1) {
+			if ($(this).scrollTop() > 80) {
+				if (comiis_gzwx.is(":hidden")) {
+					comiis_gzwx.slideDown(400);
+				}
+			} else {
+				comiis_gzwx.hide();
+			}
+		}
+	});
+	$(".gzgzh_ico").click(function () {
+		comiis_gzwx.fadeOut(400);
+		setcookie("comiis_wxhide", 1, "{$_G['comiis_weixin']['wxtopgztime']}");
+	});
+</script>
+<!--{/block}-->
+<!--{eval return $return;}-->
+{eval
+}
+
+}

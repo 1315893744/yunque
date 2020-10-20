@@ -1,0 +1,208 @@
+<script>$('.comiis_head h2').html("{$comiis_sms['162']}");</script>
+<!--{if $_G['style']['directory'] == './template/comiis_app'}-->
+<link rel="stylesheet" href="./source/plugin/comiis_sms/image/comiis_app.css" type="text/css">
+<!--{else}-->
+<link rel="stylesheet" href="./source/plugin/comiis_sms/image/comiis.css" type="text/css">
+<style>
+.bg_0 {background:{$_G['comiis_sms']['sms_bg']};}
+.bg_c {background:{$_G['comiis_sms']['sms_bgb']};}
+.bg_a {background:{$_G['comiis_sms']['sms_bga']};}
+.f_0 {color:{$_G['comiis_sms']['sms_bg']} !important;}
+.f_a {color:{$_G['comiis_sms']['sms_bga']} !important;}
+.f_ok {color:{$_G['comiis_sms']['sms_bgc']} !important;}
+.b_0 {border-color:{$_G['comiis_sms']['sms_bg']};}
+</style>
+<!--{/if}-->
+<!--{if $_G['style']['directory'] != './template/comiis_app'}-->
+<div id="comiis_sms_head">		
+    <div class="comiis_sms_head{if $comiis_app_switch['comiis_header_style'] == 1} bg_f f_0 b_b{else} bg_0 f_f{/if} wmse cl">
+        <div class="header_z"><a href="javascript:history.back(-1)"><i class="comiis_mobfont">&#xe60d;</i></a></div>
+        <h2>{$comiis_sms['162']}</h2>
+        <div class="header_y"><a href="./"><i class="comiis_mobfont">&#xe662;</i></a></div>
+    </div>
+</div>
+<!--{/if}-->
+<div class="comiis_topnv xlco bg_f b_b">
+    <ul class="comiis_flex">
+        <li class="flex{if $_GET['mods'] == 'setup'} kmon{/if}"><a href="home.php?mod=spacecp&ac=plugin&id=comiis_sms:comiis_setup" class="{if $_GET['mods'] == 'setup'}b_0 f_0{else}f_c{/if}"><!--{if $comiis_is_mobile_user == 1}-->{$comiis_sms['218']}<!--{else}-->{$comiis_sms['01']}<!--{/if}--></a></li>
+        <li class="flex{if $_GET['mods'] == 'rename'} kmon{/if}"><a href="home.php?mod=spacecp&ac=plugin&id=comiis_sms:comiis_setup&mods=rename" class="{if $_GET['mods'] == 'rename'}b_0 f_0{else}f_c{/if}">{$comiis_sms['03']}</a></li>
+    </ul>
+</div>
+<!--{if $_GET['mods'] == 'setup'}-->
+	{$return}
+	<!--{if $_G['comiis_sms']['unbundling'] || !$comiis_is_mobile_user}-->	
+		<!--{if $comiis_is_mobile_user}-->
+        <div id="comiis_mobile_ub_key" class="comiis_notip comiis_sofa mt15 bg_f b_t b_b cl">
+            <img src="./source/plugin/comiis_sms/image/comiis_ico.png" style="height:50px;margin-top:10px;">
+            <span class="f_d">{$comiis_sms['217']}</span>
+            <span class="f_a">{$comiis_sms['07']}: {echo substr_replace($comiis_mobile_user['tel'], '****', 3, 4);}</span>
+            <span class="mb10"><a href="javascript:;" onclick="comiis_mobile_ub_key()" class="bg_c f_f" style="margin-top:10px;">{$comiis_sms['208']}{$comiis_sms['02']}</a></span>
+        </div>
+		<script>
+		function comiis_mobile_ub_key() {
+			$('#comiis_mobile_ub_box').show();
+			$('#comiis_mobile_ub_key').hide();
+		}
+		</script>
+		<!--{/if}-->		
+		<div id="comiis_mobile_ub_box"{if $comiis_is_mobile_user} style="display:none;"{/if}>	
+		<form method="post" autocomplete="off" name="register"  enctype="multipart/form-data"  action="plugin.php?id=comiis_sms:comiis_sms_post&action={if $comiis_is_mobile_user == 1}Unbundling{else}binding{/if}" id="comiis_mobile_binding_sms" class="{if $comiis_is_mobile_user == 1}Unbundling{else}binding{/if}">
+			<input type="hidden" name="formhash" value="{FORMHASH}">
+			<input type="hidden" name="comiis_mobile_bindingsubmit" value="true">
+			<input type="hidden" name="referer" value="{echo dreferer()}" />
+			<!--{if $comiis_is_mobile_user == 1}-->
+			<input type="hidden" name="comiis_tel" id="comiis_tel" value="{$comiis_mobile_user['tel']}">
+			<!--{/if}-->
+            <div class="comiis_login_box ypci comiis_mobreg_box">
+                <div class="comiis_login_from" style="margin:0;">
+                    <ul class="bg_f b_t b_b">
+                        <!--{if $comiis_is_mobile_user == 1}-->
+                        <li class="comiis_flex qqli styli_zico f16">
+                            <div class="styli_tit"><i class="comiis_mobfont f_d">&#xe631;</i>{$comiis_sms['47']}</div>
+                            <div class="flex f_c">{echo dgmdate($comiis_mobile_user['dateline'])}</div>
+                        </li>
+                        <li class="comiis_flex qqli styli_zico f16 b_t">
+                            <div class="styli_tit"><i class="comiis_mobfont f_d">&#xe684;</i>{$comiis_sms['07']}</div>
+                           <div class="flex f_a">{echo substr_replace($comiis_mobile_user['tel'], '****', 3, 4);}</div>
+                            <div class="styli_r tipcol">
+                                <div class="comiis_mobreg_time comiis_sendbtn bg_a f_f" style="display:none"><span></span>{$comiis_sms['08']}</div>
+                                <input type="button" class="comiis_mobreg_timekey comiis_sendbtn bg_0 f_f" value="{$comiis_sms['09']}" onclick="comiis_mobreg_fkey('Unbundling')" />
+                            </div>
+                        </li>
+                        <!--{else}-->
+                        <li class="comiis_flex qqli styli_zico f16">
+                            <div class="styli_tit"><i class="comiis_mobfont f_d">&#xe684;</i>{$comiis_sms['139']}</div>
+                            <div class="flex"><input type="text" value="" autocomplete="off" name="comiis_tel" id="comiis_tel" required class="comiis_px" placeholder="{$comiis_sms['138']}{$comiis_sms['10']}"></div>
+                            <div class="styli_r tipcol">
+                                <div class="comiis_mobreg_time comiis_sendbtn bg_a f_f" style="display:none"><span></span>{$comiis_sms['08']}</div>
+                                <input type="button" class="comiis_mobreg_timekey comiis_sendbtn bg_0 f_f" value="{$comiis_sms['09']}" onclick="comiis_mobreg_fkey('binding')" />
+                            </div>
+                        </li>
+                        <!--{/if}-->
+                        <li class="comiis_flex qqli styli_zico f16 b_t">
+                            <div class="styli_tit"><i class="comiis_mobfont f_d">&#xe6e0;</i><!--{if $comiis_is_mobile_user == 1}-->{$comiis_sms['144']}<!--{else}-->{$comiis_sms['140']}<!--{/if}--></div>
+                            <div class="flex"><input name="code" type="text" value="" autocomplete="off" required class="comiis_px" placeholder="{$comiis_sms['138']}{$comiis_sms['147']}"></div>
+                        </li>
+                        <!--{if $_G['comiis_sms']['setup_seccodeverify']}-->
+                        <li class="comiis_flex qqli styli_zico f16 b_t">
+                            <div class="styli_tit"><i class="comiis_mobfont f_d">&#xe62f;</i><!--{if $comiis_is_mobile_user == 1}-->{$comiis_sms['216']}<!--{/if}-->{$comiis_sms['215']}</div>
+                            <div class="flex">					
+                            {eval}				
+                                    list($seccodecheck, $secqaacheck) = seccheck('register');
+                                    if($secqaacheck || $seccodecheck){
+                                        $sectpl = '<div class="rfm"><table><tr><th><span class="rq">*</span><sec>: </th><td><sec><br /><sec></td></tr></table></div>';
+                                        $sechash = !isset($sechash) ? 'S'.($_G['inajax'] ? 'A' : '').$_G['sid'] : $sechash.random(3);
+                                        $sectpl = str_replace("'", "\'", $sectpl);
+                                    }
+                                $sechash = 'S'.random(4);
+                                $sectpl = !empty($sectpl) ? explode("<sec>", $sectpl) : array('<br />',': ','<br />','');	
+                                $ran = random(5, 1);
+                            {/eval}
+                            <!--{if $secqaacheck}-->
+                            <!--{eval
+                                $message = '';
+                                $question = make_secqaa();
+                                $secqaa = lang('core', 'secqaa_tips').$question;
+                            }-->
+                            <!--{/if}-->
+                            <!--{if $sectpl}-->
+                                <!--{if $secqaacheck}-->
+                                    <div class="comiis_sec_txt b_b f_c cl">
+                                    {lang secqaa}:
+                                    $secqaa
+                                    <input name="secqaahash" type="hidden" value="$sechash" />
+                                    &nbsp;<input name="secanswer" id="secqaaverify_$sechash" type="text" class="comiis_px b_ok" />
+                                    </div>
+                                <!--{/if}-->
+                                <!--{if $seccodecheck}-->
+                                    <div class="comiis_sec_code b_t cl">
+                                        <input name="seccodehash" type="hidden" value="$sechash" class="sechashs" />
+                                        <img src="misc.php?mod=seccode&update={$ran}&idhash={$sechash}&mobile=2" class="sec_code_imgs sec_code_img" />
+                                        <input type="text" class="comiis_px vm" style="ime-mode:disabled;" autocomplete="off" value="" id="seccodeverifys_$sechash" name="seccodeverify" placeholder="{$comiis_sms['138']}{$comiis_sms['216']}{lang seccode}" fwin="seccode">        
+                                    </div>
+                                <!--{/if}-->
+                            <!--{/if}-->
+                            <script type="text/javascript">
+                                (function() {
+                                
+                                    $('.sec_code_imgs').on('click', function() {
+                                        $('#seccodeverifys_$sechash').attr('value', '');
+                                        var tmprandom = 'S' + Math.floor(Math.random() * 1000);
+                                        $('.sechashs').attr('value', tmprandom);
+                                        $(this).attr('src', 'misc.php?mod=seccode&update={$ran}&idhash='+ tmprandom +'&mobile=2');
+                                    });
+                                    
+                                })();
+                            </script>
+                            </div>
+                        </li>
+                        <!--{/if}-->
+                    </ul>
+                </div>
+                <div class="comiis_btn_login aakb"><button type="submit" class="comiis_btn bg_c f_f"><!--{if $comiis_is_mobile_user == 1}-->{$comiis_sms['02']}<!--{else}-->{$comiis_sms['137']}<!--{/if}--></button></div>
+                <!--{if $comiis_is_mobile_user == 1}-->
+                    <div class="comiis_mobreg_tip cl"><span class="f_a">{$comiis_sms['04']}</span><br><span class="f_d">{$comiis_sms['05']}</span></div>
+                <!--{else}-->
+                    <div class="comiis_mobreg_tip f_d cl">{$comiis_sms['06']}</div>
+                <!--{/if}-->
+            </div>
+		</form>
+		</div>
+	<!--{else}-->
+        <div class="comiis_notip comiis_sofa bfhl mt15 bg_f b_t b_b cl">
+            <img src="./source/plugin/comiis_sms/image/comiis_ico.png" style="height:50px;margin-top:5px;">
+            <span class="f_a">{$comiis_sms['07']}: {echo substr_replace($comiis_mobile_user['tel'], '****', 3, 4);}</span>
+            <span class="f_d">{$comiis_sms['12']}!</span>
+        </div>
+	<!--{/if}-->	
+	<!--{if count($comiis_alluser) > 1}-->
+        <div class="comiis_pltit wmse bg_f b_t b_b f_ok mt15 cl"><h2 style="font-size:15px;">{$comiis_sms['14']}</h2></div>
+        <div class="comiis_sms_bdlist xlco bg_f b_b">
+            <ul>                
+                <!--{loop $comiis_alluser $temp}-->
+                <li class="b_b"><span class="y f_d">uid: {$temp['uid']}</span><a href="home.php?mod=space&uid={$temp['uid']}" title="{$temp['username']}"><img src="<!--{avatar($temp['uid'], small, true)}-->">{$temp['username']}</a></li>
+                <!--{/loop}-->
+                <li class="f_c" style="line-height:20px;font-size:12px;">Tips: {$comiis_sms['15']}</li>
+            </ul>
+        </div>
+	<!--{/if}-->
+<!--{else}-->
+    <!--{if $comiis_is_mobile_reg_user == 1}-->
+        <div class="comiis_login_box wmse comiis_mobreg_box">
+            <form method="post" autocomplete="off" name="register"  enctype="multipart/form-data"  action="plugin.php?id=comiis_sms:comiis_sms_post&action=rename">
+                <input type="hidden" name="formhash" value="{FORMHASH}">
+                <input type="hidden" name="renamesubmit" value="true" />		
+                <div class="comiis_login_from" style="margin:0;">
+                    <ul class="bg_f b_t b_b">
+                        <li class="comiis_flex qqli styli_zico f16">
+                            <div class="styli_tit"><i class="comiis_mobfont f_d">&#xe61e;</i>{$comiis_sms['141']}</div>
+                            <div class="flex f_a">{$_G[member][username]}</div>
+                        </li>
+                        <li class="comiis_flex qqli styli_zico f16 b_t">
+                            <div class="styli_tit"><i class="comiis_mobfont f_d">&#xe69f;</i>{$comiis_sms['142']}</div>
+                            <div class="flex"><input name="newname" type="text" value="" autocomplete="off" required class="comiis_px" placeholder="{$comiis_sms['138']}{$comiis_sms['142']}"></div>
+                        </li>
+                        <!--{if $comiis_mobile_user['state'] == 2}-->                
+                            <li class="comiis_flex qqli styli_zico f16 b_t">
+                                <div class="styli_tit"><i class="comiis_mobfont f_d">&#xe61d;</i>{$comiis_sms['170']}</div>
+                                <div class="flex"><input name="password1" type="password" value="" autocomplete="off" required class="comiis_px" placeholder="{$comiis_sms['170']}"></div>
+                            </li>
+                            <li class="comiis_flex qqli styli_zico f16 b_t">
+                                <div class="styli_tit"><i class="comiis_mobfont f_d">&#xe6d2;</i>{$comiis_sms['33']}</div>
+                                <div class="flex"><input name="password2" type="password" value="" autocomplete="off" required class="comiis_px" placeholder="{$comiis_sms['33']}"></div>
+                            </li>    
+                        <!--{/if}-->
+                    </ul>
+                </div>
+                <div class="comiis_btn_login"><button type="submit" class="comiis_btn bg_c f_f">{$comiis_sms['13']}</button></div>
+                <div class="comiis_mobreg_tip xlco f_d cl">{$comiis_sms['18']}</div>
+            </form>
+        </div>
+    <!--{else}-->
+        <div class="comiis_notip comiis_sofa ypci mt15 bg_f b_t b_b cl">
+            <img src="./source/plugin/comiis_sms/image/comiis_ico.png" style="height:50px;margin-top:5px;">
+            <span class="f_d">{$comiis_sms['19']}</span>
+        </div>
+    <!--{/if}-->	
+<!--{/if}-->
+<!--{eval $comiis_foot = 'no';}-->

@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,width=device-width" />
+<title>{$qidou_love['jy_title']}</title>
+<script src="{$siteurl}/source/plugin/qidou_love/static/js/sq-3.0.0.js"></script>
+<script src="{$siteurl}/source/plugin/qidou_love/static/js/common.js?1"></script>
+<script>
+var siteurl = '{$siteurl}';
+var uid = <!--{if $uid}-->{$uid}<!--{else}-->null<!--{/if}-->;
+var username = '{$username}';
+var is_login = <!--{if $uid}-->true<!--{else}-->false<!--{/if}-->;
+var is_appbyme = navigator.userAgent.indexOf('Appbyme')!=-1;
+(function (){
+    var Doc = document.documentElement;
+    Doc.style.fontSize = Doc.clientWidth/10+'px';
+})();
+var position_data = {lat:0,lng:0};
+</script>
+</head>

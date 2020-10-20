@@ -1,0 +1,38 @@
+@import "public";
+html,body{height:100%;background:#f1f1f1;font-size:12/@r;}
+@import "top_menu";
+
+.photo_warning{display:-webkit-box;display:box;height:30/@r;background:#feefb8;color:#222;font-size:12/@r;-webkit-box-align:center;box-align:center;-webkit-box-pack:center;box-pack:center;}
+.photo_warning .icon{width:20/@r;height:20/@r;background:url(../images/warning.png) no-repeat center center/100% 100%;}
+.photo_warning .text{height:20/@r;line-height:20/@r;}
+
+#user_list{padding:0 10/@r 10/@r 0;overflow:hidden;}
+#user_list li{width:50%;padding-left:10/@r;box-sizing:border-box;float:left;margin-top:10/@r;}
+#user_list .user_wrap{position:relative;}
+#user_list .user_link{position:absolute;left:0;top:0;width:100%;height:100%;}
+#user_list .user_header{height:200/@r;position:relative;}
+#user_list .user_header .user_photo{height:200/@r;overflow:hidden;}
+#user_list .user_header .user_honor{width:60/@r;height:26/@r;line-height:26/@r;position:absolute;left:10px;top:-4px;color:#fff;text-align:center;display:none;}
+#user_list li:first-of-type .user_honor{background:#fe2641 !important;display:block;}
+#user_list li:nth-of-type(-n+4) .user_honor{background:#ff9393;display:block;}
+#user_list li:nth-of-type(-n+4) .user_honor:after{content:'';position:absolute;right:-4px;top:0;width:4px;height:4px;background:linear-gradient(45deg,#660612 3px,transparent 0)}
+#user_list .user_header .love_num{width:100%;height:24/@r;line-height:24/@r;padding-right:10px;box-sizing:border-box;position:absolute;right:0;top:0;text-align:right;background:linear-gradient(to right,rgba(0,0,0,0) 50%,rgba(0,0,0,0.4));font-size:12px;color:#fff;}
+#user_list .user_header .love_num span{height:100%;line-height:24/@r;display:inline-block;vertical-align:middle;margin-left:4px;}
+#user_list .user_header .love_num img{width:20/@r;vertical-align:middle;margin-top:-2/@r;}
+#user_list .user_header .user_box{position:absolute;bottom:0;width:100%;height:26/@r;line-height:26/@r;background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6))}
+#user_list .user_header .user_name,#user_list .user_header .user_distance{position:absolute;bottom:0;width:50%;box-sizing:border-box;color:#fff;}
+#user_list .user_header .user_name{left:0;padding-left:10px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+#user_list .user_header .user_distance{right:0;text-align:right;padding-right:10px;}
+#user_list .user_header img{width:100%;}
+#user_list .user_footer{height:36/@r;background:#fff;line-height:36/@r;padding:0 10px;position:relative;}
+#user_list .user_footer .go_greeting{width:36/@r;height:36/@r;background:url(../images/greeting.png) center center/30/@r 30/@r no-repeat;position:absolute;right:0;top:0;z-index:2;}
+.loading{height:40/@r;display:-webkit-box;display:box;-webkit-box-pack:center;box-pack:center;-webkit-box-align:center;box-align:center;display:none;}
+.loading_main{width:20/@r;height:20/@r;background:url(../images/loading.png) no-repeat center center/20/@r 20/@r;animation:loading 1s infinite linear paused;-webkit-animation:loading 1s infinite linear paused;}
+@keyframes loading{
+	0%{
+		transform:rotateZ(0deg);
+	}
+	100%{
+		transform:rotateZ(360deg);
+	}
+}

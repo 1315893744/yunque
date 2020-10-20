@@ -1,0 +1,80 @@
+<!--{template qidou_love:header}-->
+<link rel="stylesheet" type="text/css" href="{$siteurl}/source/plugin/qidou_love/static/css/love.css" />
+<body>
+    <ul id="love_list">
+        <!--{if $user_type == 1}-->
+            <!--{loop $love_list $love}-->
+            <li data-uid="{$love['uid']}">
+                <div class="user_author">
+                    <img src="{$_G['setting']['ucenterurl']}/avatar.php?uid={$love['uid']}&size=middle" />
+                </div>
+                <div class="user_info">
+                    <div class="user_header">
+                        <div class="user_name">{$love['user_name']}</div>
+                        <div class="user_group v{$love['groupid']}"><div>{$user_group[$love['groupid']][1]}</div></div>
+                    </div>
+                    <div class="user_footer"><!--{if $love['age']}-->{$love['age']}{$lang['h_age_unit']}<span>|</span><!--{/if}--><!--{if $love['height']}-->{$love['height']}cm<!--{/if}--></div>
+                </div>
+                <div class="love_num"><div class="text">{$love['love_num']}</div><div class="icon"></div></div>
+                <div class="comm_right"></div>
+            </li>
+            <!--{/loop}-->
+        <!--{elseif $user_type == 2}-->
+            <!--{loop $love_list $love}-->
+            <li data-uid="{$love['uid']}">
+                <div class="user_author">
+                    <img src="{$_G['setting']['ucenterurl']}/avatar.php?uid={$love['uid']}&size=middle" />
+                </div>
+                <div class="user_info">
+                    <div class="user_header">
+                        <div class="user_name">{$love['user_name']}</div>
+                        <div class="user_group v{$love['groupid']}"><div>{$user_group[$love['groupid']][1]}</div></div>
+                    </div>
+                    <div class="user_footer"><!--{if $love['age']}-->{$love['age']}{$lang['h_age_unit']}<span>|</span><!--{/if}--><!--{if $love['height']}-->{$love['height']}cm<!--{/if}--></div>
+                </div>
+                <div class="love_num reward"><div class="text">{$love['r_price']}</div><div class="icon"></div></div>
+                <div class="comm_right"></div>
+            </li>
+            <!--{/loop}-->
+        <!--{elseif $user_type == 3}-->
+            <!--{loop $love_list $love}-->
+            <li data-uid="{$love['uid']}">
+                <div class="user_author">
+                    <img src="{$_G['setting']['ucenterurl']}/avatar.php?uid={$love['uid']}&size=middle" />
+                </div>
+                <div class="user_info">
+                    <div class="user_header">
+                        <div class="user_name">{$love['user_name']}</div>
+                        <div class="reward_name">{$love['r_name']}</div>
+                    </div>
+                    <div class="user_footer"><!--{if $love['age']}-->{$love['age']}{$lang['h_age_unit']}<span>|</span><!--{/if}--><!--{if $love['height']}-->{$love['height']}cm<!--{/if}--></div>
+                </div>
+                <div class="reward_wrap">
+                    <img src="{$love['r_image']}" class="reward_image"/>
+                    <div class="love_num reward">
+                        <div class="text">{$love['r_price']}</div>
+                        <div class="icon"></div>
+                    </div>
+                </div>
+                <div class="comm_right"></div>
+            </li>
+            <!--{/loop}-->
+        <!--{/if}-->
+    </ul>
+    <div class="loading"><div class="loading_main"></div></div>
+    <script src="{$siteurl}/source/plugin/qidou_love/static/js/jquery-2.1.3.min.js"></script>
+    <script>
+        var loading_data = {
+            start:0,
+            love_id:{$love_id},
+            user_type:{$user_type}
+        };
+        var loading_url = '{$siteurl}/plugin.php?id=qidou_love:qidou_show&act=ajax_love_list&formhash={FORMHASH}';
+        down_loading(loading_data,loading_url,'#love_list');
+        $('#love_list').on('click','li',function (){
+            var data_uid = $(this).attr('data-uid');
+            open_page_url(siteurl+'/plugin.php?id=qidou_love:qidou_user&love_id='+data_uid);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!--{template common/header}-->
+    <div class="midaben_con mbm">
+        <a href="{$misign['pluginurl']}sign" class="midaben_signpanel JD_sign visted" id="JD_sign" target="_blank">
+            <div class="font">
+                {lang k_misign:signed}
+            </div>
+            <span class="nums">
+                {lang k_misign:row}{$qiandaodb['lasted']}{lang k_misign:days}
+            </span>
+            <div class="fblock">
+                <div class="all">
+                    {$stats['todayq']}{lang k_misign:people}
+                </div>
+                <div class="line">
+                    {$row}
+                </div>
+            </div>
+        </a>
+        <div id="JD_win" class="midaben_win JD_win" style="display:block;">
+            <div class="angleA">
+            </div>
+            <div class="angleB">
+            </div>
+            <div class="title">
+                <h3>{lang k_misign:signsuccess}</h3>
+                <p class="con">
+                <!--{if $ajaxcreditshow['ext']['type'] == $ajaxcreditshow['normal']['type']}-->
+                    <!--{eval echo lang('plugin/k_misign','getreward', array('reward' => $ajaxcreditshow['normal']['number'].$_G['setting']['extcredits'][$ajaxcreditshow['normal']['type']]['unit'].$_G['setting']['extcredits'][$ajaxcreditshow['normal']['type']]['title']));}-->
+                <!--{else}-->
+                    <!--{eval echo lang('plugin/k_misign','getreward2', array('reward' => $ajaxcreditshow['normal']['number'].$_G['setting']['extcredits'][$ajaxcreditshow['normal']['type']]['unit'].$_G['setting']['extcredits'][$ajaxcreditshow['normal']['type']]['title'], 'reward2' => $ajaxcreditshow['ext']['number'].$_G['setting']['extcredits'][$ajaxcreditshow['ext']['type']]['unit'].$_G['setting']['extcredits'][$ajaxcreditshow['ext']['type']]['title']));}-->
+                <!--{/if}-->
+                </p>
+            </div>
+            <div class="info"><!--{eval echo lang('plugin/k_misign','yljqddays', array('days' => ($qiandaodb['days'] ? $qiandaodb['days'] : 1)));}--></div>
+        </div>
+    </div>
+<!--{template common/footer}-->

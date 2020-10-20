@@ -1,0 +1,16 @@
+<form id="cpform" action="admin.php?action=plugins&operation=config&identifier=aljol&pmod=log&act=delete&page={$currpage}" autocomplete="off" method="post" name="cpform">
+<table class="tb tb2 nobdb">
+<tbody><tr><th class="partition" colspan="15">&#28040;&#24687;&#31649;&#29702;</th></tr>
+<tr class="header"><th></th><th>&#21457;&#36865;&#26102;&#38388;</th><th>&#29992;&#25143;</th><th>&#32842;&#22825;&#20869;&#23481;</th>
+</tr>
+
+{loop $loglist $log}
+<tr>
+<td><input type="checkbox" value="{$log['id']}" name="delete[]" class="checkbox"></td>
+<td>{eval echo dgmdate($log['datetime']);}</td><td><font style="color:#FF6633;">{$log['username']}</font>{if $log['friendid']}&#23545;<font style="color:#FF6633;">{$log['friendusername']}</font>{else}&#22312;<font style="color:#FF6633;">&#22312;&#32447;&#32842;&#22825;&#23460;</font>{/if}&#35828;</td><td>{$log['talk']}</td>
+<td>{$log['result']}</td>
+</tr>
+{/loop}
+<tr><td colspan="3"><div class="fixsel"><input type="checkbox" onclick="checkAll('prefix', this.form, 'delete','chkallUMP3')" class="checkbox" id="chkallUMP3" name="chkall"><label for="chkallUMP3">&#21024;&#63;</label>&nbsp;<input type="submit" value="&#25552;&#20132;"  name="submit" id="submit_submit" class="btn"></div></td><td>$paging</td></tr>
+</tbody></table>
+</form>

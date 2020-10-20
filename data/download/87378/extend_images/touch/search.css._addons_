@@ -1,0 +1,7 @@
+.lmw_search_history_item {
+    padding: 5px 0;
+}
+
+.lmw_search_history_bottom {
+    border-bottom: 1px #d9d9d9 solid;
+}

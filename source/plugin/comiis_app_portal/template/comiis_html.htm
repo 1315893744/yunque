@@ -1,0 +1,29 @@
+<!--{template common/header_ajax}-->
+<h3 class="flb iggw">
+	<em id="return_$_GET[handlekey]">{$comiis_app_portal_lang['87']}</em>
+	<span><a href="javascript:;" class="flbc" onclick="hideWindow('$_GET[handlekey]');return false;" title="{lang close}">{lang close}</a></span>
+</h3>
+<div style="overflow:hidden;">
+	<form method="post" autocomplete="off" action="plugin.php?id=comiis_app_portal&style=yes" id="styleform" onsubmit="ajaxpost('styleform','return_$_GET[handlekey]','return_$_GET[handlekey]','onerror');">
+		<input type="hidden" id="comiis_color_form" name="editid" value="{$comiis_diy['id']}">
+		<input type="hidden" name="formhash" value="{FORMHASH}" />
+		<input type="hidden" name="submit" value="true" />
+		<input type="hidden" name="handlekey" value="$_GET['handlekey']" />
+		<div class="c diywin nalg"{if $_G[inajax]} style="width: 490px; {if $_GET[from]=='cp'}max-height:260px;{else}max-height:380px;{/if}height:auto !important; {if $_GET[from]=='cp'}height:260px;{else}height:380px;{/if} _padding-right: 17px; overflow-x: hidden; overflow-y: auto;"{/if}>
+			{$comiis_app_portal_lang['88']}<input type="checkbox" name="margintop" class="pr" value="1"{if $comiis_diy['margintop']} checked="checked"{/if}>{$comiis_app_portal_lang['89']}&nbsp;&nbsp;&nbsp;<input type="checkbox" name="marginbottom" class="pr" value="1"{if $comiis_diy['marginbottom']} checked="checked"{/if}>{$comiis_app_portal_lang['90']}<br><br>		
+			{$comiis_app_portal_lang['91']}<input type="checkbox" name="bordertop" class="pr" value="1"{if $comiis_diy['bordertop']} checked="checked"{/if}>{$comiis_app_portal_lang['92']}&nbsp;&nbsp;&nbsp;<input type="checkbox" name="borderbottom" class="pr" value="1"{if $comiis_diy['borderbottom']} checked="checked"{/if}>{$comiis_app_portal_lang['93']}<br><br>	
+			{$comiis_app_portal_lang['99']}<input type="checkbox" name="indenttop" class="pr" value="1"{if $comiis_diy['indenttop']} checked="checked"{/if}>{$comiis_app_portal_lang['100']}&nbsp;&nbsp;&nbsp;<input type="checkbox" name="indentbottom" class="pr" value="1"{if $comiis_diy['indentbottom']} checked="checked"{/if}>{$comiis_app_portal_lang['101']}	
+		</div>
+		<div class="o pns djsz">
+			<button type="submit" class="pn pnc gkqu"><strong>{lang confirms}</strong></button>
+			<button type="button" class="pn uomj" onclick="hideWindow('$_GET[handlekey]');return false;"><strong>{lang cancel}</strong></button>
+		</div>
+	</form>
+</div>
+<script type="text/javascript" reload="1">
+function succeedhandle_$_GET[handlekey] (url, message, values) {
+	hideWindow('$_GET[handlekey]');
+	location.reload();
+}
+</script>
+<!--{template common/footer_ajax}-->

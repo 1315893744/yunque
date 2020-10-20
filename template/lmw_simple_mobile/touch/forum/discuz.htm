@@ -1,0 +1,63 @@
+<!--{template common/header}-->
+<!--{template common/lmw_header}-->
+<link rel="stylesheet" href="{$_G['style']['styleimgdir']}/touch/discuz.css" type="text/css" media="all">
+<!--{hook/index_top_mobile}-->
+<!-- main forumlist start -->
+<div>
+    <!--{loop $catlist $key $cat}-->
+    <div class="lmw_cat">
+        <!--分区名-->
+        <div class="lmw_catTitle">
+            $cat[name]
+            <input type="checkbox" checked="true" onclick="lmwSwitchClicked(this,{$key})" class="lmw_forum_cat_switch"/>
+        </div>
+        <!--版块列表-->
+        <div id="lmw_catbody_{$key}" class="lmw_catbody">
+            <!--{loop $cat[forums] $key $forumid}-->
+            <!--{eval $forum=$forumlist[$forumid];}-->
+            <!--{eval preg_match("/([^\"'>]+.(jpg|JPG|jpeg|JPEG|gif|GIF|png|PNG))/i", $forum['icon'],$out);}-->
+            <!--{eval $iconPath = count($out[0]) == 0 ? '' : $out[0]}-->
+            <div class="lmw_catbody_inner">
+                <a href="forum.php?mod=forumdisplay&fid={$forum['fid']}">
+                    <div class="lmw_forum_card">
+                        <div class="lmw_forum_icon">
+                            <!--{if ($iconPath != '')}-->
+                            <img src="{$iconPath}" width="100%" alt="">
+                            <!--{else}-->
+                            <img src="$_G['style']['imgdir']/forum.gif" width="100%" alt="">
+                            <!--{/if}-->
+                        </div>
+                        <div class="lmw_forum_name">{$forum['name']}</div>
+                        <div class="lmw_forum_info">
+                            主题 <!--{$forum['threads']}-->&nbsp;&nbsp;&nbsp;&nbsp;新帖 <!--{$forum['todayposts']}-->
+                        </div>
+                        <div class="lmw_forum_desc">
+                            <!--{if ($forum['description'])}-->
+                            {$forum['description']}
+                            <!--{else}-->
+                            暂无简介
+                            <!--{/if}-->
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!--{/loop}-->
+        </div>
+    </div>
+</div>
+<!--{/loop}-->
+<!-- main forumlist end -->
+<!--{hook/index_middle_mobile}-->
+<script>
+    function lmwSwitchClicked(checkBox, catKey) {
+        let catBody = document.getElementById("lmw_catbody_" + catKey);
+        let check = eval(checkBox.getAttribute("checked"));
+        if (check) {
+            catBody.style.display = "none";
+        } else {
+            catBody.style.removeProperty("display");
+        }
+        checkBox.setAttribute("checked", !check);
+    }
+</script>
+<!--{template common/footer}-->

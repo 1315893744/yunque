@@ -1,0 +1,16 @@
+{loop $addfriendrequest $tmp_key $tmp_value}
+<div class="friendre">
+	<div class="friend-head">
+		{eval echo avatar($tmp_value['fuid'])}
+	</div>
+	<div class="friend-name">
+		<div class="friend-name-left">
+			<p>{$tmp_value['fusername']}</p>
+			<span>{$tmp_value['sightml']}</span>
+		</div>
+		<div class="friend-name-right">
+			<p></p>
+		</div>
+	</div>
+</div>
+{/loop}

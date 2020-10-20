@@ -1,0 +1,1 @@
+<?php if(!defined('IN_DISCUZ')) exit('Access Denied'); echo comiis_output_ajaxs(); ?>]]></root><?php exit;?>

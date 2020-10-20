@@ -1,0 +1,73 @@
+<div class="tl">
+	<div class="sttl mbn">
+		<h2><!--{if $keyword}-->{lang search_result_keyword} <!--{if $modfid}--><a href="forum.php?mod=modcp&action=thread&fid=$modfid&keywords=$modkeyword&submit=true&do=search&page=$page" target="_blank">{lang goto_memcp}</a><!--{/if}--><!--{else}-->{lang search_result}<!--{/if}--></h2>
+	</div>
+	<!--{ad/search/y mtw}-->
+	<!--{if empty($threadlist)}-->
+		<p class="emp xs2 xg2">{lang search_nomatch}</p>
+	<!--{else}-->
+		<div class="slst mtw" id="threadlist" {if $modfid} style="position: relative;"{/if}>
+			<!--{if $modfid}-->
+			<form method="post" autocomplete="off" name="moderate" id="moderate" action="forum.php?mod=topicadmin&action=moderate&fid=$modfid&infloat=yes&nopost=yes">
+			<!--{/if}-->
+			<ul>
+			<style type="text/css">
+				.byg_list_img .byg_list_img_z{ float: left; width: 129px;}
+				.byg_list_img .byg_list_img_z img{ margin-top: 4px; width: 120px; height: 70px; vertical-align: middle; border-radius: 2px;}
+				.byg_list_img .byg_list_img_y{ float: left; width: 630px;}
+				.byg_list_img .byg_message_p{ height: 38px; line-height: 19px; overflow: hidden;}
+			</style>
+			<!--{eval require_once(DISCUZ_ROOT.'./template/bygsjw/php/forum_guide_list_row.php');}-->
+				<!--{loop $threadlist $thread}-->
+				<!--{eval $biaoid = substr($thread[realtid], -1);}-->
+				<!--{eval $img_number = byg_threadlist_img_num($thread[realtid], $thread[authorid], $biaoid);}-->
+				<li class="pbw <!--{if $img_number > 0 && $_G['style']['luntan_liebiaotu'] == "on"}-->byg_list_img<!--{/if}-->" id="$thread[tid]">
+					<h3 class="xs3">
+						<!--{if $modfid}-->
+							<!--{if $thread['fid'] == $modfid && ($thread['displayorder'] <= 3 || $_G['adminid'] == 1)}-->
+								<input onclick="tmodclick(this)" type="checkbox" name="moderate[]" value="$thread[tid]" />&nbsp;
+							<!--{else}-->
+								<input type="checkbox" disabled="disabled" />&nbsp;
+							<!--{/if}-->
+						<!--{/if}-->
+						<a href="forum.php?mod=viewthread&tid=$thread[realtid]&highlight=$index[keywords]" target="_blank" $thread[highlight]>$thread[subject]</a>
+					</h3>
+					<div class="cl">
+						<!--{if $img_number > 0 && $_G['style']['luntan_liebiaotu'] == "on"}-->
+						<!--{eval $list_img1 = byg_threadlist_img($thread[realtid], $thread[authorid], 1, $biaoid);}-->
+						<div class="byg_list_img_z">
+							<!--{loop $list_img1 $list_img1_1}-->
+							<a href="forum.php?mod=viewthread&tid=$thread[realtid]&highlight=$index[keywords]" target="_blank"><img src="{eval echo(getforumimg($list_img1_1[aid],0,120,70));}"/></a>
+							<!--{/loop}-->
+						</div>
+						<!--{/if}-->
+						<div class="byg_list_img_y">
+							<p class="xg1">$thread[replies] {lang a_comment_thread} - $thread[views] {lang a_visit}</p>
+							<p class="byg_message_p"><!--{if !$thread['price'] && !$thread['readperm']}-->$thread[message]<!--{else}-->{lang thread_list_message1}<!--{/if}--></p>
+							<p>
+								<span>$thread[dateline]</span>
+								 -
+								<span>
+									<!--{if $thread['authorid'] && $thread['author']}-->
+										<a href="home.php?mod=space&uid=$thread[authorid]" target="_blank">$thread[author]</a>
+									<!--{else}-->
+										<!--{if $_G['forum']['ismoderator']}--><a href="home.php?mod=space&uid=$thread[authorid]" target="_blank">{lang anonymous}</a><!--{else}-->{lang anonymous}<!--{/if}-->
+									<!--{/if}-->
+								</span>
+								 -
+								<span><a href="forum.php?mod=forumdisplay&fid=$thread[fid]" target="_blank" class="xi1">$thread[forumname]</a></span>
+							</p>
+						</div>
+					</div>
+				</li>
+				<!--{/loop}-->
+			</ul>
+		<!--{if $modfid}-->
+			</form>
+			<script type="text/javascript" src="{$_G[setting][jspath]}forum_moderate.js?{VERHASH}"></script>
+			<!--{template forum/topicadmin_modlayer}-->
+		<!--{/if}-->
+		</div>
+	<!--{/if}-->
+	<!--{if !empty($multipage)}--><div class="pgs cl mbm">$multipage</div><!--{/if}-->
+</div>

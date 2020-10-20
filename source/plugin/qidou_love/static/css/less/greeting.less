@@ -1,0 +1,29 @@
+@r:32rem;
+
+.bg1{background:#42bbff;}
+.bg2{background:#3cdec2;}
+.bg3{background:#ffa33f;}
+.bg4{background:#f072f2;}
+
+.greeting_wrap{position:fixed;left:0;bottom:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:999999;display:none;transition:0.3s all;transform:translate(0,100%) translateZ(0);}
+.greeting_box{height:89%;overflow:auto;padding:10/@r;box-sizing:border-box;}
+.greeting_box li{
+	padding:0 30/@r;
+	height:80/@r;
+	line-height:20/@r;
+	font-size:14/@r;
+	display:-webkit-box;
+	display:box;
+	color:#fff;
+	-webkit-box-align:center;
+	box-align:center;
+	border-radius:5/@r;
+	background-image:url(../images/love_num.png);
+	background-repeat:no-repeat;
+	background-size:18/@r;
+	background-position:6/@r center;
+	opacity:0;
+	transform:translate(0,50px) translateZ(0);
+}
+.greeting_box li+li{margin-top:20/@r;}
+.greeting_close{height:10%;background:url(../images/closeb.png) no-repeat center center/20/@r 20/@r;}

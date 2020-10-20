@@ -1,0 +1,66 @@
+{eval
+function comiis_weixin_login_extra() {
+	global $_G;
+}
+<!--{block return}-->
+<div class="fastlg_fm vqdn y" style="margin-right:10px;padding-right:10px">
+<p><a href="plugin.php?id=comiis_weixin&mod=wxlogin&inajax=1" onclick="showWindow('comiis_wxlogin', this.href, 'get', 0);"><img src="source/plugin/comiis_weixin/style/wechat_login.png" alt="{$_G['comiis_wxlang']['043']}" class="vm"></a></p>
+<p class="hm xg1" style="padding-top:2px;">{$_G['comiis_wxlang']['044']}</p>
+</div>
+<!--{/block}-->
+<!--{eval return $return;}-->
+{eval
+}
+function comiis_weixin_logging_method() {
+	global $_G;
+}
+<!--{block return}-->
+<a href="plugin.php?id=comiis_weixin&mod=wxlogin&inajax=1" onclick="showWindow('comiis_wxlogin', this.href, 'get', 0);"><img src="source/plugin/comiis_weixin/style/wechat_login.png" alt="{$_G['comiis_wxlang']['043']}" class="vm"></a>
+<!--{/block}-->
+<!--{eval return $return;}-->
+{eval
+}
+function comiis_weixin_logging_code($key='') {
+	global $comiis_is_weixin_user, $_G;
+}
+<!--{block return}-->
+    <h3 class="flb">
+      <em id="return_$_GET[handlekey]">{if !$_G['uid']}{$_G['comiis_wxlang']['044']}{elseif $comiis_is_weixin_user['uid'] == $_G['uid']}{$_G['comiis_wxlang']['045']}{else}{$_G['comiis_wxlang']['046']}{/if}</em>
+      <span><a href="javascript:;" onclick="hideWindow('$_GET[handlekey]');" class="flbc" title="{lang close}">{lang close}</a></span>
+    </h3>
+	<img src="plugin.php?id=comiis_weixin&mod=mobile_qrcode&key={$key}&t=unty"/>
+	<script language="javascript">
+	var comiis_weixin_wait_num_rybn = 0;
+	function comiis_weixin_waitgofm(){
+		comiis_weixin_wait_num_rybn++;
+		var x = new Ajax();
+		x.get('plugin.php?id=comiis_weixin&mod=weixin_wait&key={$key}&t=oysx', function(s, x) {
+			s = trim(s);
+			if(s == '1'){
+				location.href = location.href;
+			}else if(comiis_weixin_wait_num_rybn > 75){
+				hideWindow('$_GET[handlekey]');
+			}else{
+				setTimeout(function(){
+					comiis_weixin_waitgofm();
+				}, 4000);
+			}
+		});
+	}
+	comiis_weixin_waitgofm();
+  </script>
+<!--{/block}-->
+<!--{eval return $return;}-->
+{eval
+}
+function comiis_weixin_bd_code() {
+	global $_G;
+}
+<!--{block return}-->
+	<span class="pipe">|</span><a href="home.php?mod=spacecp&ac=plugin&id=comiis_weixin:comiis_weixin_setup">{$_G['comiis_wxlang']['047']}</a>
+<!--{/block}-->
+<!--{eval return $return;}-->
+{eval
+}
+
+}

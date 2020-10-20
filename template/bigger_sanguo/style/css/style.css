@@ -1,0 +1,217 @@
+@charset "UTF-8";
+/**** Bigger ****/
+
+/*快速链接*/
+.toplink{ overflow:hidden; margin:20px auto}
+.quicklink{width:222px; height:476px; background: url(../img/q_bg.jpg) no-repeat top center;margin-right: 7px;  display: inline;}
+.quicklink_box{ margin-top:4px; margin-left:4px;}
+.quicklink_box .link{ margin-left:8px}
+.game{position: relative; width:214px;height:109px;background:url(../img/start.jpg) no-repeat;}
+.game a{ width:214px;height:109px;display: block;}
+.game a:hover{ background:url(../img/start_hover.jpg) no-repeat; }
+.link a,.link a:hover{background: url(../img/bg.png) no-repeat;}
+.link-class,.link-reg,.link-download,.link-act{width:200px; height:53px; margin-top:5px;}
+.link-class a{width:200px; height:53px; background-position:0 0;  display: block; }
+.link-class a:hover{width:200px; height:53px; display: block;background-position:-200px 0;}
+.link-reg a{width:200px; height:53px; background-position:0px -59px;display: block; }
+.link-reg a:hover{width:200px; height:53px; background-position:-200px -59px;display: block; }
+.link-download a{width:200px; height:53px; background-position:0px -118px;display: block; }
+.link-download a:hover{width:200px; height:53px; background-position:-200px -118px;display: block; }
+.link-act a{width:200px; height:53px; background-position:0px -177px;display: block; }
+.link-act a:hover{width:200px; height:53px; background-position:-200px -177px;display: block; }
+/*快速通道*/
+.quicklink2{width: 176px; height: 62px; margin-top: 50px; padding:8px 0 5px 10px; }
+.quicklink2 ul li { float:left;width:80px; text-align: left; margin-left: 7px; display: inline;}
+.quicklink2 ul li a{ background: url(../img/ico.png) no-repeat left center;padding-left:10px; color: #ce8a54}
+.quicklink2 ul li a:hover{color:#fff !important;}
+/*广告位轮播*/
+.lightbox{width:430px; height:260px; background: #41261e;}
+.lightbox img{display:block;}/*ie6 兼容4px*/
+
+
+/*新闻*/
+.news{width:391px; height:260px;background: #41261e}
+.news-title{width:391px; height:37px; background: url(../img/t_bg.jpg) repeat-x;}
+.news-title ul li{float: left; width:97px;height:37px; line-height: 37px; margin-right: 1px;}
+.news-title ul li a{width:97px;height:37px; color: #c6afa8;font-size: 18px; display: block;}
+.news-title ul li a:hover{ background: url(../img/news-hover.jpg) repeat-x top center; width:97px;height:37px; display: block;text-decoration: none; color: #c6afa8}
+#last{margin-right: 0px;}
+.active{ background: url(../img/news-hover.jpg) repeat-x top center; width:97px;height:37px;}
+.news .news-main{line-height:21px !important;line-height: 22px;_line-height: 18px;*line-height: 18px;}
+.up{ width:345px;line-height:40px;_line-height:37px;*line-height:37px; border-bottom:1px dotted #755f59; }
+.up a:hover{text-decoration: underline;color: #00fcff;}
+.up_hot{font-size: 16px; color: #00fcff;}
+.news-main ul { margin-top: 5px;_margin-top:2px;}
+.news-main ul li{width:345px; height:22px;_height:18px;*height:18px; display:block; text-align: left;color: #f4ce5a;}
+.news-main ul li a{color: #f4ce5a;width:300px;overflow: hidden;display: block;height: 22px;line-height: 22px;float:left;}
+.news-main ul li a:hover {color: #ffffff !important;}
+.roughStyle{font-weight: bold;}
+.redStyle{color: red !important;}
+#newsmore a{width:345px;height:22px; display:block;}
+
+
+/*最新资讯*/
+
+.gametab{ width:540px; height:260px; background:#41261e; float:right}
+
+
+/*热门活动*/
+
+.act{ display:block;height: 209px; padding-top:6px; width: 971px; overflow:hidden}
+.act .act_back{background: #41261e none repeat scroll 0 0; height: 209px; width: 100%}
+.act .act_title{  background: rgba(0, 0, 0, 0) url("../img/act-bg.jpg") repeat-x scroll 0 0; height: 40px; width: 100%;}
+.act_con{  margin: 12px 7px;}
+.act_con ul li{margin: 0 6px; width: 179px; float:left; height:156px; overflow:hidden }
+.act_con ul li img{ width:190px; height:125px}
+.act_con ul li p{ text-align:center; line-height:25px; color:#ce8a54; height:20px; overflow:hidden; margin:0 auto}
+.act_con ul li a:hover p{ color:#b52200;}
+
+
+/*qq群*/
+
+
+.game_numtwo{ width:100%; height:660px;  overflow:hidden}
+.link_line{background: rgba(0, 0, 0, 0) url("../img/box3-line.jpg") no-repeat scroll 0 0; height: 6px; width: 246px;}
+.news_line{background: rgba(0, 0, 0, 0) url("../img/box2-line.jpg") no-repeat scroll 0 0; height: 6px; width: 717px;}
+.firstlink{ width:223px; height:auto; float:left;margin: 13px 8px 0 0;}
+.secondlink{ display:block; float:left;margin: 13px 0; width: 717px; height:1133px;}
+.thirdlink{ display:block; float:right;margin-top: 13px; width: 246px; height:1133px;}
+
+
+.game_numtwo .game_numtwo{ clear:both; height:650px;}
+.game_numtwo .game_left{ display:block; height: 120px;width: 222px;border: 1px solid #b9976e;}
+.game_numtwo .game_left .game_left_tit{background: rgba(0, 0, 0, 0) url("../img/box1.jpg") no-repeat scroll center -1px; color: #6a4b29; font-size: 18px;  font-weight: bold; height: 36px; line-height: 37px; width: 222px; text-align:center}
+.game_numtwo .game_left .qq_main{ background: #ecd4b7 none repeat scroll 0 0; border-color: currentcolor #f1dfc9 #f1dfc9;  border-image: none; border-style: none solid solid; border-width: 0 1px 1px; height: 72px; padding: 5px 0; width: 220px;}
+.game_numtwo .game_left .qq_main ul li{ background: rgba(0, 0, 0, 0) url("../img/li-style.jpg") no-repeat scroll 12px center; float: left; line-height: 23px; text-indent: 24px ;}
+
+
+/*客服*/
+
+.game_numtwo .game_mid{ display:block; height: 256px; margin-top:4px; width: 222px;border: 1px solid #b9976e;}
+.game_numtwo .game_mid .game_mid_tit{background: rgba(0, 0, 0, 0) url("../img/box1.jpg") no-repeat scroll center -1px; color: #6a4b29; font-size: 18px;  font-weight: bold; height: 36px; line-height: 37px; width: 222px; text-align:center}
+.game_numtwo .game_mid .service-main{background: #ecd4b7 none repeat scroll 0 0; border: 1px solid #f1dfc9; height: 217px; width: 220px;}
+.service-main .online{height: 108px; padding: 5px; width: 208px;}
+.service-main .tel{background: rgba(0, 0, 0, 0) url("../img/400.jpg") no-repeat scroll 13px center; font-size: 14px; font-weight: bold; line-height: 26px; text-align:center}
+.service-main .other_tel{line-height: 16px; text-align:center}
+.kefu_button{ text-align:center; margin-top:5px}
+.service-main .contact_main ul li{ text-align:center;text-indent: 20px; margin-top:5px; font-size:14px}
+
+/*分享*/
+
+.game_btm{border-left: 1px solid #e2c39a; border-top: 1px solid #e2c39a; height: 190px; margin-top: 5px; width: 220px; position:relative}
+.game_btm ul li{border-bottom: 1px solid #e2c39a;  border-right: 1px solid #e2c39a; float: left; height: 94px; width: 109px}
+.game_btm ul li a{ display:block; height: 94px; width: 109px; text-align:center; margin:0 auto; padding-top:12px; box-sizing:border-box; background:#fce8c9}
+.game_btm ul li a:hover{ background:#ffe2b4}
+.kill_icon{ position:absolute;height: 37px; left: 90px;  top:75px; width: 38px}
+.votes{ height: 60px; margin-top: 5px; width: 220px;}
+
+
+.video_list{background: #ecd4b7 none repeat scroll 0 0; border-left: 1px solid #b9976e; border-right: 1px solid #b9976e; height: 354px; width: 244px;}
+.video_list .video_tit{background: rgba(0, 0, 0, 0) url("../img/box3-title.jpg") no-repeat scroll left -1px; height: 36px;}
+.video_list .video_tit .news_img{ position: relative; top:-6px; left:6px}
+.video_list .video_tit .news_more{ float:right;line-height: 15px; margin: 12px 0 0 0;}
+.video_list .video_tit .news_more a{ display:block; width:50px; height:15px;}
+.video_list .video_tit .news_more img{ margin-left:5px}
+.video_list .video_main{border-left: 1px solid #f1dfc9;  border-right: 1px solid #f1dfc9;  height: 315px; line-height: 20px;  width: 242px; overflow:hidden}
+.video_list .video_main ul li{ margin-top:10px; height:150px; overflow:hidden}
+.video_list .video_main ul li .v_mainimg{ margin:0 auto; width:204px; height:120px}
+.video_list .video_main ul li img{ width:100%; height:100%}
+.video_list .video_main ul li p{ padding:5px 10px 0; text-align:center}
+
+
+
+.play_list{background: #ecd4b7 none repeat scroll 0 0; border-left: 1px solid #b9976e; border-right: 1px solid #b9976e; height: 268px; width: 244px; margin-top:12px}
+.play_list .video_tit{background: rgba(0, 0, 0, 0) url("../img/box3-title.jpg") no-repeat scroll left -1px; height: 36px;}
+.play_list .video_tit .news_img{ position: relative; top:-6px; left:6px}
+.play_list .video_tit .news_more{ float:right;line-height: 15px; margin: 12px 0 0 0;}
+.play_list .video_tit .news_more a{ display:block; width:50px; height:15px;}
+.play_list .video_tit .news_more img{ margin-left:5px}
+.play_list .video_main{border-left: 1px solid #f1dfc9;  border-right: 1px solid #f1dfc9;  height: 230px; line-height: 20px;  width: 242px;}
+.play_list .video_main ul li{ display:block; float:left; width:45%; margin-left:3.5%; margin-top:10px; overflow:hidden}
+.play_list .video_main ul li .palyer_img{ width:110px; height:80px}
+.play_list .video_main ul li .palyer_img img{ width:100%; height:100%}
+.play_list .video_main ul li p{ text-align:center; margin-top:5px}
+
+
+
+.npc_list{background: #ecd4b7 none repeat scroll 0 0; border-left: 1px solid #b9976e; border-right: 1px solid #b9976e; height: 214px; width: 715px;}
+.npc_list .npc_tit{background: rgba(0, 0, 0, 0) url("../img/box2-title.jpg") no-repeat scroll left -1px; height: 36px;}
+.npc_list .npc_tit .news_img{ position: relative; top:-6px; left:6px}
+.npc_list .npc_tit .news_more{ float:right;line-height: 15px; margin: 12px 0 0 0;}
+.npc_list .npc_tit .news_more a{ display:block; width:50px; height:15px;}
+.npc_list .npc_tit .news_more img{ margin-left:5px}
+.npc_list .npc_main{border-left: 1px solid #f1dfc9;  height: 184px; line-height: 20px;  width: 660px; overflow:hidden}
+.npc_list .npc_main ul li{ width:180px; float:left; margin-right:10px}
+
+
+.gonglue_list{background: #ecd4b7 none repeat scroll 0 0; border-left: 1px solid #b9976e; border-right: 1px solid #b9976e; height: 210px; width: 715px; margin-top:12px}
+.gonglue_list .gonglue_tit{background: rgba(0, 0, 0, 0) url("../img/box2-title.jpg") no-repeat scroll left -1px; height: 36px;}
+.gonglue_list .gonglue_tit .news_img{ position: relative; top:-6px; left:13px}
+.gonglue_list .gonglue_tit .news_more{ float:right;line-height: 15px; margin: 12px 0 0 0;}
+.gonglue_list .gonglue_tit .news_more a{ display:block; width:50px; height:15px;}
+.gonglue_list .gonglue_tit .news_more img{ margin-left:5px}
+.gonglue_list .gonglue_main{border-left: 1px solid #f1dfc9;  border-right: 1px solid #f1dfc9;  height: 150px; line-height: 20px;  width: 712px; padding:10px 0; overflow:hidden}
+.gonglue_list .gonglue_main ul{ width:780px}
+.gonglue_list .gonglue_main ul li{border-right: 1px dashed #cfb99d; float: left; line-height: 23px;  margin: 0 5px 0 10px;  text-align: left; width: 215px; height:26px; overflow:hidden; padding-right:10px}
+.gonglue_list .gonglue_main ul li span{ margin-left:10px}
+
+.gametab{ display:block}
+.gametabnav{ height:37px; overflow:hidden}
+.gametabnav .tabli{float: left; line-height: 37px; margin-right: 1px;width: 97px;height: 37px;color: #c6afa8;font-size: 18px;display: block; text-align:center; overflow:hidden}
+.gametabnav .tabli a{ width:97px; height:37px; text-align:center; display:block; color:#c6afa8}
+.gametabnav .tabli.on{ background: url(../img/news-hover.jpg) no-repeat;width: 97px;height: 37px;display: block;text-decoration: none;color: #c6afa8;}
+.gametabcontent{ display:block; clear:both; margin-top:20px; padding:0 20px; overflow:hidden}
+.gametabcontent ul li{ display:none}
+.gametabcontent ul li.selected{ display:block}
+.gametabcontent .tablist h3{text-align:center; border-bottom:1px dotted #755f59; line-height:22px; height:32px}
+.gametabcontent .tablist dl dd{ margin:3px 0}
+.gametabcontent .tablist dl dd,.gametabcontent .tablist dl dd a{color: #f4ce5a;height: 22px;line-height: 22px}
+.gametabcontent .tablist dl dd a:hover{ color:#fff}
+.gametabcontent .tablist dl dd a{ width:370px; float:left;}
+.gametabcontent .tablist dl dd span{ width:120px; float:right}
+.gametabcontent .tablist h3 a{font-size: 16px;color:#00fcff}
+
+.npc_main{ padding:0 18px}
+.npc_main .swiper-container{ width:690px; overflow:hidden}
+.npc_main .swiper-slide{ margin-right:20px}
+.npc_main .swiper-slide p{ margin-top:5px}
+
+
+
+.hot_list{background: #ecd4b7 none repeat scroll 0 0; border-left: 1px solid #b9976e; border-right: 1px solid #b9976e; height: 180px; width: 715px; margin-top:12px}
+.hot_list .hot_tit{background: rgba(0, 0, 0, 0) url("../img/box2-title.jpg") no-repeat scroll left -1px; height: 36px;}
+.hot_list .hot_tit .news_img{ position: relative; top:-6px; left:13px}
+.hot_list .hot_tit .news_more{ float:right;line-height: 15px; margin: 12px 0 0 0;}
+.hot_list .hot_tit .news_more a{ display:block; width:50px; height:15px;}
+.hot_list .hot_tit .news_more img{ margin-left:5px}
+.hot_list .hot_main{border-left: 1px solid #f1dfc9;  border-right: 1px solid #f1dfc9;  height: 120px; line-height: 20px;  width: 712px; padding:10px 0; overflow:hidden}
+.hot_list .hot_main ul{ width:780px}
+.hot_list .hot_main ul li{border-right: 1px dashed #cfb99d; float: left; line-height: 23px;  margin: 0 5px 0 10px;  text-align: left; width: 215px; height:26px; overflow:hidden; padding-right:10px}
+.hot_list .hot_main ul li span{ margin-left:2px}
+
+.focusBox { position: relative; overflow: hidden; }
+.focusBox .pic{ position:relative; z-index:0; }
+.focusBox .pic img { width:430px; height:260px; display: block; }
+.focusBox .hd { width:100%; position: absolute; bottom: 10px; text-align: center; font-size:0; z-index:1}
+.focusBox .hd li{margin: 0 5px; background: url(../img/dot.png) no-repeat 0 -16px; height: 16px; overflow: hidden; width: 16px; cursor: pointer;
+	display:inline-block; *display:inline; zoom:1;  _background: url(../img/dot8.png) no-repeat 0 -16px;}
+.focusBox .hd .on{ background-position:0 0; }
+.focusBox .prev,
+.focusBox .next { width: 60px; height: 90px; margin: -60px 0 0; display: none; background: url(../img/ad_ctr.png) no-repeat 0 0; position: absolute; top: 50%; z-index: 10; cursor: pointer; text-indent: -9999px; filter:alpha(opacity=20);opacity:0.2;  }
+.focusBox .prev { left: 0; }
+.focusBox .next { background-position: 0 -90px; right: 0; }
+.focusBox .prev:hover,
+.focusBox .next:hover { filter:alpha(opacity=50) !important;opacity:0.5 !important;  }
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,49 @@
+<!--{subtemplate common/header}-->
+<link rel="stylesheet" href="source/plugin/comiis_app_find/style/comiis.css" type="text/css" media="all">
+<!--{if $_G['cache']['plugin']['comiis_app_find']['comiis_app_find_css']}-->
+<style>
+	{echo strip_tags($_G['cache']['plugin']['comiis_app_find']['comiis_app_find_css']);}
+</style>
+<!--{/if}-->
+<!--{if $_G['cache']['plugin']['comiis_app_find']['comiis_app_find_top']}-->
+<header class="comiis_fxhead gmud cl">
+	<div class="head_l"><a href="javascript:history.back(-1)"><img src="source/plugin/comiis_app_find/style/comiis_top_lico.png"></a></div>
+	<h2>$_G['cache']['plugin']['comiis_app_find']['comiis_app_find_name']</h2>
+	<div class="head_r"><a href="index.php"><img src="source/plugin/comiis_app_find/style/comiis_top_rico.png"></a></div>
+</header>
+<!--{/if}-->
+{$_G['cache']['plugin']['comiis_app_find']['comiis_app_find_ad']}
+<!--{if count($comiis_app_find['data'])}-->
+	<!--{loop $comiis_app_find['data'] $temp}-->
+		<!--{if $temp['cid'] == 0}-->
+			<div class="{if $temp['show']}comiis_fx_list{else}comiis_fx_ico{/if} oohp fxbg_f bg_f cl">
+				<h2 class="fxbg_e xaqr fxb_b bg_e b_b">$temp['name']</h2>
+				<ul>
+					<!--{eval $n = 0;}-->
+					<!--{loop $comiis_app_find['data'] $sub}-->
+						<!--{if $temp['id'] == $sub['cid']}-->
+							<!--{eval $n++;}-->
+							<!--{if $temp['show']}-->
+								<li class="fxb_b b_b"><a href="{$sub['url']}" title="{$sub['name']}"><span>{$sub['data']}</span><img src="source/plugin/comiis_app_find/ico/{if $sub['icon']}{$sub['icon']}{else}noicon.png{/if}" class="vm"><p>{$sub['name']}</p></a></li>
+							<!--{else}-->
+								<li class="fxb_r fxb_b b_r b_b"><a href="{$sub['url']}" title="{$sub['name']}"><img src="source/plugin/comiis_app_find/ico/{if $sub['icon']}{$sub['icon']}{else}noicon.png{/if}" class="vm"><p>{$sub['name']}</p></a></li>
+							<!--{/if}-->
+						<!--{/if}-->
+					<!--{/loop}-->
+				</ul>
+			</div>
+			<!--{if $n == 0}-->
+				<div class="comiis_fx_nodata fuii fxf_d f_d cl">
+					<img src="source/plugin/comiis_app_find/style/comiis_nodata.png" class="vm">
+					<h2>{$_G['cache']['plugin']['comiis_app_find']['comiis_app_find_nodata']}</h2>
+				</div>
+			<!--{/if}-->
+		<!--{/if}-->
+	<!--{/loop}-->
+<!--{else}-->
+	<div class="comiis_fx_nodata iksh fxf_d f_d  cl">
+		<img src="source/plugin/comiis_app_find/style/comiis_nodata.png" class="vm">
+		<h2>{$_G['cache']['plugin']['comiis_app_find']['comiis_app_find_nodata']}</h2>
+	</div>
+<!--{/if}-->
+<!--{subtemplate common/footer}-->

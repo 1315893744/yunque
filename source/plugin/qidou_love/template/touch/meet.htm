@@ -1,0 +1,175 @@
+<!--{template qidou_love:header}-->
+<link rel="stylesheet" type="text/css" href="{$siteurl}/source/plugin/qidou_love/static/css/meet.css" />
+<body>
+    <!--{template qidou_love:top_menu}-->
+    <div class="meet_wrap">
+        <ul>
+            <li>
+                <div class="image_wrap">
+                    <div class="recom_text">{$lang['h_not_recom_user']}</div>
+                    <div class="recom_date"></div>
+                </div>
+                <div class="meet_detail">
+                    <div class="recom_button">{$lang['h_button_look']}</div>
+                </div>
+            </li>
+            <!--{loop $meet_user $meet}-->
+            <li data-love-id="{$meet['uid']}">
+                <div class="image_wrap">
+                    <img src="{$meet['user_album']}" />
+                    <span class="user_distance" is_calc="false" lat="{$meet['lat']}" lng="{$meet['lng']}"></span>
+                    <div class="loved"></div>
+                    <div class="closed"></div>
+                </div>
+                <div class="meet_detail">
+                    <h4>{$meet['user_name']}</h4>
+                    <div class="meet_info">{$meet['age']}{$lang['h_age_unit']}<span>|</span>{$meet['height']}cm<span>|</span>{$meet['constellation']}</div>
+                    <div class="love_num">{$meet['charm_num']}</div>
+                </div>
+                <a href="{$siteurl}/plugin.php?id=qidou_love:qidou_user&love_id={$meet['uid']}" class="open_page"></a>
+            </li>
+            <!--{/loop}-->
+        </ul>
+        <div class="btns">
+            <div class="close" data-type="0"></div>
+            <div class="love" data-type="1"></div>
+        </div>
+    </div>
+    <script src="{$siteurl}/source/plugin/qidou_love/static/js/jquery-2.1.3.min.js"></script>
+    <script src="{$siteurl}/source/plugin/qidou_love/static/js/layer_mobile/layer.js"></script>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=836ac091ff2acb607893d3d7f2fee530"></script>
+    <script>
+        var onOff = true;
+        var vWidth = window.screen.width;
+        var vHeight = window.screen.height;
+        var next_meet_time = {$next_meet_time};
+        var jonOff = true;
+        var timer = null;
+        
+        $(function (){
+            
+            set_time('.recom_date',next_meet_time);
+            timer = setInterval(function (){
+                var result = set_time('.recom_date',next_meet_time);
+                if( result == 3 && jonOff){
+                    clearInterval(timer);
+                    jonOff = false;
+                    window.location.reload();
+                }
+            },1000);
+            
+            open_page('.open_page');
+            get_position('.user_distance');
+            
+            
+            $('.recom_button').click(function (){
+                window.location.reload();
+            });
+            $('.close,.love').on('webkitTransitionEnd',function (){
+                $(this).css({transform:'scale(1)'});
+            });
+            $('.close,.love').click(function (){
+                if(!onOff)return;
+                if($('.meet_wrap ul li').length==1)return;
+                onOff = false;
+                var last_child = $('.meet_wrap li:last-child');
+                var type = eval($(this).attr('data-type'));
+                var left = type?vWidth+10:-(vWidth+10);
+                var rotate = type?20:-20;
+                type&&meet_love(last_child.attr('data-love-id'));
+                $(this).css({transform:'scale(1.1)'});
+                last_child.css({transition:'1.5s',transform:'translate('+left+'px,0) rotateZ('+rotate+'deg)'});
+                last_child.bind('webkitTransitionEnd',function (){
+                    onOff = true;
+                    $(this).remove();
+                });
+            });
+            var iStart = {left:0,top:0};
+            $('.meet_wrap ul').on('touchstart',function (){
+                if(!onOff)return;
+                if($('.meet_wrap ul li').length==1)return;
+                var oTouch = event.changedTouches[0];
+                iStart.left = oTouch.pageX;
+                iStart.top = oTouch.pageY;
+                $('.meet_wrap li:last-child').css({transition:'initial'});
+                $(document).on('touchmove',tmove);
+                $(document).on('touchend',tend);
+            });
+            
+            function tmove(){
+                var oTouch = event.changedTouches[0];
+                var left = oTouch.pageX - iStart.left;
+                var top = oTouch.pageY - iStart.top;
+                var scale = Math.abs(left/1000);
+                var rotate = left;
+                rotate *= 0.05;
+                $('.meet_wrap li:last-child .image_wrap div').hide();
+                if( left > 0 ){
+                    scale = scale>0.1?0.1:scale;
+                    $('.meet_wrap li:last-child .image_wrap div').eq(0).show();
+                    $('.love').css({'transform':'scale('+(1+scale)+')'});
+                }else if( left < 0 ){
+                    scale = scale>0.1?0.1:scale;
+                    $('.meet_wrap li:last-child .image_wrap div').eq(1).show();
+                    $('.close').css({'transform':'scale('+(1+scale)+')'});
+                }
+                $('.meet_wrap li:last-child .image_wrap div').css({opacity:Math.abs(left/100)});
+                $('.meet_wrap li:last-child').css({transform:'translate('+left+'px,'+top+'px) rotateZ('+rotate+'deg) translateZ(0)'});
+                event.preventDefault();
+                return false;
+            }
+            function tend(){
+                var oTouch = event.changedTouches[0];
+                var last_child = $('.meet_wrap li:last-child');
+                var left = 0;
+                var top = 0;
+                if( oTouch.pageX - iStart.left > 40 && Math.abs(oTouch.pageY - iStart.top) > 10 ){
+                    left = vWidth+10;
+                    top = oTouch.pageY < iStart.top?-vHeight+10:vHeight+10;
+                    meet_love(last_child.attr('data-love-id'));
+                }else if( oTouch.pageX - iStart.left < -40 && Math.abs(oTouch.pageY - iStart.top) > 10 ){
+                    left = -vWidth+10;
+                    top = oTouch.pageY < iStart.top?-vHeight+10:vHeight+10;
+                }
+                if( left ){
+                    onOff = false;
+                    last_child.bind('webkitTransitionEnd',function (){
+                        onOff = true;
+                        $(this).remove();
+                    });
+                }
+                $('.meet_wrap li:last-child .image_wrap div').css({opacity:0});
+                last_child.css({transition:'1s',transform:'translate('+left+'px,'+top+'px) rotateZ(0deg) translateZ(0)'});
+                $(this).unbind('touchmove',tmove);
+                $(this).unbind('touchend',tend);
+            }
+            function meet_love( love_id ){
+                $.ajax({
+                    type:'post',
+                    url:'{$siteurl}/plugin.php?id=qidou_love:qidou_handle&act=love&formhash={FORMHASH}',
+                    data:{love_id:love_id},
+                    dataType:'json',
+                    success:function ( data ){
+                        var love_onOff = false;
+                        var message = '';
+                        var end = function (){};
+                        if( data.success == 0 ){
+                            love_onOff = true;
+                            message = "{$lang['h_login_love']}";
+                            end = goLogin;
+                        }
+                        if( love_onOff ){
+                            layer.open({
+                                content:message,
+                                skin: 'msg',
+                                time:3,
+                                end:end
+                            });
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

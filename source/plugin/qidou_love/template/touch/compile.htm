@@ -1,0 +1,396 @@
+<!--{template qidou_love:header}-->
+<link rel="stylesheet" type="text/css" href="{$siteurl}/source/plugin/qidou_love/static/css/compile.css?1" />
+<body>
+    <section class="page_main">
+        <div class="user_header" data-uid="{$user['uid']}">
+            <div class="user_author">
+                <img src="{$_G['setting']['ucenterurl']}/avatar.php?uid={$user['uid']}&size=middle" />
+            </div>
+            <div class="user_info">
+                <div class="user_name">{$user['user_name']}</div>
+                <div class="user_sign"><!--{if $user['sightml']}-->$user['sightml']<!--{else}-->{$lang['h_d_sign']}<!--{/if}--></div>
+            </div>
+            <div class="comm_right"></div>
+        </div>
+        <form id="user_info" action="{$siteurl}/plugin.php?id=qidou_love:qidou_user&act=save&formhash={FORMHASH}">
+            <div class="comm_title">{$lang['h_jyzp']}</div>
+            <input id="Filedata" name="Filedata" type="file" style="display:none;" />
+            <ul class="friends_album">
+                <!--{loop $album_list $key $album}-->
+                <li data-id="{$key}">
+                    <img src="{$album}">
+                    <div class="img_remove"></div>
+                    <!--{if $user['is_album']==$key}-->
+                    <div class="img_fengmian">{$lang['h_fengmian']}</div>
+                    <input type="hidden" class="fengmian" name="fengmian" value="{$user['is_album']}">
+                    <!--{/if}-->
+                    <input type="hidden" name="album[]" value="{$album}" />
+                </li>
+                <!--{/loop}-->
+                <li id="image_adder" onclick="$('#Filedata').click()"></li>
+            </ul>
+            <div class="comm_title">{$lang['h_jyxx']}</div>
+            <ul class="user_detail">
+                <li>
+                    <div class="detail_menu">{$lang['h_jyxr']}</div>
+                    <div class="detail_content"><input type="text" placeholder="{$lang['h_jyxy_info']}" value="{$user['sigtext']}" name="sigtext" class="focus"/></div>
+                </li>
+                <li>
+                    <div class="detail_menu">{$lang['h_d_1']}</div>
+                    <div class="detail_content">
+                        <!--{if $user['gender']}-->
+                            <input type="text" value="{$lang['h_d_1_'.$user['gender']]}" readonly/>
+                            <input type="hidden" name="gender" value="{$user['gender']}" readonly/>
+                        <!--{else}-->
+                            <select name="gender">
+                                <option value="0">{$lang['h_select']}</option>
+                                <option value="1">{$lang['h_d_1_1']}</option>
+                                <option value="2">{$lang['h_d_1_2']}</option>
+                            </select>
+                        <!--{/if}-->
+                    </div>
+                    <div class="comm_right"></div>
+                </li>
+                <li>
+                    <div class="detail_menu">{$lang['h_d_12']}</div>
+                    <div class="detail_content birthday"><input type="text" placeholder="{$lang['h_select']}" name="birth" id="birth" value="{$user['birthyear']}-{$user['birthmonth']}-{$user['birthday']}"/></div>
+                    <div class="comm_right"></div>
+                </li>
+                <li>
+                    <div class="detail_menu">{$lang['h_d_3']}</div>
+                    <div class="detail_content">
+                        <select name="constellation">
+                            <option value="0">{$lang['h_select']}</option>
+                            {eval}
+                                for( $i=1; $i<13;$i++ ){
+                                    $selected = $user['constellation']==$lang['h_d_3_'.$i]?'selected':'';
+                                    echo '<option value="'.$lang['h_d_3_'.$i].'" '.$selected.'>'.$lang['h_d_3_'.$i].'</option>';
+                                }
+                            {/eval}
+                        </select>
+                    </div>
+                    <div class="comm_right"></div>
+                </li>
+                <li>
+                    <div class="detail_menu">{$lang['h_d_4']}</div>
+                    <div class="detail_content">
+                        <select name="height">
+                            <option value="0">{$lang['h_select']}</option>
+                            {eval}
+                                for( $i=150; $i<200;$i++ ){
+                                    $selected = $user['height']==$i?'selected':'';
+                                    echo '<option value="'.$i.'" '.$selected.'>'.$i.'CM</option>';
+                                }
+                            {/eval}
+                        </select>
+                    </div>
+                    <div class="comm_right"></div>
+                </li>
+                <li>
+                    <div class="detail_menu">{$lang['h_d_5']}</div>
+                    <div class="detail_content">
+                        <select name="weight">
+                            <option value="0">{$lang['h_select']}</option>
+                            {eval}
+                                for( $i=40; $i<100;$i++ ){
+                                    $selected = $user['weight']==$i?'selected':'';
+                                    echo '<option value="'.$i.'" '.$selected.'>'.$i.'KG</option>';
+                                }
+                            {/eval}
+                        </select>
+                    </div>
+                    <div class="comm_right"></div>
+                </li>
+                <li class="comm_line"></li>
+                <li>
+                    <div class="detail_menu">{$lang['h_d_6']}</div>
+                    <div class="detail_content">
+                        <select name="education">
+                            <option value="0">{$lang['h_select']}</option>
+                            {eval}
+                                for( $i=1; $i<7;$i++ ){
+                                    $selected = $user['education']==$lang['h_d_6_'.$i]?'selected':'';
+                                    echo '<option value="'.$lang['h_d_6_'.$i].'" '.$selected.'>'.$lang['h_d_6_'.$i].'</option>';
+                                }
+                            {/eval}
+                        </select>
+                    </div>
+                    <div class="comm_right"></div>
+                </li>
+                <li>
+                    <div class="detail_menu">{$lang['h_d_7']}</div>
+                    <div class="detail_content">
+                        <select name="occupation">
+                            <option value="0">{$lang['h_select']}</option>
+                            {eval}
+                                for( $i=1; $i<11;$i++ ){
+                                    $selected = $user['occupation']==$lang['h_d_7_'.$i]?'selected':'';
+                                    echo '<option value="'.$lang['h_d_7_'.$i].'" '.$selected.'>'.$lang['h_d_7_'.$i].'</option>';
+                                }
+                            {/eval}
+                        </select>
+                    </div>
+                    <div class="comm_right"></div>
+                </li>
+                <li>
+                    <div class="detail_menu">{$lang['h_d_8']}</div>
+                    <div class="detail_content">
+                        <select name="income">
+                            <option value="0">{$lang['h_select']}</option>
+                            {eval}
+                                for( $i=1; $i<9;$i++ ){
+                                    $selected = $user['income']==$lang['h_d_8_'.$i]?'selected':'';
+                                    echo '<option value="'.$lang['h_d_8_'.$i].'" '.$selected.'>'.$lang['h_d_8_'.$i].'</option>';
+                                }
+                            {/eval}
+                        </select>
+                    </div>
+                    <div class="comm_right"></div>
+                </li>
+                <li>
+                    <div class="detail_menu">{$lang['h_d_9']}</div>
+                    <div class="detail_content">
+                        <select name="house">
+                            <option value="0">{$lang['h_select']}</option>
+                            {eval}
+                                for( $i=1; $i<5;$i++ ){
+                                    $selected = $user['house']==$lang['h_d_9_'.$i]?'selected':'';
+                                    echo '<option value="'.$lang['h_d_9_'.$i].'" '.$selected.'>'.$lang['h_d_9_'.$i].'</option>';
+                                }
+                            {/eval}
+                        </select>
+                    </div>
+                    <div class="comm_right"></div>
+                </li>
+                <li>
+                    <div class="detail_menu">{$lang['h_d_10']}</div>
+                    <div class="detail_content">
+                        <select name="vehicle">
+                            <option value="0">{$lang['h_select']}</option>
+                            {eval}
+                                for( $i=1; $i<4;$i++ ){
+                                    $selected = $user['vehicle']==$lang['h_d_10_'.$i]?'selected':'';
+                                    echo '<option value="'.$lang['h_d_10_'.$i].'" '.$selected.'>'.$lang['h_d_10_'.$i].'</option>';
+                                }
+                            {/eval}
+                        </select>
+                    </div>
+                    <div class="comm_right"></div>
+                </li>
+                <li>
+                    <div class="detail_menu">{$lang['h_d_11']}</div>
+                    <div class="detail_content">
+                        <select name="affectivestatus" value="{$user['affectivestatus']}">
+                            <option value="0">{$lang['h_select']}</option>
+                            {eval}
+                                for( $i=1; $i<8;$i++ ){
+                                    $selected = $user['affectivestatus']==$lang['h_d_11_'.$i]?'selected':'';
+                                    echo '<option value="'.$lang['h_d_11_'.$i].'" '.$selected.'>'.$lang['h_d_11_'.$i].'</option>';
+                                }
+                            {/eval}
+                        </select>
+                    </div>
+                    <div class="comm_right"></div>
+                </li>
+            </ul>
+            <div class="comm_title">{$lang['h_user_tag']}</div>
+            <div class="tag_list">
+                {eval $user_tag = array_filter(explode(',',$user['user_tag']));}
+                <!--{if $user_tag}-->
+                    <!--{loop $user_tag $tags}-->
+                    <div class="c{eval echo rand(1,3)}">{$tags}<input type="hidden" name="user_tag[]" value="{$tags}"/></div>
+                    <!--{/loop}-->
+                <!--{else}-->
+                <div class="c{eval echo rand(1,3)}">{$lang['h_not_user_tag']}</div>
+                <!--{/if}-->
+            </div>
+            <div class="tag_box">
+                <div class="tag_main">
+                    <div class="tag_wrap">
+                        {eval $tag_list = explode("\r\n",$qidou_love['tag_name']);}
+                        <!--{loop $tag_list $key $tag}-->
+                        <div>{$tag}</div>
+                        <!--{/loop}-->
+                    </div>
+                    <div class="tag_close">{$lang['h_close']}</div>
+                </div>
+            </div>
+        </form>
+    </section>
+    <div class="submit_button"><div>{$lang['h_submit_button_1']}</div><div class="icon"></div><div>{$lang['h_submit_button_2']}</div></div>
+    <link rel="stylesheet" href="{$siteurl}/source/plugin/qidou_love/static/js/date_mobile/mobiscroll.css" type="text/css"/>
+    <link rel="stylesheet" href="{$siteurl}/source/plugin/qidou_love/static/js/date_mobile/mobiscroll_date.css" type="text/css"/>
+    <script src="{$siteurl}/source/plugin/qidou_love/static/js/jquery-2.1.3.min.js"></script>
+    <script src="{$siteurl}/source/plugin/qidou_love/static/js/date_mobile/mobiscroll_date.js"></script>
+    <script src="{$siteurl}/source/plugin/qidou_love/static/js/date_mobile/mobiscroll.js" charset="utf-8"></script>
+    <script src="{$siteurl}/source/plugin/qidou_love/static/js/ajaxfileupload.js"></script>
+    <script src="{$siteurl}/source/plugin/qidou_love/static/js/buildfileupload.js"></script>
+    <script src="{$siteurl}/source/plugin/qidou_love/static/js/jquery.form.js"></script>
+    <script src="{$siteurl}/source/plugin/qidou_love/static/js/layer_mobile/layer.js"></script>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=836ac091ff2acb607893d3d7f2fee530"></script>
+    <script type="text/javascript">
+    var imgexts = typeof imgexts == 'undefined' ? 'jpg, jpeg, gif, png' : imgexts;
+    var STATUSMSG = {'-1': 'err-1','0': 'err0','1': 'err1','2': 'err2','3': 'err3','4': 'err4','5': 'err5','6': 'err6','7': 'err7','8': 'err8','9': 'err9','10': 'err10','11': 'err11'};
+    $(document).on('change', '#Filedata', function () {
+        var upload_loading = layer.open({type:2});
+        uploadsuccess = function (data) {
+            var data =   eval("(" + data + ")"); 
+            layer.close(upload_loading);
+            if (data.pic){
+                var image = '<li><img src="'+data.pic+'"><div class="img_remove"></div><input type="hidden" name="album[]" value="'+data.pic+'"></li>';
+                $(".friends_album").prepend(image);
+                $(".friends_album li").map(function ( index,item ){
+                    $(item).attr({'data-id':index});
+                });
+                $('.fengmian').val($('.fengmian').parent().attr('data-id'));
+            }else{
+                layer.open({
+                    content:'{$lang['h_upload_error']}'
+                    ,skin: 'footer'
+                });
+            }
+
+        };
+        var upload_url = '{$siteurl}/plugin.php?id=qidou_love:qidou_user&act=upload&formhash={FORMHASH}';
+        if (typeof FileReader != 'undefined' && this.files[0]) {
+            $.buildfileupload({
+                uploadurl: upload_url,
+                files: this.files,
+                uploadformdata: {},
+                uploadinputname: 'Filedata',
+                maxfilesize: "4000",
+                success: uploadsuccess,
+                error: function () {
+                    layer.open({
+                        content:'{$lang['h_upload_error_info']}'
+                        ,skin: 'footer'
+                    });
+                }
+            });
+        } else {
+            $.ajaxfileupload({
+                url: upload_url,
+                data: {},
+                dataType: 'text',
+                fileElementId: 'filedata',
+                success: uploadsuccess,
+                error: function () {
+                    layer.open({
+                        content:'{$lang['h_upload_error_info']}'
+                        ,skin: 'footer'
+                    });
+                }
+            });
+        }
+    });
+    </script>
+    <script>
+        $(function (){
+            var user_tag = ['{eval echo implode("','",$user_tag);}'];
+            get_position();
+//            $('select').map(function (index,item){
+//                $(item).children('option[value="'+$(this).attr('value')+'"]').attr({'selected':true});
+//                $(this).removeAttr('value');
+//            });
+            $('.user_header').click(function (){
+                var data_uid = $(this).attr('data-uid');
+                open_page_url(siteurl+'/plugin.php?id=qidou_love:qidou_user&love_id='+data_uid);
+            });
+            $(document).on('touchend','.birthday',function (){
+                var currYear = (new Date()).getFullYear();	
+                var opt={};
+                opt.date = {preset : 'date'};
+                opt.default = {
+                        theme: 'android-ics light', //皮肤样式
+                        display: 'modal', //显示方式 
+                        mode: 'scroller', //日期选择模式
+                        dateFormat: 'yyyy-mm-dd',
+                        lang: 'zh',
+                        showNow: true,
+                        nowText: "\u4eca\u5929",
+                        startYear: currYear-50, //开始年份
+                        endYear: currYear //结束年份
+                };
+                var optDateTime = $.extend(opt['date'], opt['default']);
+                $("#birth").mobiscroll(optDateTime);
+            });
+            var fengmian = '<div class="img_fengmian">{$lang['h_fengmian']}</div>';
+            $('.friends_album').on('click','li',function (){
+                if( $(this).attr('id') == 'image_adder' )return;
+                $('.img_fengmian').remove();
+                $('.fengmian').remove();
+                $(this).prepend('<input type="hidden" class="fengmian" name="fengmian" value="'+$(this).attr('data-id')+'" />');
+                $(this).prepend(fengmian);
+            });
+            $('.friends_album').on('click','.img_remove',function (){
+                $(this).parent().remove();
+                event.cancelBubble = true;
+            });
+            $('.tag_list').click(function (){
+                var len = $('.tag_wrap div').length;
+                $('body').css({overflow:'hidden'});
+                $('.tag_list').html('');
+                $('.tag_box').show();
+                setTimeout(function (){
+                    $('.tag_main').css({transform:'translate(0,0) translateZ(0)'});
+                },10);
+                for( var i=0; i<len; i++ ){
+                    if( user_tag.indexOf($('.tag_wrap div').eq(i).html()) !=-1 ){
+                        $('.tag_wrap div').eq(i).addClass('c'+get_rand(1,3));
+                    }
+                }
+            });
+            $('.tag_wrap div').click(function (){
+                if( $(this).attr('class')){
+                    user_tag.splice(user_tag.indexOf($(this).html()),1);
+                    $(this).removeClass();
+                }else{
+                    user_tag.push($(this).html());
+                    $(this).addClass('c'+get_rand(1,3));
+                }
+            });
+            $('.tag_close').click(function (){
+                var tag_html = '';
+                for( var i=0; i<user_tag.length; i++ ){
+                    user_tag[i] && (tag_html += '<div class="c'+get_rand(1,3)+'">'+user_tag[i]+'<input type="hidden" name="user_tag[]" value="'+user_tag[i]+'"></div>');
+                }
+                $('.tag_list').html(tag_html);
+                $('.tag_main').css({transform:'translate(100%,0) translateZ(0)'});
+                $('.tag_main').on('webkitTransitionEnd',tag_end);
+                $('body').css({overflow:'auto'});
+                function tag_end(){
+                    $('.tag_main').unbind('webkitTransitionEnd',tag_end);
+                    $('.tag_box').hide();
+                }
+            });
+            $('.submit_button').click(function (){
+                var loading = layer.open({type:2});
+                $('#user_info').ajaxSubmit({
+                    dataType: 'json',
+                    type: 'POST',
+                    data:position_data,
+                    success:function ( data ){
+                        layer.close(loading);
+                        layer.open({
+                            content:"{$lang['h_success']}"
+                            ,skin: 'msg'
+                            ,time:3
+                        });
+                    },
+                    error:function (){
+                        layer.close(loading);
+                        layer.open({
+                            content:"{$lang['h_error']}"
+                            ,skin: 'msg'
+                            ,time:3
+                        });
+                    }
+                });
+            });
+            function get_rand( min,max ){
+                return Math.round(Math.random()*(max-min)+min);
+            }
+        });
+    </script>
+</body>
+</html>

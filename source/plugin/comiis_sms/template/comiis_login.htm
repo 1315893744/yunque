@@ -1,0 +1,65 @@
+<!--{template common/header}-->
+<style>
+.comiis_sms_titbox {height:31px;margin-bottom:-15px;}
+.comiis_sms_title_wmse {margin:10px 10px 10px;border-bottom:1px solid #cdcdcd;line-height:30px;}
+.comiis_sms_title_wmse ul {margin-left:120px;}
+.comiis_sms_title_wmse li {float:left;margin:0 0 -1px 10px;}
+.comiis_sms_title_wmse li a {display:block;padding:0 15px;background:#e5edf2;border:1px solid #cdcdcd;}
+.comiis_sms_title_wmse li.comiis_sms_on a {background:#fff;border-bottom-color:#fff;font-weight:700;}
+.comiis_mobreg_box .rfm .kmdtm th, .comiis_mobreg_box .rfm .kmdtm td {padding:0 0 12px;}
+.rfm th, .fwin .rfm th, .fwin .rfm td, .nfl .f_c .rfm th, .nfl .f_c .rfm td {padding:6px 5px 6px 2px;}
+</style>
+<h3 class="flb"><em>{$comiis_sms['167']}</em><!--{if $_G[inajax]}--><span><a href="javascript:;" class="flbc" onclick="hideWindow('$_GET['handlekey']');" title="{lang close}">{lang close}</a></span><!--{/if}--></h3>
+<form method="post" autocomplete="off" name="register" enctype="multipart/form-data"  action="plugin.php?id=comiis_sms:comiis_sms_post&action=login&inajax=1&handlekey=comiis_login" id="comiis_sms_login" onsubmit="comiis_loginsubmit('login');return false;">
+	<input type="hidden" name="formhash" value="{FORMHASH}">
+	<input type="hidden" name="comiis_mobile_jms_submit" value="ypci">
+	<input type="hidden" name="comiis_mobile_loginsubmit" value="true">
+	<input type="hidden" name="referer" value="{eval $dreferer = dreferer();}{$dreferer}" />	
+	<div class="c cl login comiis_mobreg_box aakb">
+		<div class="rfm">
+			<table>
+				<tbody>			
+					<tr>
+						<th><span class="rq">*</span><label>{$comiis_sms['28']}:</label></th>
+						<td><input class="px p_fre" size="30" type="text" value="" autocomplete="off" name="comiis_tel" id="comiis_tel" required></td>
+					</tr>
+					<tr class="kmdtm">
+						<th></th>
+						<td class="tipcol">
+						<div class="comiis_mobreg_time bfhl xi1" style="display:none"><span></span>{$comiis_sms['08']}</div>
+						<input type="button" class="comiis_mobreg_timekey" value="{$comiis_sms['09']}" onclick="comiis_mobreg_fkey('login')" />
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="rfm">
+			<table>
+				<tbody>
+					<tr>
+						<th><span class="rq">*</span><label>{$comiis_sms['147']}:</label></th>
+						<td><input name="code" class="px p_fre" size="30" type="text" value="" autocomplete="off" required></td>
+						<td class="tipcol"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+        <!--{if $_G['comiis_sms']['login_seccodeverify']}-->
+            <!--{if $seccodecheck}-->
+            <div class="rfm"><span id="seccode_cc$sechash"></span></div>
+            <script type="text/javascript" reload="1">updateseccode('cc$sechash', '$sectpl', 'member::logging');</script>
+            <!--{/if}-->
+        <!--{/if}-->
+		<div class="rfm mbw bw0">
+			<table>
+				<tbody>
+					<tr>
+						<th></th>
+						<td><button class="pn pnc" type="submit" name="loginsubmit" value="true" tabindex="100"><span>{$comiis_sms['169']}</span></button></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</form>
+<!--{template common/footer}-->

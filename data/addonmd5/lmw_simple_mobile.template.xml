@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Addon MD5]]></item>
+	<item id="ID"><![CDATA[lmw_simple_mobile.template]]></item>
+	<item id="RevisionID"><![CDATA[87378]]></item>
+	<item id="SN"><![CDATA[2020032507HHH45dSDKo]]></item>
+	<item id="RevisionDateline"><![CDATA[1584937811]]></item>
+	<item id="Data">
+		<item id="/preview_large.jpg"><![CDATA[274a82a08ce8d89a42f57508bde6ae66]]></item>
+		<item id="/discuz_style_¼òÔ¼ÊÖ»úÄ£°å.xml"><![CDATA[bef0c6f47a4cd4c2906ed9646039d3a7]]></item>
+		<item id="/touch/forum/forumdisplay_fastpost.htm"><![CDATA[428e1335189794a5e44c3aa7e621e80f]]></item>
+		<item id="/touch/forum/discuz.htm"><![CDATA[e6915357097be67e6ace3e1ecd0836b5]]></item>
+		<item id="/touch/forum/forumdisplay.htm"><![CDATA[00dbfd30af91123ac0d1e12074a2b0b6]]></item>
+		<item id="/touch/forum/viewthread.htm"><![CDATA[2f93d0e1285424d99b4d2849a6a396e6]]></item>
+		<item id="/touch/forum/post.htm"><![CDATA[bc620540039bc20d16b035aab0a47bdb]]></item>
+		<item id="/touch/home/space_thread.htm"><![CDATA[266d02af2bc8bc1e1f8932f806991fa1]]></item>
+		<item id="/touch/home/space_favorite.htm"><![CDATA[7c778c59fcae59050a058be76f266cad]]></item>
+		<item id="/touch/home/space_profile.htm"><![CDATA[9cca47b05b4748f54336d86bfff09de0]]></item>
+		<item id="/touch/home/space_pm.htm"><![CDATA[6719204da007118a617f88cc08f2f1b4]]></item>
+		<item id="/touch/common/lmw_header.htm"><![CDATA[1ade437cc7567fb2373b8fa3fe5bb181]]></item>
+		<item id="/touch/common/footer.htm"><![CDATA[4064714fc934ad30d563f0b42326b0dd]]></item>
+		<item id="/touch/common/header.htm"><![CDATA[77999f88a9bcd54a812090454af6b9a4]]></item>
+		<item id="/touch/search/thread_list.htm"><![CDATA[552834977e292abab934dd8a8cd987b6]]></item>
+		<item id="/touch/search/search_history.htm"><![CDATA[513307b8809e2d4d0d2beea336a15312]]></item>
+		<item id="/touch/search/pubsearch.htm"><![CDATA[842d8cecd00129aa04d196cc9af9efa0]]></item>
+		<item id="/touch/search/forum.htm"><![CDATA[f427b1d2a1069a65f389910715e3b187]]></item>
+		<item id="/touch/member/login.htm"><![CDATA[daeb8ef492a05624788d9b7cac247616]]></item>
+		<item id="/touch/member/register.htm"><![CDATA[73db0268f4809be3b08b98a659938024]]></item>
+		<item id="/preview.jpg"><![CDATA[e7aeee017c171a2221d8401f10f812e6]]></item>
+		<item id="/extend_images/logo.png"><![CDATA[244cc8bb87bd57d245a5bcd77580f2cc]]></item>
+		<item id="/extend_images/touch/search.css"><![CDATA[63af1793de4d8d302f72edbc508108c5]]></item>
+		<item id="/extend_images/touch/home.css"><![CDATA[770c280a4c68105c0d928901e7c7b532]]></item>
+		<item id="/extend_images/touch/lmw_header.css"><![CDATA[4ce782514c53385eed0c45123a25b73d]]></item>
+		<item id="/extend_images/touch/footer.css"><![CDATA[432dfc555b5c683ac665424a12614e25]]></item>
+		<item id="/extend_images/touch/discuz.css"><![CDATA[fee8a8143ef6360b4779390730b7eec4]]></item>
+	</item>
+</root>

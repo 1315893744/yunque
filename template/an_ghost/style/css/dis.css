@@ -1,0 +1,537 @@
+﻿body, input, button, select, textarea {
+    font: 12px/1.5 Tahoma,'Microsoft Yahei','Simsun';
+    color: #555;}
+body {
+    background: #F3F3F3;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+.block{ margin:0px;}
+.frame{    background:none;}
+
+
+.an_t .mn {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+}
+.an_t .mn {
+    width: 700px;
+}
+.an_t .mn {
+    float: left;
+    width: 730px;
+    margin-bottom: 1em;
+}
+#newspecial_menu a:hover{color: #e67e22 !important;}
+.an_box{
+    background: #FFF !important;
+    padding: 20px 30px !important;
+    border-radius: 6px;
+    margin-bottom: 20px !important;
+}
+.fl .bm_h {
+    margin-bottom: 0 !important;
+}
+.fl .bm_h, .bm_h, .bmw .bm_h {
+    background: none;
+    border: none;
+    border-bottom: 3px solid #F6F6F6;
+    height: 40px;
+    line-height: 40px;
+    padding: 0;
+    margin-bottom: 15px;
+}
+.bm_h h1, .bm_h h2, .bm_h .xs2 {
+    font-size: 16px !important;
+    font-weight: normal;
+}
+.bm_h h1, .bm_h h2 {
+    float: left;
+}
+.bmw .bm_h a {
+    color: #333;
+}
+.bm_c {
+    padding: 10px 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.fl_tb td {
+    padding: 15px 0;
+}
+
+
+a {
+    color: #555;
+    text-decoration: none;
+}
+a:hover, .link:hover, link a:hover {
+    color: #e67e22 !important;
+}
+a:hover {
+    text-decoration: underline;
+}
+.fl_icn_g img, .fl_icn img {
+    border-radius: 5px;
+}
+
+.fl_tb h2 a, .fl_g dt a {
+    font-size: 14px !important;
+    font-weight: 700;
+}
+.fl_g dd em {
+    color: #999;
+}
+.xi2, .xi2 a, .xi3 a {
+    color: #333;
+}
+
+.xs1 {
+    font-size: 12px !important;
+}
+
+
+
+
+
+
+
+
+.an_l .mn{float: left;
+width: 730px;
+margin-bottom: 1em;}
+
+.an_l, .mn {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+}
+
+.an_info {
+    margin-bottom: 0 !important;
+}
+.pgs {
+    padding: 20px 0 0;
+}
+.f20 {
+    font-size: 20px;
+}
+
+
+.pgs #newspecial, .pgs #newspecialtmp {
+    float: left;
+    background: #e67e22 url(../img/pn_post.png) no-repeat center 50%;
+    width: 112px;
+    height: 32px;
+    border-radius: 2px;
+}
+.pgs #newspecial, .pgs #newspecialtmp, .pgs #post_reply, .pgs #post_replytmp {
+    float: left;
+    margin-right: 5px;
+}
+
+#thread_types {
+    padding: 10px 0;
+    overflow: hidden;
+    border-top: 1px solid #f0f3f5;
+    margin-top: 5px;
+}
+.bm .bm, #pt.bm, #chart.bm, .bm.pgs, .ct2_a .mn .bm, .ttp.bm {
+    padding: 0;
+}
+.ttp {
+    margin-bottom: 5px !important;
+    padding-top: 10px;
+    border-width: 2px 0 0;
+    background: transparent;
+}
+.ttp li {
+    padding-bottom: 0;
+}
+
+.ttp .a a {
+    font-weight: 700;
+    color: #e67e22;
+}
+.ttp a:hover {
+    border-color: #333;
+    color: #333;
+    text-decoration: none;
+}
+.ttp .a a, .ttp a, .ttp strong, #ttp_all a:hover, .ttp .a a:hover {
+    background: none;
+    border: none;
+    padding: 0 15px 3px 0;
+    margin-right: 0;
+    font-size: 14px;
+}
+.ttp .num, .ttp .a .num {
+    background: none;
+    font-weight: 100;
+    margin-left: 0;
+    font-size: 12px;
+    color: #999 !important;
+}
+
+.bm, .bn {
+    margin-bottom: 15px;
+}
+.bm, .fl {
+    background: none;
+    border: none;
+}
+.tl .th, .tl tr:hover th, .tl tr:hover td {
+    background: none;
+}
+
+.tl .showmenubox, .showmenubox {
+    height: 24px;
+    padding: 8px;
+    background: #fafafa;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.showmenu_outer {
+    display: inline-block;
+    width: 80px;
+    height: 22px;
+    line-height: 22px;
+    margin-right: 8px;
+    border-radius: 1px;
+    color: #999;
+    background: #FAFAFA;
+    border: 1px solid #dedede;
+    text-decoration: none;
+}
+.showmenubox a:hover {
+    color: #e67e22;
+}
+.showmenu_outer .showmenu {
+    display: block;
+    padding: 0 0 0 10px;
+    color: #333;
+}
+
+#newspecial_menu {
+    width: 90px;
+}
+#newspecial_menu {
+    min-width: 102px !important;
+}
+.p_pop {
+    border-radius: 0;
+}
+.p_pop, .p_pof, .sllt {
+   
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border: 1px solid #DDD;
+    
+}
+
+.mb20{ margin-bottom: 20px !important;}
+.pt5{ padding-top:5px !important;}
+.mt5{margin-top: 5px !important;}
+.mt5 a{color: #999 !important;}
+.l_nav{ float:left;}
+.l_nav li{ float:left;}
+.l_nav li a{ color: #4b565c;}
+.l_nav li i{width: 14px;
+height: 14px;
+display: inline-block;
+vertical-align: middle;
+margin-right: 5px;margin-top: 2px;float: left;
+}
+.l_nav li .zuo-icon {
+background: url(../img/zuo.png) no-repeat 0 0;}
+
+
+.l_nav li .quan-icon {
+background: url(../img/quan.png) no-repeat 0 0;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#threadlist .icn {
+    width: 64px;
+    padding: 8px 0 0;
+    vertical-align: top;
+}
+.tl .th, .tl th, .tl td {
+    border-bottom: dashed 1px #ededed;
+}
+#threadlist .icn .forumava {
+    width: 64px;
+}
+#threadlist .icn .forumava a {
+    color: #666;
+}
+#threadlist .icn .forumava img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+#threadlist .forumtit {
+    padding: 15px 0 15px 15px;
+}
+.showhide {
+    margin: 5px 0;
+}
+#threadlist .xst {
+    line-height: 26px;
+    color: #1a1a1a;
+	font-family: yahei;
+}
+.showmenubox .y {
+    line-height: 24px;
+}
+#threadlist .forumtit img {
+    vertical-align: text-bottom;
+    margin-right: 5px;
+}
+#threadlist .foruminfo {
+    margin-top: 5px;
+    height: 20px;
+    overflow: hidden;
+    color: #999;
+}
+#threadlist .foruminfo a {
+    color: #666;
+}
+#threadlist .common .foruminfo span {
+    margin-left: 6px;
+}
+.ico_reply {
+    padding-left: 25px;
+    height: 18px;
+    line-height: 18px;
+    display: inline-block;
+    background: url(../img/ico_reply.png) no-repeat 0 0px;
+}
+.ico_see {
+    margin-left: 10px;
+    padding-left: 25px;
+    height: 18px;
+    line-height: 18px;
+    display: inline-block;
+    background: url(../img/ico_see.png) no-repeat 0 0px;
+}
+#threadlist .by {
+    text-align: right;
+}
+#threadlist .by, #threadlist .num {
+    width: 0;
+}
+#atarget {
+    margin-left: 10px;
+}
+#atarget, .unchk, .chked{color: #333;}
+.avt img {    border-radius: 50%;border: none;
+}
+
+.card_mn a {
+   
+    border-bottom: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.pls .avatar img{border-radius: 50%;background:none;border: 3px solid #fff;width: 100px; padding:0px;box-shadow: 0 0 4px rgba(200,200,200,.6);margin: 5px 5px 8px;}
+.pls .pi {
+    padding-left: 0px;text-align:center;
+}
+.pls{ background:#f3f3f3;border-right: 1px solid ##f3f3f3;}
+.ad .pls{background:#f3f3f3;}
+.plc {
+    padding: 0px 20px;
+    background: #fff;
+}
+.pls{border-right: none;}
+
+
+
+.display-r {
+    width: 65px;
+    float: left;
+    display: inline;
+	margin-left: 40px;
+	margin-top: 50px;
+}
+.display_slidebar li {
+    margin-bottom: 10px;
+    width: 64px;
+    height: 64px;
+    border-radius: 64px;
+    background: #ffffff;
+    font-size: 12px;
+    color: #999999;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0px 2px 3px -1px rgba(0,0,0,0.2);
+}
+.display_slidebar a {
+    color: #999999;
+    position: relative;
+    width: 64px;
+    height: 64px;
+    display: block;
+}
+.display_slidebar li img {
+    margin: 0 auto;
+    padding-top: 8px;
+    display: block;
+}
+.display_slidebar a .replynum {
+    position: absolute;
+    top: -4px;
+    left: 50px;
+    background: #e67e22;
+    height: 18px;
+    line-height: 18px;
+    padding: 0 5px;
+    color: #FFF;
+    border-radius: 2px;
+}
+
+#sidefixed{position: fixed;}
+
+
+
+
+
+.con-r{width: 250px;float: right;}
+
+
+.Slide {width: 250px;height: 141px; float:left;overflow: hidden;position: relative;border-radius: 4px;}
+.slide-cont {width: 250px;height: 141px;position: relative;overflow: hidden;}
+.slide-item {position: absolute;width: 100%;height: 100%;left: -630px;}
+.slide-item a {display: block;width: 100%;height: 100%;}
+.slide-item img {width: 250px;height: 141px;}
+.slide-txt {width:250px;height:30px;position: absolute;left: 0;bottom: 0px;z-index: 1;}
+.slide-txt .txt_bg {width: 250px;height: 30px;background:#000;opacity: 0.7;filter: alpha(opacity=70);}
+.slide-txt a {display: inline-block;width:210px;height: 30px;line-height: 30px;font-size:14px;padding: 0 20px;overflow: hidden;color:#fff;position: absolute;left: 0;top: 0;}
+.slide-nav {width: auto;height: 11px;display: inline-block;overflow: hidden;position: absolute;z-index: 50;bottom: 5px;right: 20px;overflow: hidden;}
+.slide-nav li {display: block;width: 10px;height: 5px;background:#333;cursor: pointer; margin-left: 5px;float: left;text-indent: -99em;overflow: hidden;border-radius: 4px;}
+.slide-nav .on {background:#ffe825;}
+.slide-loading{height: 2px;position: absolute;background: rgb(255, 232, 37) none repeat scroll 0% 0%;z-index: 10;left: 0px;bottom: 0px;}
+#prev2, #next2 {display: block;width: 57px;height: 72px;position: absolute;top: 129px;display: none;}
+#next {right: 0;background-position: -62px 0;}
+
+
+.m_b_30 {
+    margin-bottom: 30px;
+}
+
+.event-theme .tit {
+    font-size: 16px;
+    color: #333;
+    padding: 8px 0;
+}
+.event-theme .item {
+    padding: 5px 0;
+}
+.event-theme .item a {
+    font-size: 14px;
+    
+    line-height: 22px;
+    display: block;
+    height: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.event-theme .item p {
+    color: #999;
+    line-height: 16px;
+}
+.m_b_40 {
+    margin-bottom: 40px;
+}
+.event-join .tit {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.event-join ul {
+    margin-left: -9px;
+    text-align: center;
+}
+.event-join ul li {
+    display: inline;
+    margin: 0 9px 15px 9px;
+    float: left;
+    width: 68px;
+}
+.event-join li .g-img {
+    display: block;
+    width: 68px;
+    height: 68px;
+    margin-bottom: 5px;
+    position: relative;
+    box-shaodw: 5px;
+}
+.event-join a {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+.event-join .g-img img {
+    width: 68px;
+    height: 68px;
+    vertical-align: top;
+    border-radius: 5px;
+}
+.wrap h3 {
+    font-weight: normal;
+}
+.event-join h3 {
+    height: 20px;
+    overflow: hidden;
+    font-weight: normal;
+}
+.event-join p {
+    height: 20px;
+    overflow: hidden;
+    color: #9d9d9c;
+}
+.ad .plc{background: #F3F3F3}
+.t_f img{ max-width:700px; }
+
+.fl_icn_g{ padding:5px;}
+.tl .o{ padding-left:10px;}
+.wp{ width:1000px}
+
+#threadstamp img{
+    top: 30px;
+}

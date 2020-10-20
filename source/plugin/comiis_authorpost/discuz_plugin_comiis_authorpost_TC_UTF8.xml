@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3,X3.4]]></item>
+	<item id="Time"><![CDATA[2018-01-03 17:25]]></item>
+	<item id="From"><![CDATA[0]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[克米設計-樓主好帖]]></item>
+			<item id="identifier"><![CDATA[comiis_authorpost]]></item>
+			<item id="description"><![CDATA[這是一款在帖子內容頁內顯示樓主好帖展示的小插件]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[comiis_authorpost/]]></item>
+			<item id="copyright"><![CDATA[XXX网 - 站长互动平台]]></item>
+			<item id="version"><![CDATA[v2.0]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[comiis_more]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[更多克米設計作品]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[comiis_authorpost]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1999">
+					<item id="name"><![CDATA[admincp_addondzbox]]></item>
+					<item id="menu"><![CDATA[<span style="color:#E53333;"><b>聯系作者</b></span>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0,L1.0,X3.3,X3.4]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[指定帖子(全局設置)]]></item>
+				<item id="description"><![CDATA[設置指定帖子tid , 多個 tid 請用半角逗號“,” 隔開, 留空為調用樓主數據;
+注意: 指定帖子后所有顯示樓主好帖的地圖將顯示同樣內容]]></item>
+				<item id="variable"><![CDATA[tids]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[啟用版塊]]></item>
+				<item id="description"><![CDATA[選擇啟用的版塊，留空為全部版塊啟用]]></item>
+				<item id="variable"><![CDATA[open]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[啟用的用戶組]]></item>
+				<item id="description"><![CDATA[選擇啟用的用戶組，留空為全部用戶組啟用]]></item>
+				<item id="variable"><![CDATA[vip]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[最少主題數]]></item>
+				<item id="description"><![CDATA[設置用戶需要的最少主題數, 建議大于2；]]></item>
+				<item id="variable"><![CDATA[minthreads]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[讀取條件]]></item>
+				<item id="description"><![CDATA[設置顯示內容的讀取條件]]></item>
+				<item id="variable"><![CDATA[where]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[dateline]]></item>
+				<item id="extra"><![CDATA[dateline = 最新發表
+lastpost = 最新回復
+views = 帖子瀏覽數
+replies = 帖子回復數]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[讀取條數]]></item>
+				<item id="description"><![CDATA[設置內容顯示的條數]]></item>
+				<item id="variable"><![CDATA[number]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[8]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="title"><![CDATA[標題文字]]></item>
+				<item id="description"><![CDATA[設置標題的文字]]></item>
+				<item id="variable"><![CDATA[title]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[Ta最近發表:]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[17]]></item>
+				<item id="title"><![CDATA[標題顏色]]></item>
+				<item id="description"><![CDATA[設置標題的顏色]]></item>
+				<item id="variable"><![CDATA[titlecolor]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#ff6600]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[19]]></item>
+				<item id="title"><![CDATA[列表文字長度]]></item>
+				<item id="description"><![CDATA[設置列表文字長度]]></item>
+				<item id="variable"><![CDATA[titlelen]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[40]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[21]]></item>
+				<item id="title"><![CDATA[列表文字顏色]]></item>
+				<item id="description"><![CDATA[設置列表文字的顏色]]></item>
+				<item id="variable"><![CDATA[listcolor]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#333333]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[23]]></item>
+				<item id="title"><![CDATA[邊框顏色]]></item>
+				<item id="description"><![CDATA[設置邊框顏色]]></item>
+				<item id="variable"><![CDATA[divcolor]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#cfdde8]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[25]]></item>
+				<item id="title"><![CDATA[背景顏色]]></item>
+				<item id="description"><![CDATA[設置背景顏色]]></item>
+				<item id="variable"><![CDATA[bgcolor]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#f6f8ff]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[27]]></item>
+				<item id="title"><![CDATA[更多鏈接文字]]></item>
+				<item id="description"><![CDATA[設置更多鏈接顯示的文字]]></item>
+				<item id="variable"><![CDATA[more]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[更多Ta的好帖&gt;&gt;]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[28]]></item>
+				<item id="title"><![CDATA[指定底部鏈接(全局設置)]]></item>
+				<item id="description"><![CDATA[設置模塊底部更多主題的連接地址,  設置后全站將顯示同樣連接, 留空為自動調用樓主帖子]]></item>
+				<item id="variable"><![CDATA[all_url]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[29]]></item>
+				<item id="title"><![CDATA[更多鏈接顏色]]></item>
+				<item id="description"><![CDATA[設置更多鏈接的顏色]]></item>
+				<item id="variable"><![CDATA[morecolor]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#0F68B2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+	</item>
+</root>

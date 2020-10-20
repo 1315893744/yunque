@@ -1,0 +1,57 @@
+/*
+[name]&#x7D2B;[/name]
+[iconbgcolor]#a846d1[/iconbgcolor]
+Powered by Tsmini.com
+*/
+
+.bm_h, .tl th, .tl td { border-bottom-color: #CDCDCD; }
+.fl .bm_h { border-color: #FCC; background: #F8EFF8; }
+.bm_h a{color:#9846ba}
+.bm_h .xw1 a{color:#9846ba !important}
+.bm_h h2 a{color:#9846ba !important}
+.tbmu .pnc{background:#9846ba !important}
+a,link {color:#333}
+
+.postbtn {
+	padding: 10px 20px;
+	font-size: 16px;
+	background: linear-gradient(60deg, rgba(147,62,183,1) 0%, rgba(175,95,209,1) 100%);
+	border-radius: 10px;
+	color: #FFF;
+	float: left;
+}
+
+.postbtn:hover {
+	background: #893ea9;
+}
+
+
+.pnc {
+	background: #a12ed2;
+}
+
+.pnc:hover {
+	background: #b85fde;
+}
+
+.header {
+position: relative;
+text-align: center;
+background: linear-gradient(60deg, rgba(175,95,209,1) 0%, rgba(147,62,183,1) 100%);
+background-size: 100% auto;
+color: white;
+}
+
+/* 重定义按钮 */
+
+#create_group_btn { display: block; background: url(create_group.png) no-repeat 0 0; }
+	#create_group_btn img { opacity: 0; filter: alpha(opacity=0); }
+
+/* 重定义广播 */
+.moodfm_btn { background-image: url(mood_input_btn.png) !important; }
+#uhd, #flw_header .bar, .flw_replybox { background-color: #FCF9FC; }
+	#uhd .tb a, #flw_header .bar { border-top-color: #F8EFF8; }
+.pg_follow #fastpostsubmit { background-image: url(flw_post.png); }
+.flw_replybox .pnc { background-image: url(pn_reply.png); }
+.flw_replybox td table .pnc { background-image: url(pn_rt.png); }
+#flw_post_extra .sec { border-color: #F8EFF8; background-color: #FCF9FC; }

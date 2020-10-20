@@ -1,0 +1,263 @@
+<style>
+.disabled{background:#eee;}
+.image_list{overflow:hidden;}
+.image_box{float:left;width:100px;position:relative;margin-right:10px;}
+.fmian{position:absolute;left:0;top:0;padding:4px 10px;background:rgba(0,0,0,0.6);font-size:12px;color:#fff;}
+.remove{position:absolute;right:0;top:0;width:20px;height:20px;background:rgba(255,255,255,0.6) url({$siteurl}/source/plugin/qidou_love/static/images/closed.png) no-repeat center center/14px 14px;}
+</style>
+<script src="{$siteurl}/source/plugin/qidou_love/static/js/jquery-2.1.3.min.js"></script>
+<form name="cpform" method="post" autocomplete="off" action="{ADMINSCRIPT}?action=plugins&operation=config&do={$pluginid}&identifier=qidou_love&pmod=admin_user&act={$act}" id="cpform" enctype="multipart/form-data">
+  <input type="hidden" name="formhash" value="{FORMHASH}">
+  <input type="hidden" id="formscrolltop" name="scrolltop" value="">
+  <input type="hidden" name="anchor" value="">
+  <input type="hidden" name="uid" value="{$love_user['uid']}">
+  <table class="tb tb2 ">
+    <tbody>
+      <tr>
+        <td colspan="2" class="td27" s="1">{$a_lang['a_user_name']}:</td>
+      </tr>
+      <tr class="noborder">
+        <td class="vtop rowform"><input value="{$love_user['user_name']}" type="text" class="txt disabled" disabled /></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="td27" s="1">{$a_lang['a_user_album']}:</td>
+      </tr>
+      <tr class="noborder">
+          <td class="vtop rowform"><!--{if $love_user['user_album']}--><a href="{$love_user['user_album']}" target="_blank"><img src="{$love_user['user_album']}" width="100" /></a><!--{/if}--></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="td27" s="1">{$a_lang['a_album_list']}:</td>
+      </tr>
+      <tr class="noborder">
+          <td class="vtop rowform">
+              <div class="image_list">
+                {eval $album_list = array_filter(explode(',',$love_user['album_list']));}
+                <!--{loop $album_list $key $album}-->
+                <div class="image_box" data-id="{$key}">
+                    <!--{if $love_user['is_album']==$key}-->
+                    <span class="fmian">{$a_lang['h_fengmian']}</span>
+                    <input type="hidden" class="fengmian" name="fengmian" value="{$love_user['is_album']}">
+                    <!--{/if}-->
+                    <span class="remove"></span>
+                    <img src="{$album}" width="100" />
+                    <input type="hidden" name="album[]" value="{$album}" />
+                </div>
+                <!--{/loop}-->
+            </div>
+          </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="td27" s="1">{$a_lang['a_gender']}:</td>
+      </tr>
+      <tr class="noborder" >
+          <td class="vtop rowform">
+            <select name="gender" value="{$love_user['gender']}">
+                <option value="0">{$a_lang['h_select']}</option>
+                <option value="1">{$a_lang['h_d_1_1']}</option>
+                <option value="2">{$a_lang['h_d_1_2']}</option>
+            </select>
+          </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="td27" s="1">{$a_lang[a_birth]}:</td>
+      </tr>
+      <tr class="noborder">
+        <td class="vtop rowform"><input name="birth" value="{$love_user['birthyear']}-{$love_user['birthmonth']}-{$love_user['birthday']}" type="text" class="txt"></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="td27" s="1">{$a_lang['a_age']}:</td>
+      </tr>
+      <tr class="noborder">
+        <td class="vtop rowform"><input value="{$love_user['age']}" type="text" class="txt disabled" disabled /></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="td27" s="1">{$a_lang['a_constellation']}:</td>
+      </tr>
+      <tr class="noborder" >
+          <td class="vtop rowform">
+                <select name="constellation"  value="{$love_user['constellation']}">
+                {eval}
+                    for( $i=1; $i<13;$i++ ){
+                        echo '<option value="'.$a_lang['h_d_3_'.$i].'">'.$a_lang['h_d_3_'.$i].'</option>';
+                    }
+                {/eval}
+                </select>
+          </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="td27" s="1">{$a_lang['a_education']}:</td>
+      </tr>
+      <tr class="noborder">
+          <td class="vtop rowform">
+                <select name="education" value="{$love_user['education']}">
+                    {eval}
+                        for( $i=1; $i<7;$i++ ){
+                            echo '<option value="'.$a_lang['h_d_6_'.$i].'">'.$a_lang['h_d_6_'.$i].'</option>';
+                        }
+                    {/eval}
+                </select>
+          </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="td27" s="1">{$a_lang['a_occupation']}:</td>
+      </tr>
+      <tr class="noborder">
+          <td class="vtop rowform">
+                <select name="occupation" value="{$love_user['occupation']}">
+                    {eval}
+                        for( $i=1; $i<11;$i++ ){
+                            echo '<option value="'.$a_lang['h_d_7_'.$i].'">'.$a_lang['h_d_7_'.$i].'</option>';
+                        }
+                    {/eval}
+                </select>
+          </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="td27" s="1">{$a_lang['a_affectivestatus']}:</td>
+      </tr>
+      <tr class="noborder">
+          <td class="vtop rowform">
+                <select name="affectivestatus" value="{$love_user['affectivestatus']}">
+                    {eval}
+                        for( $i=1; $i<8;$i++ ){
+                            echo '<option value="'.$a_lang['h_d_11_'.$i].'">'.$a_lang['h_d_11_'.$i].'</option>';
+                        }
+                    {/eval}
+                </select>
+          </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="td27" s="1">{$a_lang['a_income']}:</td>
+      </tr>
+      <tr class="noborder">
+          <td class="vtop rowform">
+                <select name="income" value="{$love_user['income']}">
+                    {eval}
+                        for( $i=1; $i<9;$i++ ){
+                            echo '<option value="'.$a_lang['h_d_8_'.$i].'">'.$a_lang['h_d_8_'.$i].'</option>';
+                        }
+                    {/eval}
+                </select>
+          </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="td27" s="1">{$a_lang['a_house']}:</td>
+      </tr>
+      <tr class="noborder">
+          <td class="vtop rowform">
+                <select name="house" value="{$love_user['house']}">
+                    {eval}
+                        for( $i=1; $i<5;$i++ ){
+                            echo '<option value="'.$a_lang['h_d_9_'.$i].'">'.$a_lang['h_d_9_'.$i].'</option>';
+                        }
+                    {/eval}
+                </select>
+          </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="td27" s="1">{$a_lang['a_vehicle']}:</td>
+      </tr>
+      <tr class="noborder">
+          <td class="vtop rowform">
+                <select name="vehicle" value="{$love_user['vehicle']}">
+                    {eval}
+                        for( $i=1; $i<4;$i++ ){
+                            echo '<option value="'.$a_lang['h_d_10_'.$i].'">'.$a_lang['h_d_10_'.$i].'</option>';
+                        }
+                    {/eval}
+                </select>
+          </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="td27" s="1">{$a_lang['a_height']}:</td>
+      </tr>
+      <tr class="noborder">
+        <td class="vtop rowform"><input value="{$love_user['height']}" type="text" class="txt" name="height" /></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="td27" s="1">{$a_lang['a_weight']}:</td>
+      </tr>
+      <tr class="noborder">
+        <td class="vtop rowform"><input value="{$love_user['weight']}" type="text" class="txt" name="weight" /></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="td27" s="1">{$a_lang['a_sightml']}:</td>
+      </tr>
+      <tr class="noborder">
+        <td class="vtop rowform"><input value="{$love_user['sightml']}" type="text" class="txt" name="sightml" /></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="td27" s="1">{$a_lang['a_sigtext']}:</td>
+      </tr>
+      <tr class="noborder">
+        <td class="vtop rowform"><input value="{$love_user['sigtext']}" type="text" class="txt" name="sigtext" /></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="td27" s="1">{$a_lang['a_lat']}:</td>
+      </tr>
+      <tr class="noborder">
+        <td class="vtop rowform"><input value="{$love_user['lat']}" type="text" class="txt" name="lat" /></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="td27" s="1">{$a_lang['a_lng']}:</td>
+      </tr>
+      <tr class="noborder">
+        <td class="vtop rowform"><input value="{$love_user['lng']}" type="text" class="txt" name="lng" /></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="td27" s="1">{$a_lang['a_people_num']}:</td>
+      </tr>
+      <tr class="noborder">
+        <td class="vtop rowform"><input value="{$love_user['people_num']}" type="text" class="txt disabled" disabled /></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="td27" s="1">{$a_lang['a_charm_num']}:</td>
+      </tr>
+      <tr class="noborder">
+        <td class="vtop rowform"><input value="{$love_user['charm_num']}" type="text" class="txt disabled" disabled /></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="td27" s="1">{$a_lang['a_user_tag']}:</td>
+      </tr>
+      <tr class="noborder">
+        <td class="vtop rowform">
+            <textarea name="user_tag" class="txt">{$love_user['user_tag']}</textarea>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="td27" s="1">{$a_lang['a_is_recom']}:</td>
+      </tr>
+      <tr class="noborder">
+        <td class="vtop rowform"><ul onmouseover="altStyle(this);">
+            <li <!--{if $love_user[is_recom]}-->class="checked"<!--{/if}-->>
+              <input class="radio" type="radio" name="is_recom" value="1" <!--{if $love_user[is_recom]}-->checked<!--{/if}-->>
+              &nbsp;{$a_lang['a_yes']}</li>
+            <li <!--{if !$love_user[is_recom]}-->class="checked"<!--{/if}-->>
+              <input class="radio" type="radio" name="is_recom" value="0" <!--{if !$love_user[is_recom]}-->checked<!--{/if}-->>
+              &nbsp;{$a_lang['a_no']}</li>
+          </ul></td>
+      </tr>
+      <tr>
+        <td colspan="15">
+            <div class="fixsel">
+            <input type="submit" class="btn" id="submit_submit" name="submit"  value="{$a_lang['a_submit']}">
+            </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+<script>
+$('select').map(function (index,item){
+    $(item).children('option[value="'+$(this).attr('value')+'"]').attr({'selected':true});
+});
+var fengmian = $('.fmian');
+$('.image_box').on('click',function (){
+    $('.fengmian').remove();
+    $(this).prepend('<input type="hidden" class="fengmian" name="fengmian" value="'+$(this).attr('data-id')+'" />');
+    $(this).prepend(fengmian);
+});
+$('.remove').click(function (){
+    $(this).parent().remove();
+});
+</script>

@@ -1,0 +1,823 @@
+@-webkit-keyframes e{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes e{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}
+.topBar {
+    background: rgba(33, 150, 243, 0.8);
+    position: fixed;
+    color: #fff;
+    height: 56px;
+    line-height: 56px;
+    position: relative;
+    text-align: center;
+    font-style: normal;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.topBar2 {
+    background: rgba(33, 150, 243, 0.8);
+    position: fixed;
+    color: #fff;
+    height: 46px;
+    line-height: 46px;
+    position: relative;
+    text-align: center;
+    font-style: normal;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.top1{
+	display:flex;
+}
+.top1>i{
+	flex:1;
+}
+.top1>a{
+	flex:1;
+	color: #fff;
+}
+.top1>span{
+	font-size:16px;
+	flex:5
+}
+.top>i{
+	position: absolute;
+	left:5px;
+	font-size: 26px;
+}
+.top>span{
+	font-size:16px;
+}
+.topBar>ul {
+	display: inline-flex;
+	width: 5.4rem;
+    height: 0.7rem;
+    line-height: 0.7rem;
+}
+.topBar>ul>li {
+	flex:1;
+	border: 1px solid #fff;
+	height: 0.7rem;
+    line-height: 0.7rem;
+}
+.topBar>ul>li:first-child{
+	-moz-border-radius:5px 0px 0px 5px;
+    -webkit-border-radius: 5px 0px 0px 5px;
+    border-radius:5px 0px 0px 5px;
+}
+.topBar>ul>li:last-child{
+	-moz-border-radius:0px 5px 5px 0px;
+    -webkit-border-radius: 0px 5px 5px 0px;
+    border-radius:0px 5px 5px 0px;
+}
+.topBar>ul>li.active {
+	background: #fff;
+    height: 100%;
+	color: #2196F3;
+}
+.foot{
+	background: rgb(255, 255, 255);
+	position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 1.45rem;
+}
+.foot>ul{
+	display: flex;
+	width: 100%;
+	height: 100%;
+	border-top: 1px solid #e5e5e5;
+}
+.foot>ul>li{
+	flex:1;
+	display: inline-flex;
+	justify-content: center;
+    align-items: center;
+}
+.foot>ul>li>a{
+	display: inline-flex;
+	flex-direction: row;
+}
+.foot>ul>li>a>span,em{
+	flex:1
+}
+.self-head{
+	width: 40px;
+    height: 56px;
+    line-height: 56px;
+    position: absolute;
+    display: inline-flex;
+	justify-content: center;
+    align-items: center;
+   	left: 5px;
+
+}
+.self-head>img{
+	width: 36px;
+    height: 36px;
+    border-radius: 18px;
+}
+.footerarea{
+	position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    padding: 5px 0;
+    z-index: 200;
+    text-align: center;
+    border-top: 1px solid rgba(229, 229, 229, 0.84);
+    box-shadow: rgba(0,0,0,0.317647) 1px 1px 1px 0;
+}
+.flex_box {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.flex {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    color:#504242;
+    font-size: 12px;
+}
+.flex>i{
+	display: block;
+	font-size: 22px;
+}
+.flex_box>li.active{
+	color: #f65d5b;
+}
+.talk-foot {
+	position: fixed;
+    bottom: 0;
+    left: 0px;
+    right: 0px;
+    padding: 0px 10px;
+    height: 80px;
+    background: #F3F3F3;
+    z-index: 999;
+}
+.layim-chat-send {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+.layui-m-layer * {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.layim-chat-send input {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    height: 40px;
+    padding-left: 5px;
+    border: 0;
+    background-color: #fff;
+    border-radius: 3px;
+    outline:none;
+}
+.layim-chat-send button {
+    border-radius: 3px;
+    height: 40px;
+    padding: 0 20px;
+    border: 0;
+    margin-left: 10px;
+    background-color: #5FB878;
+    color: #fff;
+    outline: none;
+}
+/*消息界面*/
+.friend{
+	width: 100%;
+	background: #fff;
+	border-bottom: 1px solid #e5e5e5;
+	height: 2.3rem;
+	line-height: 2.3rem;
+	vertical-align: middle;
+}
+.friend-head{
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 0.3rem;
+	height: 2.3rem;
+	line-height: 2.3rem;
+	width: 1.6rem;
+}
+.friend-head>img{
+	border-radius: 0.8rem;
+    height: 1.6rem;
+    width: 1.6rem;
+}
+.friend-name{
+	display: inline-flex;
+	float: left;
+	height: 2.3rem;
+	line-height: 2.3rem;
+	width: 7.8rem;
+}
+.friend-name-left{
+	display: inline-flex;
+    flex-direction: column;
+    height: 2.3rem;
+    line-height: 2.3rem;
+    flex: 2;
+	overflow: hidden;
+}
+.friend-name-left>p{
+	height: 1.15rem;
+	line-height: 1.15rem;
+	font-size: 16px;
+    margin-top: 4%;
+    margin-bottom: -4%;
+}
+.friend-name-left>span{
+	height: 1.15rem;
+	line-height: 1.15rem;
+	clear:both;
+	font-size: 12px;
+    color: #A6A1A1;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-flex;
+	align-items: center;
+}
+.friend-name-left>span>img{
+	height: 24px;
+    width: 24px;
+}
+.friend-name-right{
+    font-size: 12px;
+    color: #a6a1a1;
+    width: auto;
+    z-index: 9999;
+    flex: 1;
+}
+.friend-name-right>p{
+    margin-top: -14%;
+    padding-right: 0.2rem;
+    text-align: right;
+}
+/*聊天界面*/
+.talk{
+    position: relative;
+    width: 100%;
+    height: -moz-calc(100% - 100px);
+    height: -webkit-calc(100% - 100px);
+    height: calc(100% - 100px);
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+    z-index: 1;
+    -webkit-animation: cut-in .4s forwards;
+    animation: cut-in .4s forwards;
+    background: #F3F3F3;
+     z-index: 1;
+}
+.layim-chat-tool {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    height: 38px;
+    line-height: 38px;
+    margin-top: 3px;
+    font-size: 0;
+    white-space: nowrap;
+}
+.layim-chat-tool>i{
+	position: relative;
+    margin: 0 15px;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    color:#5A5151;
+}
+#picturefile{
+	position: absolute;
+    width: 25px;
+    height: 36px;
+    left: 0;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+}
+#picture{
+	display: block;
+    width: 25px;
+    height: 35px;
+    opacity: 0;
+    cursor: pointer;
+}
+.layim-layer {
+    position: fixed;
+    bottom: 85px;
+    left: 10px;
+    right: 10px;
+    margin: 0 auto;
+    z-index: 999999;
+}
+
+.layui-m-layer1 .layui-m-layerchild {
+    border: none;
+    border-radius: 0;
+}
+.layui-m-layer1 .layui-m-layercont {
+    padding: 0;
+    text-align: left;
+}
+.Econt {
+    line-height: 22px;
+
+}
+.Eface {
+    position: relative;
+    max-height: 180px;
+    overflow: auto;
+    padding: 10px;
+    font-size: 0;
+    background: #fff;
+}
+.Eface li {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: bottom;
+    padding: 5px 2px;
+    text-align: center;
+    width: 10%;
+    -webkit-box-sizing: border-box!important;
+    -moz-box-sizing: border-box!important;
+    box-sizing: border-box!important;
+}
+.Eface li img {
+    width: 30px;
+    height: 30px;
+}
+.Emain {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+    display: none;
+}
+.layui-disabled, .layui-disabled:active {
+    background-color: #d2d2d2!important;
+    color: #fff!important;
+    cursor: not-allowed!important;
+}
+.talk>ul{
+	padding-top: 0.3rem;
+	overflow-x: hidden;
+	padding-bottom: 1rem;
+}
+.talk>ul>li{
+    position: relative;
+    font-size: 0;
+    margin-bottom: 10px;
+    padding-left: 1.8rem;
+    min-height: 68px;
+}
+.layim-chat-user {
+    position: absolute;
+    left: 0.3rem;
+}
+.layim-chat-text, .layim-chat-user {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 15px;
+}
+.layim-chat-user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+.layim-chat-user cite {
+    position: absolute;
+    left: 60px;
+    top: -2px;
+    line-height: 24px;
+    font-size: 12px;
+    white-space: nowrap;
+    color: #999;
+    text-align: left;
+    font-style: normal;
+}
+.layim-chat-text {
+    position: relative;
+    min-height: 22px;
+    line-height: 22px;
+    margin-top: 25px;
+    padding: 8px 15px;
+    background-color: #fff;
+    border-radius: 3px;
+    color: #333;
+    word-break: break-all;
+}
+.layim-chat-mine {
+    text-align: right;
+    padding-left: 0;
+   padding-right: 1.8rem;
+}
+.layim-chat-mine .layim-chat-user {
+    left: auto;
+    right: 0.3rem;
+}
+.layim-chat-mine .layim-chat-user cite {
+    left: auto;
+    right: 60px;
+    text-align: right;
+}
+.layim-chat-mine .layim-chat-text {
+    margin-left: 0;
+    text-align: left;
+    background-color: #5FB878;
+    color: #fff;
+
+}
+/*好友*/
+.layim-list-top {
+    background-color: #fff;
+    font-size: 17px;
+}
+.layim-list-top li {
+    position: relative;
+    font-size: 17px;
+    line-height: 50px;
+
+    cursor: pointer;
+}
+.newFriend>i{
+	padding: 0 15px;
+    font-weight: 300;
+    font-size: 25px;
+    color: #4DABF5;
+}
+.layim-list-friend, .layim-list-group {
+    background-color: #fff;
+    border-top: 1px solid #f2f2f2;
+}
+.layim-list-friend li h5 {
+    position: relative;
+    height: 50px;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-bottom: 1px solid #f2f2f2;
+    cursor: pointer;
+}
+.layim-list-friend li h5 i{
+    padding: 0px 18px;
+    font-weight: 100;
+    font-size: 18px;
+}
+
+.layui-layim-list li {
+    position: relative;
+    height: 42px;
+    padding: 5px 15px 5px 60px;
+    border-bottom: 1px solid #f2f2f2;
+    cursor: pointer;
+}
+.layim-list-friend li h5 span {
+    max-width: 80%;
+}
+.layim-list-friend li h5 span, .layui-layim-list li p, .layui-layim-list li span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.layui-layim-list li * {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 17px;
+}
+.layui-layim-list li img {
+    position: absolute;
+    left: 12px;
+    top: 8px;
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+}
+.layui-layim-list li span {
+    margin-top: 2px;
+    max-width: 155px;
+    font-size: 17px;
+}
+.layui-layim-list li p {
+    display: block;
+    padding-right: 30px;
+    line-height: 18px;
+    font-size: 13px;
+    color: #999;
+}
+.close{
+	display: none;
+}
+.open{
+	display: block;
+}
+.main{
+
+    overflow-y: scroll;
+}
+.layim-chat-text:after {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 13px;
+    width: 0;
+    height: 0;
+    border-style: solid dashed dashed;
+    border-color: #fff transparent transparent;
+    overflow: hidden;
+    border-width: 10px;
+}
+.layim-chat-mine .layim-chat-text:after {
+    left: auto;
+    right: -10px;
+    border-top-color: #5FB878;
+}
+.Em {
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+}
+.jm{
+	    max-width: 4rem;
+}
+.w{
+	margin-right: 21%;
+}
+layui-layer-tips {
+	background: 0 0;
+	box-shadow: none;
+	border: none
+}
+
+.layui-layer-tips .layui-layer-content {
+	position: relative;
+	line-height: 22px;
+	min-width: 12px;
+	padding: 5px 10px;
+	font-size: 12px;
+	_float: left;
+	border-radius: 2px;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+	background-color: #000;
+	color: #fff
+}
+
+*{-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;}
+.swiper-container1 {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.95);
+    z-index: 99999999;
+}
+.swiper-slide {
+	overflow: hidden;
+    -webkit-flex-shrink: 0;
+    -ms-flex: 0 0 auto;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-zoom-container {
+    width: auto;
+    height: auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    text-align: center;
+}
+.closeswiper{
+	position: absolute;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    top: 6px;
+    right: 4px;
+    font-weight: 500;
+    z-index: 99999999999999999999999;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.closeswiper>i{
+	font-size: 31px;
+}
+.layim-list-top>li:first-child{
+	border-bottom: 1px solid #f2f2f2;
+}
+.layim-list-top>li>i{
+	padding: 0px 16px;
+    font-weight: 100;
+    font-size: 22px;
+    color: #4DABF5;
+}
+.search{
+	position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #FFFFFF;
+    z-index: 9999;
+}
+.search-header {
+    position: relative;
+    z-index: 1001;
+    padding: .16rem;
+    height: .85333333rem;
+    line-height: .85333333rem;
+    background: #fff;
+    color: #fff;
+    box-shadow: 2px 4px 1px rgba(194, 194, 194, 0.57);
+}
+.search-header .search-text {
+    font-size: .34666667rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.search-header .search-text input {
+    padding: 0 .16rem;
+    width: 84%;
+    color: #666;
+    height: .85333333rem;
+    background: #F6F6F6;
+    border-radius: 5px;
+    border: none;
+    outline: 0;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    -webkit-appearance: none;
+}
+.layui-btn {
+    display: inline-block;
+    height: .8333333rem;
+    line-height: .8333333rem;
+    padding: 0 .16rem;
+    background-color: #4dabf5;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: .9;
+    margin-left: 0.2rem;
+    filter: alpha(opacity=90);
+    outline: none;
+}
+.layui-btn>i{
+	font-size: 20px;
+}
+.c{
+    color: rgba(0, 0, 0, 0.4);
+}
+.userlist{
+	margin-top: 14px;
+}
+#user li {
+    position: relative;
+    height: 42px;
+    padding: 5px 15px 5px 60px;
+    border-bottom: 1px solid #f2f2f2;
+    cursor: pointer;
+}
+#user li img {
+    position: absolute;
+    left: 12px;
+    top: 8px;
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+}
+#user li span {
+    margin-top: 2px;
+    max-width: 155px;
+    font-size: 17px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#user li p {
+    display: block;
+    padding-right: 30px;
+    line-height: 18px;
+    font-size: 13px;
+    color: #999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#user li button{
+	float: right;
+    margin-top: -37px;
+    background-color: #fd482c;
+}
+.requestmain{
+	margin-top: 51px;
+}
+.weui-loadmore {
+    width: 65%;
+    margin: 1.5em auto;
+    line-height: 1.6em;
+    font-size: 14px;
+    text-align: center;
+}
+.weui-loading {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-animation: e 1s steps(12) infinite;
+    animation: e 1s steps(12) infinite;
+    background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgxMDB2MTAwSDB6Ii8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTlFOUU5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLTMwKSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iIzk4OTY5NyIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgzMCAxMDUuOTggNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjOUI5OTlBIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDYwIDc1Ljk4IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0EzQTFBMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSg5MCA2NSA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNBQkE5QUEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoMTIwIDU4LjY2IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0IyQjJCMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgxNTAgNTQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjQkFCOEI5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDE4MCA1MCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDMkMwQzEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTE1MCA0NS45OCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDQkNCQ0IiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTEyMCA0MS4zNCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNEMkQyRDIiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDM1IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0RBREFEQSIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgtNjAgMjQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTJFMkUyIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKC0zMCAtNS45OCA2NSkiLz48L3N2Zz4=) no-repeat;
+    background-size: 100%;
+}
+.weui-loadmore__tips {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 13px;
+}
+.friendre {
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    height: 2.3rem;
+    line-height: 2.3rem;
+    vertical-align: middle;
+}
+.topBar1 {
+    background: rgb(78, 167, 236);
+    position: fixed;
+    color: #fff;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    font-style: normal;
+    font-size: 12px;
+    vertical-align: middle;
+    width: 100%;
+    top:0;
+}
+.flex12{
+	display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons{
+	margin-left: 0rem;
+	margin-right: 0.2rem;
+    background-color: #fd482c;
+}
+.layim-chat-system {
+    margin: 0.4rem 0;
+    text-align: center;
+}
+.layim-chat-system span {
+    display: inline-block;
+    line-height: 30px;
+    padding: 0 15px;
+    border-radius: 3px;
+    background-color: #ddd;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}

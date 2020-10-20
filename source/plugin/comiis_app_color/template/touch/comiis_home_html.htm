@@ -1,0 +1,42 @@
+<!--{template common/header}-->
+<style>
+.comiis_bbsstyle {padding:7px 6px 6px;overflow:hidden;}
+.comiis_bbsstyle li {float:left;width:33.33%;padding:6px;box-sizing:border-box;text-align:center;overflow:hidden;}
+.comiis_bbsstyle li span {display:block;width:100%;height:76px;line-height:76px;margin-bottom:6px;border-radius:2px;}
+.comiis_bbsstyle li span i {font-size:30px;display:none;}
+.comiis_bbsstyle li.comiis_list_on span i {display:block;}
+</style>
+<!--{if $_G['comiis_homestyleid']}-->
+<div class="comiis_topnv xzig bg_f b_b">
+	<ul class="comiis_flex glqh">
+		<li class="flex f_0"><em class="bg_0"></em><a href="plugin.php?id=comiis_app_color">{$_G['cache']['plugin']['comiis_app_color']['name']}</a></li>
+		<li class="flex"><a href="plugin.php?id=comiis_app_homestyle" class="f_c">{$_G['cache']['plugin']['comiis_app_color']['homename']}</a></li>
+	</ul>
+</div>
+<!--{/if}-->
+<form method="post" autocomplete="off" action="plugin.php?id=comiis_app_color">
+	<input type="hidden" id="comiis_color_form" name="colorid" value="0">
+	<input type="hidden" name="formhash" value="{FORMHASH}" />
+	<input type="hidden" name="colorsubmit" value="true" />
+	<div class="comiis_bbsstyle dfnp bg_f b_t b_b mt10 cl">
+		<ul>
+			<!--{loop $comiis_app_style $temp}-->
+				<li id="comiis_app_styleyhmo{$temp['id']}" onclick="comiis_set_colorgyyg('{$temp['id']}');"{if $_G['comiis_cssid'] == $temp['id']} class="comiis_list_on"{/if}><span style="background:{$temp['color']};"><i class="comiis_font f_f">&#xe683;</i></span>{$temp['name']}</li>
+			<!--{/loop}-->
+		</ul>
+	</div>
+	<div class="comiis_btnbox">
+		<button class="formdialog comiis_btn bg_c f_f">{lang save}{$comiis_lang['post37']}</button>
+	</div>
+</form>
+<script>
+	function comiis_set_colorgyyg(id){
+		$('#comiis_color_form').val(id);
+		$('.comiis_bbsstyle li').attr("class", "");
+		$('#comiis_app_styleyhmo' + id).attr("class", "comiis_list_on");
+		$('#comiis_app_addclass').remove();
+		$("<link>").attr({id:"comiis_app_addclass", rel:"stylesheet", type: "text/css", href: './source/plugin/comiis_app/cache/comiis_'+id+'_style.css'}).appendTo("head");
+	}
+</script>
+<!--{eval $comiis_foot = 'no';}-->
+<!--{template common/footer}-->

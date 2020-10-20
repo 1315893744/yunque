@@ -1,0 +1,208 @@
+{eval}
+    $reward_list = QidouLove::array_group(explode("\r\n",$qidou_love['reward_list']),8);
+{/eval}
+<link rel="stylesheet" type="text/css" href="{$siteurl}/source/plugin/qidou_love/static/css/reward.css" />
+<div class="reward_wrap">
+    <div class="reward_box">
+        <div class="reward_main">
+            <ul class="reward_list">
+                <!--{loop $reward_list $reward}-->
+                <li>
+                    <!--{loop $reward $rew}-->
+                    {eval $rew = explode(',',$rew);}
+                    <div class="reward_content" data-price="{$rew[2]}">
+                        <div class="reward_logo"><img _src="{$rew[0]}" /></div>
+                        <div class="reward_name">{$rew[1]}</div>
+                        <div class="reward_price"><span class="icon"></span><span class="text">{$rew[2]}</span></div>
+                    </div>
+                    <!--{/loop}-->
+                </li>
+                <!--{/loop}-->
+            </ul>
+            <ul class="reward_dot">
+                <!--{loop $reward_list $reward}-->
+                <li></li>
+                <!--{/loop}-->
+            </ul>
+        </div>
+        <div class="reward_footer">
+            <div class="user_account">
+                <div class="icon"></div>
+                <div class="text">{$lang['h_account']} : <span>{$account_price}</span></div>
+            </div>
+            <div class="reward_button" is_reward="false">{$lang['h_zengsong']}</div>
+        </div>
+    </div>
+</div>
+<script>
+function post_reward( main ){
+    var account_price = {$account_price};
+    var reward_index = 0;
+    var iStart = {left:0};
+    var sLeft = 0;
+    var len = $('.reward_list li').length;
+    var reward_price = 0;
+    var reward_link = '{$qidou_love['reward_link']}';
+    var reward_url = siteurl+'/plugin.php?id=qidou_love:qidou_handle&act=reward&formhash={FORMHASH}';
+    
+    $('.reward_dot li').eq(reward_index).addClass('active');
+    
+    $(main).click(function (){
+        $('.reward_logo img').map(function (i,t){
+            $(t).attr({src:$(t).attr('_src')});
+        });
+        $('.reward_logo img').css({opacity:1});
+        $('.reward_wrap').show();
+    });
+    
+    $('.reward_content').click(function (){
+        $('.reward_content').removeClass('active');
+        $(this).addClass('active');
+        reward_price = $(this).attr('data-price');
+        
+        if( reward_price < account_price ){
+            $('.reward_button').attr({is_reward:true});
+            $('.reward_button').html("{$lang['h_zengsong']}");
+            $('.reward_button').addClass('active');
+        }else{
+            $('.reward_button').attr({is_reward:false});
+            $('.reward_button').removeClass('active');
+            $('.reward_button').html("{$lang['h_yebz']}");
+        }
+    });
+    var this_reward_user = $('.reward_user_main li[data-uid='+uid+']');
+    $('.reward_button').click(function (){
+        if( !reward_price ){return;}
+        var is_reward = eval($(this).attr('is_reward'));
+        
+        if( !is_login ){
+            layer.open({
+                content:"{$lang['h_login_follow']}",
+                skin: 'msg',
+                time:3,
+                end:goLogin
+            });
+            return;
+        }
+        if( love_id == uid ){
+            return;
+        }
+        if( is_reward ){
+            var loading = layer.open({type:2});
+            var reward_id = $('.reward_list .active').index('.reward_content');
+            var data = {
+                rid:$(main).attr('data-uid'),
+                reward_id:reward_id
+            };
+            $.ajax({
+                type:'post',
+                url:reward_url,
+                data:data,
+                dataType:'json',
+                success:function ( data ){
+                    layer.close(loading);
+                    var message = '';
+                    
+                    var end = function (){};
+                    if( data.success == 1 ){
+                        end = function (){open_page_url(reward_link);};
+                        message = "{$lang['h_yebz_open_link']}";
+                    }else if( data.success == 2 ){
+                        var reward_info = $('.reward_content.active');
+                        $('.reward_list_main,.reward_user_main').parents('.user_list_wrap').show();
+                        if( this_reward_user.length ){
+                            var this_love_price = parseInt(this_reward_user.find('.reward_num span').html());
+                            this_love_price += parseInt(reward_info.find('.reward_price .text').html());
+                            this_reward_user.find('.reward_num span').html( this_love_price );
+                        }else if( !this_reward_user.length && $('.reward_user_main li').length<4 ){
+                            $('.reward_user_main').append('<li data-uid="'+uid+'">'+
+                                    '<img src="'+siteurl+'/uc_server/avatar.php?uid='+uid+'&size=middle">'+
+                                    '<div class="love_name">'+username+'</div>'+
+                                    '<div class="love_num reward_num"><span>'+reward_info.find('.reward_price .text').html()+'</span></div>'+
+                            '</li>');
+                            this_reward_user = $('.reward_user_main li[data-uid='+uid+']');
+                        }
+                        if( $('.reward_list_main li').length<4 ){
+                            $('.reward_list_main').append('<li>'+
+                                '<img src="'+reward_info.find('.reward_logo img').attr('src')+'">'+
+                                '<div class="love_name">'+reward_info.find('.reward_name').html()+'</div>'+
+                                '<div class="love_num reward_num"><span>'+reward_info.find('.reward_price .text').html()+'</span></div>'+
+                            '</li>');
+                        }
+                        message = "{$lang['h_reward_success']}";
+                    }
+                    $('.reward_wrap').click();
+                    layer.open({
+                        content : message,
+                        skin : 'msg',
+                        time : 3,
+                        end : end
+                    });
+                },
+                error:function (){
+                    layer.open({
+                        content : "{$lang['h_reward_error']}",
+                        skin : 'msg',
+                        time : 3
+                    });
+                }
+            });
+        }else if( !is_reward && reward_link ){
+            layer.open({
+                content:"{$lang['h_yebz_open_link']}",
+                skin: 'msg',
+                time:3,
+                end:function (){
+                    open_page_url(reward_link);
+                }
+            });
+        }
+    });
+    
+    $('.reward_main').on('touchstart',function (){
+        var oTouch = event.changedTouches[0];
+        iStart.left = oTouch.pageX;
+        $('.reward_list').css({transition:'initial'});
+        $(document).on('touchmove',rmove);
+        $(document).on('touchend',rend);
+    });
+
+    function rmove(){
+        var oTouch = event.changedTouches[0];
+        var left = 0;
+        left = -sLeft + (oTouch.pageX - iStart.left);
+        $('.reward_list').css({transform:'translateX('+left+'px) translateZ(0)'});
+        event.preventDefault();
+        return false;
+    }
+    function rend(){
+        var oTouch = event.changedTouches[0];
+        if( oTouch.pageX - iStart.left > 20 ){
+            reward_index--;
+        }else if( oTouch.pageX - iStart.left < -20 ){
+            reward_index++;
+        }
+        if( reward_index == -1 ){
+            reward_index = 0;
+        }else if( reward_index == len ){
+            reward_index = len -1;
+        }
+        $('.reward_dot li').removeClass('active');
+        $('.reward_dot li').eq(reward_index).addClass('active');
+        sLeft = reward_index*vWidth;
+        $('.reward_list').css({transition:'1s',transform:'translateX(-'+sLeft+'px) translateZ(0)'});
+        $(this).unbind('touchmove',rmove);
+        $(this).unbind('touchend',rend);
+    }
+    $('.reward_wrap').click(function (){
+        reward_price = 0;
+        $('.reward_content').removeClass('active');
+        $('.reward_button').removeClass('active');
+        $('.reward_button').html("{$lang['h_zengsong']}");
+        $(this).hide();
+    });
+    $('.reward_box').click(function (){
+        event.cancelBubble = true;
+    });
+}
+</script>

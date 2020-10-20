@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Addon MD5]]></item>
+	<item id="ID"><![CDATA[wekei_touch_news.template]]></item>
+	<item id="RevisionID"><![CDATA[86806]]></item>
+	<item id="SN"><![CDATA[2020032507uHUZ33l1l6]]></item>
+	<item id="RevisionDateline"><![CDATA[1578097381]]></item>
+	<item id="Data">
+		<item id="/images/vk_touch.css"><![CDATA[89f7458cf9f3a59110795246fa7888af]]></item>
+		<item id="/images/logo.png"><![CDATA[7fea72ddc9b1831f0e9dc5c28024aa29]]></item>
+		<item id="/images/icon_tu.png"><![CDATA[75412f3692533cbcf2ca5f57e7489b6c]]></item>
+		<item id="/images/icon_edit.png"><![CDATA[269df9388f8f713f304a8421d31ee0ed]]></item>
+		<item id="/images/vk_icon_forum.png"><![CDATA[6be4c89368be04f0fdc1d3d4b3169b29]]></item>
+		<item id="/images/vk_icon_user.png"><![CDATA[f379ce790c2eae45aa9af20f358fb1c2]]></item>
+		<item id="/images/icon_arrow_down.png"><![CDATA[1e031b06776d45654aaa801d66384507]]></item>
+		<item id="/images/collapsed_no.png"><![CDATA[03df6a1e5e628092b5e6476e23c896b6]]></item>
+		<item id="/images/icon_digest.png"><![CDATA[ece8114226261db049982aae9f13447f]]></item>
+		<item id="/images/icon_reply.png"><![CDATA[7bfa4c5e812cea8a7aa2249196685c39]]></item>
+		<item id="/images/vk_header.png"><![CDATA[df2204524f1638e50117e446ceaaa210]]></item>
+		<item id="/images/collapsed_yes.png"><![CDATA[6af3fb679b5a9788c982ff279179fbc6]]></item>
+		<item id="/images/index.htm"><![CDATA[d41d8cd98f00b204e9800998ecf8427e]]></item>
+		<item id="/images/vk_icon_hot.png"><![CDATA[eb961a56fc359a31160d479c719ee921]]></item>
+		<item id="/images/titlebg.png"><![CDATA[b819c2a733ee85da493b1640bf13f0fa]]></item>
+		<item id="/images/vk_icon_search.png"><![CDATA[445a244af5346e94a6937650403d4461]]></item>
+		<item id="/images/icon_top.png"><![CDATA[2ef6cd4e04c2f6d7b3990e19961f0e40]]></item>
+		<item id="/images/icon_back.png"><![CDATA[b06a3912a463f726ab212d9b04625892]]></item>
+		<item id="/preview_large.jpg"><![CDATA[3900dbbe0cda1552135a9a064483120a]]></item>
+		<item id="/touch/forum/guide.htm"><![CDATA[7a8f27e115917eff10278a0461c7522b]]></item>
+		<item id="/touch/forum/discuz.htm"><![CDATA[1b7a66b7c71431f18abbb41213c4cb0c]]></item>
+		<item id="/touch/forum/forumdisplay.htm"><![CDATA[1781982e25e6da4c6f176259e152de28]]></item>
+		<item id="/touch/forum/index.htm"><![CDATA[d41d8cd98f00b204e9800998ecf8427e]]></item>
+		<item id="/touch/home/space_profile.htm"><![CDATA[cba72e85de77a0153f42ef5a299e3c44]]></item>
+		<item id="/touch/common/index.htm"><![CDATA[d41d8cd98f00b204e9800998ecf8427e]]></item>
+		<item id="/touch/common/header.htm"><![CDATA[7fb5eb3b1bc7b4dae028f57df9734856]]></item>
+		<item id="/touch/search/forum.htm"><![CDATA[8567446d18f46249ca98a1b3a9802f2e]]></item>
+		<item id="/touch/index.htm"><![CDATA[d41d8cd98f00b204e9800998ecf8427e]]></item>
+		<item id="/touch/member/login.htm"><![CDATA[3db150e94816bca0c666867457737d37]]></item>
+		<item id="/touch/member/register.htm"><![CDATA[2eae920d16e2c1b663945d629bd88f50]]></item>
+		<item id="/index.htm"><![CDATA[d41d8cd98f00b204e9800998ecf8427e]]></item>
+		<item id="/preview.jpg"><![CDATA[c148bef8d972276eab131dfa06eb8901]]></item>
+		<item id="/discuz_style_wekei_touch_news.xml"><![CDATA[4f0c3982df5d22965f6d3600a466b9f3]]></item>
+	</item>
+</root>

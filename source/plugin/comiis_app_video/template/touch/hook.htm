@@ -1,0 +1,131 @@
+<!--{block html}-->
+<script src="./source/plugin/comiis_app_video/static/upload.js"></script>
+<style>
+<!--{if $_G['comiis_video_is_comiis'] == 0}-->
+.comiis_sendbtn {-webkit-appearance:none;line-height:30px;padding:0 15px;font-size:15px;border:none;outline:none;text-align:center;text-decoration:none;overflow:hidden;border-radius:20px;}
+.comiis_input, .comiis_input::-webkit-outer-spin-button, .comiis_input::-webkit-inner-spin-button {-webkit-appearance:none;}
+.comiis_input {-webkit-appearance:none;width:100%;height:1.4em;line-height:1.4;font-size:inherit;border:none;outline:none;background-color:transparent;}
+.comiis_flex {display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;}
+.flex {-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;}
+.bg_0 {background:#53BCF5;}
+.bg_e {background:#f8f8f8;}
+.bg_f {background:#fff;}
+.f14 {font-size:14px;}
+.f_a, .f_a a {color:#f90;}
+.f_c, .f_c a {color:#999;}
+.f_d, .f_d a {color:#bbb;}
+.b_b {border-bottom:1px solid #efefef;}
+.b_ok {border:1px solid #efefef;}
+.mt10 {margin-top:10px;}
+.comiis_p5 {padding:5px;}
+.comiis_p12 {padding:12px;}
+.comiis_stylitit {padding:12px 12px 5px;height:24px;line-height:24px;font-size:13px;}
+.comiis_styli_m {padding:10px 0;margin:0 12px;}
+.styli_tit {padding-right:8px;vertical-align:top;}
+.styli_r {padding-left:8px;}
+<!--{/if}-->
+a.comiis_nokm_mp4btn {display:inline-block;margin:12px;padding:5px 15px;font-size:14px;background:#53BCF5;color:#fff;border-radius:4px;}
+.comiis_nokm_upbox {margin:0 11px;border-radius:5px;}
+.comiis_post_mp4 fieldset {border:none;}
+.comiis_post_mp4 label.radio {margin-right:15px;}
+.comiis_post_mp4_upbtn {padding:12px 0;height:48px;margin:0 12px;position:relative;}
+.comiis_post_mp4_upbtn .mp4_upbtn {position:absolute;top:20px;left:0;right:0;z-index:8;width:160px;height:38px;margin:0 auto;line-height:38px;text-align:center;}
+.comiis_post_mp4_upbtn .mp4_upbtn .comiis_sendbtn {height:38px;line-height:38px;}
+.comiis_post_mp4_upbtn .mp4_ico {margin:15px 0;text-align:center;}
+.comiis_post_mp4_upbtn #uploadControl input {position:absolute;top:20px;left:0;height:48px;width:100%;z-index:10;opacity:0;}
+.comiis_post_mp4 #upload-status-wraper {overflow:hidden;}
+.comiis_post_mp4_tips {margin:0 12px 18px;text-align:center;}
+.progress{height:16px;margin:10px auto;; overflow: hidden;background-color: #f7f7f7;background-image: -moz-linear-gradient(top, #f5f5f5, #f9f9f9);background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f5f5), to(#f9f9f9));background-image: -webkit-linear-gradient(top, #f5f5f5, #f9f9f9);background-image: -o-linear-gradient(top, #f5f5f5, #f9f9f9);background-image: linear-gradient(to bottom, #f5f5f5, #f9f9f9);background-repeat: repeat-x;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;filter: progid:dximagetransform.microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#fff9f9f9', GradientType=0);-webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);-moz-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);}
+.progress .bar{float: left;width: 0;height: 100%;font-size: 12px;color: #ffffff;text-align: center;text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);background-color: #0e90d2;background-image: -moz-linear-gradient(top, #149bdf, #0480be);background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#149bdf), to(#0480be));background-image: -webkit-linear-gradient(top, #149bdf, #0480be);background-image: -o-linear-gradient(top, #149bdf, #0480be);background-image: linear-gradient(to bottom, #149bdf, #0480be);background-repeat: repeat-x;filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff149bdf', endColorstr='#ff0480be', GradientType=0);-webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);-moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;-webkit-transition: width 0.6s ease;-moz-transition: width 0.6s ease;-o-transition: width 0.6s ease;transition: width 0.6s ease;}
+.progress .bar + .bar{-webkit-box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.15);-moz-box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.15);box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.15);}
+.progress-striped .bar{background-color: #149bdf;background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);-webkit-background-size: 40px 40px;-moz-background-size: 40px 40px;-o-background-size: 40px 40px;background-size: 40px 40px;}
+.progress.active .bar{-webkit-animation: progress-bar-stripes 2s linear infinite;-moz-animation: progress-bar-stripes 2s linear infinite;-ms-animation: progress-bar-stripes 2s linear infinite;-o-animation: progress-bar-stripes 2s linear infinite;animation: progress-bar-stripes 2s linear infinite;}
+.progress-danger .bar,
+.progress .bar-danger{background-color: #dd514c;background-image: -moz-linear-gradient(top, #ee5f5b, #c43c35);background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#c43c35));background-image: -webkit-linear-gradient(top, #ee5f5b, #c43c35);background-image: -o-linear-gradient(top, #ee5f5b, #c43c35);background-image: linear-gradient(to bottom, #ee5f5b, #c43c35);background-repeat: repeat-x;filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffc43c35', GradientType=0);}
+.progress-danger.progress-striped .bar,
+.progress-striped .bar-danger{background-color: #ee5f5b;background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);}
+.progress-success .bar,
+.progress .bar-success{background-color: #99DB5c;background-image: -moz-linear-gradient(top, #99DB5d, #99DB5a);background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#99DB5d), to(#99DB5a));background-image: -webkit-linear-gradient(top, #99DB5d, #99DB5a);background-image: -o-linear-gradient(top, #99DB5d, #99DB5a);background-image: linear-gradient(to bottom, #99DB5d, #99DB5a);background-repeat: repeat-x;filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff99DB5d', endColorstr='#ff99DB5a', GradientType=0);}
+.progress-success.progress-striped .bar,
+.progress-striped .bar-success{background-color: #99DB5d;background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);}
+.progress-info .bar,
+.progress .bar-info{background-color: #4bb1cf;background-image: -moz-linear-gradient(top, #5bc0de, #339bb9);background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#339bb9));background-image: -webkit-linear-gradient(top, #5bc0de, #339bb9);background-image: -o-linear-gradient(top, #5bc0de, #339bb9);background-image: linear-gradient(to bottom, #5bc0de, #339bb9);background-repeat: repeat-x;filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff5bc0de', endColorstr='#ff339bb9', GradientType=0);}
+.progress-info.progress-striped .bar,
+.progress-striped .bar-info{background-color: #5bc0de;background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);}
+.progress-warning .bar,
+.progress .bar-warning{background-color: #faa732;background-image: -moz-linear-gradient(top, #fbb450, #f89406);background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbb450), to(#f89406));background-image: -webkit-linear-gradient(top, #fbb450, #f89406);background-image: -o-linear-gradient(top, #fbb450, #f89406);background-image: linear-gradient(to bottom, #fbb450, #f89406);background-repeat: repeat-x;filter: progid:dximagetransform.microsoft.gradient(startColorstr='#fffbb450', endColorstr='#fff89406', GradientType=0);}
+.progress-warning.progress-striped .bar,
+.progress-striped .bar-warning{background-color: #fbb450;background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);}
+</style>
+<!--{if $_G['comiis_video_is_comiis'] == 0}-->
+<a href="javascript:$('.comiis_post_mp4').toggle();" class="comiis_nokm_mp4btn">{$comiis_app_video_lang['001']}</a>
+<!--{/if}-->
+<div id="youku-upload" class="comiis_post_mp4 bg_f{if $_G['comiis_video_is_comiis'] == 0} comiis_nokm_upbox b_ok{else} b_b{/if}"{if $_G['comiis_video_is_comiis'] == 0} style="display:none;"{/if}>
+    <div name="video-upload">
+		<input type="hidden" name="public_type" id="public_type1" value="all" checked="checked">
+        <fieldset>
+            <ul>
+                <li class="comiis_post_mp4_upbtn"{if $_G['comiis_video_is_comiis'] == 0} style="padding:12px 0;"{/if}>
+                    <div class="mp4_upbtn"><div class="comiis_sendbtn bg_e b_ok f_a">+ {$comiis_app_video_lang['003']}</div></div>
+                    <div id="uploadControl"></div>
+                </li>
+				<div class="comiis_post_mp4_tips f_d">{$comiis_app_video_lang['004']}</div>			
+                <div style="display:none;">
+                <div id="youku-upload_title" style="display:none;">
+					<li class="comiis_styli_m f14 comiis_flex b_b">
+						<label class="styli_tit" for="input01" style="padding-right:14px;">{$comiis_app_video_lang['006']}</label>
+						<div class="flex"><input type="text" class="comiis_input kmshow f_c" id="input01" name="title" placeholder="{$comiis_app_video_lang['005']}{$comiis_app_video_lang['006']}"></div>
+					</li>
+                    <li class="comiis_styli_m f14 comiis_flex b_b">      
+                        <label class="styli_tit" for="textarea">{$comiis_app_video_lang['007']}</label>
+                        <div class="flex bg_e comiis_p5"><textarea class="comiis_pxs f_c" id="textarea" name="description" placeholder="{$comiis_app_video_lang['005']}{$comiis_app_video_lang['007']}"></textarea></div>
+                    </li>
+                    <li class="comiis_styli_m f14 comiis_flex b_b">
+                        <label class="styli_tit" for="input02" style="padding-right:14px;">{$comiis_app_video_lang['008']}</label>
+                        <div class="flex">
+                            <input type="text" class="comiis_input kmshow f_c" id="input02" name="up_tags" placeholder="{$comiis_app_video_lang['005']}{$comiis_app_video_lang['008']}" value="{$comiis_app_video_lang['009']}">
+                            <span class="help-inline"></span>
+                        </div>
+                    </li>
+                    <li class="comiis_styli_m f14 comiis_flex b_b">
+                        <label class="styli_tit" for="category-node">{$comiis_app_video_lang['010']}</label>
+                        <div class="styli_r">
+                            <select id="category-node" name="category"></select>
+                        </div>
+                    </li>
+                    <li class="comiis_styli_m f14 comiis_flex b_b">
+                        <label class="styli_tit">{$comiis_app_video_lang['011']}</label>
+                        <div class="styli_r">
+                            <label class="radio"><input type="radio" name="copyright_type" id="copyright_type2" value="original" checked=""> {$comiis_app_video_lang['012']}</label>
+                            <label class="radio"><input type="radio" name="copyright_type" id="copyright_type1" value="reproduced"> {$comiis_app_video_lang['013']}</label>
+                        </div>
+                    </li>
+					<li class="comiis_styli_m comiis_flex" style="padding-bottom:15px;">
+						<div class="styli_tit"><button type="button" class="comiis_sendbtn bg_0 f_f" id="btn-upload-start">{$comiis_app_video_lang['014']}</button></div>
+						<div class="flex"></div>
+					</li>
+                </div>
+                </div>
+            </ul>
+        </fieldset>
+    </div>
+    <div id="upload-status-wraper" class="bg_f" style="overflow:hidden;"></div>
+</div>
+<script>
+    var USE_STREAM_UPLOAD = true;
+    jQuery(document).ready(function(){ 
+        var param = {
+            client_id : "{$_G['cache']['plugin']['comiis_app_video']['clientid']}",
+            access_token : "{$_G['comiis_video_access_token']}",
+            completeCallback : "comiis_uploadComplete"
+        };
+        youkuUploadInit(param);
+    });
+    function comiis_uploadComplete(data){    
+		$('#needmessage').val($('#needmessage').val() + "[media=x,500,375]http://player.youku.com/player.php/sid/"+data.videoid+"/v.swf[/media]");
+		popup.open("{$comiis_app_video_lang['015']}", 'alert');
+
+        uploadagain();
+    }
+</script>
+<!--{/block}-->

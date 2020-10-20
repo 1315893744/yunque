@@ -1,0 +1,100 @@
+<!--{template common/header}-->
+<link rel="stylesheet" type="text/css" href='template/quater_3_zuk/group/group.css' />
+	<div id="pt" class="bm cl">
+		<div class="z">
+			<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a><em>&raquo;</em><a href="group.php">{$_G[setting][navs][3][navname]}</a>$navigation
+		</div>
+	</div>
+	<!--{ad/text/wp a_t}-->
+	<style id="diy_style" type="text/css"></style>
+	<div class="wp">
+		<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+	</div>
+	<div id="ct" class="ct2 wp cl">
+		<div class="mn">
+			<!--[diy=diycontenttop]--><div id="diycontenttop" class="area"></div><!--[/diy]-->
+			<div class="bm bmw">
+				<!--[diy=diy5]--><div id="diy5" class="area"></div><!--[/diy]-->
+			</div>
+			<!--[diy=diycommendtop]--><div id="diycommendtop" class="area"></div><!--[/diy]-->
+			<!--{hook/index_header}-->
+
+			<!--[diy=diycategorytop]--><div id="diycategorytop" class="area"></div><!--[/diy]-->
+			<!--{hook/index_top}-->
+			<div class="bm">
+				<div class="bm_h cl">
+					<h3>{lang group_categories}</h3>
+				</div>
+				<div class="bm_c" style="padding: 10px 3px;">
+					<!--{loop $first $groupid $group}-->
+							<dl class="mbm pbm bbda">
+								<dt class="pbn">
+									<span class="y xi2"><!--{loop $group['secondlist'] $fid}--><a href="group.php?sgid=$fid">$second[$fid][name]</a> <!--{/loop}--><a href="group.php?gid=$groupid">{lang more} &rsaquo;</a></span>
+									<strong class="xs2"><a href="group.php?gid=$groupid">$group[name]</a></strong><!--{if $group[groupnum]}--><span class="xg1">($group[groupnum])</span><!--{/if}-->
+								</dt>
+								<dd>
+									<!--{loop $lastupdategroup[$groupid] $val}-->
+										<a href="forum.php?mod=group&fid=$val[fid]">$val[name]</a> &nbsp;&nbsp;
+									<!--{/loop}-->
+								</dd>
+							</dl>
+					<!--{/loop}-->
+				</div>
+			</div>
+			<!--[diy=diycontentbottom]--><div id="diycontentbottom" class="area"></div><!--[/diy]-->
+			<!--{hook/index_bottom}-->
+		</div>
+
+		<div class="sd">
+			<div class="drag">
+				<!--[diy=diysidetop]--><div id="diysidetop" class="area"></div><!--[/diy]-->
+			</div>
+            				<!--{if helper_access::check_module('group')}-->
+                            <div class="cl" style="padding: 15px; box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.02); background: #FFFFFF;">
+                             <div class="thread_post cl">
+                              <a href="forum.php?mod=group&action=create" id="create_group_btn">创建新的群组</a>
+                             </div>
+                            </div>
+                            <!--{/if}-->
+			<!--{hook/index_side_top}-->
+			<!--{if helper_access::check_module('group')}-->
+				<!--{if empty($gid) && empty($sgid)}-->
+					<div class="bm" style="padding-top: 0;">
+						<div class="bm_h cl">
+							<h2 style="padding-left: 8px;">{lang create_group_step}</h2>
+						</div>
+						<div class="bm_c">
+							<ul id="g_guide" class="mbm">
+								<li><label><strong class="xi1">{lang group_create}</strong><span class="xg1">{lang create_group_message1}</span></label></li>
+								<li><label><strong class="xi1">{lang personality_setting}</strong><span class="xg1">{lang create_group_message2}</span></label></li>
+								<li><label><strong class="xi1">{lang invite_friend}</strong><span class="xg1">{lang create_group_message3}</span></label></li>
+								<li><label><strong class="xi1">{lang group_upgrade}</strong><span class="xg1">{lang create_group_message4}</span></label></li>
+							</ul>
+						</div>
+					</div>
+				<!--{else}-->
+					<div class="bm bw0">
+						<div class="bm_c">
+							<a href="forum.php?mod=group&action=create&fupid=$fup&groupid=$sgid" id="create_group_btn"><img src="{IMGDIR}/create_group.png" alt="{lang group_create}" /></a>
+						</div>
+					</div>
+				<!--{/if}-->
+			<!--{/if}-->
+			<div class="bm">
+               <div class="bm_h cl">
+			      <h2 style="padding-left: 8px;">推荐群组</h2>
+			   </div>
+			   <!--[diy=diysidemiddle]--><div id="diysidemiddle" class="area"></div><!--[/diy]-->
+			</div>
+			<div class="drag">
+				<!--[diy=diysidebottom]--><div id="diysidebottom" class="area"></div><!--[/diy]-->
+			</div>
+			<!--{hook/index_side_bottom}-->
+		</div>
+	</div>
+
+<div class="wp mtn">
+	<!--[diy=diy4]--><div id="diy4" class="area"></div><!--[/diy]-->
+</div>
+
+<!--{template common/footer}-->

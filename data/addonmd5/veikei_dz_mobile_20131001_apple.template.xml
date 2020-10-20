@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Addon MD5]]></item>
+	<item id="ID"><![CDATA[veikei_dz_mobile_20131001_apple.template]]></item>
+	<item id="RevisionID"><![CDATA[28708]]></item>
+	<item id="SN"><![CDATA[2020050605MsPqQ4eDmM]]></item>
+	<item id="RevisionDateline"><![CDATA[1573265727]]></item>
+	<item id="Data">
+		<item id="/images/vk_touch.css"><![CDATA[85173f39cb8a99a7eeedd51767c9cd5a]]></item>
+		<item id="/images/logo.png"><![CDATA[4c8313611ab070b6c8fd29eae218eddc]]></item>
+		<item id="/images/icon_tu.png"><![CDATA[75412f3692533cbcf2ca5f57e7489b6c]]></item>
+		<item id="/images/icon_edit.png"><![CDATA[269df9388f8f713f304a8421d31ee0ed]]></item>
+		<item id="/images/vk_icon_forum.png"><![CDATA[aa6e238a43dfc2943efb67d49480a3ff]]></item>
+		<item id="/images/vk_icon_user.png"><![CDATA[0ead7c625d864710e110c065c453fbbf]]></item>
+		<item id="/images/icon_arrow_down.png"><![CDATA[1e031b06776d45654aaa801d66384507]]></item>
+		<item id="/images/collapsed_no.png"><![CDATA[48f9f229694f830ec3a7a47df74c82dd]]></item>
+		<item id="/images/icon_digest.png"><![CDATA[ece8114226261db049982aae9f13447f]]></item>
+		<item id="/images/icon_reply.png"><![CDATA[7bfa4c5e812cea8a7aa2249196685c39]]></item>
+		<item id="/images/vk_header.png"><![CDATA[7de224652a45c34dbc481d8a71044d75]]></item>
+		<item id="/images/collapsed_yes.png"><![CDATA[81bd256688520aaf563c0db7b623f2b3]]></item>
+		<item id="/images/index.htm"><![CDATA[d41d8cd98f00b204e9800998ecf8427e]]></item>
+		<item id="/images/vk_icon_hot.png"><![CDATA[2ec0bab78b86cb2499c7910534cea194]]></item>
+		<item id="/images/titlebg.png"><![CDATA[b819c2a733ee85da493b1640bf13f0fa]]></item>
+		<item id="/images/vk_icon_search.png"><![CDATA[2493e4e0be26cd7a2aee606559d62fcd]]></item>
+		<item id="/images/icon_top.png"><![CDATA[2ef6cd4e04c2f6d7b3990e19961f0e40]]></item>
+		<item id="/images/icon_back.png"><![CDATA[b06a3912a463f726ab212d9b04625892]]></item>
+		<item id="/preview_large.jpg"><![CDATA[ef7c111928cdd83a2f835dd92dcd5cdf]]></item>
+		<item id="/discuz_style_veikei_dz_mobile_20131001_apple.xml"><![CDATA[f5d853dc0e4ef3771ed8dfa2f4587342]]></item>
+		<item id="/touch/forum/guide.htm"><![CDATA[7a8f27e115917eff10278a0461c7522b]]></item>
+		<item id="/touch/forum/discuz.htm"><![CDATA[1b7a66b7c71431f18abbb41213c4cb0c]]></item>
+		<item id="/touch/forum/forumdisplay.htm"><![CDATA[1781982e25e6da4c6f176259e152de28]]></item>
+		<item id="/touch/forum/index.htm"><![CDATA[d41d8cd98f00b204e9800998ecf8427e]]></item>
+		<item id="/touch/home/space_profile.htm"><![CDATA[7738e7ed675f840f09ecdf8beb7f5661]]></item>
+		<item id="/touch/common/index.htm"><![CDATA[d41d8cd98f00b204e9800998ecf8427e]]></item>
+		<item id="/touch/common/header.htm"><![CDATA[45378336ff54cdb43ea191a7d6bce21c]]></item>
+		<item id="/touch/search/forum.htm"><![CDATA[8567446d18f46249ca98a1b3a9802f2e]]></item>
+		<item id="/touch/index.htm"><![CDATA[d41d8cd98f00b204e9800998ecf8427e]]></item>
+		<item id="/touch/member/login.htm"><![CDATA[93e4440c04c33c2d7c78f0b4dc543a9d]]></item>
+		<item id="/touch/member/register.htm"><![CDATA[649baa86e81719d1c8b1d279967cffa2]]></item>
+		<item id="/index.htm"><![CDATA[7215ee9c7d9dc229d2921a40e899ec5f]]></item>
+		<item id="/preview.jpg"><![CDATA[bd17f4a31cb31054b50da9768c543e89]]></item>
+	</item>
+</root>

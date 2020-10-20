@@ -1,0 +1,45 @@
+@import "public";
+html,body{height:100%;background:#fff;font-size:12/@r;}
+
+.comm_right{height:100%;width:12/@r;position:absolute;right:10/@r;top:0;background:url(../images/right.png) no-repeat right center/12/@r 12/@r;}
+
+#love_list li{position:relative;padding:15/@r 20/@r;display:-webkit-box;display:box;-webkit-box-align:center;box-align:center;color:#999;}
+#love_list .user_author{width:40/@r;height:40/@r;}
+#love_list .user_author img{width:100%;border-radius:40/@r;}
+#love_list .user_info{width:150/@r;padding:0 10/@r;box-sizing:border-box;}
+#love_list .user_info .user_header{display:-webkit-box;display:box;-webkit-box-align:center;box-align:center;}
+#love_list .user_info .user_name{font-size:14/@r;color:#222;height:30/@r;line-height:30/@r;}
+#love_list .user_info .reward_name{font-size:10/@r;color:#fff;background:#fdc846;margin-left:4/@r;padding:2/@r 5/@r;border-radius:3/@r;}
+#love_list .user_info .user_group{border:1px solid #27b7ff;font-size:10/@r;display:-webkit-box;display:box;line-height:14/@r;background:#27b7ff;margin-left:3/@r;border-radius:3/@r;overflow:hidden;}
+#love_list .user_info .user_group div{background:#fff;color:#27b7ff;padding:0 2/@r;}
+.for-grade(18);
+.for-grade( @n,@i:1 ) when ( @i<=@n ){
+	#love_list .user_info .user_group.v@{i}:before{
+		content:'';
+		display:block;
+		width:17/@r;
+		height:14/@r;
+		background:url(../images/level_icon.png) no-repeat -16*(-1+@i)/@r center/16*18/@r 12/@r;
+	}
+	.for-grade(@n,(@i+1));
+}
+#love_list .user_info .user_footer{font-size:12/@r;}
+#love_list .user_info .user_footer span{display:inline-block;padding:0 3/@r;}
+#love_list .reward_wrap{-webkit-box-flex:1;box-flex:1;width:1px;text-align:right;}
+#love_list .reward_wrap .reward_image{width:30/@r;margin-right:4/@r;}
+#love_list .reward_wrap .love_num{width:100%;display:-webkit-box;display:box;-webkit-box-pack:center;box-pack:center;}
+#love_list .love_num{-webkit-box-flex:1;box-flex:1;width:1px;display:-webkit-box;display:box;-webkit-box-pack:end;box-pack:end;}
+#love_list .love_num .text{height:14/@r;line-height:16/@r;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;-webkit-box-flex:1;box-flex:1;width:1px;text-align:right;}
+#love_list .love_num .icon{width:20/@r;height:14/@r;background:url(../images/love_nnum.png) no-repeat center center/14/@r 14/@r;}
+#love_list .reward .icon{background:url(../images/dashang.png) no-repeat center center/14/@r 14/@r;}
+#love_list li+li{border-top:1px solid #f1f1f1;}
+.loading{height:40/@r;display:-webkit-box;display:box;-webkit-box-pack:center;box-pack:center;-webkit-box-align:center;box-align:center;display:none;}
+.loading_main{width:20/@r;height:20/@r;background:url(../images/loading.png) no-repeat center center/20/@r 20/@r;animation:loading 1s infinite linear paused;-webkit-animation:loading 1s infinite linear paused;}
+@keyframes loading{
+	0%{
+		transform:rotateZ(0deg);
+	}
+	100%{
+		transform:rotateZ(360deg);
+	}
+}

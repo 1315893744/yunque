@@ -1,0 +1,78 @@
+/* 头部 */
+.comiis_achead {height:30px;line-height:30px;padding:7px 5px;overflow:hidden;background:#fff;border-bottom:1px solid #efefef}
+.comiis_achead h2 {float:left;width:50%;text-align:center;font-size:16px;font-weight:100}
+.comiis_achead .head_l {float:left;width:25%;height:30px;overflow:hidden}
+.comiis_achead .head_r {float:right;width:25%;height:30px;text-align:right;overflow:hidden}
+.comiis_achead img {height:20px;padding:5px}
+/* 单图广告-满屏  */
+.comiis_ac_ggbig {font-size:0;overflow:hidden}
+.comiis_ac_ggbig a {display:block;margin:0px;position:relative}
+.comiis_ac_ggbig a img {display:block}
+.comiis_ac_ggbig a em {position:absolute;bottom:8px;right:8px;display:block;height:21px;line-height:21px;background:rgba(0,0,0,0.6);font-size:12px;color:#fff;padding:0px 8px;overflow:hidden;border-radius:2px}
+/* 单图广告-左右留边 */
+.comiis_ac_gg a {margin:13px 0}
+.comiis_ac_gg a img {border-radius:2px}
+/* 导航 */
+.comiis_acheader {height:40px;width:100%;overflow:hidden}
+#comiis_actop_box {height:39px;position:relative}
+.comiis_actop_ico_box{position:absolute;top:0px;right:0;display:block;width:55px;height:39px;z-index:10}
+.comiis_actop_ico_l{width:20px;height:39px;overflow:hidden;float:left;background: -webkit-linear-gradient(left,rgba(255,255,255,0),rgba(255,255,255,1));background: -moz-linear-gradient(left,rgba(255,255,255,0),rgba(255,255,255,1))}
+.comiis_actop_ico {width:34px;height:27px;text-align:center;overflow:hidden;z-index:20;float:right;padding-top:12px}
+.comiis_actop_ico img {height:15px;-webkit-transition: all .2s ease;transition: all .2s ease}
+.comiis_actop_ico_on img {-webkit-transform: rotate(180deg);transform: rotate(180deg)}
+#comiis_actop_nvyzvl {height:40px;text-align:center;white-space:nowrap;width:100%}
+#comiis_actop_nvyzvl li {float:left;width:auto;overflow:hidden;position:relative}
+#comiis_actop_nvyzvl em {position:absolute;left:50%;bottom:2px;margin-left:-9px;height:4px;width:18px;border-radius:10px}
+#comiis_actop_nvyzvl a {display:inline-block;font-size:15px;height:40px;line-height:38px;padding:0 12px}
+/* 二级导航 */
+.comiis_ac_my {height:18px;line-height:18px;padding:10px 0;width:100%;overflow:hidden}
+.comiis_ac_my li {float:left;width:25%;font-size:14px;text-align:center;box-sizing:border-box}
+.comiis_ac_my li a {display:block}
+.comiis_ac_my li:first-child {border-left:none}
+.swiper-wrapper{position:relative;width:100%;height:100%;z-index:1;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-transition-property:-webkit-transform;-moz-transition-property:-moz-transform;-o-transition-property:-o-transform;-ms-transition-property:-ms-transform;transition-property:transform;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}
+.swiper-slide{-webkit-flex-shrink:0;-ms-flex:0 0 auto;flex-shrink:0;width:100%;height:100%;position:relative}
+/* 活动内容 */
+.comiis_ach10 {height:10px;background:#f8f8f8;border-bottom:1px solid #efefef;overflow:hidden}
+.comiis_activity {padding:0 12px;overflow:hidden}
+.comiis_activity li {width:100%;overflow:hidden;padding-top:12px}
+.comiis_activity li:first-child {border-top:none !important}
+.comiis_activity li a {display:block}
+.comiis_activity li a .act_tit {line-height:26px;font-size:18px}
+.comiis_activity li a .act_time {margin-top:3px;line-height:20px;font-size:12px}
+.comiis_activity li a .act_time span {display:inline-block;padding:0 5px;margin-right:8px;border-radius:2px}
+.comiis_activity li a .act_img {width:100%;margin:10px 0;overflow:hidden}
+.comiis_activity li a .act_img img {width:100%;border-radius:3px}
+.comiis_activity li a .act_noimg {width:100%;height:140px;line-height:140px;text-align:center;font-size:18px;margin:10px 0;overflow:hidden;border-radius:4px;filter:alpha(opacity=60);-moz-opacity:0.6;-khtml-opacity:0.6;opacity:0.6}
+.comiis_activity li a .act_btn {height:40px;line-height:40px;padding-bottom:15px;font-size:16px}
+.comiis_activity li a .act_btn span {padding:0 5px;font-size:20px}
+.comiis_activity li a .act_btn em {float:right;padding:0 20px;font-size:16px;border-radius:3px}
+/* 无数据提示 */
+.comiis_ac_nodata {padding:35px 15px;text-align:center;overflow:hidden}
+.comiis_ac_nodata img {height:60px}
+.comiis_ac_nodata h2 {font-size:14px;font-weight:100;padding:5px 25px}
+/* 首页调用样式 */
+.comiis_ac_homebox {width:100%;padding:0;margin-top:10px;border-collapse:inherit;overflow:hidden}
+.comiis_ac_homebox h2 {height:28px;line-height:28px;font-size:16px;font-weight:100;padding:7px 0 6px;margin:0 12px 0;overflow:hidden}
+.comiis_ac_homebox h2 span {float:right;font-size:13px;line-height:36px}
+.comiis_ac_homebox .ac_homelist {margin:0 12px;overflow:hidden}
+.comiis_ac_homebox .ac_homelist li:first-child {border-top:none !important}
+.comiis_ac_homebox .ac_homelist li a {display:block;width:100%;padding:12px 0;overflow:hidden}
+.comiis_ac_homebox .ac_homelist_img {float:left;width:100px;height:75px;overflow:hidden;margin-right:10px;border-radius:2px}
+.comiis_ac_homebox .ac_homelist_img img {width:100px;height:auto}
+.comiis_ac_homebox .ac_homelist_info {height:75px;overflow:hidden}
+.comiis_ac_homebox .ac_homelist_info p, .comiis_ac_homebox .ac_homelist_info span {display:block;overflow:hidden}
+.comiis_ac_homebox .ac_homelist_info p {max-height:40px;line-height:20px;font-size:15px;margin-bottom:4px}
+.comiis_ac_homebox .ac_homelist_info span {height:16px;line-height:16px;overflow:hidden}
+.acf_0, .acf_0 a, a.acf_0:link, a.acf_0:visited, a.acf_0:hover {color:#53bcf5}
+.acf_a, .acf_a a, a.acf_a:link, a.acf_a:visited, a.acf_a:hover {color:#f90}
+.acf_c, .acf_c a, a.acf_c:link, a.acf_c:visited, a.acf_c:hover {color:#999}
+.acf_d, .acf_d a, a.acf_d:link, a.acf_d:visited, a.acf_d:hover {color:#bbb}
+.acbg_0 {background:#53BCF5}
+.acbg_f {background:#fff}
+.acbg_a {background:#fcad30;color:#fff}
+.acbg_b {background:#eee;color:#999}
+.acb_0 {border-color:#53bcf5}
+.acb_t {border-top:1px solid #efefef}
+.acb_l {border-left:1px solid #efefef}
+.acb_b {border-bottom:1px solid #efefef}
+.comiis_ac_imgbg {background-color:rgba(0,0,0,0.02);background-image:url(comiis_imgbg.png);background-repeat:no-repeat;background-size:22% auto;background-position:center;border-radius:2px}

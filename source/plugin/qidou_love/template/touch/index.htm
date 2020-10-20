@@ -1,0 +1,50 @@
+<!--{template qidou_love:header}-->
+<link rel="stylesheet" type="text/css" href="{$siteurl}/source/plugin/qidou_love/static/css/index.css" />
+<body>
+    <!--{template qidou_love:top_menu}-->
+    <!--{if !$this_user['user_album']}-->
+    <div class="photo_warning" onclick="open_page_url( siteurl+'/plugin.php?id=qidou_love:qidou_user&act=compile' );"><div class="icon"></div><div class="text">{$lang['h_photo_warning']}</div></div>
+    <!--{/if}-->
+    <ul id="user_list">
+        <!--{loop $love_user $key $love}-->
+        <li>
+            <div class="user_wrap">
+                <div class="user_header">
+                    <div class="user_honor"><!--{if !$key}-->{$lang['h_ghonor']}<!--{else}-->{$lang['h_honor']}<!--{/if}--></div>
+                    <div class="love_num"><img src="{$siteurl}/source/plugin/qidou_love/static/images/love_num.png"/><span>{$love['charm_num']}</span></div>
+                    <div class="user_photo">
+                        <img src="{$love['user_album']}" />
+                    </div>
+                    <div class="user_box">
+                        <div class="user_name">{$love['user_name']}</div>
+                        <div class="user_distance" is_calc="false" lat="{$love['lat']}" lng="{$love['lng']}"></div>
+                    </div>
+                </div>
+                <div class="user_footer">
+                    <div class="user_info">{$love['age']}{$lang['h_age_unit']} | {$love['height']}CM</div>
+                    <div class="go_greeting" data-uid="{$love['uid']}"></div>
+                </div>
+                <a class="user_link" href="{$siteurl}/plugin.php?id=qidou_love:qidou_user&love_id={$love['uid']}"></a>
+            </div>
+        </li>
+        <!--{/loop}-->
+    </ul>
+    <!--{template qidou_love:common_greeting}-->
+    <div class="loading"><div class="loading_main"></div></div>
+    <script src="{$siteurl}/source/plugin/qidou_love/static/js/jquery-2.1.3.min.js"></script>
+    <script src="{$siteurl}/source/plugin/qidou_love/static/js/layer_mobile/layer.js"></script>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=836ac091ff2acb607893d3d7f2fee530"></script>
+    <script>
+        var loading_data = {
+            start:0,
+            gender:{$condition['gender']},
+            type:{$type}
+        };
+        open_page('.user_link');
+        get_position('.user_distance');
+        post_greeting('#user_list','.go_greeting');
+        var loading_url = siteurl+'/plugin.php?id=qidou_love:qidou_show&act=ajax_index_list&formhash={FORMHASH}';
+        down_loading(loading_data,loading_url,'#user_list','.user_distance');
+    </script>
+</body>
+</html>

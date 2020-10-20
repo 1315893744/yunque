@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>充值中心</title>
+    <link href="./css/base.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="./css/help.css"/>
+</head>
+<body>
+<div class="w_1200 fw_box ">
+    <div class="left_nav">
+        <ul class="bzzx_nav_list">
+            <li><a href="/" class="icon_1">首页</a></li>
+            <li class="on"><a href="javascript:void(0)" class="icon_2"> 会员充值</a></li>
+        </ul>
+    </div>
+    <div class="fw_conent">
+        <div class="bzzx_bt" id="name-0"></div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="zwfb_shop_table">
+            <tr valign="top" id="tops">
+                <td align="right" width="70">充值金额：</td>
+                <td>
+                    <ul class="fwmc_xxk" id="goods-list">
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td height="20"></td>
+                <td></td>
+            </tr>
+            <tr id="qr" style="display: none;">
+                <td align="right">支付扫码：</td>
+                <td>
+                    <div class="zwfb_zje">
+                        <div style="height: 180px;margin:10px 20px;" id="qrcode"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr id="order_id" style="display:none;">
+                <td align="right" height="20">订单号：</td>
+                <td>
+                    <div class="zwfb_zje" id="ids"></div>
+                </td>
+            </tr>
+            <tr id="price">
+                <td align="right">价格：</td>
+                <td>
+                    <div class="zwfb_zje"><span>0.00</span> <i>元</i></div>
+                </td>
+            </tr>
+            <tr>
+                <td height="20"></td>
+                <td></td>
+            </tr>
+            <tr id="btns">
+                <td></td>
+                <td style="display:flex;">
+                    <a class="ty_but ml20" id="wechat-pay" onclick="toPay('wechat_scan')"
+                       href="javascript:void(0)">微信</a>
+                    <a class="ty_but ml20" id="ali-pay" onclick="toPay('alipay_web')" href="javascript:void(0)">支付宝</a>
+                </td>
+            </tr>
+        </table>
+        <div class="gmxz_tip"> 购买须知：
+            <p> 如有问题请联系管理员</p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="./js/jquery-1.8.1.min.js"></script>
+<script src="../js/jquery.qrcode.min.js"></script>
+<script src="https://cdn.staticfile.org/axios/0.19.0/axios.min.js"></script>
+<script src="https://cdn.staticfile.org/qs/6.8.0/qs.min.js"></script>
+<script src="../js/base64.js"></script>
+<script type="text/javascript">
+    var onpay = 0
+    var jq = jQuery.noConflict();
+    var amount = 0.01;
+    var moneyName = '';
+    var chooseGoods = -1;
+    var goodList = [];
+    jq(document).ready(function (e) {
+        loadSetting();
+        intGoods();
+    });
+
+    function loadSetting() {
+        axios.post("/plugin.php?id=yimen_app&s=order/info")
+            .then((res) => {
+                console.log(res)
+                moneyName = res.data.data.moneyName
+                jq("#name-0").html('<strong>充值中心</strong>充值站内' + moneyName + '，支持<span>微信、支付宝</span>')
+                if (res.data.data.payType[0] == 0) {
+                    jq("#wechat-pay").css('display', 'none');
+                }
+                if (res.data.data.payType[1] == 0) {
+                    jq("#ali-pay").css('display', 'none');
+                }
+            });
+    }
+
+    function intGoods() {
+        axios.post("/plugin.php?id=yimen_app&s=goods/lists")
+            .then((res) => {
+                res.data.data.forEach((item) => {
+                    goodList.push({
+                        id: item.id,
+                        amount: item.amount,
+                        name: str_decode(item.name)
+                    })
+                })
+                loadGoods();
+            });
+    }
+
+    function loadGoods() {
+        var html = '';
+        goodList.forEach(function (item, index) {
+            html += `<li>
+                        <p>${item.name}</p>
+                        <i>${item.amount}</i>元
+                    </li>
+                    `;
+
+        });
+        jq('#goods-list').html(html);
+        jq("#goods-list li").click(function () {
+            jq(this).addClass("on").siblings().removeClass("on");
+            chooseGoods = jq(this).index()
+            tola();
+        });
+    }
+
+    function tola() {
+        var li = jq(".fwmc_xxk").children("li.on");
+        amount = li.children("i").text();
+        jq(".zwfb_zje span").text(amount);
+    }
+
+    function toPay(type) {
+        if (chooseGoods < 0) {
+            alert('请选择金额');
+            return;
+        }
+        var data = {
+            'goods_id': goodList[chooseGoods]['id'],
+            "amount": goodList[chooseGoods]['amount'],
+            "name": str_encode(goodList[chooseGoods]['name']),
+            "type": type
+        };
+        jq.ajax({
+            url: "/plugin.php?id=yimen_app&s=order/create",
+            type: "POST",
+            data: data,
+            dataType: 'json',
+            success: (res) => {
+                if (res.code == 1) {
+                    if (type == 'wechat_scan') {
+                        var order_id = res.order_id
+                        jq.ajax({
+                            url: "/plugin.php?id=yimen_app&s=pay/" + type + "&order_id=" + res.order_id,
+                            type: "POST",
+                            data: data,
+                            dataType: 'json',
+                            success: (ress) => {
+                                if (ress.code == 1) {
+                                    jq('#order_id').attr("style", "");
+                                    jq('#ids').html(order_id);
+                                    //jq('#price').attr("style", "display:none;");
+                                    jq('#tops').attr("style", "display:none;");
+                                    jq('#btns').attr("style", "display:none;");
+                                    jq('#qrcode').qrcode({
+                                        text: ress.qrcode,
+                                        height: 160,
+                                        width: 160,
+                                        logo: '../img/wx.jpg'//这里配置Logo的地址即可。
+                                    });
+                                    jq('#qr').attr("style", "");
+                                    find_order(order_id)
+                                } else {
+                                    alert(ress.msg);
+                                }
+                            }
+                        });
+                    } else {
+                        window.location.href = "/plugin.php?id=yimen_app&s=pay/" + type + "&order_id=" + res.order_id
+                    }
+                } else {
+                    alert(res.msg);
+                }
+            }
+        });
+    }
+
+    function find_order(order_id) {
+        jq.ajax({
+            url: "/plugin.php?id=yimen_app&s=pay/wx_find&order_id=" + order_id,
+            type: "GET",
+            dataType: 'json',
+            success: (res) => {
+                if (res.code == 1) {
+                    location.reload();
+                } else {
+                    setTimeout(() => {
+                        find_order(order_id)
+                    }, 3000);
+                }
+            }
+        });
+    }
+</script>
+</body>
+</html>

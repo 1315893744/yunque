@@ -1,0 +1,155 @@
+.signpoint{
+    margin-top: 10px;
+    color: #222;
+    font-weight: bold;
+    display: inline-block;
+	width: 100%;
+}
+.signleft
+{
+    width: 50%;
+    height :190px;
+    border-right: 1px solid red;
+    float: left;
+}
+.signright
+{
+    padding-left: 20px;
+    width: 40%;
+    float: left;
+}
+.signinfor
+{
+    width: 100%;
+    font-size: 13px;
+    font-weight: normal;
+    display :inline-block;
+    text-indent: 10px;
+}
+.rtitle
+{
+    font-size: 16px;
+    font-weight: bold;
+}
+.signinfor p
+{
+    line-height: 25px;
+    margin: 0px;
+}
+
+.signinfor .name
+{
+   font-weight: bolder;
+    font-family: Arial;
+    font-size :18px;
+    color: red;
+	padding:0px 3px;
+}
+.signinfor .times
+{
+    font-size: 20px;
+}
+.signleft .ct {
+  height: 30px;
+  line-height: 30px;
+  padding-left: 50px;
+}
+
+.signlistheader
+{
+    height: 36px;
+    background: white url(hotbg.jpg) no-repeat;
+    text-indent: 160px;
+    line-height: 42px;
+    color: #123;
+    width: 100%;
+    position: relative;
+    font-size: 16px;
+    font-weight: bold;
+    color: #2B96CC;
+}
+.signlist
+{
+    margin: 10px auto;
+    border: 1px solid #EEE;
+    padding-bottom: 10px !important;
+}
+
+
+.head img
+{
+    height: 90px;
+    width: 90px;
+	margin: 10px auto;
+    border: none;
+}
+.infor
+{
+    width: 130px;
+    margin-left: 10px;
+}
+.infor p
+{
+    margin: 0px;
+    padding: 0px;
+    line-height: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block;
+}
+.times
+{
+    color: Red;
+    font-size: 14px;
+    font-family: Verdana;
+}
+.list ul
+{
+    padding: 10px 2px;
+    width: 100%;
+}
+
+.list li
+{
+    margin: 5px 5px 5px 0px;
+    width: 230px;
+    float: left;
+    background: white;
+    border: 1px solid #eee;
+	position:relative;
+}
+.more {
+	float:right;
+	margin-right:10px;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  text-indent: 0px;
+}
+/*排名*/
+.index
+{
+    height: 60px;
+    font-size: 18px;
+    color: #ccc;
+    font-weight: bolder;
+    font-family: Arial;
+    cursor: pointer;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+.first
+{
+    color: Red;
+}
+
+.second
+{
+    color: #E04B1D;
+}
+.third
+{
+    color: #C5816C;
+}

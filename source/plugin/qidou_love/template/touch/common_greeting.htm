@@ -1,0 +1,74 @@
+{eval}
+    $greeting = array_filter(explode("\r\n",$qidou_love['greeting_text']));
+    $class = array('bg1','bg2','bg3','bg4');
+{/eval}
+<link rel="stylesheet" type="text/css" href="{$siteurl}/source/plugin/qidou_love/static/css/greeting.css" />
+<div class="greeting_wrap">
+    <div class="greeting_box">
+        <ul>
+            <!--{loop $greeting $key $gre}-->
+            <li class="{eval echo $class[$key%4]}">{$gre}</li>
+            <!--{/loop}-->
+        </ul>
+    </div>
+    <div class="greeting_close"></div>
+</div>
+<script>
+function post_greeting( parent,child ){
+    var get_uid = null;
+    var greeting_url = siteurl+'/plugin.php?id=qidou_love:qidou_handle&act=send_message&formhash={FORMHASH}';
+    $(parent).on('click',child,function (){
+        if( !is_login ){
+            goLogin();
+            return false;
+        }
+        get_uid = $(this).attr('data-uid');
+        
+        $('.greeting_wrap').show();
+        $('.greeting_box').scrollTop(0);
+        $('.greeting_box li').map(function ( i,t ){
+            setTimeout(function (){
+                $(t).css({'opacity':1,'transition':'0.7s '+i*0.05+'s all','transform':'translate(0,0) translateZ(0)'});
+            },0);
+        });
+        setTimeout(function (){
+            $('.greeting_wrap').css({'transform':'translate(0,0) translateZ(0)'});
+        },0);
+    });
+    $('.greeting_box li').click(function (){
+        var message = $(this).html();
+        var loading = layer.open({type:2});
+        $('.greeting_close').click();
+        $.ajax({
+            type:'post',
+            url:greeting_url,
+            data:{message:message,get_uid:get_uid},
+            dataType:'json',
+            success:function ( data ){
+                layer.close(loading);
+                var message = '';
+                if( data.success ){
+                    message = "{$lang['h_greeting_success']}";
+                }else{
+                    message = "{$lang['h_greeting_error']}";
+                }
+                layer.open({
+                    content : message,
+                    skin : 'msg',
+                    time : 3
+                });
+            }
+        });
+    });
+    $('.greeting_close').click(function (){
+        $('.greeting_wrap').css({'transform':'translate(0,100%) translateZ(0)'});
+        $('.greeting_wrap').bind('webkitTransitionEnd',greeting_hide);
+    });
+    function greeting_hide(){
+        get_uid = null;
+        $('.greeting_wrap').hide();
+        $('.greeting_wrap').unbind('webkitTransitionEnd',greeting_hide);
+        $('.greeting_box li').css({'opacity':0,'transition':'initial','transform':'translate(0, 50px) translateZ(0)'});
+    }
+}
+</script>

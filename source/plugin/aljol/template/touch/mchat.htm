@@ -1,0 +1,80 @@
+{template aljol:head}
+<header class="topBar2 top1">
+	<a href="plugin.php?id=aljol"><i class="iconfont icon-fanhui"></i></a>
+	<span>{$firendname['username']}</span>
+	<a href="./"><i class="iconfont icon-shouye"></i></a>
+</header>
+<main class="talk">
+
+	<ul>
+		{loop $selftalkrecord $tmp_key $tmp_value}
+			{if $tmp_value['uid'] == $friendid}
+			<li class="layim-chat-li w" date-id="{$tmp_value['id']}">
+				<div class="layim-chat-user" >
+					{eval echo avatar($tmp_value['uid'])}
+					<cite>{$tmp_value['username']}</cite>
+				</div>
+				<div class="layim-chat-text w">
+					{if $tmp_value['talk']}
+						{$tmp_value['talk']}
+					{else}
+						<img src="{$tmp_value['picture']}" class="jm" onclick="clickjm(this);">
+					{/if}
+				</div>
+			</li>
+			{else}
+			<li class="layim-chat-li layim-chat-mine" date-id="{$tmp_value['id']}">
+				<div class="layim-chat-user">
+					{eval echo avatar($tmp_value['uid'])}
+					<cite>{$tmp_value['username']}</cite>
+				</div>
+				<div class="layim-chat-text">
+					{if $tmp_value['talk']}
+						{$tmp_value['talk']}
+					{else}
+						<img src="{$tmp_value['picture']}" class="jm" onclick="clickjm(this);">
+					{/if}
+				</div>
+			</li>
+			{/if}
+		{/loop}
+	</ul>
+</main>
+
+
+<div class="swiper-container1" style="display: none;">
+	<div class="closeswiper"><i class="iconfont icon-remove"></i></div>
+	<div class="swiper-wrapper">
+
+	</div>
+</div>
+
+
+<div class="Emain">
+	<div class="layim-layer" id='emoji'>
+		<div class="Econt">
+		<ul class="Eface">
+		</ul>
+		</div>
+	</div>
+</div>
+<footer class="talk-foot">
+	<div class="layim-chat-send">
+		<input type="text" autocomplete="off" id="saytext" oninput="addtext()">
+		<button class="layim-send layui-disabled" onclick="send(0,this);">{lang aljol:talk_htm_1}</button>
+	</div>
+	<div class="layim-chat-tool" >
+		<i class="iconfont icon-biaoqing emotion"></i>
+		<i class="iconfont icon-xuanzetupian pic">
+			<form  method="post" enctype="multipart/form-data" action="" id="picturefile">
+            	<input id="picture" type="file" name="picture" onchange="lrz_mobile({$friendid},this)">
+        	</form>
+		</i>
+	</div>
+</footer>
+</body>
+<script>
+chat({$friendid});
+addslide();
+</script>
+</html>

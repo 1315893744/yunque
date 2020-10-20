@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Addon MD5]]></item>
+	<item id="ID"><![CDATA[jvmao_jane.template]]></item>
+	<item id="RevisionID"><![CDATA[84490]]></item>
+	<item id="SN"><![CDATA[2020032506mPV0P80Fsg]]></item>
+	<item id="RevisionDateline"><![CDATA[1583907125]]></item>
+	<item id="Data">
+		<item id="/forum/guide.htm"><![CDATA[4394c854f0ea1cf362e409abfef47882]]></item>
+		<item id="/forum/discuz.htm"><![CDATA[166cc8ca763bd350039221d70915d104]]></item>
+		<item id="/forum/forumdisplay_list.htm"><![CDATA[15a37de9b7bd50d70971e687a257d184]]></item>
+		<item id="/forum/ajax_threadlist.htm"><![CDATA[72dc68cdf7e66e05482aea1969528d99]]></item>
+		<item id="/forum/forumdisplay.htm"><![CDATA[56bf6037e83460beca317820e428c5e7]]></item>
+		<item id="/forum/viewthread.htm"><![CDATA[5eaf4c46f7e3abf0e1b9ca35ae597b0e]]></item>
+		<item id="/forum/forumdisplay_subforum.htm"><![CDATA[25ded682827cf80426fe907b9971cd0f]]></item>
+		<item id="/forum/guide_list_row.htm"><![CDATA[673c4c9205f92413b3e5d3145eb76f22]]></item>
+		<item id="/forum/forumdisplay_leftside.htm"><![CDATA[3b506aba1def4659d5a90497b8824925]]></item>
+		<item id="/forum/viewthread_node_body.htm"><![CDATA[2bd69472671d8349fd0ad20cfdf1f7c1]]></item>
+		<item id="/forum/viewthread_node.htm"><![CDATA[b46aedecd5d8392df6310b3c9c00cb8b]]></item>
+		<item id="/images/font/iconfont.svg"><![CDATA[7681004b852dc55959f5e83314099a21]]></item>
+		<item id="/images/font/iconfont.woff"><![CDATA[aa38c8a68811d715ad33f07f1696947c]]></item>
+		<item id="/images/font/iconfont.woff2"><![CDATA[c254aa41afafe2ec2f8310ed8a4b7065]]></item>
+		<item id="/images/font/index.htm"><![CDATA[7215ee9c7d9dc229d2921a40e899ec5f]]></item>
+		<item id="/images/font/iconfont.ttf"><![CDATA[1981f749e2f63e21c5d211e8d40f7b27]]></item>
+		<item id="/images/font/iconfont.eot"><![CDATA[cf524a674c9c610af6c7b4d371a16b37]]></item>
+		<item id="/images/index.htm"><![CDATA[7215ee9c7d9dc229d2921a40e899ec5f]]></item>
+		<item id="/discuz_style_jvmao_jane.xml"><![CDATA[96b227175b347ea7b73b49894454cdc4]]></item>
+		<item id="/portal/index.htm"><![CDATA[afb38dd3d4e8a059f9da131681629c1b]]></item>
+		<item id="/common/extend_common.css"><![CDATA[2d922490470c3e8b203ba7504126c11c]]></item>
+		<item id="/common/footer.htm"><![CDATA[373ade9f76dc01c247a09a78f224bd46]]></item>
+		<item id="/common/header.htm"><![CDATA[dd3a4c97fa29016c8adf033ea5cebe0f]]></item>
+		<item id="/group/group_manage.htm"><![CDATA[d96753cfd3c0a62a0db3707efdd1fe66]]></item>
+		<item id="/group/type.htm"><![CDATA[ee389dd0db1dabdfb407a9733a45f8b0]]></item>
+		<item id="/group/group_list.htm"><![CDATA[5d2a16dd1651d4a9905cb12daca97ffe]]></item>
+		<item id="/group/group_index.htm"><![CDATA[f768e99c074c7403101ca359b87085b1]]></item>
+		<item id="/group/group.htm"><![CDATA[6171b17f18df4e4adfb530a6c8812344]]></item>
+		<item id="/index.htm"><![CDATA[7215ee9c7d9dc229d2921a40e899ec5f]]></item>
+		<item id="/preview.jpg"><![CDATA[9428889e86ce1fd07054f471484be052]]></item>
+	</item>
+</root>

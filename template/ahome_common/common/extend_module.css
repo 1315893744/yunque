@@ -1,0 +1,30 @@
+
+/** forum **/
+
+.pls {width: 180px; background: #F9F9F9;border-right: 1px solid #F5F5F5; padding-top:0px;}
+.pls .avatar {margin: 15px 15px 5px; text-align: center;}
+.vuimg { margin-top: -16px!important;}
+.bui {padding: 15px 0 15px 24px;  box-shadow: none;width: 440px !important;}
+.pls .avatar img, .avtm img {background: #fff; padding: 5px;border: 1px solid #e3e3e3; border-radius:10px;}
+.pls .pi {padding: 0 0 10px 0;text-align: center;border-bottom: none; margin: 10px;}
+.pls .pi .authi a { color: #777; font-size: 16px;text-decoration: none;}
+.pls .tns { background: #f1f1f1; padding: 8px 0; margin: 0 13px 10px; border-radius: 0}
+.tns th, .tns td { text-align: center;font-size: 12px;}
+.tns th { border-right: 1px solid #e3e3e3;}
+.tns th, .tns td, .tns th a, .tns td a,.pls p em a, .pls dt em,.pls p, .pls .pil, .pls .o,.cp_pls a{ color:#888;} 
+.pls .plso { margin: 5px 0px 10px 16px;}
+.pls .plso li {float: left; overflow: hidden; width: 72px; margin-right: 10px;}
+.pls .plso li a { background: #ffa000; height: 24px; line-height: 24px; padding: 0 10px;text-indent: 0;text-align: center; display: block; width: 52px; color: #fff;}
+.pls .plso li.addflw a:hover{background: #ffa000; text-decoration: none}   
+.pls .plso li.pm2 a { background: #F0BE21}
+.pls .plso li.pm2 a:hover { background: #ffa000; text-decoration:none;}
+.ptn {border-top-left-radius:10px;}
+
+
+#fwin_mods *{font-size:12px;}
+#fwin_mods input{border-radius:2px;padding:2px 2px;}
+#fwin_mods .colorwd {border-radius:0px;padding:0px !important;background-repeat:no-repeat;min-height:20px;height:20px !important;width:20px !important;overflow:hidden;}
+
+
+
+/** end **/

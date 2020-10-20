@@ -1,0 +1,22 @@
+<!--{loop $love_user $key $love}-->
+<li>
+    <div class="user_wrap">
+        <div class="user_header">
+            <div class="user_honor"><!--{if !$key}-->{$lang['h_ghonor']}<!--{else}-->{$lang['h_honor']}<!--{/if}--></div>
+            <div class="love_num"><img src="{$siteurl}/source/plugin/qidou_love/static/images/love_num.png"/><span>{$love['charm_num']}</span></div>
+            <div class="user_photo">
+                <img src="{$love['user_album']}" />
+            </div>
+            <div class="user_box">
+                <div class="user_name">{$love['user_name']}</div>
+                <div class="user_distance" is_calc="false" lat="{$love['lat']}" lng="{$love['lng']}"></div>
+            </div>
+        </div>
+        <div class="user_footer">
+            <div class="user_info">{$love['age']}{$lang['h_age_unit']} | {$love['height']}CM</div>
+            <div class="go_greeting" data-uid="{$love['uid']}"></div>
+        </div>
+        <a class="user_link" href="{$siteurl}/plugin.php?id=qidou_love:qidou_user&love_id={$love['uid']}"></a>
+    </div>
+</li>
+<!--{/loop}-->

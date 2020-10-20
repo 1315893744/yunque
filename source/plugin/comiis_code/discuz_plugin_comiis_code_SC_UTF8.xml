@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,X3.3,X3.4,F1.0,L1.0]]></item>
+	<item id="Time"><![CDATA[2018-08-16 11:30]]></item>
+	<item id="From"><![CDATA[XXX网 - 站长互动平台]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[克米设计-帖子二维码]]></item>
+			<item id="identifier"><![CDATA[comiis_code]]></item>
+			<item id="description"><![CDATA[这是一款方便用户通过手机扫描二维码快速查看当前帖子的小插件, 免去手工输入复杂网址的烦恼, 穿越手机看帖就是这么简单!]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[comiis_code/]]></item>
+			<item id="copyright"><![CDATA[XXX网 - 站长互动平台]]></item>
+			<item id="version"><![CDATA[v2.5]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[comiis_more]]></item>
+					<item id="menu"><![CDATA[更多克米设计作品]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[comiis_code]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[comiis_mobile]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[28]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,X3.3,X3.4,F1.0,L1.0]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[启用的版块]]></item>
+				<item id="description"><![CDATA[设置需要启用本插件的板块
+留空为所有版块启用]]></item>
+				<item id="variable"><![CDATA[comiis_code_inforum]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[2]]></item>
+					<item id="1"><![CDATA[36]]></item>
+					<item id="2"><![CDATA[37]]></item>
+					<item id="3"><![CDATA[38]]></item>
+					<item id="4"><![CDATA[39]]></item>
+					<item id="5"><![CDATA[40]]></item>
+					<item id="6"><![CDATA[41]]></item>
+					<item id="7"><![CDATA[42]]></item>
+					<item id="8"><![CDATA[43]]></item>
+					<item id="9"><![CDATA[44]]></item>
+					<item id="10"><![CDATA[64]]></item>
+					<item id="11"><![CDATA[65]]></item>
+					<item id="12"><![CDATA[45]]></item>
+					<item id="13"><![CDATA[62]]></item>
+					<item id="14"><![CDATA[46]]></item>
+					<item id="15"><![CDATA[63]]></item>
+					<item id="16"><![CDATA[69]]></item>
+					<item id="17"><![CDATA[70]]></item>
+					<item id="18"><![CDATA[71]]></item>
+					<item id="19"><![CDATA[72]]></item>
+					<item id="20"><![CDATA[73]]></item>
+					<item id="21"><![CDATA[74]]></item>
+					<item id="22"><![CDATA[48]]></item>
+					<item id="23"><![CDATA[49]]></item>
+					<item id="24"><![CDATA[50]]></item>
+					<item id="25"><![CDATA[51]]></item>
+					<item id="26"><![CDATA[52]]></item>
+					<item id="27"><![CDATA[53]]></item>
+					<item id="28"><![CDATA[54]]></item>
+					<item id="29"><![CDATA[55]]></item>
+					<item id="30"><![CDATA[56]]></item>
+					<item id="31"><![CDATA[57]]></item>
+					<item id="32"><![CDATA[58]]></item>
+					<item id="33"><![CDATA[66]]></item>
+					<item id="34"><![CDATA[60]]></item>
+					<item id="35"><![CDATA[61]]></item>
+				</item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[图标样式]]></item>
+				<item id="description"><![CDATA[设置前台显示的小图标样式]]></item>
+				<item id="variable"><![CDATA[comiis_code_style]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[0 = 默认图标样式
+1 = 简约图标样式]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[二维码LOGO]]></item>
+				<item id="description"><![CDATA[设置显示在二维码图片中心的小LOGO图标
+尺寸: 30 X 30]]></item>
+				<item id="variable"><![CDATA[comiis_code_logo]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[source/plugin/comiis_code/comiis_img/comiis_logo.gif]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[一级标题]]></item>
+				<item id="description"><![CDATA[设置二维码图片下面的标题文字]]></item>
+				<item id="variable"><![CDATA[comiis_code_title]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[微信扫一扫  分享朋友圈]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[二级标题]]></item>
+				<item id="description"><![CDATA[设置二级标题的文字内容
+{views}为手机查看数调用代码]]></item>
+				<item id="variable"><![CDATA[comiis_code_views]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[已有{views}人穿越成功<img src="source/plugin/comiis_code/comiis_img/comiis_smile.gif">]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[教程标题文字]]></item>
+				<item id="description"><![CDATA[设置教程标题的文字修改]]></item>
+				<item id="variable"><![CDATA[comiis_code_linktitle]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[教程：手机怎么扫描二维码]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[教程标题链接]]></item>
+				<item id="description"><![CDATA[设置教程连接的地址, 可设置连接到其他页面, 直接填写网址即可
+默认地址为 plugin.php?id=comiis_code]]></item>
+				<item id="variable"><![CDATA[comiis_code_link]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[plugin.php?id=comiis_code]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[教程页面标题]]></item>
+				<item id="description"><![CDATA[设置默认教程页面标题]]></item>
+				<item id="variable"><![CDATA[comiis_code_htmltitle]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[手机穿越看帖分享朋友圈就是这么简单]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[教程页面内容]]></item>
+				<item id="description"><![CDATA[设置默认教程页面显示的教程内容, 支持HTML代码]]></item>
+				<item id="variable"><![CDATA[comiis_code_htmlbody]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<span class="kmtit">1. 如何穿越到手机看帖？</span>
+<span>
+正在浏览帖子的你是否注意到右上角（也就是标题右边）多了点什么呢？<br>
+<img src="source/plugin/comiis_code/comiis_img/jcimg/001.jpg"><br>
+没错，是二维码，再把鼠标放上面试试看<br>
+<img src="source/plugin/comiis_code/comiis_img/jcimg/002.jpg"><br>
+整个二维码大图都显示出来啦，快打开微信或者其他二维码扫描软件扫扫看<br>
+下面以微信为例：<br>
+打开微信，在右上角+号功能选项中选择 扫一扫<br>
+<img src="source/plugin/comiis_code/comiis_img/jcimg/003.jpg"><br>
+将扫描框对准我们的二维码扫描，如果扫描成功，会有提示音出现，并且开始进行跳转<br>
+Duang Duang Duang...&nbsp;&nbsp;成功穿越到手机浏览，是不是很炫呢？<br>
+<img src="source/plugin/comiis_code/comiis_img/jcimg/004.jpg"><br><br><br>
+</span>
+<span class="kmtit">2. 赶快分享到你的朋友圈吧...</span>
+<span>
+看到好的帖子想要分享到自己的朋友圈给大伙看看怎么办呢？<br>
+成功穿越到手机后，我们继续找到右上角的功能选项，选择“分享到朋友圈”选项，会再次进行跳转<br>
+<img src="source/plugin/comiis_code/comiis_img/jcimg/005.jpg"><br>
+跳转后进入到分享界面，您可以设置观看权限，对该帖子自己描述和评论，然后点击发送即可<br>
+<img src="source/plugin/comiis_code/comiis_img/jcimg/006.jpg"><br>
+是不是很方便呢？伙伴们赶快拿出你的手机试试吧... ^_^<br>
+</span>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[手机页面一级标题]]></item>
+				<item id="description"><![CDATA[二维码进入手机页面提示的标题]]></item>
+				<item id="variable"><![CDATA[comiis_code_mob_title]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[恭喜您，帖子穿越成功!]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[18]]></item>
+				<item id="title"><![CDATA[手机页面二级标题]]></item>
+				<item id="description"><![CDATA[二维码进入手机页面的人数提示标题
+{views}为手机查看数调用代码]]></item>
+				<item id="variable"><![CDATA[comiis_code_mob_view]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[您是第{views}位成功穿越者<img src="source/plugin/comiis_code/comiis_img/comiis_mob_ico.gif">]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[20]]></item>
+				<item id="title"><![CDATA[生成方式]]></item>
+				<item id="description"><![CDATA[是为本地生成并保存二维码图片，否为客户浏览器JS实时生成
+提示：如果更换域名后发现扫描的二维码地址还是原来的旧地址，请登录FTP删除 source/plugin/comiis_code/comiis_cache/ 目录下的所有图片让其重新生成即可]]></item>
+				<item id="variable"><![CDATA[comiis_code_open]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[22]]></item>
+				<item id="title"><![CDATA[显示穿越成功]]></item>
+				<item id="description"><![CDATA[设置是否显示穿越成功]]></item>
+				<item id="variable"><![CDATA[comiis_code_top_open]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+	</item>
+</root>

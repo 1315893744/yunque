@@ -1,0 +1,132 @@
+{template aljol:head}
+<header class="topBar">
+	<a class="self-head" href="home.php?mod=space&uid={$_G['uid']}&do=profile">
+		{eval echo avatar($_G['uid'])}
+	</a>
+	<ul id="header-list">
+		<li class="active" onclick="switch_list(1,this);">
+			<span>{lang aljol:aljol_htm_3}</span>
+		</li>
+		<li onclick="switch_list(2,this);">
+			<span>{lang aljol:aljol_htm_4}</span>
+		</li>
+		<li onclick="location.href='plugin.php?id=aljol&act=talk&friendid=0';">
+			<span>&#22312;&#32447;&#32842;&#22825;&#23460;</span>
+		</li>
+	</ul>
+</header>
+<main class="main">
+	<div id="information" >
+		{loop $chatlist $tmp_key $tmp_value}
+			<div class="friend" onclick="friendtalk({$tmp_value['uid']});" id="f_{$tmp_value['uid']}" data-time="{$tmp_value['datetime']}" data-id="{$tmp_value['uid']}">
+				<div class="friend-head">
+					{eval echo avatar($tmp_value['uid'])}
+				</div>
+				<div class="friend-name">
+					<div class="friend-name-left">
+						<p>{if $tmp_value['username']}{$tmp_value['username']}{else}&#22312;&#32447;&#32842;&#22825;&#23460;{/if}</p>
+						<span>{$tmp_value['lastnews']}</span>
+					</div>
+					<div class="friend-name-right">
+						<p>{$tmp_value['time']}</p>
+					</div>
+				</div>
+			</div>
+		{/loop}
+	</div>
+	<div id="friend" style="display: none;">
+		<ul class="layim-list-top">
+			<li onclick="opensearch();">
+				<i class="iconfont icon-jwj_tianjiahaoyou"></i>{lang aljol:aljol_htm_5}
+			</li>
+			<li onclick="requestfriend();">
+				<i class="iconfont icon-pengyou"></i>{lang aljol:aljol_htm_6}
+			</li>
+		</ul>
+		<ul class="layim-list-friend">
+			<li data-id="1">
+				<h5 ><i class="iconfont icon-you-copy-copy"></i><span>{lang aljol:aljol_htm_7}</span></h5>
+				<ul class="layui-layim-list close">
+
+				</ul>
+			</li>
+			<li data-id="2">
+				<h5 ><i class="iconfont icon-you-copy-copy"></i><span>{lang aljol:aljol_htm_8}</span></h5>
+				<ul class="layui-layim-list close" >
+
+				</ul>
+			</li>
+			<li data-id="3">
+				<h5 ><i class="iconfont icon-you-copy-copy"></i><span>{lang aljol:aljol_htm_9}</span></h5>
+				<ul class="layui-layim-list close" >
+
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="search" style="display: none;">
+		<section  class="search-header">
+	        <span class="search-text">
+	          <i class="iconfont icon-fanhui c" onclick="closesearch()"></i>
+	          <input type="text"  id="searchuser" value="" placeholder="UID">
+	          <button class="layui-btn" onclick="search()"><i class="iconfont icon-sousuo"></i></button>
+	         </span>
+    	</section>
+    	<section class="userlist">
+    		<ul id="user">
+
+			</ul>
+    	</section>
+	</div>
+</main>
+<script>
+	var list=$('.layim-list-friend li');
+	news();
+
+	var page =1;
+	list.each(function(){
+		$(this).click(function(){
+			var type = parseInt($(this).attr('data-id'));
+			var ul=$(this).find('ul');
+			if(ul.hasClass('open')) {
+				$(this).find('i').removeClass('icon-arrow_down').addClass('icon-you-copy-copy');
+				ul.removeClass('open').addClass('close');
+			}else{
+				$(this).find('i').removeClass('icon-you-copy-copy').addClass('icon-arrow_down');
+				page =1;
+				ul.html('');
+				friendlist(type,ul,1);
+				ul.removeClass('close').addClass('open');
+				$(this).siblings().find('ul').html('');
+				$(this).siblings().find('ul').removeClass('open').addClass('close');
+				$(this).siblings().find('i').removeClass('icon-arrow_down').addClass('icon-you-copy-copy');
+			}
+		});
+	});
+	function friendlist(type,ul,page) {
+		var url='plugin.php?id=aljol&act=friendlist&page='+page;
+		var data={'listtype':type};
+		$.post(url,data,function(res){
+			if(res !=null && res != '') {
+				$.each(res, function(k,d) {
+					if(d.code == 200) {
+						var datedom = '<li onclick="friendtalk('+d.friendid+')"><div>'+
+										d.head+
+									'</div><span>'+d.friendname+'</span>'+
+									'<p>'+d.sign+'</p>'+
+									'</li>';
+						ul.append(datedom);
+					}
+				});
+				setTimeout(function(){
+					page=page+1;
+					friendlist(type,ul,page);
+				}, 500);
+			}
+
+		},'json');
+	}
+
+</script>
+{template aljol:btn}
+{template aljol:foot}

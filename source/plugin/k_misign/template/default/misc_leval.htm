@@ -1,0 +1,38 @@
+<!--{subtemplate common/header}-->
+<link rel="stylesheet" type="text/css" href="./source/plugin/k_misign/static/default/sign.css" />
+<div id="pt" class="bm cl">
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a><em>&raquo;</em>
+        <a href="{$misign['pluginurl']}sign"><!--{if $misign['title']}-->{$misign['title']}<!--{else}-->{lang k_misign:sign}<!--{/if}--></a><em>&raquo;</em>
+        <a href="{$misign['pluginurl']}misc&operation=magics">{lang k_misign:extend_magics}</a>
+	</div>
+</div>
+<div id="ct" class="wp ct2_a cl">
+	<!--{eval include template('diy:misc_appl', '', 'source/plugin/k_misign/template/'.($misign['styles']['pc'] ? $misign['styles']['pc'] : 'default'));}-->
+	<div class="mn">
+		<div class="bm bw0 cl">	
+            <div class="bm_h"><h2>{lang k_misign:signlevel}</h2></div>
+            <div class="mbn tl cl">
+				<table cellspacing="0" cellpadding="0">
+					<tbody>
+						<tr class="th">
+                        	<td class="icn">&nbsp;</td>
+							<td class="frm">{$extendlang['levelname']}</td>
+                            <td>{$extendlang['leveldays']}</td>
+						</tr>
+					</tbody>
+					<tbody>
+                    	<!--{loop $levals $key $leval}-->
+						<tr>
+                        	<td class="icn">&nbsp;</td>
+                            <td class="frm">{$leval['levelname']}</td>
+                            <td>{$leval['leveldays']}{lang k_misign:days}</td>
+						</tr>
+                        <!--{/loop}-->
+					</tbody>
+				</table>
+            </div>
+        </div>
+    </div>
+</div>
+{subtemplate common/footer}

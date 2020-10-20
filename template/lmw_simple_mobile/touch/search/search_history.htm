@@ -1,0 +1,28 @@
+<div id="lmw_search_history" style="width: auto;padding: 10px;font-size: 14px;">
+    <span style="font-weight: bold;font-size: 14px;">搜索历史</span>
+    <div style="padding: 0 10px;" id="lmw_search_history_body">
+    </div>
+</div>
+<script type="text/javascript">
+    let lmwKs = localStorage.getItem("lmw_search_keywords");
+    if (!lmwKs) {
+        document.getElementById("lmw_search_history").style.display = 'hide';
+    } else {
+        let lmwSearchHistoryBody = document.getElementById("lmw_search_history_body");
+        lmwKs.split(",").forEach((k, index) => {
+            let tmp = document.createElement("div");
+            tmp.setAttribute("onclick", "clickSearchHistory('" + k + "')");
+            tmp.classList.add("lmw_search_history_item");
+            if (index !== 0) {
+                tmp.classList.add("lmw_search_history_bottom");
+            }
+            tmp.innerText = k;
+            lmwSearchHistoryBody.insertBefore(tmp, lmwSearchHistoryBody.children[0]);
+        });
+    }
+
+    function clickSearchHistory(value) {
+        document.getElementById("scform_srchtxt").value = value;
+        document.getElementById("searchform").submit();
+    }
+</script>

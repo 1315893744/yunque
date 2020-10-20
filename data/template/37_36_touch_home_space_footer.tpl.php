@@ -1,0 +1,12 @@
+<?php if(!defined('IN_DISCUZ')) exit('Access Denied'); ?>
+<div class="cl" style="height:40px;"></div>
+<div class="comiis_space_foot bg_f b_t">
+<ul class="comiis_flex sdxt"><?php require_once libfile('function/friend');$isfriend=friend_check($space[uid]);?><?php if(!$isfriend) { ?>
+<li class="flex"><a href="<?php if($_G['uid']) { ?>home.php?mod=spacecp&ac=friend&op=add&uid=<?php echo $space['uid'];?>&handlekey=addfriendhk_<?php echo $space['uid'];?><?php } elseif(!$_G['connectguest']) { ?>javascript:popup.open('<?php echo $comiis_lang['tip16'];?>', 'confirm', 'member.php?mod=logging&action=login');<?php } else { ?>javascript:popup.open('<?php echo $comiis_lang['reg23'];?>', 'confirm', 'member.php?mod=connect');<?php } ?>"<?php if($_G['uid']) { ?> class="dialog"<?php } ?>><i class="comiis_font f_qq">&#xe60f;</i><span class="f_b"><?php echo $comiis_lang['post40'];?></span></a></li>
+<?php } else { ?>
+<li class="flex foot_cp"><a href="home.php?mod=spacecp&amp;ac=friend&amp;op=ignore&amp;uid=<?php echo $space['uid'];?>&amp;handlekey=ignorefriendhk_<?php echo $space['uid'];?>"<?php if($_G['uid']) { ?> class="dialog"<?php } ?>><i class="comiis_font f_qq">&#xe60f;</i><span class="f_b">解除好友</span></a></li>
+<?php } ?>		
+<li class="flex"><a href="<?php if($_G['uid']) { ?>home.php?mod=spacecp&ac=poke&op=send&uid=<?php echo $space['uid'];?>&handlekey=propokehk_<?php echo $space['uid'];?><?php } elseif(!$_G['connectguest']) { ?>javascript:popup.open('<?php echo $comiis_lang['tip16'];?>', 'confirm', 'member.php?mod=logging&action=login');<?php } else { ?>javascript:popup.open('<?php echo $comiis_lang['reg23'];?>', 'confirm', 'member.php?mod=connect');<?php } ?>"><i class="comiis_font f_wb">&#xe638;</i><span class="f_b"><?php echo $comiis_lang['post38'];?></span></a></li>
+<li class="flex"><a href="<?php if($_G['uid']) { ?>home.php?mod=space&do=pm&subop=view&touid=<?php echo $space['uid'];?><?php } elseif(!$_G['connectguest']) { ?>javascript:popup.open('<?php echo $comiis_lang['tip16'];?>', 'confirm', 'member.php?mod=logging&action=login');<?php } else { ?>javascript:popup.open('<?php echo $comiis_lang['reg23'];?>', 'confirm', 'member.php?mod=connect');<?php } ?>"><i class="comiis_font f_wx">&#xe626;</i><span class="f_b"><?php echo $comiis_lang['post41'];?></span></a></li>
+</ul>
+</div>

@@ -1,0 +1,60 @@
+.title-text span {
+    display: block; /*设置为块级元素会独占一行形成上下居中的效果*/
+    position: relative; /*定位横线（当横线的父元素）*/
+    color: #188eee; /*居中文字的颜色*/
+    text-align: center;
+}
+
+.title-text span:before, .title-text span:after {
+    content: '';
+    position: absolute; /*定位背景横线的位置*/
+    top: 50%;
+    background: #8c8c8c; /*背景横线颜色*/
+    width: 35%; /*单侧横线的长度*/
+    height: 1px;
+}
+
+.title-text span:before {
+    left: 2%; /*调整背景横线的左右距离*/
+}
+
+.title-text span:after {
+    right: 2%;
+}
+
+.yimen_buttons {
+    margin: 20px 20px;
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+}
+
+.yimen_login {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+}
+
+.login_icon {
+    height: 30px;
+    line-height: 30px;
+    font-size: 24px;
+}
+
+.login_text {
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+}
+
+.wx {
+    color: #8CB922;
+}
+
+.qq {
+    color: #3CA0EC;
+}
+
+.wb {
+    color: #E14432;
+}

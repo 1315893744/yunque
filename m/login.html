@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://bbs.pku.edu.cn/v2/login.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <link rel="alternate" media="only screen and (max-width: 640px)" href="https://bbs.pku.edu.cn/v2/mobile/login.php">
+
+<!-- start _stylesheets_and_scripts.php-->
+<link rel="stylesheet" href="./login_files/all.css">
+<script>
+    if (typeof(window.console) == 'undefined')
+        window.console = {};
+    if (typeof(window.console.log) == 'undefined')
+      window.console.log = function(a){};
+</script>
+<script src="./login_files/config.js.下载"></script>
+<script src="./login_files/crypto-js.js.下载"></script>
+<script src="./login_files/jquery-1.11.3.min.js.下载"></script>
+<script src="./login_files/jquery.pjax.js.下载"></script>
+<script src="./login_files/jquery.ba-resize.min.js.下载"></script>
+<script src="./login_files/underscore-min.js.下载"></script>
+<script src="./login_files/jquery.gridly.js.下载"></script>
+<script src="./login_files/jquery.transit.js.下载"></script>
+<script src="./login_files/rangy-core.js.下载"></script>
+<script src="./login_files/rangy-selectionsaverestore.js.下载"></script>
+<script src="./login_files/perfect-scrollbar.jquery.min.js.下载"></script>
+<script src="./login_files/Sortable.min.js.下载"></script>
+<script src="./login_files/jquery.selection.js.下载"></script>
+<script src="./login_files/strophe.min.js.下载"></script>
+<script src="./login_files/highlight.pack.js.下载"></script>
+<script src="./login_files/highslide-with-gallery.js.下载"></script>
+<script src="./login_files/bdwm.min.js.下载"></script>
+<script src="./login_files/all.min.js.下载"></script>
+<link rel="stylesheet" href="./login_files/font-awesome.min.css">
+<link rel="stylesheet" href="./login_files/github.css">
+<link rel="stylesheet" href="./login_files/perfect-scrollbar.min.css">
+<link rel="stylesheet" href="./login_files/highslide.css">
+<!--[if lt IE 7]>
+<link rel="stylesheet" href="libs/highslide/highslide-ie6.css" />
+<![endif]-->
+<link rel="stylesheet" href="./login_files/bdwm.min.css">
+
+<!-- end _stylesheets_and_scripts.php-->
+
+  <title>login</title>
+  <meta name="description" content="创立于2000年，作为北京大学唯一的BBS论坛，是北大师生、校友日常交流的重要信息传播载体和信息服务形式。">
+  <script type="text/javascript">
+        window.login = false;
+        window.username = "guest";
+
+  </script>
+  <style type="text/css">.highslide img {cursor: url(../v2/libs/highslide/graphics/zoomin.cur), pointer !important;}.highslide-viewport-size {position: fixed; width: 100%; height: 100%; left: 0; top: 0}</style></head>
+<body id="page-login">
+<div id="bdwm-title">login</div>
+  <div class="main-container">
+    <div class="loading" style="display: none;"><img src="./login_files/loading.gif"></div>
+    <a data-no-pjax="" href="https://bbs.pku.edu.cn/v2/post-read.php?bid=1&amp;threadid=17010806"><img id="bgimg" style="" src="./login_files/index_MKoueo.jpg"></a>
+    <div class="panel">
+      <div class="logo">
+        <span class="h1">北大未名</span>
+        <span class="h2">bbs.pku.edu.cn</span>
+      </div>
+      <div class="form" style="position: relative">
+        <input type="text" name="username" data-role="username" placeholder="用户名 / username">
+        <input type="password" name="password" data-role="password" placeholder="密码 / password">
+        <input type="checkbox" name="keepalive" data-role="keepalive" id="form-remember-checkbox">
+        <label for="form-remember-checkbox">下次自动登录</label>
+        <a class="button red" data-action="login">登录</a>
+        <a class="button" href="https://bbs.pku.edu.cn/v2/register.php" data-no-pjax="" target="_blank">注册</a>
+        <span class="separator"></span>
+        <a class="small-link" href="https://bbs.pku.edu.cn/v2/home.php" data-no-pjax="">游客</a>
+<!--        <a class="small-link" href="http://bbs.pku6.edu.cn">高校联盟</a>-->
+        <a class="small-link" href="https://bbs.pku.edu.cn/v2/reset-password-req.php">找回密码</a>
+<!--        <a class="small-link" href="register.php?type=4" data-no-pjax style="position: absolute; bottom: 3px; right: 41px;">2018新生注册通道</a>-->
+      </div>
+    </div>
+    <div class="footer">
+      <p>
+        
+        
+        <a data-no-pjax="">官方微信<span class="login-wechat-qrcode"></span></a>
+      </p>
+      <p>Flynnn © 2000–2019 北大未名BBS</p>
+      <!--NO SET HTMLSPECIALCHARS-->
+    </div>
+  </div>
+
+
+<script type="text/javascript">
+  var bgimg = document.getElementById('bgimg');
+  var setMiddle = function () {
+    var huge = document.getElementsByClassName('huge');
+    if (huge.length) {
+      var windoww = Math.max(document.body.clientWidth, document.documentElement.clientWidth),
+        windowh = Math.max(document.body.clientHeight, document.documentElement.clientHeight);
+      if (windowh / windoww <= 9 / 16) {
+        bgimg.style.width = '100%';
+        bgimg.style.height = '';
+      }
+      else {
+        bgimg.style.height = '100%';
+        bgimg.style.width = '';
+      }
+    }
+  };
+  setMiddle();
+  window.onresize = setMiddle;
+  $(function(){
+    var img = $('#bgimg');
+    if (img.eq(0).get(0).readyState ==  'complete' || img.eq(0).get(0).complete) {
+      img.css({visibility: '',display: 'none'});
+      img.fadeIn('normal', function(){$('.loading').hide();});
+    }
+    else
+      img.load(function(){
+        img.css({visibility: '',display: 'none'});
+        img.fadeIn('normal', function(){$('.loading').hide();});
+        setMiddle();
+      });
+  });
+
+</script>
+
+
+<div class="highslide-container" style="padding: 0px; border: none; margin: 0px; position: absolute; left: 0px; top: 0px; width: 100%; z-index: 1001; direction: ltr;"><a class="highslide-loading" title="点击取消加载" href="javascript:;" style="position: absolute; top: -9999px; opacity: 0.75; z-index: 1;">载入中...</a><div style="display: none;"></div><div class="highslide-viewport highslide-viewport-size" style="padding: 0px; border: none; margin: 0px; visibility: hidden;"></div><table cellspacing="0" style="padding: 0px; border: none; margin: 0px; visibility: hidden; position: absolute; border-collapse: collapse; width: 0px;"><tbody style="padding: 0px; border: none; margin: 0px;"><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://bbs.pku.edu.cn/v2/libs/highslide/graphics/outlines/rounded-white.png&quot;) 0px 0px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://bbs.pku.edu.cn/v2/libs/highslide/graphics/outlines/rounded-white.png&quot;) 0px -40px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://bbs.pku.edu.cn/v2/libs/highslide/graphics/outlines/rounded-white.png&quot;) -20px 0px; height: 20px; width: 20px;"></td></tr><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://bbs.pku.edu.cn/v2/libs/highslide/graphics/outlines/rounded-white.png&quot;) 0px -80px; height: 20px; width: 20px;"></td><td class="rounded-white highslide-outline" style="padding: 0px; border: none; margin: 0px; position: relative;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://bbs.pku.edu.cn/v2/libs/highslide/graphics/outlines/rounded-white.png&quot;) -20px -80px; height: 20px; width: 20px;"></td></tr><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://bbs.pku.edu.cn/v2/libs/highslide/graphics/outlines/rounded-white.png&quot;) 0px -20px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://bbs.pku.edu.cn/v2/libs/highslide/graphics/outlines/rounded-white.png&quot;) 0px -60px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://bbs.pku.edu.cn/v2/libs/highslide/graphics/outlines/rounded-white.png&quot;) -20px -20px; height: 20px; width: 20px;"></td></tr></tbody></table></div></body></html>

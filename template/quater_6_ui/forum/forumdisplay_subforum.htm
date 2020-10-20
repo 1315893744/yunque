@@ -1,0 +1,31 @@
+
+<div class="sidebarBlock cl" style="width: 270px; padding: 20px; margin-bottom: 0; box-shadow: none; margin-bottom: 15px; box-shadow: 0 0 3px rgba(0,0,0,.1);">
+  <h3>{lang forum_subforums}</h3>
+  <div id="subforum_{$_G[forum][fid]}">
+    <ul>
+      <!--{loop $sublist $sub}--> 
+      <!--{eval $forumurl = !empty($sub['domain']) && !empty($_G['setting']['domain']['root']['forum']) ? 'http://'.$sub['domain'].'.'.$_G['setting']['domain']['root']['forum'] : 'forum.php?mod=forumdisplay&fid='.$sub['fid'];}-->
+      <li class="cl" style="padding: 15px 0;">
+        <!-- 图标 -->
+        <div class="subforum-icn cl" style="float: left; padding: 0 12px 0 0;"> 
+          <!--{if $sub[icon]}--> 
+          $sub[icon] 
+          <!--{else}--> 
+          <a href="$forumurl"{if $sub[redirect]} target="_blank"{/if}><img src="{IMGDIR}/forum{if $sub[folder]}_new{/if}.gif" alt="$sub[name]" /></a> 
+          <!--{/if}--> 
+        </div>
+        <!-- 名称 -->
+        <div class="cl" style="float: left;">
+        <h2 style="height: 35px; line-height: 35px; font-size: 14px;"><a href="$forumurl" {if !empty($sub[redirect])}target="_blank"{/if} style="{if !empty($sub[extra][namecolor])}color: {$sub[extra][namecolor]};{/if}">$sub[name]</a><!--{if $sub[todayposts] && !$sub['redirect']}--><em class="xw0 xi1" title="{lang forum_todayposts}"> ($sub[todayposts])</em><!--{/if}--> </h2>
+       <p> <!--{if empty($sub[redirect])}--><em>{lang forum_threads}: <!--{echo dnumber($sub[threads])}--></em>, <em>{lang forum_posts}: <!--{echo dnumber($sub[posts])}--></em><!--{/if}--> </p>
+       </div>
+      </li>
+      
+      <!--{/loop}--> 
+      $_G['forum']['endrows']
+      <!--{hook/forumdisplay_subforum_extra $sub[fid]}-->
+    </ul>
+  </div>
+  <!--{hook/forumdisplay_subforum_extra $sub[fid]}-->
+</div>
+

@@ -1,0 +1,63 @@
+<!--{template common/header_ajax}-->
+<h3 class="flb"><em>{$comiis_sms['20']}</em><!--{if $_G[inajax]}--><span><a href="javascript:;" class="flbc" onclick="hideWindow('$_GET['handlekey']');" title="{lang close}">{lang close}</a></span><!--{/if}--></h3>
+<form method="post" autocomplete="off" name="login" id="comiis_mobile_pwform" class="cl" onsubmit="ajaxpost('comiis_mobile_pwform', '', '', 'onerror');return false;" action="plugin.php?id=comiis_sms:comiis_sms_post&action=lostpw&inajax=1&handlekey=comiis_mobile_pwformjs" fwin="{$_GET['handlekey']}">
+	<input type="hidden" name="formhash" value="{FORMHASH}">
+	<input type="hidden" name="comiis_lpwsubmit" value="bfhl">
+	<input type="hidden" name="comiis_mobile_pwsubmit" value="true">
+	<input type="hidden" name="referer" value="{echo dreferer();}" />	
+	<input type="hidden" name="comiis_tel" value="{$_GET['comiis_tel']}">
+	<input type="hidden" name="code" value="{$_GET['code']}">
+	<input type="hidden" name="md5" value="{$comiis_newpwmd5}">
+	<div class="bm_c wmse">
+        <div class="cl comiis_mobreg_box xlco c" style="padding:0">
+            <div class="rfm">
+                <table>
+                    <tbody>	
+                    <!--{if count($comiis_alluser) > 1}-->		
+                        <tr>
+                            <th><span class="rq">*</span><label>{$comiis_sms['21']}:</label></th>
+                            <td>
+                                <select name="comiis_uidpassedit" style="width:140px;">
+                                <!--{loop $comiis_alluser $temp}-->
+                                    <option value="$temp['uid']">$temp['username']</option>
+                                <!--{/loop}-->
+                                </select>
+                            </td>
+                        </tr>
+                    <!--{else}-->
+                        <tr>
+                            <th><label>{$comiis_sms['22']}: </label></th>
+                            <td class="xi1">$comiis_alluser[0]['username']<input type="hidden" name="comiis_uidpassedit" value="$comiis_alluser[0]['uid']"></td>
+                        </tr>
+                    <!--{/if}-->
+                    </tbody>
+                </table>
+            </div>
+            <div class="rfm">
+                <table>
+                    <tbody>	
+                        <tr>
+                            <th><span class="rq">*</span><label>{$comiis_sms['23']}:</label></th>
+                            <td><input name="password1" class="px" type="password" size="25" value="" autocomplete="off" required></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="rfm" style="border-bottom:none;">
+                <table>
+                    <tbody>	
+                        <tr>
+                            <th><span class="rq">*</span><label>{$comiis_sms['24']}: </label></th>
+                            <td><input name="password2" class="px" type="password" size="25" value="" autocomplete="off" required></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+	</div>
+	<p class="o pns">
+		<button type="submit" class="pn pnc" value="ypci"><strong>{$comiis_sms['25']}</strong></button>
+		<button type="button" class="pn" value="aakb" onclick="hideWindow('$_GET['handlekey']');"><em>{lang cancel}</em></button>
+	</p>
+</form>
+<!--{template common/footer_ajax}-->

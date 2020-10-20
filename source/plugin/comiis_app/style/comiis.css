@@ -1,0 +1,22 @@
+.comiis_tabbox {margin-top:5px;border:1px solid #ddd;border-top:2px solid #09c;position:relative;}
+.comiis_tabbox_tit {height:38px;line-height:38px;background:#f2f9fd;border-bottom:1px solid #ddd;overflow:hidden;}
+.comiis_tabbox_tit ul {position:absolute;top:0;height:39px;overflow:hidden;}
+.comiis_tabbox_tit li {float:left;}
+.comiis_tabbox_tit li a {display:block;font-weight:600;padding:0 20px;height:38px;line-height:38px;border-bottom:1px solid #ddd;border-right:1px solid #ddd;}
+.comiis_tabbox_tit li a.tabon {height:39px;background:#fff;border-bottom:none;}
+.comiis_tabbox_body {padding:15px;overflow:hidden;}
+.comiis_tabbox_body h2 {margin-bottom:10px;background:#f2f9fd;color:#09c;font-weight:400;padding:0 10px;height:30px;line-height:30px;overflow:hidden;}
+.comiis_liststyle {width:100%;overflow:hidden;}
+.comiis_liststyle h1 {height:24px;line-height:24px;background:#f2f9fd;color:#09c;padding:5px 10px;overflow:hidden;}
+.comiis_liststyle p {padding:10px 10px;line-height:24px;}
+.comiis_liststyle li {float:left;width:48%;margin-right:2%;padding:10px 0 5px;overflow:hidden;}
+.comiis_liststyle li h2 {height:24px;line-height:24px;background:#f2f9fd;color:#09c;padding:5px 10px;margin-bottom:8px;overflow:hidden;}
+.comiis_liststyle li .comiis_liststyle_box {padding:5px 10px;overflow:hidden;}
+.comiis_liststyle li .comiis_liststyle_box .left_img {float:left;height:198px;border:1px solid #ddd;margin-right:30px;overflow:hidden;position:relative;}
+.comiis_liststyle li .comiis_liststyle_box .left_img img {width:160px;height:100%;}
+.comiis_liststyle li .comiis_liststyle_box .left_img span {position:absolute;left:0;bottom:0;display:block;width:100%;height:26px;line-height:24px;text-align:center;color:#fff;background:rgba(0,0,0,0.6);filter:progid:dximagetransform.microsoft.gradient(startcolorstr=#6e333333,endcolorstr=#6e333333);}
+.comiis_liststyle li .comiis_liststyle_box select {width:315px;height:200px;}
+.comiis_liststyle_sum {padding:8px 10px;overflow:hidden;}
+.comiis_liststyle_sum input.txt {width:53px;}
+.comiis_liststyle_sum span.kmtit {padding-right:10px;color:green;}
+.comiis_liststyle_sum span.kmtxt {padding-left:28px;color:#999;}

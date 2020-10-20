@@ -1,0 +1,56 @@
+{template aljol:head}
+<header class="topBar1 top">
+	<i class="iconfont icon-fanhui" onclick="location.href='plugin.php?id=aljol'"></i>
+	<span>{lang aljol:request_htm_1}</span>
+</header>
+<main class="requestmain">
+	<div class ="content">
+	{loop $addfriendrequest $tmp_key $tmp_value}
+	<div class="friendre">
+		<div class="friend-head">
+			{eval echo avatar($tmp_value['fuid'])}
+		</div>
+		<div class="friend-name">
+			<div class="friend-name-left">
+				<p>{$tmp_value['fusername']}</p>
+				<span>{$tmp_value['sightml']}</span>
+			</div>
+			<div class="friend-name-right flex12">
+				<button class="layui-btn buttons" onclick="yesfriend({$tmp_value['fuid']},1,this)">{lang aljol:request_htm_3}</button>
+				<button class="layui-btn buttons" onclick="yesfriend({$tmp_value['fuid']},2,this)">{lang aljol:request_htm_4}</button>
+			</div>
+		</div>
+	</div>
+	{/loop}
+	</div>
+	<div class="weui-loadmore" style="display: none;">
+	  <i class="weui-loading"></i>
+	  <span class="weui-loadmore__tips">{lang aljol:request_htm_5}..</span>
+	</div>
+</main>
+</body>
+	<script>
+		var loading = false;  //{lang aljol:request_htm_6}
+		var page = 1;
+		$(document.body).infinite().on("infinite", function() {
+		  if(loading) return;
+		  loading = true;
+		  page=page+1;
+		  $('.weui-loadmore').show();
+		  getrequest(page);
+		});
+		function getrequest(page) {
+			var url = 'plugin.php?id=aljol&act=requestfriendlist&page='+page;
+			$.post(url,function(res){
+				if(res!=null &&res!='') {
+					$('.content').append(res);
+					loading = false;
+				}else{
+					loading = true;
+					$('.weui-loadmore').hide();
+				}
+			})
+		}
+	
+	</script>
+</html>

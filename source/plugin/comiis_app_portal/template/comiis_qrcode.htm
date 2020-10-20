@@ -1,0 +1,23 @@
+<!--{template common/header}-->
+<style>
+.comiis_app_portal_ewmuuis {margin:0 auto 10px;padding:30px 15px;text-align:center;background:#fff;overflow:hidden;border-radius:6px;}
+.comiis_app_portal_ewmuuis h2 {height:30px;line-height:30px;font-size:18px;color:#369;font-weight:400;}
+.comiis_app_portal_ewmuuis img {display:block;border:1px solid #e3e3e3;border-radius:6px;margin:15px auto;}
+.comiis_app_portal_ewmuuis .ewm_txtwnwr {font-size:14px;line-height:26px;}
+.comiis_app_portal_ewmuuis .ewm_txtwnwr span {font-size:12px;color:#dd0000;}
+</style>
+<div id="pt" class="bm cl udum">
+	<div class="mouz z">
+		<a href="./" class="hnnx nvhm" title="{lang homepage}">$_G[setting][bbname]</a><em>&raquo;</em>{$comiis_app_portal_lang['94']}
+	</div>
+</div>
+<div class="comiis_app_portal_ewmuuis">
+	<h2>{$comiis_data['name']}</h2>
+	<img src="./data/attachment/temp/mobile_qrcode_{$comiis_pid}{if $comiis_data['comiisheader'] == '1'}_s{/if}.png">
+	<div class="ewm_txtwnwr">
+	{$comiis_app_portal_lang['95']}
+	<span>{$_G['siteurl']}{if $comiis_data['comiisheader'] == '1'}page-{$comiis_pid}.html{else}plugin.php?id=comiis_app_portal&pid={$comiis_pid}{/if}</span>
+	</div>
+</div>
+<!--{template common/footer}-->
+<!--{eval exit();}-->

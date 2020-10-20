@@ -1,0 +1,22 @@
+<!--{template common/header}-->
+<style>
+.comiis_app_portal_ewm {margin:0 auto 10px;padding:30px 15px;text-align:center;background:#fff;overflow:hidden;border-radius:6px;}
+.comiis_app_portal_ewm h2 {height:30px;line-height:30px;font-size:18px;color:#369;font-weight:400;}
+.comiis_app_portal_ewm img {display:block;border:1px solid #e3e3e3;border-radius:6px;margin:15px auto;}
+.comiis_app_portal_ewm .ewm_txt {font-size:14px;line-height:26px;}
+.comiis_app_portal_ewm .ewm_txt span {font-size:12px;color:#dd0000;}
+</style>
+<div id="pt" class="bm cl">
+	<div class=" z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a><em>&raquo;</em>{$comiis_app_activity_set['name']}
+	</div>
+</div>
+<div class="comiis_app_portal_ewm">
+	<h2>{$comiis_app_activity_set['name']}</h2>
+	<img src="http://qr.topscan.com/api.php?text={$_G['siteurl']}plugin.php?id=comiis_app_activity">
+	<div class="ewm_txt">
+	<span>{$_G['siteurl']}plugin.php?id=comiis_app_activity</span>
+	</div>
+</div>
+<!--{template common/footer}-->
+<!--{eval exit();}-->

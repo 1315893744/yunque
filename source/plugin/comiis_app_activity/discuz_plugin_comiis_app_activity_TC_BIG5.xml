@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X3,X3.1,X3.2,X3.3,X3.4,F1.0,L1.0]]></item>
+	<item id="Time"><![CDATA[2018-11-15 11:09]]></item>
+	<item id="From"><![CDATA[XXX网 - 站长互动平台]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[克米設計-手機活動]]></item>
+			<item id="identifier"><![CDATA[comiis_app_activity]]></item>
+			<item id="description"><![CDATA[手機版活動聚合展示插件, 有效增加用戶互動興趣]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[comiis_app_activity/]]></item>
+			<item id="copyright"><![CDATA[XXX网 - 站长互动平台]]></item>
+			<item id="version"><![CDATA[v3.5]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[comiis_more]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[更多克米設計作品]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[comiis_app_activity]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[28]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X3,X3.1,X3.2,X3.3,X3.4,F1.0,L1.0]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[授權Key]]></item>
+				<item id="description"><![CDATA[請與克米設計聯系獲取授權Key]]></item>
+				<item id="variable"><![CDATA[comiis_key]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[欄目名稱]]></item>
+				<item id="description"><![CDATA[設置插件顯示的名稱]]></item>
+				<item id="variable"><![CDATA[name]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[精彩活動]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[是否顯示頭部導航]]></item>
+				<item id="description"><![CDATA[設置是否顯示頭部導航
+提示: 使用克米設計手機版的用戶此項請選擇否]]></item>
+				<item id="variable"><![CDATA[open_header]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[發布活動連接]]></item>
+				<item id="description"><![CDATA[設置頭部導航右側發布活動圖標的連接
+留空則顯示返回首頁圖標]]></item>
+				<item id="variable"><![CDATA[post_url]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[頭部廣告代碼]]></item>
+				<item id="description"><![CDATA[設置活動頁面頭部的廣告代碼
+支持HTML代碼和聯盟廣告代碼]]></item>
+				<item id="variable"><![CDATA[header_ad]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<a href="#">
+<em>商家推廣</em>
+<img src="source/plugin/comiis_app_activity/style/comiis_topimg.jpg" width="100%">
+</a>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[暫無活動提示內容]]></item>
+				<item id="description"><![CDATA[設置暫無活動數據提示的內容]]></item>
+				<item id="variable"><![CDATA[no_ac]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[暫無活動，敬請期待...]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[讀取版塊]]></item>
+				<item id="description"><![CDATA[設置需要調用活動數據的版塊
+留空則全部版塊調用]]></item>
+				<item id="variable"><![CDATA[fids]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[活動排序]]></item>
+				<item id="description"><![CDATA[設置活動排序選項]]></item>
+				<item id="variable"><![CDATA[timeoder]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[tid]]></item>
+				<item id="extra"><![CDATA[tid = 發帖排序
+cost = 每人花銷
+starttimefrom = 開始時間
+starttimeto = 結束時間
+number = 活動人數
+applynumber = 已參加人數
+expiration = 報名截止日期
+credit = 需消耗的積分]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[排序方式]]></item>
+				<item id="description"><![CDATA[設置活動排列順序]]></item>
+				<item id="variable"><![CDATA[oder]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[0 = 正序
+1 = 倒序]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[每頁顯示數量]]></item>
+				<item id="description"><![CDATA[設置活動列表每頁顯示的數量]]></item>
+				<item id="variable"><![CDATA[list_num]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[10]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[活動列表間廣告]]></item>
+				<item id="description"><![CDATA[設置活動列表間的廣告
+格式︰在第幾個下面插入廣告|廣告提示文字|廣告連接地址|廣告圖片
+例子︰2|廣告|http://www.comiis.com|source/plugin/comiis_app_activity/style/comiis_img01.jpg]]></item>
+				<item id="variable"><![CDATA[list_ad]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[2|廣告|http://www.comiis.com/|source/plugin/comiis_app_activity/style/comiis_img01.jpg
+8|推廣|http://www.comiis.com/|source/plugin/comiis_app_activity/style/comiis_img02.jpg]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[是否在首頁顯示推薦活動]]></item>
+				<item id="description"><![CDATA[設置是否在論壇首頁顯示推薦活動, 選擇否, 則進行手工添加代碼顯示, 請復制下面代碼到需要的位置
+調用代碼: <!--{hook/global_comiis_app_activity}-->
+提示: 使用克米設計手機版的用戶此項請選擇否]]></item>
+				<item id="variable"><![CDATA[activity_index]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[首頁推薦活動調用的tid]]></item>
+				<item id="description"><![CDATA[設置需要在首頁顯示的活動主題tid, 多個tid請用英文,號分隔, 如: 1,2,3]]></item>
+				<item id="variable"><![CDATA[tids]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[首頁推薦活動標題文字]]></item>
+				<item id="description"><![CDATA[設置首頁推薦活動顯示的標題文字]]></item>
+				<item id="variable"><![CDATA[hookname]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[活動進行中...]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[是否顯示首頁推薦活動標題]]></item>
+				<item id="description"><![CDATA[設置是否顯示首頁推薦活動的欄目標題
+提示: 使用克米設計手機版的用戶此項請選擇否]]></item>
+				<item id="variable"><![CDATA[hooktitle]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="title"><![CDATA[附加CSS]]></item>
+				<item id="description"><![CDATA[為插件添加CSS進行個性化樣式設置]]></item>
+				<item id="variable"><![CDATA[css]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+	</item>
+</root>

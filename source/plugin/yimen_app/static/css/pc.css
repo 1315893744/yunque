@@ -1,0 +1,44 @@
+.yimen_login {
+    height: 56px;
+    width: 168px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login_box {
+    height: 56px;
+    width: 56px;
+    display: flex;
+    flex-direction: column;
+}
+
+.box_img {
+    margin: 0 8px;
+    height: 40px;
+    width: 40px;
+}
+
+.login_icon {
+    height: 40px;
+    line-height: 40px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.box_text {
+    height: 16px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.wx {
+    color: #8CB922;
+}
+
+.qq {
+    color: #3CA0EC;
+}
+
+.wb {
+    color: #E14432;
+}

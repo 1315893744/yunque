@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>会员登录</title>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="./css/bui.css"/>
+    <link rel="stylesheet" href="./icon/iconfont.css"/>
+    <link rel="stylesheet" href="./css/login.css"/>
+</head>
+<body>
+<div class="bui-page">
+    <div class="logo">
+        <div class="back" id="back">
+            <i class="icon-back"></i>
+        </div>
+        <div class="logos">
+
+        </div>
+        <div class="btns">
+            <div class="btn active" id="login">登 录</div>
+            <div class="btn" id="reg">注 册</div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="form-box" id="login-box">
+            <div class="bui-input user-input">
+                <input id="username" type="text" value="" placeholder="请输入用户名">
+                <i class="icon-user"></i>
+            </div>
+            <div class="bui-input user-input">
+                <input id="password" type="password" value="" placeholder="请输入密码">
+                <i class="icon-lock"></i>
+            </div>
+
+            <div class="bui-btn ring btn-color" id="tologin">登 录</div>
+            <div class="other-login" id="loginss">
+                <div class="other-line"></div>
+                <div class="other-box qq" id="qq"><i class="iconfont">&#xe6af;</i></div>
+                <div class="other-box wx" id="wechat"><i class="iconfont">&#xe62e;</i></div>
+                <div class="other-box wb" id="sina"><i class="iconfont">&#xe6b2;</i></div>
+                <div class="other-line"></div>
+            </div>
+        </div>
+        <div class="form-box" id="reg-box" style="display: none;">
+            <div class="bui-input user-input">
+                <input id="rusername" type="text" value="" placeholder="请输入用户名">
+                <i class="icon-user"></i>
+            </div>
+            <div class="bui-input user-input">
+                <input id="remail" type="text" value="" placeholder="请输入邮箱">
+                <i class="icon-lock"></i>
+            </div>
+            <div class="bui-input user-input">
+                <input id="rpassword" type="password" value="" placeholder="请输入密码">
+                <i class="icon-lock"></i>
+            </div>
+
+            <div class="bui-btn ring btn-color" id="toreg">注册</div>
+        </div>
+
+    </div>
+</div>
+<script src="./js/zepto.js"></script>
+<script src="./js/bui.js"></script>
+<script src="./js/login.js"></script>
+<script src="./js/jsbridge-mini.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!--{block return}-->
+<!--{if $wsq}-->
+<style type="text/css">
+#headerbar #k_misign_button{height:28px;padding-top:10px;width:100%;display:-webkit-box;position:relative;float:left;}
+#headerbar #signBtn{display:inline-block;margin-left:10px;height:28px;padding:1px 8px 0;overflow: hidden;border-radius:2px;white-space: nowrap;text-overflow:ellipsis;box-sizing:border-box;line-height:28px;font-size:13px;text-align:center;color:#FFFFFF; background:{$buttonsetting['buttoncolor']};}
+#headerbar a.sign{background-image:-webkit-linear-gradient(top,{$buttonsetting['navcolor']},{$buttonsetting['nav2color']});background-image:linear-gradient(to bottom,{$buttonsetting['navcolor']},{$buttonsetting['nav2color']})}
+#headerbar a.signed{background-color: #474b5c;background-image:none!important;color:rgba(255,255,255,.6)!important;}
+#headerbar #signIcon{position: relative;top: 1px;display: inline-block;width: 12px;height: 12px;background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAS1BMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////+DmQsHAAAAGHRSTlMAsMAXcNoRJgq25olABWXyIX9LXMqoNfrCBrZ1AAAAoUlEQVR4Xp3ROQ7DMAxE0ZGtzXsWx/n3P2lAIAJsKVWmnEeQBfVHkuOULkt5SNZT90vHGCUHPuqcFzBL4HXJBGOSwXV+hWCN4NLPsGe10G/YfAsdYy/pXiDvazmQrKfAAE9bBA9zKJACHNKLSVdQ7Nj6mbDUoGVgCBxqQDlgi1rQ7b3ln6DHUzWUVBBriF/wNXiD9lHRgyuvrZNk4mpw1n8A3RkQ6646hjoAAAAASUVORK5CYII=');background-size:12px 12px;margin: 0 2px 0 0}
+#headerbar #focusBtn{position:relative;display:-webkit-box;-webkit-box-flex:1;box-sizing:border-box;background:#f4f6f9;padding:0 5px 0 25px;border-radius:2px}
+#headerbar #fb_exp_progressbar{-webkit-box-flex:1;display:block;height:12px;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAMAAADXEh96AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo3Rjc4RkE4MURCMjkxMUUzQjZGRjg5ODA0NzUxNjlDMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo3Rjc4RkE4MkRCMjkxMUUzQjZGRjg5ODA0NzUxNjlDMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjdGNzhGQTdGREIyOTExRTNCNkZGODk4MDQ3NTE2OUMxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjdGNzhGQTgwREIyOTExRTNCNkZGODk4MDQ3NTE2OUMxIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+mketkAAAAAZQTFRF19ri3uHpDMv7WAAAABtJREFUeNpiYGBgZGRkQCUZIGwGRhgTJA4QYAABpAATbPyJwwAAAABJRU5ErkJggg==");border-radius:12px;border: 2px solid #e1e3e5;position:relative;margin:6px 6px 0 0}
+#headerbar #fb_current_progress{width:0;height: 100%;background-image:-webkit-linear-gradient(top,{$buttonsetting['navcolor']},{$buttonsetting['nav2color']});background-image: linear-gradient(to bottom,{$buttonsetting['navcolor']},{$buttonsetting['nav2color']});border-radius:12px;position:relative;top: 0;left: 0;-webkit-transition:width .8s ease-out}
+#headerbar #fb_exp{color:#939596;font:400 12px/12px Arial;text-align:center;word-break: break-all;height:28px;line-height:28px}
+#headerbar #fb_level_badge{position: absolute;top:4px;left:0;width: 21px;height: 20px;display: inline-block;line-height:20px;text-align:center;font-size:10px;color: #fff;vertical-align: middle;z-index:10;background-size: 100%;background-image:url("{$_G['siteurl']}/source/plugin/k_misign/static/image/button/mobile_default/grade-{$qiandaodb['levelarray']['levelnum']}.png")}
+</style>
+<!--{else}-->
+<style type="text/css">
+#k_misign_button{height:28px;width:100%;display:-webkit-box;position:relative;}
+#signBtn{display:inline-block;margin-left:10px;height:28px;padding:1px 8px 0;overflow: hidden;border-radius:2px;white-space: nowrap;text-overflow:ellipsis;box-sizing:border-box;line-height:28px;font-size:13px;text-align:center;color:#FFFFFF; background:{$buttonsetting['buttoncolor']};}
+a.sign{background-image:-webkit-linear-gradient(top,{$buttonsetting['navcolor']},{$buttonsetting['nav2color']});background-image:linear-gradient(to bottom,{$buttonsetting['navcolor']},{$buttonsetting['nav2color']})}
+a.signed{background-color: #474b5c;background-image:none!important;color:rgba(255,255,255,.6)!important;}
+#signIcon{position: relative;top: 1px;display: inline-block;width: 12px;height: 12px;background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAS1BMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////+DmQsHAAAAGHRSTlMAsMAXcNoRJgq25olABWXyIX9LXMqoNfrCBrZ1AAAAoUlEQVR4Xp3ROQ7DMAxE0ZGtzXsWx/n3P2lAIAJsKVWmnEeQBfVHkuOULkt5SNZT90vHGCUHPuqcFzBL4HXJBGOSwXV+hWCN4NLPsGe10G/YfAsdYy/pXiDvazmQrKfAAE9bBA9zKJACHNKLSVdQ7Nj6mbDUoGVgCBxqQDlgi1rQ7b3ln6DHUzWUVBBriF/wNXiD9lHRgyuvrZNk4mpw1n8A3RkQ6646hjoAAAAASUVORK5CYII=');background-size:12px 12px;margin: 0 2px 0 0}
+#focusBtn{position:relative;display:-webkit-box;-webkit-box-flex:1;box-sizing:border-box;background:#f4f6f9;padding:0 5px 0 25px;border-radius:2px}
+#fb_exp_progressbar {-webkit-box-flex:1;display:block;height:12px;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAMAAADXEh96AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo3Rjc4RkE4MURCMjkxMUUzQjZGRjg5ODA0NzUxNjlDMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo3Rjc4RkE4MkRCMjkxMUUzQjZGRjg5ODA0NzUxNjlDMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjdGNzhGQTdGREIyOTExRTNCNkZGODk4MDQ3NTE2OUMxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjdGNzhGQTgwREIyOTExRTNCNkZGODk4MDQ3NTE2OUMxIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+mketkAAAAAZQTFRF19ri3uHpDMv7WAAAABtJREFUeNpiYGBgZGRkQCUZIGwGRhgTJA4QYAABpAATbPyJwwAAAABJRU5ErkJggg==");border-radius:12px;border: 2px solid #e1e3e5;position:relative;margin:6px 6px 0 0}
+#fb_current_progress {width:0;height:100%;background-image:-webkit-linear-gradient(top,{$buttonsetting['navcolor']},{$buttonsetting['nav2color']});background-image: linear-gradient(to bottom,{$buttonsetting['navcolor']},{$buttonsetting['nav2color']});border-radius:12px;position:relative;top: 0;left: 0;-webkit-transition:width .8s ease-out}
+#fb_exp {color:#939596;font:400 12px/12px Arial;text-align:center;word-break: break-all;height:28px;line-height:28px}
+#fb_level_badge {position: absolute;top:4px;left:0;width: 21px;height: 20px;display: inline-block;line-height:20px;text-align:center;font-size:10px;color: #fff;vertical-align: middle;z-index:10;background-size: 100%;background-image:url("./source/plugin/k_misign/static/image/button/mobile_default/grade-{$qiandaodb['levelarray']['levelnum']}.png")}
+</style>
+<!--{/if}-->
+<!--{if !$wsq}--><div style="padding:10px;"><!--{/if}-->
+<div id="k_misign_button">
+    <a id="focusBtn">
+        <span id="fb_level_badge"></span>
+        <div id="fb_exp_progressbar">
+            <div id="fb_current_progress" style="width:{$sign_width}%;"></div>
+        </div>
+        <div id="fb_exp"><span style="color:#f15a23">{$qiandaodb['days']}</span>/<span>{$levelquery[$nextlevel]['leveldays']}</span></div>
+    </a>
+    <!--{if $_G['uid'] && $qiandaodb['time'] > $tdtime}-->
+    <a id="signBtn" class="sign signed" href="{if !$wsq}plugin.php?id=k_misign:sign{else}{$signedurl}{/if}" title="{$qiandaodb['levelarray']['levelname']}"><i id="signIcon"></i>{lang k_misign:signed}</a>
+    <!--{else}-->
+    <a id="signBtn" class="sign" href="{if !$wsq}{if $_G['uid']}javascript:;{else}member.php?mod=logging&action=login{/if}{else}{$signurl}{/if}" {if !$wsq && $_G['uid']}onClick="ajaxsign();window.location.reload();"{/if}><i id="signIcon"></i>{lang k_misign:sign}</a>
+    <!--{/if}-->
+</div>
+<!--{if !$wsq}--></div><!--{/if}-->
+<!--{if !$wsq}-->
+        <script>
+			function ajaxsign(){
+				htmlobj = $.ajax({url:"{$misign['pluginurl']}sign&operation=qiandao&format=text&formhash={FORMHASH}",async:false,contentType: "application/x-www-form-urlencoded; charset=utf-8"});
+				$("#signBtn").html(htmlobj.responseText);
+			}
+        </script>
+<!--{/if}-->
+<!--{/block}-->
+<!--{eval return $return;}-->

@@ -1,0 +1,52 @@
+<!--{subtemplate common/header}-->
+<link rel="stylesheet" type="text/css" href="./source/plugin/k_misign/static/y2002/style.css" />
+
+<!--{if $tobqday}-->
+<div id="magic_bq_menu" class="tip tip_4" style="display:none;"><div class="tip_horn"></div><div class="tip_c">{$bqshowtip}</div></div>
+<!--{/if}-->
+
+<div id="pt" class="bm cl">
+	<div class="y">
+	    <span class="xg1">{lang k_misign:todaystar}<!--{if $todaystar['username']}-->{$todaystar['username']}<!--{else}-->{lang k_misign:noinfo}<!--{/if}--></span>
+        <span class="pipe">|</span>
+        <span class="xg1">{lang k_misign:height}<!--{if $stats[highestq] > $stats[todayq]}-->{$stats[highestq]}<!--{else}-->{$stats[todayq]}<!--{/if}-->{lang k_misign:people}</span>
+        <span class="pipe">|</span>
+        <span class="xg1"><a href="{$setting['pluginurl']}misc&operation=rewardrule">{lang k_misign:rewardrule}</a></span>
+    </div>
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a><em>&raquo;</em>
+        <a href="{$setting['pluginurl']}sign">{$setting['title']}</a>
+	</div>
+</div>
+<div class="wp cl">
+	<div class="signpoint">
+		<div class="signinfor">
+			<div class="signleft">
+			  <p class="rtitle">欢迎您：<span class="name"><a href="home.php?mod=space&uid={$_G['uid']}" c="1" class="author">{$_G['username']}</a></span></p>
+              <!--{if $qiandaodb['time'] > $tdtime}-->
+              <p class="ct">{lang k_misign:yourrow}第<span class="name">{$qiandaodb['row']}</span>名（共<span class="name">{$stats['todayq']}</span>人签到）</p>
+              <p class="ct">累计签到：<span class="name">{$qiandaodb['days']}</span>次</p>
+              <p class="ct">连续签到：<span class="name">{$qiandaodb['lasted']}</span>次<!--{if $tobqday}--><a href="home.php?mod=magic&mid=k_misign:k_misign_bq&bid={$bq['bid']}" id="magic_bq" onclick="showWindow(this.id, this.href, 'get', 0)" onmouseover="showMenu({'ctrlid':this.id, 'pos':'12!', 'menuid':'magic_bq_menu'});" class="xi1 notice">{lang k_misign:magic_bq_do}</a><!--{/if}--></p>
+              <!--{else}-->
+              <p class="ct">{lang k_misign:notqdyet}</p>
+              <p>
+              	<span class="z"><a id="JD_sign" {if $_G['uid']}href="{$setting['pluginurl']}sign&operation=qiandao&formhash={FORMHASH}&from=insign" onclick="ajaxget(this.href, this.id, '', '', '', 'window.location.reload();');return false;"{else} href="member.php?mod=logging&action=login" onclick="showWindow('login', this.href);return false;"{/if}><img src="./source/plugin/k_misign/static/y2002/signnow.gif "></a></span>
+              </p>
+              <!--{/if}-->
+            </div>
+			<div class="signright">
+				<!--{if $extend['k_migeyan']}-->
+                    <span class="jtitle z">{lang k_misign:k_migeyan_everyday}{lang k_misign:maohao}</span>
+					<div class="jingju J_xyline z">
+						<span id="bigpower" class="xyart J_xyfont">{$k_migeyan['geyan']['subject']}</span>
+					</div>
+				<!--{/if}-->
+            	<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+			</div>
+		</div>
+	</div>
+	<div class="signlist cl" id="ranklist">
+	</div>
+    <script type="text/javascript">ajaxget('{$setting[pluginurl]}sign&operation=list','ranklist');</script>
+</div>
+{subtemplate common/footer}

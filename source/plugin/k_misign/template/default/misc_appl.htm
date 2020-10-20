@@ -1,0 +1,10 @@
+	<div class="appl">
+    	<div class="tbn">
+        	<h2 class="mt bbda">{lang k_misign:rule}</h2>
+            <ul>
+                <li {if $operation == 'rewardrule'}class="a"{/if}><a href="{$misign['pluginurl']}misc&operation=rewardrule">{lang k_misign:rewardrule}</a></li>
+                <li {if $operation == 'leval'}class="a"{/if}><a href="{$misign['pluginurl']}misc&operation=leval">{lang k_misign:signlevel}</a></li>
+                <li {if $operation == 'magics'}class="a"{/if}><a href="{$misign['pluginurl']}misc&operation=magics">{lang k_misign:extend_magics}</a></li>
+            </ul>
+        </div>
+    </div>

@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X3,X2.5]]></item>
+	<item id="Time"><![CDATA[2013-03-04 11:23]]></item>
+	<item id="From"><![CDATA[XXX网 - 站长互动平台]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[克米圖展中心]]></item>
+			<item id="identifier"><![CDATA[comiis_imgshow]]></item>
+			<item id="description"><![CDATA[為帖子圖片增加圖展中心模式的小插件]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[comiis_imgshow/]]></item>
+			<item id="copyright"><![CDATA[XXX网 - 站长互动平台]]></item>
+			<item id="version"><![CDATA[v1.2.5]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[comiis_imgshow]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X3,X2.5]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[圖展中心名稱]]></item>
+				<item id="description"><![CDATA[設置圖展中心名稱]]></item>
+				<item id="variable"><![CDATA[sohwname]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[圖展中心]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[圖展中心鏈接]]></item>
+				<item id="description"><![CDATA[設置頭部導航圖展中心超鏈接，如︰http://www.comiis.com]]></item>
+				<item id="variable"><![CDATA[nameurl]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[圖展中心LOGO]]></item>
+				<item id="description"><![CDATA[設置頭部導航LOGO，默認為︰./source/plugin/comiis_imgshow/comiis_img/comiis_logo.gif]]></item>
+				<item id="variable"><![CDATA[logo]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[./source/plugin/comiis_imgshow/comiis_img/comiis_logo.gif]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[keywords]]></item>
+				<item id="description"><![CDATA[設置克米圖展中心關鍵詞]]></item>
+				<item id="variable"><![CDATA[keywords]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[圖展中心,圖片中心,帖子圖集,論壇圖集,論壇圖庫,克米圖展,克米圖庫,克米圖集]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[description]]></item>
+				<item id="description"><![CDATA[設置克米圖展中心描述]]></item>
+				<item id="variable"><![CDATA[description]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[XXX网 - 站长互动平台圖展中心v1.2.5]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[啟用圖展模式圖片最小值]]></item>
+				<item id="description"><![CDATA[設置啟用圖展模式需要的帖內圖片的最小數值]]></item>
+				<item id="variable"><![CDATA[minnumber]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[選擇開啟圖展模式版塊]]></item>
+				<item id="description"><![CDATA[選擇開啟圖展模式的版塊
+“空”為所有版塊啟用]]></item>
+				<item id="variable"><![CDATA[forum]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[論壇帖內按鈕位置]]></item>
+				<item id="description"><![CDATA[選擇按鈕在論壇帖子內顯示的位置]]></item>
+				<item id="variable"><![CDATA[key]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[3]]></item>
+				<item id="extra"><![CDATA[0 = 不顯示
+1 = 內容頁標題右側
+2 = 帖子內容左上方
+3 = 帖子內容右上方]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[群組帖內按鈕位置]]></item>
+				<item id="description"><![CDATA[選擇按鈕在群組帖子內顯示的位置]]></item>
+				<item id="variable"><![CDATA[group_key]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[3]]></item>
+				<item id="extra"><![CDATA[0 = 不顯示
+1 = 內容頁標題右側
+2 = 帖子內容左上方
+3 = 帖子內容右上方]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[帖內按鈕名稱]]></item>
+				<item id="description"><![CDATA[設置帖子內按鈕的名稱]]></item>
+				<item id="variable"><![CDATA[name]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[進入圖片模式]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="title"><![CDATA[帖內按鈕顏色]]></item>
+				<item id="description"><![CDATA[選項帖內按鈕的顏色]]></item>
+				<item id="variable"><![CDATA[color]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[1 = 綠色
+2 = 藍色
+3 = 橙色
+4 = 紅色
+5 = 粉色
+6 = 啡色
+7 = 黑色
+8 = 灰色
+9 = 紫色]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[群組自動跳轉]]></item>
+				<item id="description"><![CDATA[設置群組帖子是否自動跳轉到圖展模式]]></item>
+				<item id="variable"><![CDATA[locationgroup]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[17]]></item>
+				<item id="title"><![CDATA[自動跳轉論壇版塊]]></item>
+				<item id="description"><![CDATA[選擇帖子自動跳轉到圖展模式的版塊
+“空”為不跳轉]]></item>
+				<item id="variable"><![CDATA[locationforum]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[19]]></item>
+				<item id="title"><![CDATA[自動移動到正文]]></item>
+				<item id="description"><![CDATA[設置是否自動移動到正文位置]]></item>
+				<item id="variable"><![CDATA[scroll]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[21]]></item>
+				<item id="title"><![CDATA[圖片簡介長度]]></item>
+				<item id="description"><![CDATA[設置圖片簡介內容的長度，單位︰字節]]></item>
+				<item id="variable"><![CDATA[messagelen]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[500]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[22]]></item>
+				<item id="title"><![CDATA[顯示主題內容]]></item>
+				<item id="description"><![CDATA[設置是否顯示主題內容]]></item>
+				<item id="variable"><![CDATA[message]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="16">
+				<item id="displayorder"><![CDATA[23]]></item>
+				<item id="title"><![CDATA[主題內容長度]]></item>
+				<item id="description"><![CDATA[設置主題內容的長度，單位︰字節]]></item>
+				<item id="variable"><![CDATA[threadlen]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[1500]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="17">
+				<item id="displayorder"><![CDATA[24]]></item>
+				<item id="title"><![CDATA[顯示回復內容]]></item>
+				<item id="description"><![CDATA[設置是否顯示回復內容]]></item>
+				<item id="variable"><![CDATA[remessage]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="18">
+				<item id="displayorder"><![CDATA[25]]></item>
+				<item id="title"><![CDATA[開啟內容圖片解析]]></item>
+				<item id="description"><![CDATA[設置是否啟用內容中[IMG]圖片的解析]]></item>
+				<item id="variable"><![CDATA[messagepic]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="19">
+				<item id="displayorder"><![CDATA[26]]></item>
+				<item id="title"><![CDATA[開啟內容鏈接解析]]></item>
+				<item id="description"><![CDATA[設置是否啟用內容的超鏈接[url]解析]]></item>
+				<item id="variable"><![CDATA[messagelink]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="20">
+				<item id="displayorder"><![CDATA[27]]></item>
+				<item id="title"><![CDATA[內容鏈接顏色]]></item>
+				<item id="description"><![CDATA[設置內容中鏈接的顏色]]></item>
+				<item id="variable"><![CDATA[linkcolor]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#369]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="21">
+				<item id="displayorder"><![CDATA[28]]></item>
+				<item id="title"><![CDATA[開啟內容表情解析]]></item>
+				<item id="description"><![CDATA[設置是否啟用內容中的表情解析]]></item>
+				<item id="variable"><![CDATA[smilies]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="22">
+				<item id="displayorder"><![CDATA[29]]></item>
+				<item id="title"><![CDATA[主題內容解析空格和換行]]></item>
+				<item id="description"><![CDATA[設置是否啟用主題內容解析空格和換行]]></item>
+				<item id="variable"><![CDATA[messagebr]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="23">
+				<item id="displayorder"><![CDATA[30]]></item>
+				<item id="title"><![CDATA[顯示回復用戶頭像]]></item>
+				<item id="description"><![CDATA[設置是否顯示回復用戶頭像]]></item>
+				<item id="variable"><![CDATA[avatar]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="24">
+				<item id="displayorder"><![CDATA[31]]></item>
+				<item id="title"><![CDATA[顯示回復框]]></item>
+				<item id="description"><![CDATA[設置是否顯示回復框]]></item>
+				<item id="variable"><![CDATA[retext]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="25">
+				<item id="displayorder"><![CDATA[33]]></item>
+				<item id="title"><![CDATA[回復條數]]></item>
+				<item id="description"><![CDATA[設置顯示回復的數量]]></item>
+				<item id="variable"><![CDATA[renumber]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[5]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="26">
+				<item id="displayorder"><![CDATA[35]]></item>
+				<item id="title"><![CDATA[回復附加當前圖片]]></item>
+				<item id="description"><![CDATA[設置回復是否附加當前瀏覽圖片]]></item>
+				<item id="variable"><![CDATA[reimg]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="27">
+				<item id="displayorder"><![CDATA[37]]></item>
+				<item id="title"><![CDATA[顯示推薦圖片模塊]]></item>
+				<item id="description"><![CDATA[設置底部推薦圖片模塊是否顯示]]></item>
+				<item id="variable"><![CDATA[img]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="28">
+				<item id="displayorder"><![CDATA[39]]></item>
+				<item id="title"><![CDATA[推薦圖片模塊顯示條件]]></item>
+				<item id="description"><![CDATA[設置底部推薦圖片模塊數據讀取條件]]></item>
+				<item id="variable"><![CDATA[imgcondition]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[lastpost]]></item>
+				<item id="extra"><![CDATA[dateline = 當前版塊最新帖子
+lastpost = 當前版塊最新回復
+views = 當前版塊最多瀏覽
+replies = 當前版塊最多回復]]></item>
+			</item>
+			<item id="29">
+				<item id="displayorder"><![CDATA[40]]></item>
+				<item id="title"><![CDATA[推薦圖片模塊顯示條數]]></item>
+				<item id="description"><![CDATA[設置推薦圖片模塊圖片顯示條數]]></item>
+				<item id="variable"><![CDATA[conditionnum]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[6]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="30">
+				<item id="displayorder"><![CDATA[41]]></item>
+				<item id="title"><![CDATA[大家都在看模塊顯示條件]]></item>
+				<item id="description"><![CDATA[設置未圖彈出的大家都在看模塊數據讀取條件]]></item>
+				<item id="variable"><![CDATA[endcondition]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[views]]></item>
+				<item id="extra"><![CDATA[dateline = 當前版塊最新帖子
+lastpost = 當前版塊最新回復
+views = 當前版塊最多瀏覽
+replies = 當前版塊最多回復]]></item>
+			</item>
+			<item id="31">
+				<item id="displayorder"><![CDATA[42]]></item>
+				<item id="title"><![CDATA[大家都在看按鈕名稱]]></item>
+				<item id="description"><![CDATA[設置大家都在看按鈕名稱]]></item>
+				<item id="variable"><![CDATA[keyname]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[進入社區圖片中心]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="32">
+				<item id="displayorder"><![CDATA[43]]></item>
+				<item id="title"><![CDATA[大家都在看按鈕鏈接]]></item>
+				<item id="description"><![CDATA[設置大家都在看按鈕鏈接]]></item>
+				<item id="variable"><![CDATA[keyurl]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[#]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="33">
+				<item id="displayorder"><![CDATA[44]]></item>
+				<item id="title"><![CDATA[自定義導航右則HTML內容]]></item>
+				<item id="description"><![CDATA[自定義導航右則HTML內容]]></item>
+				<item id="variable"><![CDATA[html]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<a href="#" target="_blank">自定內容</a><span>|</span><a href="#" target="_blank">自定內容</a><span>|</span><a href="#" target="_blank">自定內容</a><span>|</span><a href="#" target="_blank">自定內容</a>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="34">
+				<item id="displayorder"><![CDATA[45]]></item>
+				<item id="title"><![CDATA[頭部廣告代碼]]></item>
+				<item id="description"><![CDATA[設置頭部廣告HTML代碼]]></item>
+				<item id="variable"><![CDATA[topad]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<a href="http://addon.discuz.com/?@comiis_imgshow.plugin" target="_blank"><img src="./source/plugin/comiis_imgshow/comiis_img/comiis_ad.jpg" width="980" height="60"></a>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="35">
+				<item id="displayorder"><![CDATA[47]]></item>
+				<item id="title"><![CDATA[自定義分享到代碼]]></item>
+				<item id="description"><![CDATA[設置自定義分享到代碼
+留空為使用XXX网 - 站长互动平台內置的分享到樣式
+注意︰自定義分享到代碼有可能會影響頁面加載速度]]></item>
+				<item id="variable"><![CDATA[toolBar]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="36">
+				<item id="displayorder"><![CDATA[48]]></item>
+				<item id="title"><![CDATA[底部版權信息代碼]]></item>
+				<item id="description"><![CDATA[設置底部版權信息HTML代碼]]></item>
+				<item id="variable"><![CDATA[footcopy]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[Copyright &copy; 2012-2013 <a href="http://www.comiis.com" target="_blank">XXX网 - 站长互动平台</a> 版權所有 All Rights Reserved. ]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="37">
+				<item id="displayorder"><![CDATA[49]]></item>
+				<item id="title"><![CDATA[開啟偽靜態]]></item>
+				<item id="description"><![CDATA[設置偽靜態是否開啟
+相關偽靜態規則:  http://addon.discuz.com/?@comiis_imgshow.plugin.doc/wjt]]></item>
+				<item id="variable"><![CDATA[Rewrite]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="imgnumber"><![CDATA[貼子圖片不足 ]]></item>
+				<item id="unit"><![CDATA[ 張]]></item>
+				<item id="replace"><![CDATA[/本帖最後由(.*?)編輯/is]]></item>
+				<item id="gmdate"><![CDATA[Y年m月d日 H:i]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="text"><![CDATA[正文]]></item>
+				<item id="auto"><![CDATA[每5秒自動切換]]></item>
+				<item id="slideshow"><![CDATA[幻燈播放]]></item>
+				<item id="view"><![CDATA[查看原圖]]></item>
+				<item id="prompt"><![CDATA[提示︰支持鍵盤翻頁 ←左 右→]]></item>
+				<item id="qzone"><![CDATA[QQ空間]]></item>
+				<item id="tqq"><![CDATA[騰訊微博]]></item>
+				<item id="sina"><![CDATA[新浪微博]]></item>
+				<item id="viewtid"><![CDATA[查看原文]]></item>
+				<item id="read"><![CDATA[閱\讀]]></item>
+				<item id="replies"><![CDATA[回復]]></item>
+				<item id="replie"><![CDATA[我也要發表圖帖]]></item>
+				<item id="replay"><![CDATA[重新播放]]></item>
+				<item id="favorites"><![CDATA[加入收藏夾]]></item>
+				<item id="share"><![CDATA[分享本帖子]]></item>
+				<item id="look"><![CDATA[大家都在看]]></item>
+				<item id="comment"><![CDATA[評論]]></item>
+				<item id="talk"><![CDATA[我來說兩句︰]]></item>
+				<item id="netreplie"><![CDATA[網友評論︰]]></item>
+				<item id="date"><![CDATA[發表于]]></item>
+				<item id="civilization"><![CDATA[文明上網，理性發言]]></item>
+				<item id="welcome"><![CDATA[歡迎您]]></item>
+				<item id="replieaddpic"><![CDATA[回復附加當前瀏覽圖片]]></item>
+				<item id="submit"><![CDATA[發 布]]></item>
+				<item id="login1"><![CDATA[歡迎您，請 <a onclick="showWindow('login', this.href);return false;" href="member.php?mod=logging&action=login&referer=plugin.php?id=comiis_imgshow%26tid=]]></item>
+				<item id="login2"><![CDATA[">[登錄]</a> 或 <a href="member.php?mod=register" style="float:none;">[注冊]</a> 發言!]]></item>
+				<item id="foot"><![CDATA[ Design: <A href="http://www.comiis.com" class="kmurl" target=_blank title="XXX网 - 站长互动平台">Comiis.Com</A>]]></item>
+				<item id="source"><![CDATA[來自]]></item>
+				<item id="sourcereplie"><![CDATA[的回復︰]]></item>
+				<item id="sources"><![CDATA[來源︰]]></item>
+				<item id="author"><![CDATA[作者︰]]></item>
+			</item>
+		</item>
+	</item>
+</root>

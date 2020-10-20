@@ -1,0 +1,45 @@
+/*
+@font-face {
+  font-family: 'comiis_mobfont';
+  src: url('comiis_mobfont.eot');
+  src: url('comiis_mobfont.eot?#iefix') format('embedded-opentype'),
+  url('comiis_mobfont.svg#comiis_mobfont') format('svg'),
+  url('comiis_mobfont.woff') format('woff'),
+  url('comiis_mobfont.ttf') format('truetype');
+}
+*/
+@font-face {
+  font-family: 'comiis_mobfont';  /* project id 406863 */
+  src: url('//at.alicdn.com/t/font_406863_ljbpwqq1h1j4te29.eot');
+  src: url('//at.alicdn.com/t/font_406863_ljbpwqq1h1j4te29.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_406863_ljbpwqq1h1j4te29.woff') format('woff'),
+  url('//at.alicdn.com/t/font_406863_ljbpwqq1h1j4te29.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_406863_ljbpwqq1h1j4te29.svg#comiis_mobfont') format('svg');
+}
+.comiis_mobfont {
+  font-family:"comiis_mobfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing:antialiased;
+  -webkit-text-stroke-width:0px;
+  -moz-osx-font-smoothing:grayscale;
+}
+.comiis_mobreg_box .styli_r .comiis_sendbtn {font-size:14px;}
+.comiis_mobreg_tip {margin:15px 15px 0;line-height:24px;font-size:13px;text-align:center;}
+.comiis_sms_bdlist li {line-height:30px;padding:10px 0;margin:0 12px;font-size:14px;}
+.comiis_sms_bdlist li img {float:left;width:30px;height:30px;margin-right:8px;border-radius:50%;}
+.comiis_sms_btnbox {padding:0 15px;}
+.comiis_sms_btnbox_bg {padding:0 25px 15px;}
+#comiis_sms_head {width:100%;height:48px;}
+.comiis_sms_head {height:38px;padding:5px 5px;}
+.comiis_sms_head h2 {float:left;width:50%;text-align:center;font-size:18px;line-height:38px;position:relative;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.comiis_sms_head h2 img {height:38px;}
+.comiis_sms_head h2 i.kmxiao {margin-left:5px;font-size:14px;}
+.comiis_sms_head .header_z {float:left;width:25%;position:relative;}
+.comiis_sms_head .header_y {float:right;width:25%;position:relative;}
+.comiis_sms_head .header_z a, .comiis_sms_head .header_y a {display:block;width:34px;height:38px;text-align:center;overflow:hidden;}
+.comiis_sms_head .header_y a {float:right;}
+.comiis_sms_head i {font-size:20px;line-height:38px;}
+.comiis_login_box {padding:15px 0;}
+.comiis_sms_xzuid {width:100%;background:none;border:none;}
+

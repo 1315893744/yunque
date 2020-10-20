@@ -1,0 +1,192 @@
+<?php if(!defined('IN_DISCUZ')) exit('Access Denied'); ?><?php
+$__CURMODULE = CURMODULE;$return = <<<EOF
+
+<script type="text/javascript">
+var comiis_mobile_runjs_num_wmse = 0;
+var comiis_lostpwform;
+
+EOF;
+ if(!$_G['uid']) { 
+$return .= <<<EOF
+
+function comiis_mobile_runjs_aakb(){
+
+EOF;
+ if($_G['comiis_sms']['open_pcreg'] && $_G['basescript'] == 'member' && CURMODULE == 'register') { 
+$return .= <<<EOF
+
+jQuery('{$regdata}').insertBefore("#registerform");
+if({$_G['comiis_sms']['reg_mod']} == 0){
+jQuery('#registerform').hide();
+}else{
+jQuery('#registerform').remove();
+}
+
+EOF;
+ } 
+$return .= <<<EOF
+
+}
+function comiis_mobile_tab(a) {
+if(a == 0){
+jQuery('#comiis_mobile_tab_0').addClass('comiis_sms_on');
+jQuery('#comiis_mobile_tab_1').removeClass('comiis_sms_on');
+jQuery('#comiis_sms_sms').show();
+jQuery('#registerform').hide();
+}else{
+jQuery('#comiis_mobile_tab_1').addClass('comiis_sms_on');
+jQuery('#comiis_mobile_tab_0').removeClass('comiis_sms_on');
+jQuery('#comiis_sms_sms').hide();
+jQuery('#registerform').show();
+}
+}
+function comiis_mobile_jtab(a) {
+if(a == 0){
+jQuery('#comiis_mobile_jtab_0').addClass('comiis_sms_on');
+jQuery('#comiis_mobile_jtab_1').removeClass('comiis_sms_on');
+jQuery('#comiis_mobile_jms_sms').show();
+comiis_lostpwform.hide();
+}else{
+jQuery('#comiis_mobile_jtab_1').addClass('comiis_sms_on');
+jQuery('#comiis_mobile_jtab_0').removeClass('comiis_sms_on');
+jQuery('#comiis_mobile_jms_sms').hide();
+comiis_lostpwform.show();
+}
+}
+function comiis_checksubmit(type){
+var phone = jQuery("."+type+" #comiis_tel").val();
+var myregbfhl = /^(\+)?(86)?0?1\d{10}$/;
+if(phone == '' || !myregbfhl.test(phone)){
+showDialog('{$comiis_sms['35']}', 'notice', '{$comiis_sms['36']}');
+return;
+}
+ajaxpost('comiis_sms_sms', 'returnmessage4', 'returnmessage4', 'onerror');
+return;
+}
+function comiis_loginsubmit(type){
+var phone = jQuery("."+type+" #comiis_tel").val();
+var myregbfhl = /^(\+)?(86)?0?1\d{10}$/;
+if(phone == '' || !myregbfhl.test(phone)){
+showDialog('{$comiis_sms['35']}', 'notice', '{$comiis_sms['36']}');
+return;
+}
+ajaxpost('comiis_sms_login', 'returnmessage4', 'returnmessage4', 'onerror');
+return;
+}
+function succeedhandle_comiis_lostpw(locationhref, message, param) {
+showWindow('login', 'plugin.php?id=comiis_sms:comiis_sms_post&action=lostpw&comiis_tel='+param['tel']+'&code='+param['code']+'&md5='+param['md5']+'&inajax=1', 'get', 0);
+}
+function comiis_lostpwssubmit(type){
+var phone = jQuery("."+type+" #comiis_tel").val();
+var myregbfhl = /^(\+)?(86)?0?1\d{10}$/;             
+if(phone == '' || !myregbfhl.test(phone)){
+showDialog('{$comiis_sms['35']}', 'notice', '{$comiis_sms['36']}');
+return;
+}
+ajaxpost('comiis_mobile_jms_sms', 'returnmessage4', 'returnmessage4', 'onerror');
+return;
+}
+
+EOF;
+ } 
+$return .= <<<EOF
+
+var comiis_mobreg_timeout_xlco;
+function comiis_mobreg_fkey(type){
+//发送和返回
+var phone = jQuery("."+type+" #comiis_tel").val();
+var myregbfhl = /^(\+)?(86)?0?1\d{10}$/;             
+if(phone == '' || !myregbfhl.test(phone)){
+showDialog('{$comiis_sms['35']}', 'notice', '{$comiis_sms['36']}');
+}else{
+jQuery('.'+type+' .comiis_mobreg_timekey').attr("disabled","disabled");
+var comiis_seccodeverify = '';
+var secanswer = jQuery("."+type+' input[name="secanswer"]').val();
+var secqaahash = jQuery("."+type+' input[name="secqaahash"]').val();
+var seccodeverify = jQuery("."+type+' input[name="seccodeverify"]').val();
+var seccodehash = jQuery("."+type+' input[name="seccodehash"]').val();
+var seccodemodid = jQuery("."+type+' input[name="seccodemodid"]').val();
+comiis_seccodeverify = '&secanswer='+secanswer+'&secqaahash='+secqaahash+'&seccodeverify='+seccodeverify+'&seccodehash='+seccodehash+'&seccodemodid='+seccodemodid;
+jQuery.ajax({
+type:'GET',
+url: 'plugin.php?id=comiis_sms&action='+type+'&comiis_tel='+phone+comiis_seccodeverify+'&inajax=1' ,
+dataType:'xml',
+}).success(function(s) {
+if(s.lastChild.firstChild.nodeValue.length < 1){
+showDialog('{$comiis_sms['37']}', 'notice', '{$comiis_sms['36']}');
+}
+jQuery('.'+type+' .comiis_mobreg_timekey').removeAttr("disabled");
+var a = s.lastChild.firstChild.nodeValue;
+var dataarr = a.split('|');
+if(dataarr[0] == 'comiis_mob_reg'){
+jQuery('.'+type+' .comiis_mobreg_time span').text((Number(dataarr[2]) > 0 ? Number(dataarr[2]) : 60)); // 返回秒数
+if(dataarr[1] == '1'){
+showDialog('{$comiis_sms['38']}', 'notice', '{$comiis_sms['36']}');
+comiis_mobreg_timeout_fun(type);
+}else{
+showDialog(dataarr[1], 'notice', '{$comiis_sms['36']}');
+}
+
+if(Number(dataarr[2]) > 0){
+jQuery('.'+type+' .comiis_mobreg_timekey').hide();
+jQuery('.'+type+' .comiis_mobreg_time').show();
+comiis_mobreg_timeout_fun(type);
+}
+}else{
+showDialog('{$comiis_sms['39']}', 'notice', '{$comiis_sms['36']}');
+}
+}).error(function() {
+showDialog('{$comiis_sms['40']}', 'notice', '{$comiis_sms['36']}');
+});
+}
+}
+function comiis_mobreg_timeout_fun(type){
+var outtime = Number(jQuery('.'+type+' .comiis_mobreg_time span').text()) - 1;
+jQuery('.'+type+' .comiis_mobreg_time span').text(outtime);
+if(outtime < 1){
+jQuery('.'+type+' .comiis_mobreg_timekey').show();
+jQuery('.'+type+' .comiis_mobreg_time').hide();
+}else{
+comiis_mobreg_timeout_xlco = setTimeout(function() {
+comiis_mobreg_timeout_fun(type);
+}, 1000);
+}
+}
+function comiis_bindingsubmit(type){
+var phone = jQuery("."+type+" #comiis_tel").val();
+var myregbfhl = /^(\+)?(86)?0?1\d{10}$/;             
+if(phone == '' || !myregbfhl.test(phone)){
+showDialog('{$comiis_sms['35']}', 'notice', '{$comiis_sms['36']}');
+return false;
+}
+return true;
+}
+jQuery(document).ready(function(){
+
+EOF;
+ if(!$_G['uid']) { 
+$return .= <<<EOF
+
+comiis_mobile_runjs_aakb();
+
+EOF;
+ } if($secqaacheck) { 
+$return .= <<<EOF
+
+updatesecqaa('cq{$sechash}', '{$sectpl}', '{$_G['basescript']}::{$__CURMODULE}');
+
+EOF;
+ } if($seccodecheck) { 
+$return .= <<<EOF
+
+updateseccode('cc{$sechash}', '{$sectpl}', '{$_G['basescript']}::{$__CURMODULE}');
+
+EOF;
+ } 
+$return .= <<<EOF
+
+});
+</script>
+
+EOF;
+?>

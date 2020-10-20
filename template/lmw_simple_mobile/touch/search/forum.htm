@@ -1,0 +1,51 @@
+<!--{template common/header}-->
+<link rel="stylesheet" href="{$_G['style']['styleimgdir']}/touch/search.css" type="text/css" media="all">
+<!-- header start -->
+<header class="header">
+    <form id="searchform" class="searchform" method="post" autocomplete="off" action="search.php?mod=forum&mobile=2"
+          onsubmit="return lmw_search_submit()">
+        <input type="hidden" name="formhash" value="{FORMHASH}"/>
+        <!--{subtemplate search/pubsearch}-->
+        <!--历史记录-->
+        <!--{if !(!empty($searchid) && submitcheck('searchsubmit', 1))}-->
+        <!--{subtemplate search/search_history}-->
+        <!--{/if}-->
+        <!--{eval $policymsgs = $p = '';}-->
+        <!--{loop $_G['setting']['creditspolicy']['search'] $id $policy}-->
+        <!--{block policymsg}-->
+        <!--{if $_G['setting']['extcredits'][$id][img]}-->$_G['setting']['extcredits'][$id][img]
+        <!--{/if}-->$_G['setting']['extcredits'][$id][title] $policy $_G['setting']['extcredits'][$id][unit]
+        <!--{/block}-->
+        <!--{eval $policymsgs .= $p.$policymsg;$p = ', ';}-->
+        <!--{/loop}-->
+        <!--{if $policymsgs}--><p>{lang search_credit_msg}</p><!--{/if}-->
+    </form>
+</header>
+<!-- header end -->
+
+<script type="text/javascript">
+    function lmw_search_submit() {
+        let lmwKs = localStorage.getItem("lmw_search_keywords");
+        let value = document.getElementById("scform_srchtxt").value;
+        if (!value) return true;
+        if (!lmwKs) {
+            localStorage.setItem("lmw_search_keywords", value);
+        } else {
+            let list = lmwKs.split(',');
+            if (list.indexOf(value) !== -1) {
+                list.splice(list.indexOf(value), 1)
+            }
+            if (list.length >= 10) {
+                list.shift();
+            }
+            list.push(value);
+            localStorage.setItem("lmw_search_keywords", list.toString());
+        }
+        return true;
+    }
+</script>
+
+<!--{if !empty($searchid) && submitcheck('searchsubmit', 1)}-->
+<!--{subtemplate search/thread_list}-->
+<!--{/if}-->
+<!--{template common/footer}-->

@@ -1,0 +1,26 @@
+@r:32rem;
+
+.reward_wrap{position:fixed;left:0;bottom:0;background:rgba(0,0,0,0.6);width:100%;height:100%;z-index:1001;display:none;}
+.reward_box{position:absolute;left:0;bottom:0;width:100%;background:#fff;}
+.reward_main{overflow:hidden;padding-top:10/@r;}
+.reward_main .reward_list{display:-webkit-box;display:box;transition:1s;}
+.reward_main .reward_list li{width:100%;overflow:hidden;padding:0 10/@r;box-sizing:border-box;}
+.reward_main .reward_list .reward_content{float:left;width:25%;text-align:center;padding-bottom:10/@r;}
+.reward_main .reward_list .reward_content.active{background:#f1f1f1;}
+.reward_main .reward_list .reward_content .reward_logo{padding:6/@r 0;}
+.reward_main .reward_list .reward_content .reward_logo img{width:40/@r;height:40/@r;opacity:0;transition:1s;}
+.reward_main .reward_list .reward_content .reward_name{padding:2/@r 0;font-size:12/@r;color:#383838;}
+.reward_main .reward_list .reward_content .reward_price{font-size:12/@r;color:#ababab;height:12/@r;display:-webkit-box;display:box;-webkit-box-pack:center;box-pack:center;-webkit-box-align:center;box-align:center;}
+.reward_main .reward_list .reward_content .reward_price span{display:block;}
+.reward_main .reward_list .reward_content .reward_price .icon{width:12/@r;height:12/@r;background:url(../images/dashang.png) no-repeat center center/cover;margin-right:4/@r;}
+.reward_main .reward_list .reward_content .reward_price .text{height:12/@r;line-height:15/@r;}
+.reward_main .reward_dot{display:-webkit-box;display:box;-webkit-box-pack:center;box-pack:center;-webkit-box-align:center;box-align:center;height:20/@r;}
+.reward_main .reward_dot li{width:6px;height:6px;background:#ececec;border-radius:10px;margin:0 3/@r;transition:0.2s;}
+.reward_main .reward_dot li.active{width:8px;height:8px;background:#fd5757;}
+.reward_footer{height:40/@r;display:-webkit-box;display:box;-webkit-box-pack:justify;box-pack:justify;-webkit-box-align:center;box-align:center;padding:0 10/@r;border-top:1px solid #eee;}
+.reward_footer .user_account{display:-webkit-box;display:box;-webkit-box-align:center;box-align:center;}
+.reward_footer .user_account .icon{width:16/@r;height:16/@r;display:block;background:url(../images/dashang.png) no-repeat center center/cover;margin-right:4/@r;margin-right:5/@r;}
+.reward_footer .user_account .text{color:#323232;font-size:12/@r;height:12/@r;}
+.reward_footer .user_account .text span{color:#fd5757;}
+.reward_footer .reward_button{padding:6/@r 12/@r;background:#ccc;border-radius:30/@r;color:#fff;}
+.reward_footer .reward_button.active{background:#fd5757;}

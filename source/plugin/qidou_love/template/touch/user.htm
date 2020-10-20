@@ -1,0 +1,442 @@
+<!--{template qidou_love:header}-->
+<link rel="stylesheet" type="text/css" href="{$siteurl}/source/plugin/qidou_love/static/css/user.css?6" />
+<body>
+<section class="page_main">
+    <section class="user_header">
+        <div class="user_photo"><img src="{$_G['setting']['ucenterurl']}/avatar.php?uid={$love_id}&size=middle" /></div>
+        <div class="user_name v{$love_user['groupid']}">{$love_user['user_name']}</div>
+        <div class="user_sign"><!--{if $love_user['sightml']}-->{$love_user['sightml']}<!--{else}-->{$lang['h_d_sign']}<!--{/if}--></div>
+        <div class="user_detail">{$lang['h_meili']}&nbsp;<span id="charm_num">{$love_user['charm_num']}</span><span class="empty">|</span>{$lang['h_guanzhu']}&nbsp;{$follow_count}<span class="empty">|</span>{$lang['h_fensi']}&nbsp;{$love_user['people_num']}</div>
+    </section>
+    <section class="nav_menu">
+        <div class="menu">{$lang['h_dongtai']}</div>
+        <div class="menu">{$lang['h_xiangce']}</div>
+        <div class="menu active">{$lang['h_jiaoyou']}</div>
+        <div class="menu_line"></div>
+    </section>
+    <section class="content_wrap">
+        <section class="user_content">
+            <section class="user_trends">
+                <!--{if $trends_list}-->
+                <ul class="section_root">
+                    <!--{loop $trends_list $trends}-->
+                    <li>
+                        <div class="trends_date">
+                            <!--{if !$trends_list[date('Y-m-d',$trends['dateline'])]}-->
+                            {eval $trends_list[date('Y-m-d',$trends['dateline'])]=1;}
+                            <div class="date_day">{eval echo date('d',$trends['dateline'])}</div>
+                            <div class="date_month">{eval echo date('m',$trends['dateline'])}{$lang['h_month']}</div>
+                            <div class="date_line"></div>
+                            <!--{else}-->
+                            <div class="date_line not_date"></div>
+                            <!--{/if}-->
+                        </div>
+                        <div class="trends_main">
+                            <!--{if $trends['image']}-->
+                            <div class="trends_image">
+                                <img _src="{$siteurl}/data/attachment/forum/{$trends['image']}" is_load="false"/>
+                                <span>{$album_count[$trends['tid']]}{$lang['h_image_unit']}</span>
+                            </div>
+                            <!--{/if}-->
+                            <div class="trends_content">
+                                <h2>
+                                    {eval}
+                                    $title = strip_tags($trends['title']);
+                                    if( !$title && strip_tags($trends['content'])){
+                                        $title = strip_tags($trends['content']);
+                                    }else if( !$title ){
+                                        $title = $lang['h_share_content'];
+                                    }
+                                    {/eval}
+                                    {$title}
+                                </h2>
+                                <div class="trends_info active">{$trends['views']}{$lang['h_read']}<span class="shuxian">|</span><span class="not_deem"></span>{eval echo (int)$give_count[$trends['tid']][0]}</div>
+                            </div>
+                        </div>
+                        <a href="{$siteurl}/forum.php?mod=viewthread&tid={$trends['tid']}" tid="{$trends['tid']}" target="_blank" class="trends_link"></a>
+                    </li>
+                    <!--{/loop}-->
+                </ul>
+                <!--{else}-->
+                <div class="section_root not_content">{$lang['h_not_trends']}</div>
+                <!--{/if}-->
+            </section>
+            <section class="user_album">
+                <!--{if $album_list}-->
+                <ul class="section_root">
+                    <!--{loop $album_list $key $albums}-->
+                    <li>
+                        <h4>{eval echo date("m".$lang['h_month']."d".$lang['h_day'],$key);}</h4>
+                        <div class="album_list">
+                            <!--{loop $albums $alb}-->
+                            <div class="album"><img _src="{$siteurl}/data/attachment/forum/{$alb}" is_load="false"/></div>
+                            <!--{/loop}-->
+                        </div>
+                    </li>
+                    <!--{/loop}-->
+                </ul>
+                <!--{else}-->
+                <div class="section_root not_content">{$lang['h_not_album']}</div>
+                <!--{/if}-->
+            </section>
+            <section class="user_friends">
+                <div class="section_root">
+                    {eval $photo_list = array_filter(explode(',',$love_user['album_list']));}
+                    <div class="comm_title">
+                        <div class="title_name">{$lang['h_jyzp']}</div>
+                        <div class="title_more">{$lang['h_t']}{eval echo count($photo_list);}{$lang['h_image_unit']}</div>
+                    </div>
+                    <div class="photo_wrap">
+                        <ul class="photo_main">
+                            <!--{loop $photo_list $key $album}-->
+                                <!--{if !$uid && $key>0}-->
+                                <li class="not_login"></li>
+                                <!--{else}-->
+                                <li><img src="{$album}" /></li>
+                                <!--{/if}-->
+                            <!--{/loop}-->
+                        </ul>
+                    </div>
+                    <div class="user_list_wrap" <!--{if !$love_list}-->style="display:none"<!--{/if}-->>
+                        <div class="bg_line"></div>
+                        <div class="comm_title" data-url="{$siteurl}/plugin.php?id=qidou_love:qidou_show&act=love_list&love_id={$love_id}&user_type=1">
+                            <div class="title_name">{$lang['h_xhtdr']}</div>
+                            <div class="title_more">{$lang['h_t']}{$love_user['people_num']}{$lang['h_r']}</div>
+                        </div>
+                        <ul class="love_list love_main">
+                            <!--{loop $love_list $love}-->
+                            <li data-uid="{$love['uid']}">
+                                <img src="{$_G['setting']['ucenterurl']}/avatar.php?uid={$love['uid']}&size=middle" />
+                                <div class="love_name">{$love['user_name']}</div>
+                                <div class="love_num"><span>{$love['love_num']}</span></div>
+                            </li>
+                            <!--{/loop}-->
+                        </ul>
+                    </div>
+                    <div class="user_list_wrap" <!--{if !$reward_user}-->style="display:none"<!--{/if}-->>
+                        <div class="bg_line"></div>
+                        <div class="comm_title" data-url="{$siteurl}/plugin.php?id=qidou_love:qidou_show&act=love_list&love_id={$love_id}&user_type=2">
+                            <div class="title_name">{$lang['h_dstdr']}</div>
+                            <div class="title_more">{$lang['h_t']}{$reward_count}{$lang['h_r']}</div>
+                        </div>
+                        <ul class="love_list reward_user_main">
+                            <!--{loop $reward_user $ruser}-->
+                            <li data-uid="{$ruser['uid']}">
+                                <img src="{$_G['setting']['ucenterurl']}/avatar.php?uid={$ruser['uid']}&size=middle" />
+                                <div class="love_name">{$ruser['user_name']}</div>
+                                <div class="love_num reward_num"><span>{$ruser['r_price']}</span></div>
+                            </li>
+                            <!--{/loop}-->
+                        </ul>
+                    </div>
+                    <div class="user_list_wrap" <!--{if !$reward_list}-->style="display:none"<!--{/if}-->>
+                        <div class="bg_line"></div>
+                        <div class="comm_title" data-url="{$siteurl}/plugin.php?id=qidou_love:qidou_show&act=love_list&love_id={$love_id}&user_type=3">
+                            <div class="title_name">{$lang['h_dslwb']}</div>
+                            <div class="title_more">{$lang['h_t']}{$reward_list_count}{$lang['h_g']}</div>
+                        </div>
+                        <ul class="love_list reward_list_main">
+                            <!--{loop $reward_list $list}-->
+                            <li>
+                                <img src="{$list['r_image']}" />
+                                <div class="love_name">{$list['r_name']}</div>
+                                <div class="love_num reward_num"><span>{$list['r_price']}</span></div>
+                            </li>
+                            <!--{/loop}-->
+                        </ul>
+                    </div>
+                    <div class="bg_line"></div>
+                    <div class="comm_title">
+                        <div class="title_name">{$lang['h_jyxr']}</div>
+                    </div>
+                    <div class="friends_sign">{$love_user['sigtext']}</div>
+                    <div class="bg_line"></div>
+                    <div class="comm_title">
+                        <div class="title_name">{$lang['h_jyxx']}</div>
+                    </div>
+                    <ul class="friends_detail">
+                        <!--{if $love_user['gender']}--><li><span>{$lang['h_d_1']}</span>{$lang['h_d_1_'.$love_user['gender']]}</li><!--{/if}-->
+                        <!--{if $love_user['age']}--><li><span>{$lang['h_d_2']}</span>{$love_user['age']}{$lang['h_age_unit']}</li><!--{/if}-->
+                        <!--{if $love_user['constellation']}--><li><span>{$lang['h_d_3']}</span>{$love_user['constellation']}</li><!--{/if}-->
+                        <!--{if $uid && $is_look}-->
+                        <!--{if $love_user['height']}--><li><span>{$lang['h_d_4']}</span>{$love_user['height']}CM</li><!--{/if}-->
+                        <!--{if $love_user['weight']}--><li><span>{$lang['h_d_5']}</span>{$love_user['weight']}KG</li><!--{/if}-->
+                        <!--{if $love_user['education']}--><li><span>{$lang['h_d_6']}</span>{$love_user['education']}</li><!--{/if}-->
+                        <!--{if $love_user['occupation']}--><li><span>{$lang['h_d_7']}</span>{$love_user['occupation']}</li><!--{/if}-->
+                        <!--{if $love_user['income']}--><li><span>{$lang['h_d_8']}</span>{$love_user['income']}</li><!--{/if}-->
+                        <!--{if $love_user['house']}--><li><span>{$lang['h_d_9']}</span>{$love_user['house']}</li><!--{/if}-->
+                        <!--{if $love_user['vehicle']}--><li><span>{$lang['h_d_10']}</span>{$love_user['vehicle']}</li><!--{/if}-->
+                        <!--{if $love_user['affectivestatus']}--><li><span>{$lang['h_d_11']}</span>{$love_user['affectivestatus']}</li><!--{/if}-->
+                        <!--{elseif !$uid}-->
+                        <li class="info_login">{$lang['h_info_login']}</li>
+                        <!--{elseif !$is_look}-->
+                        <li class="perfect_info">{$lang['h_perfect_info']}</li>
+                        <!--{/if}-->
+                    </ul>
+                    {eval $user_tag = array_filter(explode(',',$love_user['user_tag']));}
+                    <!--{if $user_tag}-->
+                    <div class="user_tag">
+                        <div class="tag_name">{$lang['h_user_tag']}</div>
+                        <div class="tag_list">
+                            <!--{loop $user_tag $tags}-->
+                            <div class="c{eval echo rand(1,3)}">{$tags}<input type="hidden" name="user_tag[]" value="{$tags}"/></div>
+                            <!--{/loop}-->
+                        </div>
+                    </div>
+                    <!--{/if}-->
+                </div>
+            </section>
+        </section>
+    </section>
+</section>
+    <!--{template qidou_love:common_greeting}-->
+    <!--{template qidou_love:common_reward}-->
+    <div class="loading"><div class="loading_main"></div></div>
+    <div class="greeting_button">
+        <div class="greeting_image" data-uid="{$love_id}"></div>
+        <div class="greeting_position user_distance" before="{$lang['h_distance']}" is_calc="false" lat="{$love_user['lat']}" lng="{$love_user['lng']}"></div>
+    </div>
+    <section class="foot_nav_menu">
+        <div class="n_menu follow"><span <!--{if $love_follow}-->class="a_guanzhu"<!--{/if}-->></span><div>{$lang['h_t_1']}</div></div>
+        <div class="n_menu love_you"><span></span><div>{$lang['h_t_2']}</div></div>
+        <div class="n_menu reward" data-uid="{$love_id}"><span></span><div>{$lang['h_t_4']}</div></div>
+    </section>
+    <script src="{$siteurl}/source/plugin/qidou_love/static/js/jquery-2.1.3.min.js"></script>
+    <script src="{$siteurl}/source/plugin/qidou_love/static/js/layer_mobile/layer.js"></script>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=836ac091ff2acb607893d3d7f2fee530"></script>
+    <script>
+        var oDoc = document.documentElement;
+        var vWidth = oDoc.clientWidth;
+        var vHeight = oDoc.clientHeight;
+        var love_id = {$love_id};
+        var love_username = '{$love_user['user_name']}';
+        var charm_num = {eval echo intval($love_user['charm_num'])};
+        var max_love_num = {eval echo intval($qidou_love['love_num'])};
+        var last_num = {eval echo intval($last_num)};
+        <!--{if $trends_list}-->
+        var trends_loading_data = {start:0,type:1,love_id:love_id,onOff:true};
+        <!--{else}-->
+        var trends_loading_data = {onOff:false};
+        <!--{/if}-->
+        <!--{if $album_list}-->
+        var album_loading_data = {start:0,type:2,love_id:love_id,onOff:true};
+        <!--{else}-->
+        var album_loading_data = {onOff:false};
+        <!--{/if}-->
+        var loading_data = {
+            data:{onOff:false},
+            main:'.user_trends .section_root',
+            url:'{$siteurl}/plugin.php?id=qidou_love:qidou_show&act=ajax_trends_list&formhash={FORMHASH}'
+        }
+        
+        $(function (){
+            var iMaxContentHeight = vHeight-$('.content_wrap').position().top;
+            
+            repeat_loading();
+            post_reward('.reward');
+            open_page('.trends_link',{$qidou_love['open_invitation']});
+            get_position('.user_distance');
+            post_greeting('.greeting_button','.greeting_image');
+            
+            $('.menu_line').css({transform:'translate('+($('.nav_menu .menu').eq(2).position().left+10)+'px,0)'});
+            $('.content_wrap').css({height:$('.section_root').eq(2).height()+100});
+            $('.user_content').css({transform:'translate(-'+2*vWidth+'px, 0px) translateZ(0px)'});
+            $('.album_list .album').css({width:vWidth/3.5});
+            
+            $('.nav_menu .menu').click(function (){
+                if( $(this).index()==0 ){
+                    loading_data.data = trends_loading_data;
+                    loading_data.main = '.user_trends .section_root';
+                }else if( $(this).index()==1 ){
+                    loading_data.data = album_loading_data;
+                    loading_data.main = '.user_album .section_root';
+                }else{
+                    $('.loading').hide();
+                    loading_data.data.onOff = false;
+                }
+                load_images( loading_data.main );
+                var left = $(this).position().left+10;
+                var index = $(this).index();
+                var height = $('.section_root').eq(index).height()+100;
+                height = height>iMaxContentHeight?height:iMaxContentHeight;
+                $('.nav_menu .menu').removeClass('active');
+                $(this).addClass('active');
+                $('.menu_line').css({transform:'translate('+left+'px,0) translateZ(0)'});
+                $('.user_content').css({transform:'translate(-'+index*vWidth+'px,0) translateZ(0)'});
+                $('.content_wrap').css({height:height});
+            });
+            $('.not_login').click(function (){
+                layer.open({
+                    content:"{$lang['h_photo_login']}",
+                    skin: 'msg',
+                    time:3,
+                    end:goLogin
+                });
+                return false;
+            });
+            var album_list = {};
+            $('.user_album').on('click','.album',function (){
+                if( !is_appbyme )return;
+                var parent = $(this).parent();
+                var pindex = parent.index('.album_list');
+                var index = $(this).index();
+                var img_len = parent.find('img').length;
+                
+                if( !album_list[pindex] ){
+                    album_list[pindex] = [];
+                    for( var i=0; i<img_len; i++ ){
+                       album_list[pindex].push( parent.find('img').eq(i).attr('src') ); 
+                    }
+                }
+                imagePreview(album_list[pindex],index);
+            });
+            var photo_list = [];
+            $('.photo_main li').click(function (){
+                if( !is_appbyme || $(this).hasClass('not_login') )return;
+                var index = $(this).index();
+                var img_len = $(this).parent().find('img').length;
+                if( photo_list.length==0 ){
+                    for( var i=0; i<img_len; i++ ){
+                       photo_list.push( $(this).parent().find('img').eq(i).attr('src') ); 
+                    }
+                }
+                imagePreview(photo_list,index);
+            });
+            $('.comm_title').click(function (){
+                var data_url = $(this).attr('data-url');
+                data_url&&open_page_url(data_url);
+            });
+            $('.love_list li').click(function (){
+                var data_uid = $(this).attr('data-uid');
+                data_uid && open_page_url(siteurl+'/plugin.php?id=qidou_love:qidou_user&love_id='+data_uid);
+            });
+            $('.info_login').click(goLogin);
+            $('.perfect_info').click(function (){
+                open_page_url( siteurl+'/plugin.php?id=qidou_love:qidou_user&act=compile' );
+            });
+            var onOff = true;
+            $('.follow').click(function (){
+                if(!onOff || love_id == uid )return;
+                onOff = false;
+                if( !is_login ){
+                    layer.open({
+                        content:"{$lang['h_login_follow']}",
+                        skin: 'msg',
+                        time:3,
+                        end:goLogin
+                    });
+                    return;
+                }
+                var data = {followuid:love_id,followname:love_username};
+                var is_follow = $(this).children('span').hasClass('a_guanzhu');
+                if( is_follow ){
+                    data.type = 'cancel';
+                }else{
+                    data.type = 'follow';
+                }
+                var self = this;
+                $.ajax({
+                    type:'post',
+                    url:'{$siteurl}/plugin.php?id=qidou_love:qidou_handle&act=follow&formhash={FORMHASH}',
+                    data:data,
+                    dataType:'json',
+                    success:function ( data ){
+                        var message = '';
+                        var end = function (){};
+                        onOff = true;
+                        if( data.success == 0 ){
+                            message = "{$lang['h_login_follow']}";
+                            end = goLogin;
+                        }else if( data.success == 1 ){
+                            message = "{$lang['h_follow_cancel']}";
+                            $(self).children('span').removeClass('a_guanzhu');
+                        }else if( data.success == 2 ){
+                            message = "{$lang['h_follow_success']}";
+                            $(self).children('span').addClass('a_guanzhu');
+                        }else{
+                            message = "{$lang['h_follow_error']}";
+                        }
+                        layer.open({
+                            content:message,
+                            skin: 'msg',
+                            time:3,
+                            end:end
+                        });
+                    }
+                });
+            });
+            var this_love_user = $('.love_main li[data-uid='+uid+']');
+            $('.love_you').click(function (){
+                if( !is_login ){
+                    layer.open({
+                        content:"{$lang['h_login_love']}",
+                        skin: 'msg',
+                        time:3,
+                        end:goLogin
+                    });
+                    return;
+                }
+                last_num++;
+                if( last_num > max_love_num ){
+                    layer.open({
+                        content:"\u4eca\u5929\u5df2\u7ecf\u559c\u6b22\u0054\u0041\u592a\u591a\u6b21\u4e86\uff0c\u660e\u5929\u518d\u6765\u5427\u007e",
+                        skin: 'msg',
+                        time:3
+                    }); 
+                    return false;
+                }
+                $('.love_main').parents('.user_list_wrap').show();
+                if( this_love_user.length ){
+                    var this_love_num = parseInt(this_love_user.find('.love_num span').html());
+                    this_love_num++;
+                    this_love_user.find('.love_num span').html( this_love_num );
+                }else if( !this_love_user.length && $('.love_main li').length<4 ){
+                    $('.love_main').append('<li data-uid="'+uid+'">'+
+                            '<img src="'+siteurl+'/uc_server/avatar.php?uid='+uid+'&size=middle">'+
+                            '<div class="love_name">'+username+'</div>'+
+                            '<div class="love_num"><span>1</span></div>'+
+                    '</li>');
+                    this_love_user = $('.love_main li[data-uid='+uid+']');
+                }
+                charm_num++;
+                $('#charm_num').html(charm_num);
+                var love_heart = '<div class="love_heart" style="-webkit-animation:ani'+get_rand(1,2)+' '+get_rand(2,3)+'s linear;animation:ani'+get_rand(1,2)+' '+get_rand(2,3)+'s linear;">+1</div>';
+                var love_result = $('body').append(love_heart); 
+                $(love_result).bind('webkitAnimationEnd',love_heart_ani);
+                if(love_id == uid )return;
+                $.ajax({
+                    type:'post',
+                    url:'{$siteurl}/plugin.php?id=qidou_love:qidou_handle&act=love&formhash={FORMHASH}',
+                    data:{love_id:love_id},
+                    dataType:'json',
+                    success:function ( data ){
+                        var love_onOff = false;
+                        var message = '';
+                        var end = function (){};
+                        if( data.success == 0 ){
+                            love_onOff = true;
+                            message = "{$lang['h_login_love']}";
+                            end = goLogin;
+                        }
+                        if( love_onOff ){
+                            layer.open({
+                                content:message,
+                                skin: 'msg',
+                                time:3,
+                                end:end
+                            });
+                        }
+                    }
+                });
+            });
+            function love_heart_ani( e ){
+                $(e.target).unbind('webkitAnimationEnd');
+                $(e.target).remove();
+            }
+            function get_rand( min,max ){
+                return Math.round(Math.random()*(max-min)+min);
+            }
+        });
+    </script>
+</body>
+</html>

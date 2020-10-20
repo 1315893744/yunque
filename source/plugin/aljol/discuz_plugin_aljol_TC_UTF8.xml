@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X3.3]]></item>
+	<item id="Time"><![CDATA[2017-08-14 15:36]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://localhost/gbk/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[【亮劍】在線聊天]]></item>
+			<item id="identifier"><![CDATA[aljol]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[aljol/]]></item>
+			<item id="copyright"><![CDATA[XXX网 - 站长互动平台]]></item>
+			<item id="version"><![CDATA[2.1.1]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[log]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[消息日志]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[app]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[亮劍免費計劃]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[10]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2.5,X3,X3.1,X3.2,X3.3,X3.4,F1.0,L1.0]]></item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="aljol_inc_php_1"><![CDATA[這家伙很懶，什麼都沒有寫]]></item>
+				<item id="aljol_inc_php_2"><![CDATA[請求加您為好友&nbsp;&nbsp;]]></item>
+				<item id="aljol_inc_php_3"><![CDATA[批準申請]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="aljol_htm_1"><![CDATA[掃描二維碼進入在線聊天]]></item>
+				<item id="aljol_htm_3"><![CDATA[聊天]]></item>
+				<item id="aljol_htm_4"><![CDATA[聯系人]]></item>
+				<item id="aljol_htm_5"><![CDATA[添加好友]]></item>
+				<item id="aljol_htm_6"><![CDATA[新的朋友]]></item>
+				<item id="aljol_htm_7"><![CDATA[我的好友]]></item>
+				<item id="aljol_htm_8"><![CDATA[我關注的]]></item>
+				<item id="aljol_htm_9"><![CDATA[關注我的]]></item>
+				<item id="foot_htm_1"><![CDATA[消息]]></item>
+				<item id="head_htm_1"><![CDATA[在線聊天]]></item>
+				<item id="request_htm_1"><![CDATA[好友通知]]></item>
+				<item id="request_htm_2"><![CDATA[這家伙很懶，什麼都沒有寫]]></item>
+				<item id="request_htm_3"><![CDATA[同意]]></item>
+				<item id="request_htm_4"><![CDATA[拒絕]]></item>
+				<item id="request_htm_5"><![CDATA[加載中]]></item>
+				<item id="request_htm_6"><![CDATA[狀態標記]]></item>
+				<item id="talk_htm_1"><![CDATA[發送]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+	</item>
+</root>

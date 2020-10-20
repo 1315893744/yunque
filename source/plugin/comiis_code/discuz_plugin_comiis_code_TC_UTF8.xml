@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,X3.3,X3.4,F1.0,L1.0]]></item>
+	<item id="Time"><![CDATA[2018-08-16 11:30]]></item>
+	<item id="From"><![CDATA[XXX网 - 站长互动平台]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[克米設計-帖子二維碼]]></item>
+			<item id="identifier"><![CDATA[comiis_code]]></item>
+			<item id="description"><![CDATA[這是一款方便用戶通過手機掃描二維碼快速查看當前帖子的小插件, 免去手工輸入復雜網址的煩惱, 穿越手機看帖就是這麼簡單!]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[comiis_code/]]></item>
+			<item id="copyright"><![CDATA[XXX网 - 站长互动平台]]></item>
+			<item id="version"><![CDATA[v2.5]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[comiis_more]]></item>
+					<item id="menu"><![CDATA[更多克米設計作品]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[comiis_code]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[comiis_mobile]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[28]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,X3.3,X3.4,F1.0,L1.0]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[啟用的版塊]]></item>
+				<item id="description"><![CDATA[設置需要啟用本插件的板塊
+留空為所有版塊啟用]]></item>
+				<item id="variable"><![CDATA[comiis_code_inforum]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[2]]></item>
+					<item id="1"><![CDATA[36]]></item>
+					<item id="2"><![CDATA[37]]></item>
+					<item id="3"><![CDATA[38]]></item>
+					<item id="4"><![CDATA[39]]></item>
+					<item id="5"><![CDATA[40]]></item>
+					<item id="6"><![CDATA[41]]></item>
+					<item id="7"><![CDATA[42]]></item>
+					<item id="8"><![CDATA[43]]></item>
+					<item id="9"><![CDATA[44]]></item>
+					<item id="10"><![CDATA[64]]></item>
+					<item id="11"><![CDATA[65]]></item>
+					<item id="12"><![CDATA[45]]></item>
+					<item id="13"><![CDATA[62]]></item>
+					<item id="14"><![CDATA[46]]></item>
+					<item id="15"><![CDATA[63]]></item>
+					<item id="16"><![CDATA[69]]></item>
+					<item id="17"><![CDATA[70]]></item>
+					<item id="18"><![CDATA[71]]></item>
+					<item id="19"><![CDATA[72]]></item>
+					<item id="20"><![CDATA[73]]></item>
+					<item id="21"><![CDATA[74]]></item>
+					<item id="22"><![CDATA[48]]></item>
+					<item id="23"><![CDATA[49]]></item>
+					<item id="24"><![CDATA[50]]></item>
+					<item id="25"><![CDATA[51]]></item>
+					<item id="26"><![CDATA[52]]></item>
+					<item id="27"><![CDATA[53]]></item>
+					<item id="28"><![CDATA[54]]></item>
+					<item id="29"><![CDATA[55]]></item>
+					<item id="30"><![CDATA[56]]></item>
+					<item id="31"><![CDATA[57]]></item>
+					<item id="32"><![CDATA[58]]></item>
+					<item id="33"><![CDATA[66]]></item>
+					<item id="34"><![CDATA[60]]></item>
+					<item id="35"><![CDATA[61]]></item>
+				</item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[圖標樣式]]></item>
+				<item id="description"><![CDATA[設置前台顯示的小圖標樣式]]></item>
+				<item id="variable"><![CDATA[comiis_code_style]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[0 = 默認圖標樣式
+1 = 簡約圖標樣式]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[二維碼LOGO]]></item>
+				<item id="description"><![CDATA[設置顯示在二維碼圖片中心的小LOGO圖標
+尺寸: 30 X 30]]></item>
+				<item id="variable"><![CDATA[comiis_code_logo]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[source/plugin/comiis_code/comiis_img/comiis_logo.gif]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[一級標題]]></item>
+				<item id="description"><![CDATA[設置二維碼圖片下面的標題文字]]></item>
+				<item id="variable"><![CDATA[comiis_code_title]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[微信掃一掃  分享朋友圈]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[二級標題]]></item>
+				<item id="description"><![CDATA[設置二級標題的文字內容
+{views}為手機查看數調用代碼]]></item>
+				<item id="variable"><![CDATA[comiis_code_views]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[已有{views}人穿越成功<img src="source/plugin/comiis_code/comiis_img/comiis_smile.gif">]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[教程標題文字]]></item>
+				<item id="description"><![CDATA[設置教程標題的文字修改]]></item>
+				<item id="variable"><![CDATA[comiis_code_linktitle]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[教程︰手機怎麼掃描二維碼]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[教程標題鏈接]]></item>
+				<item id="description"><![CDATA[設置教程連接的地址, 可設置連接到其他頁面, 直接填寫網址即可
+默認地址為 plugin.php?id=comiis_code]]></item>
+				<item id="variable"><![CDATA[comiis_code_link]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[plugin.php?id=comiis_code]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[教程頁面標題]]></item>
+				<item id="description"><![CDATA[設置默認教程頁面標題]]></item>
+				<item id="variable"><![CDATA[comiis_code_htmltitle]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[手機穿越看帖分享朋友圈就是這麼簡單]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[教程頁面內容]]></item>
+				<item id="description"><![CDATA[設置默認教程頁面顯示的教程內容, 支持HTML代碼]]></item>
+				<item id="variable"><![CDATA[comiis_code_htmlbody]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<span class="kmtit">1. 如何穿越到手機看帖？</span>
+<span>
+正在瀏覽帖子的你是否注意到右上角（也就是標題右邊）多了點什麼呢？<br>
+<img src="source/plugin/comiis_code/comiis_img/jcimg/001.jpg"><br>
+沒錯，是二維碼，再把鼠標放上面試試看<br>
+<img src="source/plugin/comiis_code/comiis_img/jcimg/002.jpg"><br>
+整個二維碼大圖都顯示出來啦，快打開微信或者其他二維碼掃描軟件掃掃看<br>
+下面以微信為例︰<br>
+打開微信，在右上角+號功能選項中選擇 掃一掃<br>
+<img src="source/plugin/comiis_code/comiis_img/jcimg/003.jpg"><br>
+將掃描框對準我們的二維碼掃描，如果掃描成功，會有提示音出現，並且開始進行跳轉<br>
+Duang Duang Duang...&nbsp;&nbsp;成功穿越到手機瀏覽，是不是很炫呢？<br>
+<img src="source/plugin/comiis_code/comiis_img/jcimg/004.jpg"><br><br><br>
+</span>
+<span class="kmtit">2. 趕快分享到你的朋友圈吧...</span>
+<span>
+看到好的帖子想要分享到自己的朋友圈給大伙看看怎麼辦呢？<br>
+成功穿越到手機後，我們繼續找到右上角的功能選項，選擇“分享到朋友圈”選項，會再次進行跳轉<br>
+<img src="source/plugin/comiis_code/comiis_img/jcimg/005.jpg"><br>
+跳轉後進入到分享界面，您可以設置觀看權限，對該帖子自己描述和評論，然後點擊發送即可<br>
+<img src="source/plugin/comiis_code/comiis_img/jcimg/006.jpg"><br>
+是不是很方便呢？伙伴們趕快拿出你的手機試試吧... ^_^<br>
+</span>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[手機頁面一級標題]]></item>
+				<item id="description"><![CDATA[二維碼進入手機頁面提示的標題]]></item>
+				<item id="variable"><![CDATA[comiis_code_mob_title]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[恭喜您，帖子穿越成功!]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[18]]></item>
+				<item id="title"><![CDATA[手機頁面二級標題]]></item>
+				<item id="description"><![CDATA[二維碼進入手機頁面的人數提示標題
+{views}為手機查看數調用代碼]]></item>
+				<item id="variable"><![CDATA[comiis_code_mob_view]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[您是第{views}位成功穿越者<img src="source/plugin/comiis_code/comiis_img/comiis_mob_ico.gif">]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[20]]></item>
+				<item id="title"><![CDATA[生成方式]]></item>
+				<item id="description"><![CDATA[是為本地生成並保存二維碼圖片，否為客戶瀏覽器JS實時生成
+提示︰如果更換域名後發現掃描的二維碼地址還是原來的舊地址，請登錄FTP刪除 source/plugin/comiis_code/comiis_cache/ 目錄下的所有圖片讓其重新生成即可]]></item>
+				<item id="variable"><![CDATA[comiis_code_open]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[22]]></item>
+				<item id="title"><![CDATA[顯示穿越成功]]></item>
+				<item id="description"><![CDATA[設置是否顯示穿越成功]]></item>
+				<item id="variable"><![CDATA[comiis_code_top_open]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+	</item>
+</root>

@@ -1,0 +1,174 @@
+/* CSS Document */
+
+.tit_top { width: 100%; height: 42px; line-height: 42px; padding: 0; margin: 10px 0 20px 0; border: 0; overflow: visible; background: none}
+.tit_top h3 { position: relative; float: left; height: 40px; line-height: 40px; padding: 0 95px 0 20px; margin: 0; font-size: 14px; color: #34495e; z-index: 1; font-weight: bold; border: 1px solid #d7dcde; background: url(a_d5.png) no-repeat 115px center}
+.tit_top h3:hover { background: url(a_d6.png) no-repeat 115px center #FFFFFF}
+.tit_top .post { float: rigth; display: block; width: auto; height: 20px; line-height: 20px; padding: 0 0 0 30px; margin: 23px 13px 0 0; color: #9aabb8; font-size: 12px; background: none}
+
+
+.exp-filter2 { float: left; width: 640px; height: 42px; padding-left: 42px; margin-top: 0; overflow: hidden}
+.exp-filter2 li {
+    display: inline-block;
+    float: left;
+    height: 42px;
+	line-height: 42px;
+	padding-right: 15px;
+	margin-right: 12px;
+	background: none
+}
+.exp-filter2 li:last-child { background: none}
+.exp-filter2 li a {
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    padding: 0 20px;
+    margin-left: 0;
+    color: #34495e;
+	font-size: 14px;
+	font-weight: bold;
+	border: 1px solid #d7dcde
+}
+.exp-filter2 li a:hover { color: #2c98dd}
+
+
+.exp-filter1 {}
+.exp-filter1 ul {
+	display: none;
+    position: absolute;
+    top: 42px;
+    left: -1px;
+    z-index: 9999;
+    background-color: #fff;
+    border: 1px solid #d7dcde;
+	border-top: 0;
+    margin-top: -1px;
+}
+.tit_top h3:hover .exp-filter1 ul { display: block}
+.exp-filter1 ul li {
+    height: 42px;
+}
+.exp-filter1 a {
+    display: block;
+    overflow: hidden;
+    color: #253c52;
+    height: 20px;
+    line-height: 20px;
+    padding: 11px 20px;
+    width: 103px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+}
+.exp-filter1 a:hover { color: #2c98dd}
+
+
+.exp-hot h2 {
+    font-size: 14px;
+    color: #34495e;
+	padding: 0 0 0 25px;
+    margin-top: 95px;
+	margin-bottom: 3px;
+    line-height: 20px;
+    margin-bottom: 13px;
+	background: url(left1.png) no-repeat left 5px
+}
+.exp-hot li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eff2f5;
+}
+.exp-hot .hot-tit {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 3px;
+    font-weight: normal;
+}
+.exp-hot .hot-tit a {
+    color: #3498e1;
+}
+.exp-hot p.hot-info {
+    color: #9aabb8;
+	font-size: 14px;
+}
+.exp-hot p.hot-info a {
+    font-size: 14px;
+    color: #bdbdbd;
+    margin-right: 10px;
+}
+.exp-hot p.hot-info i { display: inline-block; width: 16px; height: 18px; margin: 0 3px; background: url(leaf.png) no-repeat left 5px}
+
+
+.cont {
+    box-shadow: 0 0 3px rgba(0,0,0,.1);
+}
+.cont .top {
+    width: 240px;
+    background: #fff;
+    border-bottom: 1px solid #eff3f5;
+    padding: 20px;
+}
+.cont .top .img {
+    margin-top: 2px;
+    width: 70px;
+    height: 52px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.cont .top .tit .h1 {
+    font-size: 12px;
+    color: #2c3e50;
+    width: 160px;
+    height: 32px;
+    overflow: hidden;
+    line-height: 1.5;
+    padding-bottom: 5px;
+}
+.cont .top .tit .h1 a { color: #2c3e50}
+.cont .top .tit .time {
+    color: #2c3e50;
+    opacity: 0.5;
+    font-size: 12px;
+}
+.cont .down {
+    background: #f8f8f8;
+    padding: 20px;
+}
+.cont .down ul li {
+    padding-bottom: 10px;
+}
+.cont .down ul li i {
+    color: #2c3e50;
+    font-size: 12px;
+}
+.cont .down ul li a {
+    color: #2c3e50;
+    font-size: 12px;
+    margin-left: 8px;
+    width: 225px;
+}
+
+
+.works-btn {
+    float: right;
+}
+.btn-primary {
+	display: inline-block;
+padding: 10px 20px;
+height: 40px;
+height: 20px;
+line-height: 1.42857143;
+line-height: 20px;
+letter-spacing: 1px;
+font-size: 14px;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+cursor: pointer;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+background-image: none;
+border: none;
+    color: #fff;
+    background-color: #3498db;
+}

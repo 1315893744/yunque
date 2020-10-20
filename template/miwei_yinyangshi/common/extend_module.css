@@ -1,0 +1,88 @@
+
+.page_footer.animate .bar {
+    -webkit-animation: floatOut .5s .2s linear forwards 300ms 0 ease;
+    -moz-animation: floatOut .5s .2s linear forwards 300ms 0 ease;
+    -ms-animation: floatOut .5s .2s linear forwards 300ms 0 ease;
+    animation: floatOut .5s .2s linear forwards 300ms 0 ease;
+    -moz-animation: floatOut .5s .2s linear forwards;
+    -webkit-animation: floatOut .5s .2s linear forwards;
+    -o-animation: floatOut .5s .2s linear forwards;
+    -ms-animation: floatOut .5s .2s linear forwards;
+    animation: floatOut .5s .2s linear forwards;
+}
+.footer_btn .bar {
+    background-position: -1480px -320px;
+}
+.footer_btn .bar {
+    opacity: 0;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+    display: block;
+    width: 22px;
+    height: 76px;
+    position: absolute;
+    margin-left: -11px;
+    left: 50%;
+    top: 250px;
+    background-repeat: no-repeat;
+}
+.footer_btn .bottom_code_wrap {
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+    -webkit-transform: translate3d(0,30px,0);
+    -moz-transform: translate3d(0,30px,0);
+    -ms-transform: translate3d(0,30px,0);
+    -o-transform: translate3d(0,30px,0);
+    transform: translate3d(0,30px,0);
+    opacity: 0;
+    display: none\9;
+    width: 152px;
+    height: 152px;
+    position: absolute;
+    left: 50%;
+    top: 220px;
+    margin-left: -76px;
+}
+.footer_btn .bottom_code_wrap img {
+    width: 100%;
+    height: 100%;
+    -webkit-box-shadow: 0 0 30px #a7b9c2;
+    -moz-box-shadow: 0 0 30px #a7b9c2;
+    box-shadow: 0 0 30px #a7b9c2;
+}
+.footer_btn .bottom_code_wrap p {
+    background-position: -1279px -315px;
+}
+.footer_btn .bottom_code_wrap p {
+    position: absolute;
+    top: 0;
+    right: -45px;
+    width: 16px;
+    height: 150px;
+    background-repeat: no-repeat;
+}
+.footer_btn .door {
+    background-position: -331px -364px;
+}
+.footer_btn .door {
+    display: block;
+    width: 210px;
+    height: 319px;
+    position: absolute;
+    margin-left: -105px;
+    left: 50%;
+    top: 320px;
+    -webkit-transition: all .5s linear;
+    -moz-transition: all .5s linear;
+    -ms-transition: all .5s linear;
+    -o-transition: all .5s linear;
+    transition: all .5s linear;
+    background-repeat: no-repeat;
+	background-position:0 -364px;
+}

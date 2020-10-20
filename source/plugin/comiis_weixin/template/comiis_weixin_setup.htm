@@ -1,0 +1,61 @@
+<link rel="stylesheet" type="text/css" href="source/plugin/comiis_weixin/style/comiis.css?{VERHASH}" />
+<ul class="vqdn tb cl">
+	<li{if $_GET['ops'] == 'setup'} class="a"{/if}><a href="home.php?mod=spacecp&ac=plugin&id=comiis_weixin:comiis_weixin_setup&ops=setup">{if $comiis_is_weixin_user['uid'] == $_G['uid']}{$_G['comiis_wxlang']['023']}{else}{$_G['comiis_wxlang']['024']}{/if}</a></li>
+	<li{if $_GET['ops'] == 'edit'} class="a"{/if}><a href="home.php?mod=spacecp&ac=plugin&id=comiis_weixin:comiis_weixin_setup&ops=edit">{$_G['comiis_wxlang']['025']}</a></li>
+</ul>
+<!--{if $_GET['ops'] == 'setup'}-->
+	<!--{if $comiis_is_weixin_user['uid'] == $_G['uid']}-->
+		<!--{if $comiis_is_weixin_user['edit'] == 0}-->			
+		<p class="gofm tbmu mbm xi1">{$_G['comiis_wxlang']['026']}</p>		
+		<p class="ptm">
+			<button type="button" class="pn pnc" onclick="location.href='home.php?mod=spacecp&ac=plugin&id=comiis_weixin:comiis_weixin_setup&ops=edit';"><strong>{$_G['comiis_wxlang']['027']}</strong></button>
+		</p>
+		<!--{else}-->
+		<p class="tbmu mbm xi1">{$_G['comiis_wxlang']['029']}</p>		
+		<p>{$_G['comiis_wxlang']['028']}</p>
+		<p class="ptm">
+			<button type="button" class="pn pnc" onclick="showWindow('comiis_wxlogin', 'plugin.php?id=comiis_weixin&mod=wxlogin&wxdel=yes&inajax=1', 'get', 0);"><strong>{$_G['comiis_wxlang']['030']}</strong></button>
+		</p>
+		<!--{/if}-->		
+	<!--{else}-->
+		<p class="unty tbmu mbm">{$_G['comiis_wxlang']['031']}</p>
+		<div class="mtw bm2 cl">
+			<div class="bm2_b bw0 hm" style="padding-top:50px;">
+				<a href="plugin.php?id=comiis_weixin&mod=wxlogin&inajax=1" onclick="showWindow('comiis_wxlogin', this.href, 'get', 0);"><img src="source/plugin/comiis_weixin/style/wechat_bind.png"></a>
+				<p class="mtn xg1">{$_G['comiis_wxlang']['048']}</p>
+			</div>
+		</div>	
+	<!--{/if}-->
+<!--{elseif $_GET['ops'] == 'edit'}-->
+	<!--{if $comiis_is_weixin_user['uid'] == $_G['uid']}-->
+		<!--{if $comiis_is_weixin_user['edit'] == 0}-->
+		<p class="tbmu mbm xi1">{$_G['comiis_wxlang']['040']}</p>
+		<table class="tfm comiis_wx_tfm rybn" cellspacing="0" cellpadding="0">
+			<tbody>
+			<form method="post" action="home.php?mod=spacecp&ac=plugin&id=comiis_weixin:comiis_weixin_setup&ops=edit">
+				<input type="hidden" name="editsubmit" value="true" />
+				<input type="hidden" name="formhash" value="{FORMHASH}" />
+				<tr><th>{$_G['comiis_wxlang']['049']}</th><td><input type="text" name="newname" value="$_G['username']" class="px"></td></tr>
+				<tr><th>{$_G['comiis_wxlang']['015']}</th><td><input name="password" type="password" autocomplete="off" class="px"></td></tr>
+				<tr><th>{$_G['comiis_wxlang']['037']}</th><td><input name="password2" type="password" autocomplete="off" class="px"></td></tr>
+				<tr><th>&nbsp;</th><td colspan="2"><button type="submit" class="pn pnc"><strong>{$_G['comiis_wxlang']['050']}</strong></button></td></tr>
+			</form>
+			</tbody>
+		</table>		
+		<!--{else}-->
+			<div class="oysx mtw bm2 cl">
+				<div class="bm2_b bw0 hm" style="padding-top:50px;">
+					<p class="mtn xg1">{$_G['comiis_wxlang']['041']}</p>
+				</div>
+			</div>
+		<!--{/if}-->
+	<!--{else}-->
+		<p class="tbmu mbm">{$_G['comiis_wxlang']['042']}</p>
+		<div class="mtw bm2 cl">
+			<div class="bm2_b bw0 hm" style="padding-top:50px;">
+				<a href="plugin.php?id=comiis_weixin&mod=wxlogin&inajax=1" onclick="showWindow('comiis_wxlogin', this.href, 'get', 0);"><img src="source/plugin/comiis_weixin/style/wechat_bind.png"></a>
+				<p class="mtn xg1">{$_G['comiis_wxlang']['048']}</p>
+			</div>
+		</div>	
+	<!--{/if}-->
+<!--{/if}-->

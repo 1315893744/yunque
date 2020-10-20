@@ -1,0 +1,144 @@
+body { background: #EFF3F5 !important}
+#Quater_headtop { margin: 0}
+#Quater_bar { border-bottom: 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1)}
+#pt { padding: 5px 0}
+.pgs #newspecial { width: 90px; height: 32px; background: url(../src/pn_post.png) no-repeat center center #3498db}
+.pgs #newspecial img { display: none}
+dl.list_group:last-child { border-bottom: 0 !important}
+
+.groupbtn span { padding: 5px 0; background: none !important}
+
+.userheader {
+    width: 320px;
+    height: 230px;
+	margin-bottom: 10px;
+    position: relative;
+    background: #fff;
+}
+.userheader .skin {
+    width: 100%;
+    background: #3498db;
+    height: 100px;
+    text-align: center;
+    position: relative;
+}
+.userheader .imgblock {
+    position: absolute;
+    width: 66px;
+    height: 66px;
+    background: hsla(0,0%,100%,.3);
+    top: 50px;
+    left: 122px;
+    border-radius: 50%;
+    padding: 5px;
+}
+.userheader .imgblock img {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+}
+.userheader p {
+    display: block;
+    text-align: center;
+    position: relative;
+    top: 35px;
+    font-size: 13px;
+    color: rgb(227, 102, 102);
+}
+.userheader a {
+    color: #999;
+    font-size: 16px;
+}
+
+.group_top { width: 100%; height: 300px; padding: 0; overflow: hidden; text-align: center; background: url(../src/bg-10.jpg) no-repeat center center}
+.group_top h3 { margin-bottom: 20px; font-size: 38px; color: #FFFFFF}
+.bg_shadow { height: 200px; padding: 50px 0; background: url(../src/black0.5.png) repeat 0 0}
+.creating a { display: inline-block; padding: 13px 40px; font-size: 20px; color: #FFFFFF; border: 1px solid #FFFFFF; border-radius: 2px}
+.creating a:hover { color: #3498db; border: 1px solid #3498db}
+.group_top p { margin-top: 30px; font-size: 16px; color: #FFFFFF}
+.group_top p em { padding: 0 20px}
+.group_top p em:hover { color: #3498db}
+
+.tb { height: 35px; border-bottom: 1px solid #EEEEEE; background: #FAFAFA}
+.tb li { float: left; margin: 0}
+.tb a { display: block;padding: 0 15px !important;margin: 0; border: 0; border-right: 1px solid #EDEDED; background: none!important}
+.tb .a a, .tb .current a { color: #666666; border-bottom-color: #FFF; background: #FFF !important;font-weight: 400}
+.tb .y a { background: none !important}
+
+.bm .tb li { margin: 0}
+.bm .tb .a a { height: 36px; border-bottom: 0}
+
+.ct2 .mn { width: 840px; margin: 0}
+.ct2 .sd { width: 320px}
+
+
+#ct .bm { padding: 15px; margin: 0 0 10px 0; border: 0}
+#ct .bm_h { padding: 5px 0 0 0; font-size: 16px; color: #777777; font-weight: bold; margin-bottom: 10px; line-height: 120%; position: relative; border: 0; background: none}
+#ct .bm_h h3 { color: #5E5E5E; font-size: 15px; padding-left: 28px; background: url(cate.png) no-repeat left 1px}
+#ct .bm_c { padding: 10px 0}
+
+
+.thread_post { width: 290px; height: 56px; padding: 0; margin: 0 0 10px 0; text-align: center; border-radius: 0; background: url(t_post.png) no-repeat 60px center #3498db}
+.thread_post:hover { background: url(t_post.png) no-repeat 60px center #02b9a6}
+.thread_post a { padding: 0 0 0 30px; height: 56px; line-height: 56px; color: #FFFFFF; font-size: 19px}
+.thread_post a:hover { text-decoration: none}
+
+
+.portal_index_side2 { width: 400px; height: 260px; overflow: hidden; position: relative}
+.portal_index_side_window2 ul { width: 999999px; height: 260px; position: relative}
+.portal_index_side_window2 li { width: 400px; height: 260px; text-align: left;font-size:0;float:left;display:inline;position:relative; overflow: hidden}
+.portal_index_side_window2 li .si_0 { position: absolute; bottom: 0; left: 0; width: 410px; height: 44px; line-height: 44px; font-size: 16px; padding-left: 15px; transition: all 0.5s ease 0s; background: url(../src/banner_bg.png) repeat left top}
+.portal_index_side_window2 li .si_1 { font-size: 16px; font-weight: 400; padding-left: 0; color: #FFFFFF}
+.portal_index_side_window2 li p { width: 300px;height: 20px;line-height: 20px; margin: 5px 0 30px 0; overflow: hidden; padding-left: 22px}
+.portal_index_side_list2 { position:absolute; width: auto; height: 10px; right: 5px; bottom: 15px; text-align: right; overflow: hidden}
+.portal_index_side_list2 a { float: left; width: 10px; height: 10px;overflow: hidden; cursor: pointer; display: inline-block; margin-right: 10px; opacity: 0.3; border-radius: 10px; background: #FFFFFF}
+.portal_index_side_list2 a.active,.portal_index_side_list2 a:hover { opacity: 1; background: #D3D2E4}
+.portal_index_side_list2_a1 { position:absolute;z-index:10;bottom:0;width:100%}
+.portal_index_side_list2_a2 { position:relative}
+
+
+.re_group li { float: left; width: 281px; padding: 12px 0 12px 9px; border-bottom: 1px solid #F3F3F3}
+.re_group li:last-child { border-bottom: 0}
+.re_group .pic { float: left; margin-right: 12px; border-radius: 0; overflow: hidden}
+.re_group li h3 { font-size: 15px; margin-bottom: 5px}
+.re_group li p { color: #888888}
+
+.ma_portal_y {
+    background: #FFF none repeat scroll 0% 0%;
+    padding: 20px 15px 15px 15px;
+    margin-bottom: 10px;
+}
+.ma_portal_y_t {
+    font-size: 16px;
+    color: #5E5E5E;
+    font-weight: normal;
+    margin-bottom: 16px;
+    line-height: 120%;
+    position: relative;
+    top: -5px;
+}
+.ma_rt_t img {
+    position: relative;
+    top: 5px;
+    margin-right: 11px;
+}
+.ma_rt_c li {
+    float: left;
+    padding-left: 19px;
+    line-height: 150%;
+    background: url(../src/rt_ico2.png) no-repeat 4px center;
+    font-size: 14px;
+    width: 350px;
+    padding-right: 35px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+}
+.ma_rt_c a { color: #777777}
+
+
+.tb { padding: 0 5px 0 0}
+.pgb a { padding: 0 12px !important}
+.tl .th { padding: 0}

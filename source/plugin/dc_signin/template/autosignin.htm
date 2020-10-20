@@ -1,0 +1,46 @@
+<div class="mtm pbm bbs">
+	<div style="margin-left: 10px;">
+	<p>{$a_lang[auto_1]}<font color="#FF0000">{echo $auto?$auto[days]:0}</font>{$a_lang[tian]}</p>
+	<form id="addfundsform" name="addfundsform" method="post" autocomplete="off" action="plugin.php?id=dc_signin&action=autosignin" onsubmit="ajaxpost(this.id, 'return_buydays');return false;">
+	<input type="hidden" name="formhash" value="{FORMHASH}" />
+	<input type="hidden" name="buydayssubmit" value="true" />
+	<input type="hidden" name="handlekey" value="buydays" />
+	<table cellspacing="0" cellpadding="0" class="tfm mtn">
+		<tr>
+			<th>{$a_lang[auto_buy]}</th>
+				<td class="pns">
+					<input type="number" size="5" class="px" style="width: auto;" id="buydays" name="days" value="7" onblur="dayscheck()" />
+						&nbsp;{$a_lang[tian]} = <span id="desdays">{echo 7*$autoconfig[price]}</span>{$_G[setting][extcredits][$autoconfig[extcredit]][title]}
+				</td>
+				<td width="300" class="d">
+					1{$a_lang[tian]} =  <strong>{$autoconfig[price]}{$_G[setting][extcredits][$autoconfig[extcredit]][title]}</strong> 
+				</td>
+			</tr>
+			<tr>
+				<th>&nbsp;</th>
+				<td colspan="2">
+					<button type="submit" name="submit_btn" class="pn" id="submit_btn" value="true"><em>{$a_lang[buy]}</em></button>
+				</td>
+			</tr>
+		</table>
+	</form>
+	</div>
+</div>
+<div class="mtm" style="margin-left:10px;">{$a_lang[tips]}</div>
+<span style="display: none" id="return_buydays"></span>
+<script type="text/javascript">
+	function dayscheck() {
+		var buydays = $('buydays').value.replace(/^0/, '');
+		buydays = parseInt(buydays);
+		if(buydays<1){
+			$('buydays').value = buydays=7;
+		}
+		$('desdays').innerHTML = !isNaN(buydays) ? Math.ceil(buydays * {$autoconfig[price]}) : 0;
+	}
+	function errorhandle_buydays(message){
+		showDialog(message, 'alert', "", null, true, null, "", "", "", 3);
+	}
+	function succeedhandle_buydays(href, message, param){
+	showDialog(message, 'right', '', 'window.location.href=\''+href+'\'', '','','','','','',3);
+}
+</script>
